@@ -1,0 +1,3 @@
+EXPORT FUNCTION test_assert ;
+
+EXPORT OBJECT tft_id ;

@@ -1,0 +1,90 @@
+OIL_VERSION = "2.4";
+
+IMPLEMENTATION ee {
+    OS {
+        ENUM [
+            TRICORE1 { // OLD TriCore Cpu
+                STRING ID = "default_cpu";
+                STRING APP_SRC[];
+                
+                BOOLEAN [
+                    TRUE {
+                        BOOLEAN [
+                            TRUE {
+                                UINT32 SYS_SIZE; // expressed in byte
+                            },
+                            FALSE
+                        ] IRQ_STACK;
+                        //ENUM [
+                        //    SHARED,
+                        //    PRIVATE {
+                        //        UINT32 SYS_SIZE;
+                        //    }
+                        //] DUMMY_STACK;
+                    },
+                    FALSE
+                ] MULTI_STACK = FALSE;
+                
+                STRING MODEL; 
+            },
+            TRICORE { // TriCore Cpu
+                STRING ID = "default_cpu";
+                STRING APP_SRC[];
+                
+                BOOLEAN [
+                    TRUE {
+                        BOOLEAN [
+                            TRUE {
+                                UINT32 SYS_SIZE; // expressed in byte
+                            },
+                            FALSE
+                        ] IRQ_STACK;
+                        //ENUM [
+                        //    SHARED,
+                        //    PRIVATE {
+                        //        UINT32 SYS_SIZE;
+                        //    }
+                        //] DUMMY_STACK;
+                    },
+                    FALSE
+                ] MULTI_STACK = FALSE;
+                
+                STRING MODEL;
+                
+                ENUM [
+                	GNU {
+						STRING EXPORT_FILE;
+                	},
+                	TASKING,
+                	DIAB
+                ] COMPILER_TYPE;
+                STRING HW_ENDINIT : "A custom function that is called at the end of the Hardware startup initialization";
+				STRING LINKERSCRIPT : "A custom linker-script that is used for the current cpu. This option override the mcu-level custom linker-script, if defined.";
+                
+                STRING STARTUP_ADDRESS : "Address of startup code. Used only for slave cores. The master address is set through the boot and likerscript files.";
+                UINT32 SYS_STACK_SIZE;
+                UINT32 SYS_CSA_SIZE : "Size of Context Save Area";
+                FLOAT CPU_CLOCK : "The cpu clock, expressed as MHz.";
+            }
+        ] CPU_DATA[];
+
+		ENUM [
+			TRICORE {
+				ENUM [
+					TC1796,
+					TC26x,
+					TC27x,
+					TC29x
+				] MODEL;
+
+				STRING LINKERSCRIPT : "A custom linker-script that is used for each cpu, unless a cpu-specific linker-script is defined.";
+			}
+		] MCU_DATA;
+		
+		ENUM [
+			TRIBOARD_TC2X5,
+			APPKIT_TC2X5,
+			APPKIT_TC2X7
+		] BOARD_DATA = NO_BOARD;
+    };
+};

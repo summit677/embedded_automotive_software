@@ -1,0 +1,48 @@
+; Script file for TC264DE on TRIBOARD-TC2X4
+;
+; Loads the Lauterbach sieve demo (single-core) into RAM and sets up a demo
+; debug scenario. Use this script for getting started.
+;
+; $LastChangedDate: 2013-10-15 10:02:06 +0200 (Tue, 15 Oct 2013) $
+; $LastChangedRevision: 5747 $
+; $LastChangedBy: mobermeir $
+
+;========================================================================
+; initialize and start the debugger
+RESet
+SYStem.CPU TC264DE
+IF ((ID.CABLE()==0x29)||(ID.CABLE()==0x4155))
+(
+  ; Emulation Devices in LQFP packages (except Fusion Quad and TC27x A-Step)
+  ; do not support JTAG (TDI pin is used as VDDPSB)
+  ; DAP only supported by
+  ; - Bi-directional OCDS Debug Cable (0x29)
+  ; - Automotive Debug Cable (0x4155)
+  ; See tricore_app_ocds.pdf for details
+  SYStem.CONFIG.DEBUGPORTTYPE DAP2
+)
+ELSE
+(
+  DIALOG.OK "TC264DE not supported by "+CABLE.NAME() "For details see TriCore FAQ"
+  ENDDO
+)
+SYStem.Up
+
+;========================================================================
+; load demo program (uses internal RAM only)
+  Data.LOAD.auto   "#EXE_NAME#"
+
+  #ORTICMD#
+
+;========================================================================
+; open some windows
+WinCLEAR
+WinPOS 0% 0% 100% 50%
+List.auto
+WinPOS 0% 50% 50% 50%
+Frame.view /Locals /Caller
+WinPOS 50% 50% 50% 50%
+Var.Watch
+Var.AddWatch ast flags
+
+ENDDO

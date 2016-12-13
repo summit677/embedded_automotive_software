@@ -1,0 +1,191 @@
+/* ###*B*###
+ * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+ *
+ * Copyright (C) 2002-2012  Evidence Srl
+ *
+ * This file is part of ERIKA Enterprise.
+ *
+ * ERIKA Enterprise is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation, 
+ * (with a special exception described below).
+ *
+ * Linking this code statically or dynamically with other modules is
+ * making a combined work based on this code.  Thus, the terms and
+ * conditions of the GNU General Public License cover the whole
+ * combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this code with independent modules to produce an
+ * executable, regardless of the license terms of these independent
+ * modules, and to copy and distribute the resulting executable under
+ * terms of your choice, provided that you also meet, for each linked
+ * independent module, the terms and conditions of the license of that
+ * module.  An independent module is a module which is not derived from
+ * or based on this library.  If you modify this code, you may extend
+ * this exception to your version of the code, but you are not
+ * obligated to do so.  If you do not wish to do so, delete this
+ * exception statement from your version.
+ *
+ * ERIKA Enterprise is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License version 2 for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * version 2 along with ERIKA Enterprise; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA.
+ * ###*E*### */
+
+CPU test_application {
+
+  OS EE {
+
+    EE_OPT = "DEBUG";
+
+    CPU_DATA = CORTEX_RX {
+      MODEL = R4;
+      //COMPILER_TYPE = KEIL;
+      COMPILER_TYPE = CCS;
+      APP_SRC = "code.c";
+      MULTI_STACK = FALSE;
+    };
+
+    EE_OPT = "__USE_SYSTICK__";		/* Enables SysTick Timer Driver	      */
+    //EE_OPT = "__USE_USER_BUTTONS__";	/* Enables User Button Driver	      */
+    //EE_OPT = "__USE_OLED_DISPLAY__";	/* Enables OLED Display Driver	      */
+    EE_OPT = "__USE_USER_LED__";
+    EE_OPT = "__TI_DRIVER_LIB__";
+    EE_OPT = "__ALLOW_NESTED_IRQ__";
+    EE_OPT = "__USE_DISPLAY__";
+
+    MCU_DATA = TI {
+      MODEL = TMS570;
+    };
+
+    /* Uncomment this to build separate libstellarisw.a */
+    /* EE_OPT = "__ADD_LIBS__";
+    LIB = ENABLE {
+	NAME = "STELLARISWARE";
+    }; */
+
+    STATUS = EXTENDED;
+    STARTUPHOOK = FALSE;
+    ERRORHOOK = FALSE;
+    SHUTDOWNHOOK = FALSE;
+    PRETASKHOOK = FALSE;
+    POSTTASKHOOK = FALSE;
+    USEGETSERVICEID = FALSE;
+    USEPARAMETERACCESS = FALSE;
+    USERESSCHEDULER = FALSE;
+    
+  };
+
+  /* this is the OIL part for the task displaying the christmas tree */
+  TASK Task1 {
+    PRIORITY = 0x01;	/* Low priority */
+    AUTOSTART = FALSE;
+    STACK = SHARED;
+    ACTIVATION = 1;	/* only one pending activation */
+  };
+
+  /* this is the OIL part for the task activated by the button press */
+  TASK Task2 {
+    PRIORITY = 0x02;	/* High priority */
+    SCHEDULE = FULL;
+    AUTOSTART = TRUE;
+    STACK = SHARED;
+  };
+
+  ISR systick_handler {
+    CATEGORY = 2;
+    ENTRY = "SYSTICK";
+    PRIORITY = 1;
+  };
+
+  ISR buttons_handler {
+    CATEGORY = 2;
+    ENTRY = "GPIO_M";	/* Buttons mapped on GPIO - Port M - Pins 0:4 */
+    PRIORITY = 0;	/* Highest priority */
+  };
+
+  /*
+   * Please uncomment ONLY one of the following configurations at a time!
+   */
+
+  /* CONFIGURATION 1:
+   * Kernel is BCC1
+   * Task 1 is full preemptive
+   */
+  
+     OS EE {
+    KERNEL_TYPE = BCC1;
+    EE_OPT = "__OO_STARTOS_OLD__";
+  }; 
+  TASK Task1 { SCHEDULE = FULL; };
+  TASK Task2 { ACTIVATION = 1; };
+
+  /* ----------------------------------------------------------- */
+
+  /* CONFIGURATION 2:
+   * Same as Configuration 1, BUT Task 1 is NON preemptive
+   */
+
+  /* OS EE {
+    KERNEL_TYPE = BCC1;
+    EE_OPT = "__OO_STARTOS_OLD__";
+  }; 
+  TASK Task1 { SCHEDULE = NON; };
+  TASK Task2 { ACTIVATION = 1; }; */
+
+  /* ----------------------------------------------------------- */
+
+  /* CONFIGURATION 3:
+   * Same as Configuration 2, BUT the code is compiled with an additional
+   * #define that controls the presence of the Schedule() function inside Task1
+   *
+   * The additional define is added with the EEOPT = "..."; statement inside 
+   * the OS object.
+   */
+
+  /* OS EE { 
+    EE_OPT = "MYSCHEDULE";
+    KERNEL_TYPE = BCC1;
+    EE_OPT = "__OO_STARTOS_OLD__";
+  }; 
+  TASK Task1 { SCHEDULE = NON; };
+  TASK Task2 { ACTIVATION = 1; }; */
+
+  /* ----------------------------------------------------------- */
+
+  /* CONFIGURATION 4:
+   * Same as Configuration 3, BUT Task2 supports three pending activations.
+   * The kernel type has to be BCC2 to support more than one pending activation!
+   *
+   * Note: This configuration does not work with the Demo version 
+   * (which includes only a BCC1 kernel)
+   */
+
+   /*OS EE {
+    EE_OPT = "MYSCHEDULE";
+    KERNEL_TYPE = BCC2;
+    EE_OPT = "__OO_STARTOS_OLD__";
+  };
+  TASK Task1 { SCHEDULE = NON; };
+  TASK Task2 { ACTIVATION = 6; }; */
+
+  /* ----------------------------------------------------------- */
+
+  /* CONFIGURATION 5:
+   * Kernel is FP
+   * Task 1 is full preemptive
+   */
+
+   /* OS EE { KERNEL_TYPE = FP{
+      NESTED_IRQ = TRUE;
+    }; };
+  TASK Task1 { SCHEDULE = FULL; };
+  TASK Task2 { ACTIVATION = 1; }; */ 
+
+};

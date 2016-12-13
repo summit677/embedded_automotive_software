@@ -1,0 +1,673 @@
+/*
+ * Name: ee_tc2Yx_gnu_flash.ld.tmpl
+ * 
+ * Description: 
+ * Template for linker rules for internal Flash configuration
+ */
+SECTIONS
+{
+  /*
+   * Allocate .text and other read-only sections.
+   */
+
+  /*
+   * Code executed before calling main
+   */
+  CORE_SEC(.init) : ALIGN(8) FLAGS(ax)
+  {
+    *(.init)
+    *(.fini)
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  CORE_SEC(.cramtext) : ALIGN(8)
+  {
+    *(.cramtext)
+    *(.cramtext.*)
+    . = ALIGN(8);
+  } > PMI_PSPR AT> PMU_PFLASH
+
+  /*
+   * Section for trap table
+   */
+  CORE_SEC(.traptab) : ALIGN(32) FLAGS(ax)
+  {
+    PROVIDE(__traptab_start = .);
+    KEEP(*(.traptab))   /*Section for trap table*/ 
+    KEEP(*(.traptab*))
+    . = ALIGN(8);
+    PROVIDE(__traptab_end = .);
+  } > PMU_PFLASH
+
+  /*
+   * Section for interrupt table
+   */
+  CORE_SEC(.inttab) : ALIGN(32) FLAGS(ax)
+  {
+    PROVIDE(__inttab_start = .);
+    KEEP (*(.inttab));
+    KEEP (*(.*.inttab));
+    . = ALIGN(8);
+    PROVIDE(__inttab_end = .);
+  } > PMU_PFLASH
+
+  /* Global section to share code symbol between cores */
+  ee_mcglobalt : ALIGN(8) FLAGS(axl)
+  {
+    PROVIDE(ee_mcglobalt_begin = .);
+    KEEP(*(*.StartupHook))
+    KEEP(*(*.ErrorHook))
+    KEEP(*(*.ShutdownHook))
+    /* KEEP(*(*.PreTaskHook)) */
+    /* KEEP(*(*.PostTaskHook)) */
+    KEEP(*(*.ProtectionHook))
+    KEEP(*(ee_mcglobalt))
+    /* . += 1; */
+    . = ALIGN(8);
+    PROVIDE(ee_mcglobalt_end = .);
+  } > PMU_PFLASH
+
+  CORE_SEC(.text) : ALIGN(8) FLAGS(axl)
+  {
+    PROVIDE(__text_start = .);
+    *(.text)
+    *(.text.*)
+    *(.gnu.linkonce.t.*)
+    /*
+     * .gnu.warning sections are handled specially by elf32.em.
+     */
+    *(.gnu.warning)
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  /* OS Public Code */
+  CORE_SEC(.ee_api_text) : ALIGN(8) FLAGS(axl) {
+    /* range section have to be aligned to 8 bytes */
+    PROVIDE(ee_stext_api = . );
+    *(ee_api_text)
+    /* ALIGN(8) is needed because Range Addresses have to be aligned
+       to 8 byte. */
+    . += 1;
+    . = ALIGN(8);
+    /* End OS-Application Data Section Symbol */
+    PROVIDE(ee_etext_api = . );
+    /* ALIGN(16) the begin of OS_Application data and the following do the
+       trick to move next OS-Application section 16 byte forward (at least) */
+    . += 15;
+    /* Each PMU_PFLASH region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for data region are valid for __copy_table
+     */
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  /* OS Private Code */
+  CORE_SEC(.ee_kernel_text) : ALIGN(16) FLAGS(axl) {
+    /* The begin of the kernel code section is aligned to 16 to
+       ensure space requiremente for cross sections access protection.
+       (Read the Note: at page 9-5 of
+       TC_Architecture_vol1_TC161_TCS_TC16P_TC16E.pdf manual) */
+    PROVIDE(ee_stext_kernel = . );
+    *(ee_kernel_text)
+    /* ALIGN(8) is needed because Range Addresses have to be aligned
+       to 8 byte. */
+    . += 1;
+    . = ALIGN(8);
+    /* End OS-Application Data Section Symbol */
+    PROVIDE(ee_etext_kernel = . );
+    /* ALIGN(16) the begin of OS_Application data and the following do the
+       trick to move next OS-Application section 16 byte forward (at least) */
+    . += 15;
+    /* Each PMU_PFLASH region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for data region are valid for __copy_table
+     */
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  /* GENERATED APPLICATION CODE SECTIONS - BEGIN */
+FOR_EACH_APP
+  /* OS-Application Private Code */
+  CORE_SEC(.ee_${APP_NAME}_text) : ALIGN(16) FLAGS(axl) {
+    /* The begin of an OS-Application section code is aligned to 16 to
+       ensure space requiremente for cross sections access protection.
+       (Read the Note: at page 9-5 of
+       TC_Architecture_vol1_TC161_TCS_TC16P_TC16E.pdf manual) */
+    . = ALIGN(16);
+    PROVIDE(ee_stext_${APP_NAME} = . );
+    *(ee_${APP_NAME}_text)
+    /* ALIGN(8) is needed because Range Addresses have to be aligned
+       to 8 byte. */
+    . += 1;
+    . = ALIGN(8);
+    /* End OS-Application Data Section Symbol */
+    PROVIDE(ee_etext_${APP_NAME} = . );
+    /* ALIGN(16) the begin of OS_Application data and the following do the
+       trick to move next OS-Application section 16 byte forward (at least) */
+    . += 15;
+    /* Each PMU_PFLASH region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for data region are valid for __copy_table
+     */
+    . = ALIGN(4);
+  } > PMU_PFLASH
+END_EACH_APP
+  /* GENERATED APPLICATION CODE SECTIONS - END */
+
+  /*
+   * C++ exception handling tables.  NOTE: gcc emits .eh_frame
+   * sections when compiling C sources with debugging enabled (-g).
+   * If you can be sure that your final application consists
+   * exclusively of C objects (i.e., no C++ objects), you may use
+   * the -R option of the "strip" and "objcopy" utilities to remove
+   * the .eh_frame section from the executable.
+   */
+  CORE_SEC(.eh_frame) : FLAGS(axl)
+  {
+    *(.gcc_except_table)
+    __EH_FRAME_BEGIN__ = . ;
+    KEEP (*(.eh_frame))
+    __EH_FRAME_END__ = . ;
+    *(.jcr)
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  /*
+   * Constructors and destructors.
+   */
+  CORE_SEC(.ctors) : FLAGS(axl)
+  {
+    __CTOR_LIST__ = . ;
+    LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2);
+    *(.ctors)
+    LONG(0) ;
+    __CTOR_END__ = . ;
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  CORE_SEC(.dtors) : FLAGS(axl)
+  {
+    __DTOR_LIST__ = . ;
+    LONG((__DTOR_END__ - __DTOR_LIST__) / 4 - 2);
+    *(.dtors)
+    LONG(0) ;
+    __DTOR_END__ = . ;
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  CORE_SEC(.sdata2) :
+  {
+    *(.sdata.rodata)
+    *(.sdata.rodata.*)
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  _SMALL_DATA2_ = SIZEOF(CORE_SEC(.sdata2)) ? ADDR(CORE_SEC(.sdata2)) + 32k : (ADDR(CORE_SEC(.sdata2)) & 0xF0000000) + 32k ;
+  __A1_MEM = _SMALL_DATA2_;
+
+  /*
+   * Storage of write-protected data
+   */
+  /* Erika Constant Shared Data */
+  ee_mcglobalc : ALIGN(8)
+  {
+    PROVIDE(ee_mcglobalc_begin = .);
+    KEEP(*(ee_mcglobalc))
+    /* . += 1; */
+    . = ALIGN(8);
+    PROVIDE(ee_mcglobalc_end = .);
+  } > PMU_PFLASH
+
+  CORE_SEC(.rodata) : FLAGS(arl)
+  {
+    PROVIDE(__rodata_start = .);
+
+    *(.rodata)
+    *(.rodata.*)
+    *(.gnu.linkonce.r.*)
+    *(.rodata1)
+    *(.toc)
+    /*
+     * Create the clear and copy tables that tell the startup code
+     * which memory areas to clear and to copy, respectively.
+     */
+    /* make sure that __clear_table do not coincide with the last const data.
+       ALIGN(8) because range addresses have to be 8 bytes aligned */
+    . += 1;
+    . = ALIGN(8);
+    PROVIDE(__clear_table = .) ;
+    LONG(0 + ADDR(CORE_SEC(.bss)));           LONG(SIZEOF(CORE_SEC(.bss)));
+    LONG(0 + ADDR(CORE_SEC(.sbss)));          LONG(SIZEOF(CORE_SEC(.sbss)));
+    LONG(0 + ADDR(CORE_SEC(.zbss)));          LONG(SIZEOF(CORE_SEC(.zbss)));
+    LONG(0 + ADDR(CORE_SEC(.ee_api_bss)));    LONG(SIZEOF(CORE_SEC(.ee_api_bss)));
+    LONG(0 + ADDR(CORE_SEC(.ee_kernel_bss))); LONG(SIZEOF(CORE_SEC(.ee_kernel_bss)));
+/* GENERATED OS APPLICATION CLEAR TABLE - BEGIN */
+FOR_EACH_APP
+    LONG(0 + ADDR(CORE_SEC(.ee_${APP_NAME}_bss))); LONG(SIZEOF(CORE_SEC(.ee_${APP_NAME}_bss)));
+END_EACH_APP
+/* GENERATED OS APPLICATION CLEAR TABLE - END */
+    LONG(-1);                 LONG(-1);
+
+    . = ALIGN(4);
+    PROVIDE(__copy_table = .) ;
+    LONG(LOADADDR(CORE_SEC(.data)));            LONG(0 + ADDR(CORE_SEC(.data)));            LONG(SIZEOF(CORE_SEC(.data)));
+    LONG(LOADADDR(CORE_SEC(.sdata)));           LONG(0 + ADDR(CORE_SEC(.sdata)));           LONG(SIZEOF(CORE_SEC(.sdata)));
+    LONG(LOADADDR(CORE_SEC(.zdata)));           LONG(0 + ADDR(CORE_SEC(.zdata)));           LONG(SIZEOF(CORE_SEC(.zdata)));
+    LONG(LOADADDR(CORE_SEC(.cramtext)));        LONG(0 + ADDR(CORE_SEC(.cramtext)));        LONG(SIZEOF(CORE_SEC(.cramtext)));
+    LONG(LOADADDR(CORE_SEC(.ee_api_data)));     LONG(0 + ADDR(CORE_SEC(.ee_api_data)));     LONG(SIZEOF(CORE_SEC(.ee_api_data)));
+    LONG(LOADADDR(CORE_SEC(.ee_kernel_data)));  LONG(0 + ADDR(CORE_SEC(.ee_kernel_data)));  LONG(SIZEOF(CORE_SEC(.ee_kernel_data)));
+    LONG(LOADADDR(ee_mcglobald));               LONG(0 + ADDR(ee_mcglobald));               LONG(SIZEOF(ee_mcglobald));
+/* GENERATED OS APPLICATION INITIALIZATION TABLE - BEGIN */
+FOR_EACH_APP
+    LONG(LOADADDR(CORE_SEC(.ee_${APP_NAME}_data)));  LONG(0 + ADDR(CORE_SEC(.ee_${APP_NAME}_data)));  LONG(SIZEOF(CORE_SEC(.ee_${APP_NAME}_data)));
+END_EACH_APP
+/* GENERATED OS APPLICATION INITIALIZATION TABLE - END */
+    LONG(-1);                 LONG(-1);                 LONG(-1);
+
+    . = ALIGN(4) ;
+    PROVIDE(ee_stacks_table = .) ;
+    LONG(0 + ADDR(CORE_SEC(.ee_kernel_stack)));      LONG(SIZEOF(CORE_SEC(.ee_kernel_stack)));
+/* GENERATED STACKS - BEGIN */
+FOR_EACH_APP
+    LONG(0 + ADDR(CORE_SEC(.ee_${APP_NAME}_stack))); LONG(SIZEOF(CORE_SEC(.ee_${APP_NAME}_stack)));
+END_EACH_APP
+/* GENERATED STACKS TABLE - END */
+    LONG(-1);                 LONG(-1);
+    /* ALIGN(8) because range addresses have to be 8 bytes aligned */
+    . = ALIGN(8);
+  } > PMU_PFLASH
+
+  /*
+   * Allocate space for absolute addressable sections; this requires that
+   * "int_dspr" starts at a TriCore segment (256M) and points to
+   * some RAM area!  If these conditions are not met by your particular
+   * hardware setup, you should either not use absolute data, or you
+   * must move .zdata*,.zbss*,.bdata*,.bbss* input sections to some appropriate
+   * memory area.
+   */
+  CORE_SEC(.zbss) (NOLOAD) : ALIGN(8) FLAGS(awz)
+  {
+    ZBSS_BASE = . ;
+    *(.zbss)
+    *(.zbss.*)
+    *(.gnu.linkonce.zb.*)
+    *(.bbss)
+    *(.bbss.*)
+    . = ALIGN(8);
+    ZBSS_END = . ;
+  } > DMI_DSPR
+
+  CORE_SEC(.zdata) : ALIGN(8) FLAGS(awzl)
+  {
+    ZDATA_BASE = . ;
+    *(.zrodata)
+    *(.zrodata.*)
+    *(.zdata)
+    *(.zdata.*)
+    *(.gnu.linkonce.z.*)
+    *(.bdata)
+    *(.bdata.*)
+    . = ALIGN(8);
+    ZDATA_END = . ;
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  /*
+   * We're done now with the text part of the executable.  The
+   * following sections are special in that their initial code or
+   * data (if any) must also be stored in said text part of an
+   * executable, but they "live" at completely different addresses
+   * at runtime -- usually in RAM areas.  NOTE: This is not really
+   * necessary if you use a special program loader (e.g., a debugger)
+   * to load a complete executable consisting of code, data, BSS, etc.
+   * into the RAM of some target hardware or a simulator, but it *is*
+   * necessary if you want to burn your application into non-volatile
+   * memories such as EPROM or FLASH.
+   */
+
+  /*
+   * Not initialised data in section ’.sbss’, addressable by small data area pointer (%a0)
+   */
+  CORE_SEC(.sbss) (NOLOAD) : ALIGN(8) FLAGS(aws)
+  {
+    PROVIDE(__sbss_start = .);
+    *(.sbss)
+    _CONFIG_BEGIN_ = .;
+    *(.sbss.CONFIG)
+    _CONFIG_END_ = .;
+    *(.sbss.*)
+    *(.gnu.linkonce.sb.*)
+    PROVIDE(__sbss_end = .);
+    . = ALIGN(8);
+  } > DMI_DSPR
+
+  /*
+   * Initialised data in section ’.sdata’, addressable by small data area pointer (%a0)
+   */
+  CORE_SEC(.sdata) : ALIGN(8) FLAGS(awls)
+  {
+    SDATA_BASE = . ;
+    PROVIDE(__sdata_start = .);
+    *(.sdata)
+    *(.sdata.*)
+    *(.gnu.linkonce.s.*)
+    . = ALIGN(8);
+    SDATA_END = .;
+    PROVIDE(__sdata_end = .);
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  _SMALL_DATA_ = (SIZEOF(CORE_SEC(.sbss)) + SIZEOF(CORE_SEC(.sdata))) ? ADDR(CORE_SEC(.sbss)) + 32k : (ADDR(CORE_SEC(.sbss)) & 0xF0000000) ;
+  __A0_MEM = _SMALL_DATA_ ;
+
+  /*
+   * Not Initialised data.
+   * Allocate space for BSS sections.
+   */
+  CORE_SEC(.bss) (NOLOAD) : ALIGN(8) FLAGS(aw)
+  {
+    BSS_BASE = .;
+    PROVIDE(__bss_start = .);
+    *(.bss)
+    *(.bss.*)
+    *(.gnu.linkonce.b.*)
+    *(COMMON)
+
+    PROVIDE(__bss_end = .);
+    . = ALIGN(8);
+  } > DMI_DSPR /* DMI_DSPR: Local Data RAM (DSPR) */
+
+  /*
+   * Initialised data
+   */
+  CORE_SEC(.data) : ALIGN(8) FLAGS(awl)
+  {
+    DATA_BASE = . ;
+    PROVIDE(__data_start = .);
+    *(.data)
+    *(.data.*)
+    *(.gnu.linkonce.d.*)
+    SORT(CONSTRUCTORS)
+    . = ALIGN(8) ;
+    DATA_END = . ;
+    PROVIDE(__data_end = .);
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  /*
+   * Section for ustack
+   */  
+  CORE_SEC(.ustack) : ALIGN(8)
+  {
+     __USTACK_BEGIN = . ;
+    . += __USTACK_SIZE ;
+    . = ALIGN(8);
+     __USTACK = . ;
+     __USTACK_END = . ;
+  } > DMI_DSPR
+
+  /*
+   * Section for istack
+   */  
+  CORE_SEC(.istack) : ALIGN(8)
+  {
+     __ISTACK_BEGIN = . ;
+    . += __ISTACK_SIZE ;
+    . = ALIGN(8);
+     __ISTACK = . ;
+     __ISTACK_END = . ;
+  } > DMI_DSPR
+
+  /*
+   * Section for heap
+   */  
+  CORE_SEC(.heap) : ALIGN(8)
+  {
+     __HEAP_BEGIN = . ;
+     __HEAP = . ;
+    . += __HEAP_SIZE ;
+    . = ALIGN(8);
+     __HEAP_END = . ;
+  } > DMI_DSPR
+
+  /*
+   * Section for CSA
+   */  
+  CORE_SEC(.csa) : ALIGN(64)
+  {
+     __CSA_BEGIN = . ;
+     __CSA = . ;
+    . += __CSA_SIZE ;
+    . = ALIGN(64);
+     __CSA_END = . ;
+  } > DMI_DSPR
+
+
+  /* ERIKA API Sections */
+
+  /* ERIKA API public unitializated data section */
+  CORE_SEC(.ee_api_bss) :  ALIGN(8) FLAGS(aw) {
+    /* begin ERIKA API public unitializated data section symbol */
+    PROVIDE(ee_sbss_api = .);
+    *(ee_api_bss)
+    PROVIDE(ee_ebss_api = .);
+    . = ALIGN(8);
+  } > DMI_DSPR
+
+  /* ERIKA API public initializated data DATA */
+  CORE_SEC(.ee_api_data) : ALIGN(8) FLAGS(awl) {
+    PROVIDE(ee_sdata_api = .);
+    *(ee_api_data)
+
+    /* ALIGN(8) is needed because Range Addresses have to be aligned
+       to 8 byte. */
+    . += 1;
+    . = ALIGN(8);
+    /* End Erika API Data Section Symbol */
+    PROVIDE(ee_edata_api = .);
+
+    /* ALIGN(16) the begin of OS_Application data and the following do the
+       trick to move next OS-Application section 16 byte forward (at least) */
+    . += 15;
+    /* Each data region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for other data region are valid for
+       __copy_table
+     */
+    . = ALIGN(8);
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  /* ERIKA Kernel Sections */
+
+  /* ERIKA Kernel private unitializated data section */
+  CORE_SEC(.ee_kernel_bss) : ALIGN(8) FLAGS(aw) {
+    /* begin ERIKA Kernel private unitializated data section symbol */
+    PROVIDE(ee_sbss_kernel = .);
+    *(ee_kernel_bss)
+    PROVIDE(ee_ebss_kernel = .);
+  } > DMI_DSPR
+
+  /* ERIKA Kernel private initializated data DATA */
+  CORE_SEC(.ee_kernel_data) : ALIGN(8) FLAGS(awl) {
+    PROVIDE(ee_sdata_kernel = .);
+    *(ee_kernel_data)
+
+    /* ALIGN(8) is needed because Range Addresses have to be aligned
+       to 8 byte. */
+    . += 1;
+    . = ALIGN(8);
+    /* End Erika Kernel Data Section Symbol */
+    PROVIDE(ee_edata_kernel = .);
+
+    /* ALIGN(16) the begin of OS_Application data and the following do the
+       trick to move next OS-Application section 16 byte forward (at least) */
+    . += 15;
+    /* Each data region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for other data region are valid for
+       __copy_table
+     */
+    . = ALIGN(8);
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  /* ERIKA Kenel Stacks (Don't belong to any OS-Applications, special section
+     is needed to handle memory protection and stack monitoring) */
+  CORE_SEC(.ee_kernel_stack) : ALIGN(8) {
+    PROVIDE(ee_sstack_kernel = .);
+    KEEP(*(ee_kernel_stack))
+    /* Put the first OS-Application Section 16 forward respect the system
+       sections to assure cross sections access protection.
+       (Read the Note: at page 9-5 of
+        TC_Architecture_vol1_TC161_TCS_TC16P_TC16E.pdf manual)
+     */
+    . += 15;
+    . = ALIGN(8);
+    /* each range address have to be 8 byte aligned */
+    PROVIDE(ee_estack_kernel = .);
+  } > DMI_DSPR
+
+  /* GENERATED APPLICATION DATA SECTIONS - BEGIN */
+FOR_EACH_APP
+
+  /* Start OS-Application Data Section Symbol.
+                          !!! WARNING !!!
+                    I WILL IGNORE APP_BASE VALUE   */
+  /* ee_ssec_${APP_NAME} = ${APP_BASE}; */
+
+  /* OS-Application Section Private Stack */
+  CORE_SEC(.ee_${APP_NAME}_stack) /* (${APP_BASE}) */ : ALIGN(16) {
+    /* The begin of an OS-Application section "group" is aligned to 16 to
+       ensure space requiremente for cross sections access protection.
+       (Read the Note: at page 9-5 of
+        TC_Architecture_vol1_TC161_TCS_TC16P_TC16E.pdf manual) */
+    /* begin OS-Application Data Section Symbol */
+    PROVIDE(ee_ssec_${APP_NAME} = .);
+    /* The stack is put at the beginning of the application space,
+     * so that stack overflows are caught by the memory */
+    PROVIDE(ee_sstack_${APP_NAME} = .);
+    *(ee_${APP_NAME}_stack)
+    PROVIDE(ee_estack_${APP_NAME} = .);
+  } > DMI_DSPR
+
+  /* OS-Application Section Private Unitializated DATA */
+  CORE_SEC(.ee_${APP_NAME}_bss) : ALIGN(4) {
+    PROVIDE(ee_sbss_${APP_NAME} = .);
+    *(ee_${APP_NAME}_bss)
+    PROVIDE(ee_ebss_${APP_NAME} = .);
+  } > DMI_DSPR
+
+  /* OS-Application Section Private Initializated DATA */
+  CORE_SEC(.ee_${APP_NAME}_data) : ALIGN(4) FLAGS(awl) {
+    PROVIDE(ee_sdata_${APP_NAME} = .);
+    *(ee_${APP_NAME}_data)
+    PROVIDE(ee_edata_${APP_NAME} = .);
+
+    /* ALIGN(8) is needed because Range Addresses have to be aligned
+       to 8 byte. */
+    . += 1;
+    . = ALIGN(8);
+    /* End OS-Application Data Section Symbol */
+    PROVIDE(ee_esec_${APP_NAME} = .);
+
+    /* ALIGN(16) the begin of OS_Application data and the following do the
+       trick to move next OS-Application section 16 byte forward (at least) */
+    . += 15;
+    /* Each data region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for other data region are valid for
+       __copy_table
+     */
+    . = ALIGN(4);
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  /* LOAD DATA Symbol (Unused ADDED for coherency with e200zx implementation) */
+  /* PROVIDE(ee_load_data_${APP_NAME} = LOADADDR(ee_${APP_NAME}_data)); */
+
+  /* Application Dimension Check Condition */
+   _. = ASSERT(((ee_esec_${APP_NAME} <= ee_ssec_${APP_NAME} + ${APP_SIZE}) || (${APP_SIZE} == 0)), "${APP_NAME} size is bigger than reserved space");
+
+END_EACH_APP
+  /* GENERATED APPLICATION DATA SECTIONS - END */
+
+  /* Erika RTOS Multicore global data */
+  ee_mcglobald : ALIGN(8) FLAGS(awl)
+  {
+    PROVIDE(ee_mcglobald_begin = .);
+    KEEP(*(ee_mcglobald))
+    /* . += 1; */
+    . = ALIGN(8);
+    PROVIDE(ee_mcglobald_end = .);
+  } > LMU_SRAM AT> PMU_PFLASH
+
+  /* Special Section Used to Provide RAM, Flash an code Symbols */
+  CORE_SEC(ee_end) (NOLOAD) : {
+    PROVIDE(ee_sall_code      = ADDR(CORE_SEC(.init)));
+    PROVIDE(ee_eall_code      = ADDR(CORE_SEC(.dtors)) + SIZEOF(CORE_SEC(.dtors)));
+
+    PROVIDE(ee_skernel_ram    = __DMI_DSPR_BEGIN);
+    PROVIDE(ee_ekernel_ram    = .);
+    PROVIDE(ee_skernel_code   = ADDR(CORE_SEC(.ee_kernel_text)));
+    PROVIDE(ee_ekernel_code   = ADDR(CORE_SEC(.ee_kernel_text)) + SIZEOF(CORE_SEC(.ee_kernel_text)));
+    PROVIDE(ee_sapi_const     = ADDR(CORE_SEC(.sdata2)));
+    PROVIDE(ee_eapi_const     = ADDR(CORE_SEC(.rodata)) + SIZEOF(CORE_SEC(.rodata)));
+
+    PROVIDE(ee_sapi_ram       = ADDR(CORE_SEC(.ee_api_bss)));
+    PROVIDE(ee_eapi_ram       = ADDR(CORE_SEC(.ee_api_data)) + SIZEOF(CORE_SEC(.ee_api_data)));
+    PROVIDE(ee_sapi_code      = ADDR(CORE_SEC(.ee_api_text)));
+    PROVIDE(ee_eapi_code      = ADDR(CORE_SEC(.ee_api_text)) + SIZEOF(CORE_SEC(.ee_api_text)));
+    /* Each PMU_PFLASH region have to be at least 4 ALIGNED to ensure that LMA
+       region (Load Memory Address) for data region are valid for __copy_table
+     */
+    . = ALIGN(4);
+  } > DMI_DSPR AT> PMU_PFLASH
+
+  /* Make sure CSA, stack and heap addresses are properly aligned. */
+  _. = ASSERT ((__CSA_BEGIN & 0x3f) == 0 , "illegal CSA start address") ;
+  _. = ASSERT ((__CSA_SIZE & 0x3f) == 0 , "illegal CSA size") ;
+  _. = ASSERT ((__ISTACK & 7) == 0 , "ISTACK not doubleword aligned") ;
+  _. = ASSERT ((__USTACK & 7) == 0 , "USTACK not doubleword aligned") ;
+  _. = ASSERT ((__HEAP_END & 7) == 0 , "HEAP not doubleword aligned") ;
+
+  /* Define a default symbol for address 0. */
+  NULL = DEFINED (NULL) ? NULL : 0 ;
+
+  /*
+   * DWARF debug sections.
+   * Symbols in the DWARF debugging sections are relative to the
+   * beginning of the section, so we begin them at 0.
+   */
+  /*
+   * DWARF 1
+   */
+  .comment         0 : { *(.comment) }
+  .debug           0 : { *(.debug) }
+  .line            0 : { *(.line) }
+  /*
+   * GNU DWARF 1 extensions
+   */
+  .debug_srcinfo   0 : { *(.debug_srcinfo) }
+  .debug_sfnames   0 : { *(.debug_sfnames) }
+  /*
+   * DWARF 1.1 and DWARF 2
+   */
+  .debug_aranges   0 : { *(.debug_aranges) }
+  .debug_pubnames  0 : { *(.debug_pubnames) }
+  /*
+   * DWARF 2
+   */
+  .debug_info      0 : { *(.debug_info) }
+  .debug_abbrev    0 : { *(.debug_abbrev) }
+  .debug_line      0 : { *(.debug_line) }
+  .debug_frame     0 : { *(.debug_frame) }
+  .debug_str       0 : { *(.debug_str) }
+  .debug_loc       0 : { *(.debug_loc) }
+  .debug_macinfo   0 : { *(.debug_macinfo) }
+  .debug_ranges    0 : { *(.debug_ranges) }
+  /*
+   * SGI/MIPS DWARF 2 extensions
+   */
+  .debug_weaknames 0 : { *(.debug_weaknames) }
+  .debug_funcnames 0 : { *(.debug_funcnames) }
+  .debug_typenames 0 : { *(.debug_typenames) }
+  .debug_varnames  0 : { *(.debug_varnames) }
+  /*
+   * Optional sections that may only appear when relocating.
+   */
+  /*
+   * Optional sections that may appear regardless of relocating.
+   */
+  .version_info    0 : { *(.version_info) }
+  .boffs           0 : { KEEP (*(.boffs)) }
+}
+

@@ -1,0 +1,1678 @@
+Archive member included because of file (symbol)
+
+libee.a(ee_tc_trapvec.o)      obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o (EE_tc_trap_table)
+libee.a(ee_tc_intvec.o)       obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o (EE_tc_interrupt_table)
+libee.a(ee_tc_context.o)      libee.a(ee_tc_intvec.o) (EE_std_change_context)
+libee.a(ee_terminat.o)        obj/src/code.o (EE_oo_TerminateTask)
+libee.a(ee_thendin.o)         libee.a(ee_tc_context.o) (EE_thread_end_instance)
+libee.a(ee_irqendin.o)        libee.a(ee_tc_intvec.o) (EE_IRQ_end_instance)
+libee.a(ee_tstub.o)           obj/eecfg.o (EE_oo_thread_stub)
+libee.a(ee_lookup.o)          libee.a(ee_thendin.o) (EE_oo_IRQ_disable_count)
+libee.a(ee_rq_exchg.o)        libee.a(ee_thendin.o) (EE_rq2stk_exchange)
+libee.a(ee_rq_inser.o)        libee.a(ee_thendin.o) (EE_rq_insert)
+libee.a(ee_startos.o)         obj/src/code.o (EE_oo_StartOS)
+libee.a(ee_lockres.o)         obj/src/code.o (EE_oo_GetResource)
+libee.a(ee_ulockres.o)        obj/src/code.o (EE_oo_ReleaseResource)
+libee.a(ee_altick.o)          libee.a(ee_startos.o) (EE_oo_counter_object_insert)
+libee.a(ee_evclear.o)         obj/src/code.o (EE_oo_ClearEvent)
+libee.a(ee_evset.o)           obj/src/code.o (EE_oo_SetEvent)
+libee.a(ee_evwait.o)          obj/src/code.o (EE_oo_WaitEvent)
+libee.a(ee_tc2Yx_system.o)    libee.a(ee_startos.o) (EE_tc_safety_endinit_disable)
+libee.a(ee_hal_structs.o)     libee.a(ee_tc_intvec.o) (EE_std_endcycle_next_tid)
+libee.a(ee_tc_oo.o)           libee.a(ee_terminat.o) (EE_hal_terminate_task)
+libee.a(ee_tnterm.o)          libee.a(ee_tc_oo.o) (EE_thread_not_terminated)
+libee.a(ee_ulockallres.o)     libee.a(ee_tnterm.o) (EE_oo_release_all_resources)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+                              obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o (_exit)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .data          0x00000000        0x0 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .bss           0x00000000        0x0 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .bmhd1         0x00000000       0x20 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .bmhd0         0x00000000       0x20 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .text          0x00000000        0x0 obj/eecfg.o
+ .data          0x00000000        0x0 obj/eecfg.o
+ .bss           0x00000000        0x0 obj/eecfg.o
+ .rodata.EE_hal_thread_body
+                0x00000000        0x8 obj/eecfg.o
+ .rodata.EE_counter_hw_ROM
+                0x00000000        0x4 obj/eecfg.o
+ .text          0x00000000        0x0 obj/src/code.o
+ .data          0x00000000        0x0 obj/src/code.o
+ .bss           0x00000000        0x0 obj/src/code.o
+ .text          0x00000000        0x0 libee.a(ee_tc_trapvec.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_trapvec.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_trapvec.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_intvec.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_intvec.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_intvec.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_context.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_context.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_context.o)
+ .text          0x00000000        0x0 libee.a(ee_terminat.o)
+ .data          0x00000000        0x0 libee.a(ee_terminat.o)
+ .bss           0x00000000        0x0 libee.a(ee_terminat.o)
+ .text          0x00000000        0x0 libee.a(ee_thendin.o)
+ .data          0x00000000        0x0 libee.a(ee_thendin.o)
+ .bss           0x00000000        0x0 libee.a(ee_thendin.o)
+ .text          0x00000000        0x0 libee.a(ee_irqendin.o)
+ .data          0x00000000        0x0 libee.a(ee_irqendin.o)
+ .bss           0x00000000        0x0 libee.a(ee_irqendin.o)
+ .text          0x00000000        0x0 libee.a(ee_tstub.o)
+ .data          0x00000000        0x0 libee.a(ee_tstub.o)
+ .bss           0x00000000        0x0 libee.a(ee_tstub.o)
+ .text          0x00000000        0x0 libee.a(ee_lookup.o)
+ .data          0x00000000        0x0 libee.a(ee_lookup.o)
+ .bss           0x00000000        0x0 libee.a(ee_lookup.o)
+ .bss.EE_oo_IRQ_suspend_status
+                0x00000000        0x4 libee.a(ee_lookup.o)
+ .text          0x00000000        0x0 libee.a(ee_rq_exchg.o)
+ .data          0x00000000        0x0 libee.a(ee_rq_exchg.o)
+ .bss           0x00000000        0x0 libee.a(ee_rq_exchg.o)
+ .text          0x00000000        0x0 libee.a(ee_rq_inser.o)
+ .data          0x00000000        0x0 libee.a(ee_rq_inser.o)
+ .bss           0x00000000        0x0 libee.a(ee_rq_inser.o)
+ .text          0x00000000        0x0 libee.a(ee_startos.o)
+ .data          0x00000000        0x0 libee.a(ee_startos.o)
+ .bss           0x00000000        0x0 libee.a(ee_startos.o)
+ .text          0x00000000        0x0 libee.a(ee_lockres.o)
+ .data          0x00000000        0x0 libee.a(ee_lockres.o)
+ .bss           0x00000000        0x0 libee.a(ee_lockres.o)
+ .text          0x00000000        0x0 libee.a(ee_ulockres.o)
+ .data          0x00000000        0x0 libee.a(ee_ulockres.o)
+ .bss           0x00000000        0x0 libee.a(ee_ulockres.o)
+ .text          0x00000000        0x0 libee.a(ee_altick.o)
+ .data          0x00000000        0x0 libee.a(ee_altick.o)
+ .bss           0x00000000        0x0 libee.a(ee_altick.o)
+ .text.EE_oo_IncrementCounter
+                0x00000000       0x14 libee.a(ee_altick.o)
+ .text          0x00000000        0x0 libee.a(ee_evclear.o)
+ .data          0x00000000        0x0 libee.a(ee_evclear.o)
+ .bss           0x00000000        0x0 libee.a(ee_evclear.o)
+ .text          0x00000000        0x0 libee.a(ee_evset.o)
+ .data          0x00000000        0x0 libee.a(ee_evset.o)
+ .bss           0x00000000        0x0 libee.a(ee_evset.o)
+ .text          0x00000000        0x0 libee.a(ee_evwait.o)
+ .data          0x00000000        0x0 libee.a(ee_evwait.o)
+ .bss           0x00000000        0x0 libee.a(ee_evwait.o)
+ .text          0x00000000        0x0 libee.a(ee_tc2Yx_system.o)
+ .data          0x00000000        0x0 libee.a(ee_tc2Yx_system.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc2Yx_system.o)
+ .text.EE_tc_endint_disable
+                0x00000000       0x20 libee.a(ee_tc2Yx_system.o)
+ .text.EE_tc_endint_enable
+                0x00000000       0x20 libee.a(ee_tc2Yx_system.o)
+ .text.EE_tc2Yx_get_clock
+                0x00000000       0x80 libee.a(ee_tc2Yx_system.o)
+ .text.EE_tc2Yx_stm_set_sr1
+                0x00000000       0xd0 libee.a(ee_tc2Yx_system.o)
+ .text.EE_tc2Yx_stm_set_sr1_next_match
+                0x00000000       0x6e libee.a(ee_tc2Yx_system.o)
+ .text.EE_tc2Yx_delay
+                0x00000000       0x60 libee.a(ee_tc2Yx_system.o)
+ .text          0x00000000        0x0 libee.a(ee_hal_structs.o)
+ .data          0x00000000        0x0 libee.a(ee_hal_structs.o)
+ .bss           0x00000000        0x0 libee.a(ee_hal_structs.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_oo.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_oo.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_oo.o)
+ .text          0x00000000        0x0 libee.a(ee_tnterm.o)
+ .data          0x00000000        0x0 libee.a(ee_tnterm.o)
+ .bss           0x00000000        0x0 libee.a(ee_tnterm.o)
+ .text          0x00000000        0x0 libee.a(ee_ulockallres.o)
+ .data          0x00000000        0x0 libee.a(ee_ulockallres.o)
+ .bss           0x00000000        0x0 libee.a(ee_ulockallres.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .bss           0x00000000        0x8 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+----- BEGIN EXTENDED MAP LISTING -----
+
+>>> Linker and link run information
+
+Linker version: GNU ld version (GNU Binutils) 2.20 (TriCore) using BFD version (GNU Binutils) 2.20 (v2.3), Tool Version v2.7
+Name of linker executable: c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/bin/ld.exe
+Date of link run: Tue Nov 08 19:30:34 2016
+Name of linker map file: tc29x.map
+
+>>> Symbols (global (S = g) and static (S = l); sorted by address)
+
+==============================================================================================================================================================================================================
+Start      End        Size S Name                                        Memory   O-Sec            I-Sec                                               Input object                                           
+==============================================================================================================================================================================================================
+0x00000000 0x00000000    0 g NULL                                        *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000000 0x00000000    0 g __HEAP_SIZE                                 *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000000 0x00000000    0 g __ISTACK_SIZE                               *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000001 0x00000001    0 g _.                                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000290 0x00000290    0 g __TRICORE_DERIVATE_MEMORY_MAP__             *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000400 0x00000400    0 g __PMU_PFLASH_STARTUP_SIZE                   *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00002000 0x00002000    0 g __USTACK_SIZE                               *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00004000 0x00004000    0 g __CSA_SIZE                                  *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00004000 0x00004000    0 g __PMU_DFLASH0_1_SIZE                        *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00008000 0x00008000    0 g __BROM_SIZE                                 *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00008000 0x00008000    0 g __LMU_SRAM_SIZE                             *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00008000 0x00008000    0 g __PMI_PSPR_SIZE                             *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00010000 0x00010000    0 g __PMU_DFLASH1_SIZE                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x0001e000 0x0001e000    0 g __DMI_DSPR_SIZE                             *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00100000 0x00100000    0 g __PMU_DFLASH0_SIZE                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x001f0000 0x001f0000    0 g __PMU_PFLASH_SIZE                           *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00200000 0x00200000    0 g __PMU_PFLASH1_SIZE                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x50100000 0x50100000    0 g EE_tc2Yx_cpu2_start                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x60100000 0x60100000    0 g EE_tc2Yx_cpu1_start                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x80000000 0x80000000    0 g __PMU_PFLASH_STARTUP_BEGIN                  *ABS*    *ABS*            *ABS*                                               *ABS*
+0x80004000 0x80004000    0 g __PMU_PFLASH_BEGIN                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x80600000 0x80600000    0 g __PMU_PFLASH1_BEGIN                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x8fff8000 0x8fff8000    0 g __BROM_BEGIN                                *ABS*    *ABS*            *ABS*                                               *ABS*
+0x90000000 0x90000000    0 g __LMU_SRAM_BEGIN                            *ABS*    *ABS*            *ABS*                                               *ABS*
+0xaf000000 0xaf000000    0 g __PMU_DFLASH0_BEGIN                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0xaf100000 0xaf100000    0 g __PMU_DFLASH0_1_BEGIN                       *ABS*    *ABS*            *ABS*                                               *ABS*
+0xaf110000 0xaf110000    0 g __PMU_DFLASH1_BEGIN                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc0000000 0xc0000000    0 g BootModeIndex                               PMI_PSPR .startup         .startup                                            tc29x.elf
+0xc0000000 0xc0000005    6 g _START                                      PMI_PSPR .startup         .startup                                            obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0xc0000000 0xc0000000    0 g __PMI_PSPR_BEGIN                            *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc0000100 0xc0000100    0 g EE_tc_trap_mmu                              PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000100 0xc0000100    0 g EE_tc_trap_table                            PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000120 0xc0000120    0 g EE_tc_trap_protection                       PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000140 0xc0000140    0 g EE_tc_trap_instruction                      PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000160 0xc0000160    0 g EE_tc_trap_context                          PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000180 0xc0000180    0 g EE_tc_trap_bus                              PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc00001a0 0xc00001a0    0 g EE_tc_trap_assertion                        PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc00001c0 0xc00001c0    0 g EE_tc_trap_system                           PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc00001e0 0xc00001e0    0 g EE_tc_trap_nmi                              PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000200 0xc0000200    0 g EE_tc_interrupt_table                       PMI_PSPR .inttab          .inttab                                             ee_tc_intvec.o
+0xc0000220 0xc0000220    0 g EE_tc_isr2_entry_1                          PMI_PSPR .inttab          .inttab                                             ee_tc_intvec.o
+0xc0000240 0xc00002fd  190 g EE_tc_isr2_global_wrapper                   PMI_PSPR .inttab          .inttab                                             ee_tc_intvec.o
+0xc0000300 0xc0000469  362 g EE_tc2Yx_start                              PMI_PSPR .text            .text.EE_tc2Yx_start                                obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0xc000046a 0xc000049d   52 g FuncTask_Alarm1                             PMI_PSPR .text            .text.FuncTask_Alarm1                               obj/src/code.o
+0xc000049e 0xc00004c1   36 g FuncTask_Alarm2                             PMI_PSPR .text            .text.FuncTask_Alarm2                               obj/src/code.o
+0xc00004c2 0xc00004e9   40 g main                                        PMI_PSPR .text            .text.main                                          obj/src/code.o
+0xc00004ea 0xc0000581  152 g EE_std_change_context                       PMI_PSPR .text            .text.EE_std_change_context                         ee_tc_context.o
+0xc0000582 0xc00005d5   84 g EE_oo_TerminateTask                         PMI_PSPR .text            .text.EE_oo_TerminateTask                           ee_terminat.o
+0xc00005d6 0xc00006e9  276 g EE_thread_end_instance                      PMI_PSPR .text            .text.EE_thread_end_instance                        ee_thendin.o
+0xc00006ea 0xc0000783  154 g EE_IRQ_end_instance                         PMI_PSPR .text            .text.EE_IRQ_end_instance                           ee_irqendin.o
+0xc0000784 0xc0000795   18 g EE_IRQ_end_post_stub                        PMI_PSPR .text            .text.EE_IRQ_end_post_stub                          ee_irqendin.o
+0xc0000796 0xc00007a1   12 g EE_oo_thread_stub                           PMI_PSPR .text            .text.EE_oo_thread_stub                             ee_tstub.o
+0xc00007a2 0xc00007cb   42 g EE_rq2stk_exchange                          PMI_PSPR .text            .text.EE_rq2stk_exchange                            ee_rq_exchg.o
+0xc00007cc 0xc0000841  118 g EE_rq_insert                                PMI_PSPR .text            .text.EE_rq_insert                                  ee_rq_inser.o
+0xc0000842 0xc00009a7  358 g EE_oo_StartOS                               PMI_PSPR .text            .text.EE_oo_StartOS                                 ee_startos.o
+0xc00009a8 0xc0000a51  170 g EE_oo_GetResource                           PMI_PSPR .text            .text.EE_oo_GetResource                             ee_lockres.o
+0xc0000a52 0xc0000b7b  298 g EE_oo_ReleaseResource                       PMI_PSPR .text            .text.EE_oo_ReleaseResource                         ee_ulockres.o
+0xc0000b7c 0xc0000c17  156 g EE_oo_counter_object_insert                 PMI_PSPR .text            .text.EE_oo_counter_object_insert                   ee_altick.o
+0xc0000c18 0xc0000e3f  552 g EE_oo_IncrementCounterImplementation        PMI_PSPR .text            .text.EE_oo_IncrementCounterImplementation          ee_altick.o
+0xc0000e40 0xc0000e65   38 g EE_oo_IncrementCounterHardware              PMI_PSPR .text            .text.EE_oo_IncrementCounterHardware                ee_altick.o
+0xc0000e66 0xc0000ec5   96 g EE_oo_ClearEvent                            PMI_PSPR .text            .text.EE_oo_ClearEvent                              ee_evclear.o
+0xc0000ec6 0xc0000fcd  264 g EE_oo_SetEvent                              PMI_PSPR .text            .text.EE_oo_SetEvent                                ee_evset.o
+0xc0000fce 0xc000110d  320 g EE_oo_WaitEvent                             PMI_PSPR .text            .text.EE_oo_WaitEvent                               ee_evwait.o
+0xc000110e 0xc000112d   32 g EE_tc_safety_endinit_disable                PMI_PSPR .text            .text.EE_tc_safety_endinit_disable                  ee_tc2Yx_system.o
+0xc000112e 0xc000114d   32 g EE_tc_safety_endinit_enable                 PMI_PSPR .text            .text.EE_tc_safety_endinit_enable                   ee_tc2Yx_system.o
+0xc000114e 0xc000119b   78 g EE_tc_system_timer_handler                  PMI_PSPR .text            .text.EE_tc_system_timer_handler                    ee_tc2Yx_system.o
+0xc000119c 0xc0001217  124 g EE_tc2Yx_initialize_system_timer            PMI_PSPR .text            .text.EE_tc2Yx_initialize_system_timer              ee_tc2Yx_system.o
+0xc0001218 0xc0001323  268 g EE_tc2Yx_configure_clock                    PMI_PSPR .text            .text.EE_tc2Yx_configure_clock                      ee_tc2Yx_system.o
+0xc0001324 0xc00013cd  170 g EE_tc2Yx_stm_set_clockpersec                PMI_PSPR .text            .text.EE_tc2Yx_stm_set_clockpersec                  ee_tc2Yx_system.o
+0xc00013ce 0xc00013ff   50 l EE_tc_dummy_context                         PMI_PSPR .text            .text.EE_tc_dummy_context                           ee_tc_oo.o
+0xc0001400 0xc000145b   92 g EE_hal_terminate_task                       PMI_PSPR .text            .text.EE_hal_terminate_task                         ee_tc_oo.o
+0xc000145c 0xc0001463    8 g EE_hal_terminate_savestk                    PMI_PSPR .text            .text.EE_hal_terminate_savestk                      ee_tc_oo.o
+0xc0001464 0xc000147b   24 g EE_thread_not_terminated                    PMI_PSPR .text            .text.EE_thread_not_terminated                      ee_tnterm.o
+0xc000147c 0xc00014df  100 g EE_oo_release_all_resources                 PMI_PSPR .text            .text.EE_oo_release_all_resources                   ee_ulockallres.o
+0xc00014e0 0xc00014ef   16 g _exit                                       PMI_PSPR .text            .text._exit                                         libos_exit.o
+0xc00014f0 0xc00014f0    0 g __EH_FRAME_BEGIN__                          PMI_PSPR .ee_api_text     .ee_api_text                                        tc29x.elf
+0xc00014f0 0xc00014f0    0 g __EH_FRAME_END__                            PMI_PSPR .ee_api_text     .ee_api_text                                        tc29x.elf
+0xc0001528 0xc0001528    0 g __CTOR_LIST__                               PMI_PSPR .ctors           .ctors                                              tc29x.elf
+0xc0001530 0xc0001530    0 g __CTOR_END__                                PMI_PSPR .ctors           .ctors                                              tc29x.elf
+0xc0001530 0xc0001530    0 g __DTOR_LIST__                               PMI_PSPR .dtors           .dtors                                              tc29x.elf
+0xc0001538 0xc0001538    0 g __DTOR_END__                                PMI_PSPR .dtors           .dtors                                              tc29x.elf
+0xd0000000 0xd0000007    8 g EE_oo_autostart_alarm_cycle                 DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_cycle                 obj/eecfg.o
+0xd0000000 0xd0000000    0 g SDATA_BASE                                  DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZBSS_BASE                                   DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZBSS_END                                    DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZDATA_BASE                                  DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZDATA_END                                   DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g _CONFIG_BEGIN_                              DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g _CONFIG_END_                                DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g __DMI_DSPR_BEGIN                            *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd0000008 0xd000000f    8 g EE_oo_autostart_alarm_increment             DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_increment             obj/eecfg.o
+0xd0000010 0xd0000017    8 g EE_oo_autostart_alarm_data                  DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_data                  obj/eecfg.o
+0xd0000018 0xd000003f   40 g EE_oo_action_ROM                            DMI_DSPR .rodata          .rodata.EE_oo_action_ROM                            obj/eecfg.o
+0xd0000040 0xd0000057   24 g EE_oo_counter_object_ROM                    DMI_DSPR .rodata          .rodata.EE_oo_counter_object_ROM                    obj/eecfg.o
+0xd0000058 0xd000005f    8 g EE_alarm_ROM                                DMI_DSPR .rodata          .rodata.EE_alarm_ROM                                obj/eecfg.o
+0xd0000060 0xd000006b   12 g EE_counter_ROM                              DMI_DSPR .rodata          .rodata.EE_counter_ROM                              obj/eecfg.o
+0xd000006c 0xd0000073    8 g EE_resource_ceiling                         DMI_DSPR .rodata          .rodata.EE_resource_ceiling                         obj/eecfg.o
+0xd0000074 0xd000007b    8 g EE_th_is_extended                           DMI_DSPR .rodata          .rodata.EE_th_is_extended                           obj/eecfg.o
+0xd000007c 0xd0000083    8 g EE_th_dispatch_prio                         DMI_DSPR .rodata          .rodata.EE_th_dispatch_prio                         obj/eecfg.o
+0xd0000084 0xd000008b    8 g EE_th_ready_prio                            DMI_DSPR .rodata          .rodata.EE_th_ready_prio                            obj/eecfg.o
+0xd000008c 0xd0000093    8 g EE_terminate_real_th_body                   DMI_DSPR .rodata          .rodata.EE_terminate_real_th_body                   obj/eecfg.o
+0xd0000094 0xd000009f   12 g EE_std_thread_tos                           DMI_DSPR .rodata          .rodata.EE_std_thread_tos                           obj/eecfg.o
+0xd00000a0 0xd00000a7    8 l EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE obj/eecfg.o
+0xd00000a8 0xd00000a8    0 g BSS_BASE                                    DMI_DSPR .bss             .bss                                                tc29x.elf
+0xd00000a8 0xd00000ab    4 g EE_ApplicationMode                          DMI_DSPR .bss             .bss.EE_ApplicationMode                             obj/eecfg.o
+0xd00000ac 0xd00000cb   32 g EE_oo_counter_object_RAM                    DMI_DSPR .bss             .bss.EE_oo_counter_object_RAM                       obj/eecfg.o
+0xd00000cc 0xd00000d3    8 g EE_resource_oldceiling                      DMI_DSPR .bss             .bss.EE_resource_oldceiling                         obj/eecfg.o
+0xd00000d4 0xd00000db    8 g EE_resource_locked                          DMI_DSPR .bss             .bss.EE_resource_locked                             obj/eecfg.o
+0xd00000dc 0xd00000e3    8 g EE_th_waswaiting                            DMI_DSPR .bss             .bss.EE_th_waswaiting                               obj/eecfg.o
+0xd00000e4 0xd00000eb    8 g EE_th_event_waitmask                        DMI_DSPR .bss             .bss.EE_th_event_waitmask                           obj/eecfg.o
+0xd00000ec 0xd00000f3    8 g EE_th_event_active                          DMI_DSPR .bss             .bss.EE_th_event_active                             obj/eecfg.o
+0xd00000f4 0xd00000f7    4 g EE_sys_ceiling                              DMI_DSPR .bss             .bss.EE_sys_ceiling                                 obj/eecfg.o
+0xd00000f8 0xd00000ff    8 g EE_terminate_data                           DMI_DSPR .bss             .bss.EE_terminate_data                              obj/eecfg.o
+0xd0000100 0xd000010b   12 g EE_tc_tasks_RA                              DMI_DSPR .bss             .bss.EE_tc_tasks_RA                                 obj/eecfg.o
+0xd000010c 0xd000010f    4 g EE_tc_active_tos                            DMI_DSPR .bss             .bss.EE_tc_active_tos                               obj/eecfg.o
+0xd0000110 0xd0000113    4 g EE_tc_active_utid                           DMI_DSPR .bss             .bss.EE_tc_active_utid                              ee_tc_context.o
+0xd0000114 0xd0000117    4 g EE_oo_IRQ_disable_count                     DMI_DSPR .bss             .bss.EE_oo_IRQ_disable_count                        ee_lookup.o
+0xd0000118 0xd000011b    4 g EE_oo_started                               DMI_DSPR .bss             .bss.EE_oo_started                                  ee_startos.o
+0xd000011c 0xd000011f    4 l EE_tc2Yx_stm_freq_khz                       DMI_DSPR .bss             .bss.EE_tc2Yx_stm_freq_khz                          ee_tc2Yx_system.o
+0xd0000120 0xd0000123    4 g EE_std_endcycle_next_tid                    DMI_DSPR .bss             .bss.EE_std_endcycle_next_tid                       ee_hal_structs.o
+0xd0000124 0xd0000127    4 g EE_IRQ_nesting_level                        DMI_DSPR .bss             .bss.EE_IRQ_nesting_level                           ee_hal_structs.o
+0xd0000128 0xd0000128    0 g DATA_BASE                                   DMI_DSPR .data            .data                                               tc29x.elf
+0xd0000128 0xd000012f    8 g EE_counter_RAM                              DMI_DSPR .data            .data.EE_counter_RAM                                obj/eecfg.o
+0xd0000130 0xd0000137    8 g EE_resource_stack                           DMI_DSPR .data            .data.EE_resource_stack                             obj/eecfg.o
+0xd0000138 0xd000013f    8 g EE_th_resource_last                         DMI_DSPR .data            .data.EE_th_resource_last                           obj/eecfg.o
+0xd0000140 0xd0000147    8 g EE_th_terminate_nextask                     DMI_DSPR .data            .data.EE_th_terminate_nextask                       obj/eecfg.o
+0xd0000148 0xd000014b    4 g EE_rq_first                                 DMI_DSPR .data            .data.EE_rq_first                                   obj/eecfg.o
+0xd000014c 0xd0000153    8 g EE_th_rnact                                 DMI_DSPR .data            .data.EE_th_rnact                                   obj/eecfg.o
+0xd0000154 0xd0000157    4 g EE_stkfirst                                 DMI_DSPR .data            .data.EE_stkfirst                                   obj/eecfg.o
+0xd0000158 0xd000015f    8 g EE_th_next                                  DMI_DSPR .data            .data.EE_th_next                                    obj/eecfg.o
+0xd0000160 0xd0000167    8 g EE_th_status                                DMI_DSPR .data            .data.EE_th_status                                  obj/eecfg.o
+0xd0000168 0xd000016b    4 g EE_tc_IRQ_tos                               DMI_DSPR .data            .data.EE_tc_IRQ_tos                                 obj/eecfg.o
+0xd000016c 0xd0000183   24 g EE_tc_system_tos                            DMI_DSPR .data            .data.EE_tc_system_tos                              obj/eecfg.o
+0xd0000188 0xd0000188    0 g DATA_END                                    DMI_DSPR .data            .data                                               tc29x.elf
+0xd0002188 0xd0002188    0 g __HEAP_END                                  DMI_DSPR .ustack          .ustack                                             tc29x.elf
+0xd0002188 0xd0002188    0 g __ISTACK                                    DMI_DSPR .ustack          .ustack                                             tc29x.elf
+0xd0002188 0xd0002188    0 g __USTACK                                    DMI_DSPR .ustack          .ustack                                             tc29x.elf
+0xd00021c0 0xd00021c0    0 g __CSA_BEGIN                                 DMI_DSPR .csa             .csa                                                tc29x.elf
+0xd00061c0 0xd00061c0    0 g __CSA_END                                   DMI_DSPR .csa             .csa                                                tc29x.elf
+0xd00061f0 0xd00062f3  260 g EE_tc_stack_3                               DMI_DSPR .ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0xd00062f8 0xd00063fb  260 g EE_tc_stack_2                               DMI_DSPR .ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0xd0006400 0xd0006503  260 g EE_tc_stack_1                               DMI_DSPR .ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0xd0008000 0xd0008000    0 g _SMALL_DATA2_                               *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd0008000 0xd0008000    0 g __A1_MEM                                    *ABS*    *ABS*            *ABS*                                               *ABS*
+
+>>> Symbols (global (S = g) and static (S = l); sorted by name)
+
+==============================================================================================================================================================================================================
+Start      End        Size S Name                                        Memory   O-Sec            I-Sec                                               Input object                                           
+==============================================================================================================================================================================================================
+0xd00000a8 0xd00000a8    0 g BSS_BASE                                    DMI_DSPR .bss             .bss                                                tc29x.elf
+0xc0000000 0xc0000000    0 g BootModeIndex                               PMI_PSPR .startup         .startup                                            tc29x.elf
+0xd0000128 0xd0000128    0 g DATA_BASE                                   DMI_DSPR .data            .data                                               tc29x.elf
+0xd0000188 0xd0000188    0 g DATA_END                                    DMI_DSPR .data            .data                                               tc29x.elf
+0xd00000a8 0xd00000ab    4 g EE_ApplicationMode                          DMI_DSPR .bss             .bss.EE_ApplicationMode                             obj/eecfg.o
+0xc00006ea 0xc0000783  154 g EE_IRQ_end_instance                         PMI_PSPR .text            .text.EE_IRQ_end_instance                           ee_irqendin.o
+0xc0000784 0xc0000795   18 g EE_IRQ_end_post_stub                        PMI_PSPR .text            .text.EE_IRQ_end_post_stub                          ee_irqendin.o
+0xd0000124 0xd0000127    4 g EE_IRQ_nesting_level                        DMI_DSPR .bss             .bss.EE_IRQ_nesting_level                           ee_hal_structs.o
+0xd0000058 0xd000005f    8 g EE_alarm_ROM                                DMI_DSPR .rodata          .rodata.EE_alarm_ROM                                obj/eecfg.o
+0xd0000128 0xd000012f    8 g EE_counter_RAM                              DMI_DSPR .data            .data.EE_counter_RAM                                obj/eecfg.o
+0xd0000060 0xd000006b   12 g EE_counter_ROM                              DMI_DSPR .rodata          .rodata.EE_counter_ROM                              obj/eecfg.o
+0xc000145c 0xc0001463    8 g EE_hal_terminate_savestk                    PMI_PSPR .text            .text.EE_hal_terminate_savestk                      ee_tc_oo.o
+0xc0001400 0xc000145b   92 g EE_hal_terminate_task                       PMI_PSPR .text            .text.EE_hal_terminate_task                         ee_tc_oo.o
+0xc0000e66 0xc0000ec5   96 g EE_oo_ClearEvent                            PMI_PSPR .text            .text.EE_oo_ClearEvent                              ee_evclear.o
+0xc00009a8 0xc0000a51  170 g EE_oo_GetResource                           PMI_PSPR .text            .text.EE_oo_GetResource                             ee_lockres.o
+0xd0000114 0xd0000117    4 g EE_oo_IRQ_disable_count                     DMI_DSPR .bss             .bss.EE_oo_IRQ_disable_count                        ee_lookup.o
+0xc0000e40 0xc0000e65   38 g EE_oo_IncrementCounterHardware              PMI_PSPR .text            .text.EE_oo_IncrementCounterHardware                ee_altick.o
+0xc0000c18 0xc0000e3f  552 g EE_oo_IncrementCounterImplementation        PMI_PSPR .text            .text.EE_oo_IncrementCounterImplementation          ee_altick.o
+0xc0000a52 0xc0000b7b  298 g EE_oo_ReleaseResource                       PMI_PSPR .text            .text.EE_oo_ReleaseResource                         ee_ulockres.o
+0xc0000ec6 0xc0000fcd  264 g EE_oo_SetEvent                              PMI_PSPR .text            .text.EE_oo_SetEvent                                ee_evset.o
+0xc0000842 0xc00009a7  358 g EE_oo_StartOS                               PMI_PSPR .text            .text.EE_oo_StartOS                                 ee_startos.o
+0xc0000582 0xc00005d5   84 g EE_oo_TerminateTask                         PMI_PSPR .text            .text.EE_oo_TerminateTask                           ee_terminat.o
+0xc0000fce 0xc000110d  320 g EE_oo_WaitEvent                             PMI_PSPR .text            .text.EE_oo_WaitEvent                               ee_evwait.o
+0xd0000018 0xd000003f   40 g EE_oo_action_ROM                            DMI_DSPR .rodata          .rodata.EE_oo_action_ROM                            obj/eecfg.o
+0xd0000000 0xd0000007    8 g EE_oo_autostart_alarm_cycle                 DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_cycle                 obj/eecfg.o
+0xd0000010 0xd0000017    8 g EE_oo_autostart_alarm_data                  DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_data                  obj/eecfg.o
+0xd0000008 0xd000000f    8 g EE_oo_autostart_alarm_increment             DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_increment             obj/eecfg.o
+0xd00000a0 0xd00000a7    8 l EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE DMI_DSPR .rodata          .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE obj/eecfg.o
+0xd00000ac 0xd00000cb   32 g EE_oo_counter_object_RAM                    DMI_DSPR .bss             .bss.EE_oo_counter_object_RAM                       obj/eecfg.o
+0xd0000040 0xd0000057   24 g EE_oo_counter_object_ROM                    DMI_DSPR .rodata          .rodata.EE_oo_counter_object_ROM                    obj/eecfg.o
+0xc0000b7c 0xc0000c17  156 g EE_oo_counter_object_insert                 PMI_PSPR .text            .text.EE_oo_counter_object_insert                   ee_altick.o
+0xc000147c 0xc00014df  100 g EE_oo_release_all_resources                 PMI_PSPR .text            .text.EE_oo_release_all_resources                   ee_ulockallres.o
+0xd0000118 0xd000011b    4 g EE_oo_started                               DMI_DSPR .bss             .bss.EE_oo_started                                  ee_startos.o
+0xc0000796 0xc00007a1   12 g EE_oo_thread_stub                           PMI_PSPR .text            .text.EE_oo_thread_stub                             ee_tstub.o
+0xd000006c 0xd0000073    8 g EE_resource_ceiling                         DMI_DSPR .rodata          .rodata.EE_resource_ceiling                         obj/eecfg.o
+0xd00000d4 0xd00000db    8 g EE_resource_locked                          DMI_DSPR .bss             .bss.EE_resource_locked                             obj/eecfg.o
+0xd00000cc 0xd00000d3    8 g EE_resource_oldceiling                      DMI_DSPR .bss             .bss.EE_resource_oldceiling                         obj/eecfg.o
+0xd0000130 0xd0000137    8 g EE_resource_stack                           DMI_DSPR .data            .data.EE_resource_stack                             obj/eecfg.o
+0xc00007a2 0xc00007cb   42 g EE_rq2stk_exchange                          PMI_PSPR .text            .text.EE_rq2stk_exchange                            ee_rq_exchg.o
+0xd0000148 0xd000014b    4 g EE_rq_first                                 DMI_DSPR .data            .data.EE_rq_first                                   obj/eecfg.o
+0xc00007cc 0xc0000841  118 g EE_rq_insert                                PMI_PSPR .text            .text.EE_rq_insert                                  ee_rq_inser.o
+0xc00004ea 0xc0000581  152 g EE_std_change_context                       PMI_PSPR .text            .text.EE_std_change_context                         ee_tc_context.o
+0xd0000120 0xd0000123    4 g EE_std_endcycle_next_tid                    DMI_DSPR .bss             .bss.EE_std_endcycle_next_tid                       ee_hal_structs.o
+0xd0000094 0xd000009f   12 g EE_std_thread_tos                           DMI_DSPR .rodata          .rodata.EE_std_thread_tos                           obj/eecfg.o
+0xd0000154 0xd0000157    4 g EE_stkfirst                                 DMI_DSPR .data            .data.EE_stkfirst                                   obj/eecfg.o
+0xd00000f4 0xd00000f7    4 g EE_sys_ceiling                              DMI_DSPR .bss             .bss.EE_sys_ceiling                                 obj/eecfg.o
+0xc0001218 0xc0001323  268 g EE_tc2Yx_configure_clock                    PMI_PSPR .text            .text.EE_tc2Yx_configure_clock                      ee_tc2Yx_system.o
+0x60100000 0x60100000    0 g EE_tc2Yx_cpu1_start                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x50100000 0x50100000    0 g EE_tc2Yx_cpu2_start                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc000119c 0xc0001217  124 g EE_tc2Yx_initialize_system_timer            PMI_PSPR .text            .text.EE_tc2Yx_initialize_system_timer              ee_tc2Yx_system.o
+0xc0000300 0xc0000469  362 g EE_tc2Yx_start                              PMI_PSPR .text            .text.EE_tc2Yx_start                                obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0xd000011c 0xd000011f    4 l EE_tc2Yx_stm_freq_khz                       DMI_DSPR .bss             .bss.EE_tc2Yx_stm_freq_khz                          ee_tc2Yx_system.o
+0xc0001324 0xc00013cd  170 g EE_tc2Yx_stm_set_clockpersec                PMI_PSPR .text            .text.EE_tc2Yx_stm_set_clockpersec                  ee_tc2Yx_system.o
+0xd0000168 0xd000016b    4 g EE_tc_IRQ_tos                               DMI_DSPR .data            .data.EE_tc_IRQ_tos                                 obj/eecfg.o
+0xd000010c 0xd000010f    4 g EE_tc_active_tos                            DMI_DSPR .bss             .bss.EE_tc_active_tos                               obj/eecfg.o
+0xd0000110 0xd0000113    4 g EE_tc_active_utid                           DMI_DSPR .bss             .bss.EE_tc_active_utid                              ee_tc_context.o
+0xc00013ce 0xc00013ff   50 l EE_tc_dummy_context                         PMI_PSPR .text            .text.EE_tc_dummy_context                           ee_tc_oo.o
+0xc0000200 0xc0000200    0 g EE_tc_interrupt_table                       PMI_PSPR .inttab          .inttab                                             ee_tc_intvec.o
+0xc0000220 0xc0000220    0 g EE_tc_isr2_entry_1                          PMI_PSPR .inttab          .inttab                                             ee_tc_intvec.o
+0xc0000240 0xc00002fd  190 g EE_tc_isr2_global_wrapper                   PMI_PSPR .inttab          .inttab                                             ee_tc_intvec.o
+0xc000110e 0xc000112d   32 g EE_tc_safety_endinit_disable                PMI_PSPR .text            .text.EE_tc_safety_endinit_disable                  ee_tc2Yx_system.o
+0xc000112e 0xc000114d   32 g EE_tc_safety_endinit_enable                 PMI_PSPR .text            .text.EE_tc_safety_endinit_enable                   ee_tc2Yx_system.o
+0xd0006400 0xd0006503  260 g EE_tc_stack_1                               DMI_DSPR .ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0xd00062f8 0xd00063fb  260 g EE_tc_stack_2                               DMI_DSPR .ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0xd00061f0 0xd00062f3  260 g EE_tc_stack_3                               DMI_DSPR .ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0xc000114e 0xc000119b   78 g EE_tc_system_timer_handler                  PMI_PSPR .text            .text.EE_tc_system_timer_handler                    ee_tc2Yx_system.o
+0xd000016c 0xd0000183   24 g EE_tc_system_tos                            DMI_DSPR .data            .data.EE_tc_system_tos                              obj/eecfg.o
+0xd0000100 0xd000010b   12 g EE_tc_tasks_RA                              DMI_DSPR .bss             .bss.EE_tc_tasks_RA                                 obj/eecfg.o
+0xc00001a0 0xc00001a0    0 g EE_tc_trap_assertion                        PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000180 0xc0000180    0 g EE_tc_trap_bus                              PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000160 0xc0000160    0 g EE_tc_trap_context                          PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000140 0xc0000140    0 g EE_tc_trap_instruction                      PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000100 0xc0000100    0 g EE_tc_trap_mmu                              PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc00001e0 0xc00001e0    0 g EE_tc_trap_nmi                              PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000120 0xc0000120    0 g EE_tc_trap_protection                       PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc00001c0 0xc00001c0    0 g EE_tc_trap_system                           PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xc0000100 0xc0000100    0 g EE_tc_trap_table                            PMI_PSPR .traptab         .traptab                                            ee_tc_trapvec.o
+0xd00000f8 0xd00000ff    8 g EE_terminate_data                           DMI_DSPR .bss             .bss.EE_terminate_data                              obj/eecfg.o
+0xd000008c 0xd0000093    8 g EE_terminate_real_th_body                   DMI_DSPR .rodata          .rodata.EE_terminate_real_th_body                   obj/eecfg.o
+0xd000007c 0xd0000083    8 g EE_th_dispatch_prio                         DMI_DSPR .rodata          .rodata.EE_th_dispatch_prio                         obj/eecfg.o
+0xd00000ec 0xd00000f3    8 g EE_th_event_active                          DMI_DSPR .bss             .bss.EE_th_event_active                             obj/eecfg.o
+0xd00000e4 0xd00000eb    8 g EE_th_event_waitmask                        DMI_DSPR .bss             .bss.EE_th_event_waitmask                           obj/eecfg.o
+0xd0000074 0xd000007b    8 g EE_th_is_extended                           DMI_DSPR .rodata          .rodata.EE_th_is_extended                           obj/eecfg.o
+0xd0000158 0xd000015f    8 g EE_th_next                                  DMI_DSPR .data            .data.EE_th_next                                    obj/eecfg.o
+0xd0000084 0xd000008b    8 g EE_th_ready_prio                            DMI_DSPR .rodata          .rodata.EE_th_ready_prio                            obj/eecfg.o
+0xd0000138 0xd000013f    8 g EE_th_resource_last                         DMI_DSPR .data            .data.EE_th_resource_last                           obj/eecfg.o
+0xd000014c 0xd0000153    8 g EE_th_rnact                                 DMI_DSPR .data            .data.EE_th_rnact                                   obj/eecfg.o
+0xd0000160 0xd0000167    8 g EE_th_status                                DMI_DSPR .data            .data.EE_th_status                                  obj/eecfg.o
+0xd0000140 0xd0000147    8 g EE_th_terminate_nextask                     DMI_DSPR .data            .data.EE_th_terminate_nextask                       obj/eecfg.o
+0xd00000dc 0xd00000e3    8 g EE_th_waswaiting                            DMI_DSPR .bss             .bss.EE_th_waswaiting                               obj/eecfg.o
+0xc00005d6 0xc00006e9  276 g EE_thread_end_instance                      PMI_PSPR .text            .text.EE_thread_end_instance                        ee_thendin.o
+0xc0001464 0xc000147b   24 g EE_thread_not_terminated                    PMI_PSPR .text            .text.EE_thread_not_terminated                      ee_tnterm.o
+0xc000046a 0xc000049d   52 g FuncTask_Alarm1                             PMI_PSPR .text            .text.FuncTask_Alarm1                               obj/src/code.o
+0xc000049e 0xc00004c1   36 g FuncTask_Alarm2                             PMI_PSPR .text            .text.FuncTask_Alarm2                               obj/src/code.o
+0x00000000 0x00000000    0 g NULL                                        *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd0000000 0xd0000000    0 g SDATA_BASE                                  DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZBSS_BASE                                   DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZBSS_END                                    DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZDATA_BASE                                  DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g ZDATA_END                                   DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0x00000001 0x00000001    0 g _.                                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd0000000 0xd0000000    0 g _CONFIG_BEGIN_                              DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0000000 0xd0000000    0 g _CONFIG_END_                                DMI_DSPR .rodata          .rodata                                             tc29x.elf
+0xd0008000 0xd0008000    0 g _SMALL_DATA2_                               *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc0000000 0xc0000005    6 g _START                                      PMI_PSPR .startup         .startup                                            obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0xd0008000 0xd0008000    0 g __A1_MEM                                    *ABS*    *ABS*            *ABS*                                               *ABS*
+0x8fff8000 0x8fff8000    0 g __BROM_BEGIN                                *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00008000 0x00008000    0 g __BROM_SIZE                                 *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd00021c0 0xd00021c0    0 g __CSA_BEGIN                                 DMI_DSPR .csa             .csa                                                tc29x.elf
+0xd00061c0 0xd00061c0    0 g __CSA_END                                   DMI_DSPR .csa             .csa                                                tc29x.elf
+0x00004000 0x00004000    0 g __CSA_SIZE                                  *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc0001530 0xc0001530    0 g __CTOR_END__                                PMI_PSPR .ctors           .ctors                                              tc29x.elf
+0xc0001528 0xc0001528    0 g __CTOR_LIST__                               PMI_PSPR .ctors           .ctors                                              tc29x.elf
+0xd0000000 0xd0000000    0 g __DMI_DSPR_BEGIN                            *ABS*    *ABS*            *ABS*                                               *ABS*
+0x0001e000 0x0001e000    0 g __DMI_DSPR_SIZE                             *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc0001538 0xc0001538    0 g __DTOR_END__                                PMI_PSPR .dtors           .dtors                                              tc29x.elf
+0xc0001530 0xc0001530    0 g __DTOR_LIST__                               PMI_PSPR .dtors           .dtors                                              tc29x.elf
+0xc00014f0 0xc00014f0    0 g __EH_FRAME_BEGIN__                          PMI_PSPR .ee_api_text     .ee_api_text                                        tc29x.elf
+0xc00014f0 0xc00014f0    0 g __EH_FRAME_END__                            PMI_PSPR .ee_api_text     .ee_api_text                                        tc29x.elf
+0xd0002188 0xd0002188    0 g __HEAP_END                                  DMI_DSPR .ustack          .ustack                                             tc29x.elf
+0x00000000 0x00000000    0 g __HEAP_SIZE                                 *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd0002188 0xd0002188    0 g __ISTACK                                    DMI_DSPR .ustack          .ustack                                             tc29x.elf
+0x00000000 0x00000000    0 g __ISTACK_SIZE                               *ABS*    *ABS*            *ABS*                                               *ABS*
+0x90000000 0x90000000    0 g __LMU_SRAM_BEGIN                            *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00008000 0x00008000    0 g __LMU_SRAM_SIZE                             *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc0000000 0xc0000000    0 g __PMI_PSPR_BEGIN                            *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00008000 0x00008000    0 g __PMI_PSPR_SIZE                             *ABS*    *ABS*            *ABS*                                               *ABS*
+0xaf100000 0xaf100000    0 g __PMU_DFLASH0_1_BEGIN                       *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00004000 0x00004000    0 g __PMU_DFLASH0_1_SIZE                        *ABS*    *ABS*            *ABS*                                               *ABS*
+0xaf000000 0xaf000000    0 g __PMU_DFLASH0_BEGIN                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00100000 0x00100000    0 g __PMU_DFLASH0_SIZE                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0xaf110000 0xaf110000    0 g __PMU_DFLASH1_BEGIN                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00010000 0x00010000    0 g __PMU_DFLASH1_SIZE                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x80600000 0x80600000    0 g __PMU_PFLASH1_BEGIN                         *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00200000 0x00200000    0 g __PMU_PFLASH1_SIZE                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x80004000 0x80004000    0 g __PMU_PFLASH_BEGIN                          *ABS*    *ABS*            *ABS*                                               *ABS*
+0x001f0000 0x001f0000    0 g __PMU_PFLASH_SIZE                           *ABS*    *ABS*            *ABS*                                               *ABS*
+0x80000000 0x80000000    0 g __PMU_PFLASH_STARTUP_BEGIN                  *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000400 0x00000400    0 g __PMU_PFLASH_STARTUP_SIZE                   *ABS*    *ABS*            *ABS*                                               *ABS*
+0x00000290 0x00000290    0 g __TRICORE_DERIVATE_MEMORY_MAP__             *ABS*    *ABS*            *ABS*                                               *ABS*
+0xd0002188 0xd0002188    0 g __USTACK                                    DMI_DSPR .ustack          .ustack                                             tc29x.elf
+0x00002000 0x00002000    0 g __USTACK_SIZE                               *ABS*    *ABS*            *ABS*                                               *ABS*
+0xc00014e0 0xc00014ef   16 g _exit                                       PMI_PSPR .text            .text._exit                                         libos_exit.o
+0xc00004c2 0xc00004e9   40 g main                                        PMI_PSPR .text            .text.main                                          obj/src/code.o
+
+
+----- END EXTENDED MAP LISTING -----
+
+
+Memory Configuration
+
+Name             Origin             Length             Used               Free               Attributes
+PMU_PFLASH_STARTUP 0x80000000         0x00000400         0x00000000         0x00000400         xr !p
+PMU_PFLASH       0x80000400         0x001f3c00         0x00000000         0x001f3c00         xr !p
+PMU_PFLASH1      0x80200000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFLASH2      0x80400000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFLASH3      0x80600000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_DFLASH0      0xaf000000         0x00100000         0x00000000         0x00100000         r !xp
+PMU_DFLASH0_1    0xaf100000         0x00004000         0x00000000         0x00004000         r !xp
+PMU_DFLASH1      0xaf110000         0x00010000         0x00000000         0x00010000         r !xp
+BROM             0x8fff8000         0x00008000         0x00000000         0x00008000         xr !p
+PMI_PSPR         0xc0000000         0x00008000         0x00001538         0x00006ac8         xw !p
+DMI_DSPR         0xd0000000         0x0001e000         0x00006518         0x00017ae8         w !xp
+LMU_SRAM         0x90000000         0x00008000         0x00000000         0x00008000         w !xp
+*default*        0x00000000         0xffffffff         0x00020435         0xfffdfbca
+
+Linker script and memory map
+
+                0x00002000                __USTACK_SIZE = 0x2000
+                0x00004000                __CSA_SIZE = 0x4000
+LOAD obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+LOAD obj/eecfg.o
+LOAD obj/src/code.o
+LOAD libee.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double\libgcc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libm.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double\libgcc.a
+                0x60100000                EE_tc2Yx_cpu1_start = 0x60100000
+                0x50100000                EE_tc2Yx_cpu2_start = 0x50100000
+                0x00000290                __TRICORE_DERIVATE_MEMORY_MAP__ = 0x290
+                0x80000000                __PMU_PFLASH_STARTUP_BEGIN = 0x80000000
+                0x00000400                __PMU_PFLASH_STARTUP_SIZE = 0x400
+                0x80004000                __PMU_PFLASH_BEGIN = 0x80004000
+                0x001f0000                __PMU_PFLASH_SIZE = 0x1f0000
+                0x80200000                __PMU_PFLASH1_BEGIN = 0x80200000
+                0x00200000                __PMU_PFLASH1_SIZE = 0x200000
+                0x80400000                __PMU_PFLASH1_BEGIN = 0x80400000
+                0x00200000                __PMU_PFLASH1_SIZE = 0x200000
+                0x80600000                __PMU_PFLASH1_BEGIN = 0x80600000
+                0x00200000                __PMU_PFLASH1_SIZE = 0x200000
+                0xaf000000                __PMU_DFLASH0_BEGIN = 0xaf000000
+                0x00100000                __PMU_DFLASH0_SIZE = 0x100000
+                0xaf100000                __PMU_DFLASH0_1_BEGIN = 0xaf100000
+                0x00004000                __PMU_DFLASH0_1_SIZE = 0x4000
+                0xaf110000                __PMU_DFLASH1_BEGIN = 0xaf110000
+                0x00010000                __PMU_DFLASH1_SIZE = 0x10000
+                0x8fff8000                __BROM_BEGIN = 0x8fff8000
+                0x00008000                __BROM_SIZE = 0x8000
+                0xc0000000                __PMI_PSPR_BEGIN = 0xc0000000
+                0x00008000                __PMI_PSPR_SIZE = 0x8000
+                0xd0000000                __DMI_DSPR_BEGIN = 0xd0000000
+                0x0001e000                __DMI_DSPR_SIZE = 0x1e000
+                0x90000000                __LMU_SRAM_BEGIN = 0x90000000
+                0x00008000                __LMU_SRAM_SIZE = 0x8000
+                [0x00004000]                __CSA_SIZE = DEFINED (__CSA_SIZE)?__CSA_SIZE:0x2000
+                [0x00002000]                __USTACK_SIZE = DEFINED (__USTACK_SIZE)?__USTACK_SIZE:0x800
+                [0x00000000]                __ISTACK_SIZE = DEFINED (__ISTACK_SIZE)?__ISTACK_SIZE:0x0
+                [0x00000000]                __HEAP_SIZE = DEFINED (__HEAP_SIZE)?__HEAP_SIZE:0x0
+
+.startup        memory region -> PMI_PSPR
+                0xc0000000        0x8
+                0xc0000000                BootModeIndex = .
+                0xc0000000                PROVIDE (__startup_code_start, .)
+ *(*.EE_tc2Yx_cpu1_start)
+ *(*.EE_tc2Yx_cpu2_start)
+ *(.startup)
+ .startup       0xc0000000        0x6 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                0xc0000000                _START
+ *(ee_kernel_start)
+                0xc0000008                . = ALIGN (0x8)
+ *fill*         0xc0000006        0x2 00
+                0xc0000008                PROVIDE (__startup_code_end, .)
+
+.init           memory region -> PMI_PSPR
+                0xc0000008        0x0
+ *(.init)
+ *(.fini)
+                0xc0000008                . = ALIGN (0x8)
+
+.cramtext       memory region -> PMI_PSPR
+                0xc0000008        0x0
+ *(.cramtext)
+ *(.cramtext.*)
+                0xc0000008                . = ALIGN (0x8)
+
+.traptab        memory region -> PMI_PSPR
+                0xc0000100      0x100
+                0xc0000100                PROVIDE (__traptab_start, .)
+ *(.traptab)
+ .traptab       0xc0000100      0x100 libee.a(ee_tc_trapvec.o)
+                0xc0000100                EE_tc_trap_mmu
+                0xc0000100                EE_tc_trap_table
+                0xc0000120                EE_tc_trap_protection
+                0xc0000140                EE_tc_trap_instruction
+                0xc0000160                EE_tc_trap_context
+                0xc0000180                EE_tc_trap_bus
+                0xc00001a0                EE_tc_trap_assertion
+                0xc00001c0                EE_tc_trap_system
+                0xc00001e0                EE_tc_trap_nmi
+ *(.traptab.*)
+                0xc0000200                . = ALIGN (0x8)
+                0xc0000200                PROVIDE (__traptab_end, .)
+
+.inttab         memory region -> PMI_PSPR
+                0xc0000200      0x100
+                0xc0000200                PROVIDE (__inttab_start, .)
+ *(.inttab)
+ .inttab        0xc0000200      0x100 libee.a(ee_tc_intvec.o)
+                0xc0000200                EE_tc_interrupt_table
+                0xc0000220                EE_tc_isr2_entry_1
+                0xc0000240                EE_tc_isr2_global_wrapper
+ *(.*.inttab.*)
+                0xc0000300                . = ALIGN (0x8)
+                0xc0000300                PROVIDE (__inttab_end, .)
+
+ee_mcglobalt    memory region -> PMI_PSPR
+                0xc0000300        0x0
+                0xc0000300                PROVIDE (ee_mcglobalt_begin, .)
+ *(*.StartupHook)
+ *(*.ErrorHook)
+ *(*.ShutdownHook)
+ *(*.ProtectionHook)
+ *(ee_mcglobalt)
+                0xc0000300                . = ALIGN (0x8)
+                0xc0000300                PROVIDE (ee_mcglobalt_end, .)
+
+.text           memory region -> PMI_PSPR
+                0xc0000300     0x11f0
+                0xc0000300                PROVIDE (__text_start, .)
+ *(.text)
+ *(.text.*)
+ .text.EE_tc2Yx_start
+                0xc0000300      0x16a obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                0xc0000300                EE_tc2Yx_start
+ .text.FuncTask_Alarm1
+                0xc000046a       0x34 obj/src/code.o
+                0xc000046a                FuncTask_Alarm1
+ .text.FuncTask_Alarm2
+                0xc000049e       0x24 obj/src/code.o
+                0xc000049e                FuncTask_Alarm2
+ .text.main     0xc00004c2       0x28 obj/src/code.o
+                0xc00004c2                main
+ .text.EE_std_change_context
+                0xc00004ea       0x98 libee.a(ee_tc_context.o)
+                0xc00004ea                EE_std_change_context
+ .text.EE_oo_TerminateTask
+                0xc0000582       0x54 libee.a(ee_terminat.o)
+                0xc0000582                EE_oo_TerminateTask
+ .text.EE_thread_end_instance
+                0xc00005d6      0x114 libee.a(ee_thendin.o)
+                0xc00005d6                EE_thread_end_instance
+ .text.EE_IRQ_end_instance
+                0xc00006ea       0x9a libee.a(ee_irqendin.o)
+                0xc00006ea                EE_IRQ_end_instance
+ .text.EE_IRQ_end_post_stub
+                0xc0000784       0x12 libee.a(ee_irqendin.o)
+                0xc0000784                EE_IRQ_end_post_stub
+ .text.EE_oo_thread_stub
+                0xc0000796        0xc libee.a(ee_tstub.o)
+                0xc0000796                EE_oo_thread_stub
+ .text.EE_rq2stk_exchange
+                0xc00007a2       0x2a libee.a(ee_rq_exchg.o)
+                0xc00007a2                EE_rq2stk_exchange
+ .text.EE_rq_insert
+                0xc00007cc       0x76 libee.a(ee_rq_inser.o)
+                0xc00007cc                EE_rq_insert
+ .text.EE_oo_StartOS
+                0xc0000842      0x166 libee.a(ee_startos.o)
+                0xc0000842                EE_oo_StartOS
+ .text.EE_oo_GetResource
+                0xc00009a8       0xaa libee.a(ee_lockres.o)
+                0xc00009a8                EE_oo_GetResource
+ .text.EE_oo_ReleaseResource
+                0xc0000a52      0x12a libee.a(ee_ulockres.o)
+                0xc0000a52                EE_oo_ReleaseResource
+ .text.EE_oo_counter_object_insert
+                0xc0000b7c       0x9c libee.a(ee_altick.o)
+                0xc0000b7c                EE_oo_counter_object_insert
+ .text.EE_oo_IncrementCounterImplementation
+                0xc0000c18      0x228 libee.a(ee_altick.o)
+                0xc0000c18                EE_oo_IncrementCounterImplementation
+ .text.EE_oo_IncrementCounterHardware
+                0xc0000e40       0x26 libee.a(ee_altick.o)
+                0xc0000e40                EE_oo_IncrementCounterHardware
+ .text.EE_oo_ClearEvent
+                0xc0000e66       0x60 libee.a(ee_evclear.o)
+                0xc0000e66                EE_oo_ClearEvent
+ .text.EE_oo_SetEvent
+                0xc0000ec6      0x108 libee.a(ee_evset.o)
+                0xc0000ec6                EE_oo_SetEvent
+ .text.EE_oo_WaitEvent
+                0xc0000fce      0x140 libee.a(ee_evwait.o)
+                0xc0000fce                EE_oo_WaitEvent
+ .text.EE_tc_safety_endinit_disable
+                0xc000110e       0x20 libee.a(ee_tc2Yx_system.o)
+                0xc000110e                EE_tc_safety_endinit_disable
+ .text.EE_tc_safety_endinit_enable
+                0xc000112e       0x20 libee.a(ee_tc2Yx_system.o)
+                0xc000112e                EE_tc_safety_endinit_enable
+ .text.EE_tc_system_timer_handler
+                0xc000114e       0x4e libee.a(ee_tc2Yx_system.o)
+                0xc000114e                EE_tc_system_timer_handler
+ .text.EE_tc2Yx_initialize_system_timer
+                0xc000119c       0x7c libee.a(ee_tc2Yx_system.o)
+                0xc000119c                EE_tc2Yx_initialize_system_timer
+ .text.EE_tc2Yx_configure_clock
+                0xc0001218      0x10c libee.a(ee_tc2Yx_system.o)
+                0xc0001218                EE_tc2Yx_configure_clock
+ .text.EE_tc2Yx_stm_set_clockpersec
+                0xc0001324       0xaa libee.a(ee_tc2Yx_system.o)
+                0xc0001324                EE_tc2Yx_stm_set_clockpersec
+ .text.EE_tc_dummy_context
+                0xc00013ce       0x32 libee.a(ee_tc_oo.o)
+ .text.EE_hal_terminate_task
+                0xc0001400       0x5c libee.a(ee_tc_oo.o)
+                0xc0001400                EE_hal_terminate_task
+ .text.EE_hal_terminate_savestk
+                0xc000145c        0x8 libee.a(ee_tc_oo.o)
+                0xc000145c                EE_hal_terminate_savestk
+ .text.EE_thread_not_terminated
+                0xc0001464       0x18 libee.a(ee_tnterm.o)
+                0xc0001464                EE_thread_not_terminated
+ .text.EE_oo_release_all_resources
+                0xc000147c       0x64 libee.a(ee_ulockallres.o)
+                0xc000147c                EE_oo_release_all_resources
+ .text._exit    0xc00014e0       0x10 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+                0xc00014e0                _exit
+ *(.gnu.linkonce.t.*)
+ *(.gnu.warning)
+                0xc00014f0                . = ALIGN (0x8)
+
+.eh_frame       memory region -> PMI_PSPR
+                0xc00014f0        0x0
+ *(.gcc_except_table)
+                0xc00014f0                __EH_FRAME_BEGIN__ = .
+ *(.eh_frame)
+                0xc00014f0                __EH_FRAME_END__ = .
+ *(.jcr)
+                0xc00014f0                . = ALIGN (0x8)
+
+.ee_api_text    memory region -> PMI_PSPR
+                0xc00014f0       0x18
+                0xc00014f0                PROVIDE (ee_stext_api, .)
+ *(ee_api_text)
+                0xc00014f1                . = (. + 0x1)
+ *fill*         0xc00014f0        0x1 00
+                0xc00014f8                . = ALIGN (0x8)
+ *fill*         0xc00014f1        0x7 00
+                0xc00014f8                PROVIDE (ee_etext_api, .)
+                0xc0001507                . = (. + 0xf)
+ *fill*         0xc00014f8        0xf 00
+                0xc0001508                . = ALIGN (0x8)
+ *fill*         0xc0001507        0x1 00
+
+.ee_kernel_text memory region -> PMI_PSPR
+                0xc0001510       0x18
+                0xc0001510                PROVIDE (ee_stext_kernel, .)
+ *(ee_kernel_text)
+                0xc0001511                . = (. + 0x1)
+ *fill*         0xc0001510        0x1 00
+                0xc0001518                . = ALIGN (0x8)
+ *fill*         0xc0001511        0x7 00
+                0xc0001518                PROVIDE (ee_etext_kernel, .)
+                0xc0001527                . = (. + 0xf)
+ *fill*         0xc0001518        0xf 00
+                0xc0001528                . = ALIGN (0x8)
+ *fill*         0xc0001527        0x1 00
+
+.ctors          memory region -> PMI_PSPR
+                0xc0001528        0x8
+                0xc0001528                __CTOR_LIST__ = .
+                0xc0001528        0x4 LONG 0x0 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
+ *(.ctors)
+                0xc000152c        0x4 LONG 0x0
+                0xc0001530                __CTOR_END__ = .
+                0xc0001530                . = ALIGN (0x8)
+
+.dtors          memory region -> PMI_PSPR
+                0xc0001530        0x8
+                0xc0001530                __DTOR_LIST__ = .
+                0xc0001530        0x4 LONG 0x0 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
+ *(.dtors)
+                0xc0001534        0x4 LONG 0x0
+                0xc0001538                __DTOR_END__ = .
+                0xc0001538                . = ALIGN (0x8)
+
+.zbss           memory region -> DMI_DSPR
+                0xd0000000        0x0
+                0xd0000000                ZBSS_BASE = .
+ *(.zbss)
+ *(.zbss.*)
+ *(.gnu.linkonce.zb.*)
+ *(.bbss)
+ *(.bbss.*)
+                0xd0000000                . = ALIGN (0x8)
+                0xd0000000                ZBSS_END = .
+
+.zdata          memory region -> DMI_DSPR
+                0xd0000000        0x0
+                0xd0000000                ZDATA_BASE = .
+ *(.zrodata)
+ *(.zrodata.*)
+ *(.zdata)
+ *(.zdata.*)
+ *(.gnu.linkonce.z.*)
+ *(.bdata)
+ *(.bdata.*)
+                0xd0000000                . = ALIGN (0x8)
+                0xd0000000                ZDATA_END = .
+
+.sbss           memory region -> DMI_DSPR
+                0xd0000000        0x0
+                0xd0000000                PROVIDE (__sbss_start, .)
+ *(.sbss)
+                0xd0000000                _CONFIG_BEGIN_ = .
+ *(.sbss.CONFIG)
+                0xd0000000                _CONFIG_END_ = .
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+                0xd0000000                PROVIDE (__sbss_end, .)
+                0xd0000000                . = ALIGN (0x8)
+
+.sdata          memory region -> DMI_DSPR
+                0xd0000000        0x0
+                0xd0000000                SDATA_BASE = .
+                0xd0000000                PROVIDE (__sdata_start, .)
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0xd0000000                . = ALIGN (0x8)
+
+.sdata2         memory region -> DMI_DSPR
+                0xd0000000        0x0
+ *(.sdata.rodata)
+ *(.sdata.rodata.*)
+                0xd0000000                . = ALIGN (0x8)
+                0xd0008000                _SMALL_DATA2_ = SIZEOF (.sdata2)?(ADDR (.sdata2) + 0x8000):((ADDR (.sdata2) & 0xf0000000) + 0x8000)
+                0xd0008000                __A1_MEM = _SMALL_DATA2_
+
+ee_mcglobalc    memory region -> DMI_DSPR
+                0xd0000000        0x0
+                0xd0000000                PROVIDE (ee_mcglobalc_begin, .)
+ *(ee_mcglobalc)
+                0xd0000000                . = ALIGN (0x8)
+                0xd0000000                PROVIDE (ee_mcglobalc_end, .)
+
+.rodata         memory region -> DMI_DSPR
+                0xd0000000       0xa8
+                0xd0000000                PROVIDE (__rodata_start, .)
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.EE_oo_autostart_alarm_cycle
+                0xd0000000        0x8 obj/eecfg.o
+                0xd0000000                EE_oo_autostart_alarm_cycle
+ .rodata.EE_oo_autostart_alarm_increment
+                0xd0000008        0x8 obj/eecfg.o
+                0xd0000008                EE_oo_autostart_alarm_increment
+ .rodata.EE_oo_autostart_alarm_data
+                0xd0000010        0x8 obj/eecfg.o
+                0xd0000010                EE_oo_autostart_alarm_data
+ .rodata.EE_oo_action_ROM
+                0xd0000018       0x28 obj/eecfg.o
+                0xd0000018                EE_oo_action_ROM
+ .rodata.EE_oo_counter_object_ROM
+                0xd0000040       0x18 obj/eecfg.o
+                0xd0000040                EE_oo_counter_object_ROM
+ .rodata.EE_alarm_ROM
+                0xd0000058        0x8 obj/eecfg.o
+                0xd0000058                EE_alarm_ROM
+ .rodata.EE_counter_ROM
+                0xd0000060        0xc obj/eecfg.o
+                0xd0000060                EE_counter_ROM
+ .rodata.EE_resource_ceiling
+                0xd000006c        0x8 obj/eecfg.o
+                0xd000006c                EE_resource_ceiling
+ .rodata.EE_th_is_extended
+                0xd0000074        0x8 obj/eecfg.o
+                0xd0000074                EE_th_is_extended
+ .rodata.EE_th_dispatch_prio
+                0xd000007c        0x8 obj/eecfg.o
+                0xd000007c                EE_th_dispatch_prio
+ .rodata.EE_th_ready_prio
+                0xd0000084        0x8 obj/eecfg.o
+                0xd0000084                EE_th_ready_prio
+ .rodata.EE_terminate_real_th_body
+                0xd000008c        0x8 obj/eecfg.o
+                0xd000008c                EE_terminate_real_th_body
+ .rodata.EE_std_thread_tos
+                0xd0000094        0xc obj/eecfg.o
+                0xd0000094                EE_std_thread_tos
+ .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE
+                0xd00000a0        0x8 obj/eecfg.o
+ *(.gnu.linkonce.r.*)
+ *(.rodata1)
+ *(.toc)
+                0xd00000a8                . = ALIGN (0x8)
+
+.bss            memory region -> DMI_DSPR
+                0xd00000a8       0x80
+                0xd00000a8                BSS_BASE = .
+                0xd00000a8                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss.*)
+ .bss.EE_ApplicationMode
+                0xd00000a8        0x4 obj/eecfg.o
+                0xd00000a8                EE_ApplicationMode
+ .bss.EE_oo_counter_object_RAM
+                0xd00000ac       0x20 obj/eecfg.o
+                0xd00000ac                EE_oo_counter_object_RAM
+ .bss.EE_resource_oldceiling
+                0xd00000cc        0x8 obj/eecfg.o
+                0xd00000cc                EE_resource_oldceiling
+ .bss.EE_resource_locked
+                0xd00000d4        0x8 obj/eecfg.o
+                0xd00000d4                EE_resource_locked
+ .bss.EE_th_waswaiting
+                0xd00000dc        0x8 obj/eecfg.o
+                0xd00000dc                EE_th_waswaiting
+ .bss.EE_th_event_waitmask
+                0xd00000e4        0x8 obj/eecfg.o
+                0xd00000e4                EE_th_event_waitmask
+ .bss.EE_th_event_active
+                0xd00000ec        0x8 obj/eecfg.o
+                0xd00000ec                EE_th_event_active
+ .bss.EE_sys_ceiling
+                0xd00000f4        0x4 obj/eecfg.o
+                0xd00000f4                EE_sys_ceiling
+ .bss.EE_terminate_data
+                0xd00000f8        0x8 obj/eecfg.o
+                0xd00000f8                EE_terminate_data
+ .bss.EE_tc_tasks_RA
+                0xd0000100        0xc obj/eecfg.o
+                0xd0000100                EE_tc_tasks_RA
+ .bss.EE_tc_active_tos
+                0xd000010c        0x4 obj/eecfg.o
+                0xd000010c                EE_tc_active_tos
+ .bss.EE_tc_active_utid
+                0xd0000110        0x4 libee.a(ee_tc_context.o)
+                0xd0000110                EE_tc_active_utid
+ .bss.EE_oo_IRQ_disable_count
+                0xd0000114        0x4 libee.a(ee_lookup.o)
+                0xd0000114                EE_oo_IRQ_disable_count
+ .bss.EE_oo_started
+                0xd0000118        0x4 libee.a(ee_startos.o)
+                0xd0000118                EE_oo_started
+ .bss.EE_tc2Yx_stm_freq_khz
+                0xd000011c        0x4 libee.a(ee_tc2Yx_system.o)
+ .bss.EE_std_endcycle_next_tid
+                0xd0000120        0x4 libee.a(ee_hal_structs.o)
+                0xd0000120                EE_std_endcycle_next_tid
+ .bss.EE_IRQ_nesting_level
+                0xd0000124        0x4 libee.a(ee_hal_structs.o)
+                0xd0000124                EE_IRQ_nesting_level
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+                0xd0000128                PROVIDE (__bss_end, .)
+                0xd0000128                . = ALIGN (0x8)
+
+.data           memory region -> DMI_DSPR
+                0xd0000128       0x60
+                0xd0000128                PROVIDE (__data_start, .)
+                0xd0000128                DATA_BASE = .
+ *(.data)
+ *(.data.*)
+ .data.EE_counter_RAM
+                0xd0000128        0x8 obj/eecfg.o
+                0xd0000128                EE_counter_RAM
+ .data.EE_resource_stack
+                0xd0000130        0x8 obj/eecfg.o
+                0xd0000130                EE_resource_stack
+ .data.EE_th_resource_last
+                0xd0000138        0x8 obj/eecfg.o
+                0xd0000138                EE_th_resource_last
+ .data.EE_th_terminate_nextask
+                0xd0000140        0x8 obj/eecfg.o
+                0xd0000140                EE_th_terminate_nextask
+ .data.EE_rq_first
+                0xd0000148        0x4 obj/eecfg.o
+                0xd0000148                EE_rq_first
+ .data.EE_th_rnact
+                0xd000014c        0x8 obj/eecfg.o
+                0xd000014c                EE_th_rnact
+ .data.EE_stkfirst
+                0xd0000154        0x4 obj/eecfg.o
+                0xd0000154                EE_stkfirst
+ .data.EE_th_next
+                0xd0000158        0x8 obj/eecfg.o
+                0xd0000158                EE_th_next
+ .data.EE_th_status
+                0xd0000160        0x8 obj/eecfg.o
+                0xd0000160                EE_th_status
+ .data.EE_tc_IRQ_tos
+                0xd0000168        0x4 obj/eecfg.o
+                0xd0000168                EE_tc_IRQ_tos
+ .data.EE_tc_system_tos
+                0xd000016c       0x18 obj/eecfg.o
+                0xd000016c                EE_tc_system_tos
+ *(.gnu.linkonce.d.*)
+                0xd0000188                . = ALIGN (0x8)
+ *fill*         0xd0000184        0x4 00
+                0xd0000188                DATA_END = .
+                0xd0000188                PROVIDE (__data_end, .)
+
+.ustack         memory region -> DMI_DSPR
+                0xd0000188     0x2000
+                0xd0000188                PROVIDE (__USTACK_BEGIN, .)
+                0xd0002188                . = (. + __USTACK_SIZE)
+ *fill*         0xd0000188     0x2000 00
+                0xd0002188                . = ALIGN (0x8)
+                0xd0002188                PROVIDE (__USTACK, .)
+                0xd0002188                PROVIDE (__USTACK_END, .)
+
+.istack         memory region -> DMI_DSPR
+                0xd0002188        0x0
+                0xd0002188                PROVIDE (__ISTACK_BEGIN, .)
+                0xd0002188                . = (. + __ISTACK_SIZE)
+                0xd0002188                . = ALIGN (0x8)
+                0xd0002188                PROVIDE (__ISTACK, .)
+                0xd0002188                PROVIDE (__ISTACK_END, .)
+
+.heap           memory region -> DMI_DSPR
+                0xd0002188        0x0
+                0xd0002188                PROVIDE (__HEAP_BEGIN, .)
+                0xd0002188                PROVIDE (__HEAP, .)
+                0xd0002188                . = (. + __HEAP_SIZE)
+                0xd0002188                . = ALIGN (0x8)
+                0xd0002188                PROVIDE (__HEAP_END, .)
+
+.csa            memory region -> DMI_DSPR
+                0xd00021c0     0x4000
+                0xd00021c0                PROVIDE (__CSA_BEGIN, .)
+                0xd00021c0                PROVIDE (__CSA, .)
+                0xd00061c0                . = (. + __CSA_SIZE)
+ *fill*         0xd00021c0     0x4000 00
+                0xd00061c0                . = ALIGN (0x40)
+                0xd00061c0                PROVIDE (__CSA_END, .)
+
+.ee_api_bss     memory region -> DMI_DSPR
+                0xd00061c0        0x0
+                0xd00061c0                PROVIDE (ee_sbss_api, .)
+ *(ee_api_bss)
+                0xd00061c0                PROVIDE (ee_ebss_api, .)
+                0xd00061c0                . = ALIGN (0x8)
+
+.ee_api_data    memory region -> DMI_DSPR
+                0xd00061c0       0x18
+                0xd00061c0                PROVIDE (ee_sdata_api, .)
+ *(ee_api_data)
+                0xd00061c1                . = (. + 0x1)
+ *fill*         0xd00061c0        0x1 00
+                0xd00061c8                . = ALIGN (0x8)
+ *fill*         0xd00061c1        0x7 00
+                0xd00061c8                PROVIDE (ee_edata_api, .)
+                0xd00061d7                . = (. + 0xf)
+ *fill*         0xd00061c8        0xf 00
+                0xd00061d8                . = ALIGN (0x8)
+ *fill*         0xd00061d7        0x1 00
+
+.ee_kernel_bss  memory region -> DMI_DSPR
+                0xd00061d8        0x0
+                0xd00061d8                PROVIDE (ee_sbss_kernel, .)
+ *(ee_kernel_bss)
+                0xd00061d8                PROVIDE (ee_ebss_kernel, .)
+                0xd00061d8                . = ALIGN (0x8)
+
+.ee_kernel_data memory region -> DMI_DSPR
+                0xd00061d8       0x18
+                0xd00061d8                PROVIDE (ee_sdata_kernel, .)
+ *(ee_kernel_data)
+                0xd00061d9                . = (. + 0x1)
+ *fill*         0xd00061d8        0x1 00
+                0xd00061e0                . = ALIGN (0x8)
+ *fill*         0xd00061d9        0x7 00
+                0xd00061e0                PROVIDE (ee_edata_kernel, .)
+                0xd00061ef                . = (. + 0xf)
+ *fill*         0xd00061e0        0xf 00
+                0xd00061f0                . = ALIGN (0x8)
+ *fill*         0xd00061ef        0x1 00
+
+.ee_kernel_stack memory region -> DMI_DSPR
+                0xd00061f0      0x328
+                0xd00061f0                PROVIDE (ee_sstack_kernel, .)
+ *(ee_kernel_stack)
+ ee_kernel_stack
+                0xd00061f0      0x318 obj/eecfg.o
+                0xd00061f0                EE_tc_stack_3
+                0xd00062f8                EE_tc_stack_2
+                0xd0006400                EE_tc_stack_1
+                0xd0006517                . = (. + 0xf)
+ *fill*         0xd0006508        0xf 00
+                0xd0006518                . = ALIGN (0x8)
+ *fill*         0xd0006517        0x1 00
+                0xd0006518                PROVIDE (ee_estack_kernel, .)
+
+ee_mcglobald    memory region -> LMU_SRAM
+                0x90000000        0x0
+                0x90000000                PROVIDE (ee_mcglobald_begin, .)
+ *(ee_mcglobald)
+                0x90000000                . = ALIGN (0x8)
+                0x90000000                PROVIDE (ee_mcglobald_end, .)
+
+.ee_end         memory region -> DMI_DSPR
+                0xd0006518        0x0
+                0xc0000000                PROVIDE (ee_sall_code, BootModeIndex)
+                0xc0001538                PROVIDE (ee_eall_code, (ADDR (.dtors) + SIZEOF (.dtors)))
+                0xd0000000                PROVIDE (ee_skernel_ram, __DMI_DSPR_BEGIN)
+                0xd0006518                PROVIDE (ee_ekernel_ram, .)
+                0xc0001510                PROVIDE (ee_skernel_code, ADDR (.ee_kernel_text))
+                0xc0001528                PROVIDE (ee_ekernel_code, (ADDR (.ee_kernel_text) + SIZEOF (.ee_kernel_text)))
+                0xd0000000                PROVIDE (ee_sapi_const, ADDR (.sdata2))
+                0xd00000a8                PROVIDE (ee_eapi_const, (ADDR (.rodata) + SIZEOF (.rodata)))
+                0xd00061c0                PROVIDE (ee_sapi_ram, ADDR (.ee_api_bss))
+                0xd00061d8                PROVIDE (ee_eapi_ram, (ADDR (.ee_api_data) + SIZEOF (.ee_api_data)))
+                0xc00014f0                PROVIDE (ee_sapi_code, ADDR (.ee_api_text))
+                0xc0001508                PROVIDE (ee_eapi_code, (ADDR (.ee_api_text) + SIZEOF (.ee_api_text)))
+                0x00000001                _. = ASSERT (((__CSA_BEGIN & 0x3f) == 0x0), illegal CSA start address)
+                0x00000001                _. = ASSERT (((__CSA_SIZE & 0x3f) == 0x0), illegal CSA size)
+                0x00000001                _. = ASSERT (((__ISTACK & 0x7) == 0x0), ISTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__USTACK & 0x7) == 0x0), USTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__HEAP_END & 0x7) == 0x0), HEAP not doubleword aligned)
+                [0x00000000]                NULL = DEFINED (NULL)?NULL:0x0
+
+.comment        memory region -> *default*
+                0x00000000       0x47
+ *(.comment)
+ .comment       0x00000000       0x47 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                                 0x48 (size before relaxing)
+ .comment       0x00000000       0x48 obj/eecfg.o
+ .comment       0x00000000       0x48 obj/src/code.o
+ .comment       0x00000000       0x48 libee.a(ee_tc_trapvec.o)
+ .comment       0x00000000       0x48 libee.a(ee_tc_intvec.o)
+ .comment       0x00000000       0x48 libee.a(ee_tc_context.o)
+ .comment       0x00000000       0x48 libee.a(ee_terminat.o)
+ .comment       0x00000000       0x48 libee.a(ee_thendin.o)
+ .comment       0x00000000       0x48 libee.a(ee_irqendin.o)
+ .comment       0x00000000       0x48 libee.a(ee_tstub.o)
+ .comment       0x00000000       0x48 libee.a(ee_lookup.o)
+ .comment       0x00000000       0x48 libee.a(ee_rq_exchg.o)
+ .comment       0x00000000       0x48 libee.a(ee_rq_inser.o)
+ .comment       0x00000000       0x48 libee.a(ee_startos.o)
+ .comment       0x00000000       0x48 libee.a(ee_lockres.o)
+ .comment       0x00000000       0x48 libee.a(ee_ulockres.o)
+ .comment       0x00000000       0x48 libee.a(ee_altick.o)
+ .comment       0x00000000       0x48 libee.a(ee_evclear.o)
+ .comment       0x00000000       0x48 libee.a(ee_evset.o)
+ .comment       0x00000000       0x48 libee.a(ee_evwait.o)
+ .comment       0x00000000       0x48 libee.a(ee_tc2Yx_system.o)
+ .comment       0x00000000       0x48 libee.a(ee_hal_structs.o)
+ .comment       0x00000000       0x48 libee.a(ee_tc_oo.o)
+ .comment       0x00000000       0x48 libee.a(ee_tnterm.o)
+ .comment       0x00000000       0x48 libee.a(ee_ulockallres.o)
+ .comment       0x00000000       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  memory region -> *default*
+                0x00000000      0x360
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_aranges
+                0x00000028       0x30 obj/src/code.o
+ .debug_aranges
+                0x00000058       0x20 libee.a(ee_tc_intvec.o)
+ .debug_aranges
+                0x00000078       0x20 libee.a(ee_tc_context.o)
+ .debug_aranges
+                0x00000098       0x20 libee.a(ee_terminat.o)
+ .debug_aranges
+                0x000000b8       0x20 libee.a(ee_thendin.o)
+ .debug_aranges
+                0x000000d8       0x28 libee.a(ee_irqendin.o)
+ .debug_aranges
+                0x00000100       0x20 libee.a(ee_tstub.o)
+ .debug_aranges
+                0x00000120       0x20 libee.a(ee_rq_exchg.o)
+ .debug_aranges
+                0x00000140       0x20 libee.a(ee_rq_inser.o)
+ .debug_aranges
+                0x00000160       0x20 libee.a(ee_startos.o)
+ .debug_aranges
+                0x00000180       0x20 libee.a(ee_lockres.o)
+ .debug_aranges
+                0x000001a0       0x20 libee.a(ee_ulockres.o)
+ .debug_aranges
+                0x000001c0       0x38 libee.a(ee_altick.o)
+ .debug_aranges
+                0x000001f8       0x20 libee.a(ee_evclear.o)
+ .debug_aranges
+                0x00000218       0x20 libee.a(ee_evset.o)
+ .debug_aranges
+                0x00000238       0x20 libee.a(ee_evwait.o)
+ .debug_aranges
+                0x00000258       0x78 libee.a(ee_tc2Yx_system.o)
+ .debug_aranges
+                0x000002d0       0x30 libee.a(ee_tc_oo.o)
+ .debug_aranges
+                0x00000300       0x20 libee.a(ee_tnterm.o)
+ .debug_aranges
+                0x00000320       0x20 libee.a(ee_ulockallres.o)
+ .debug_aranges
+                0x00000340       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     memory region -> *default*
+                0x00000000    0x16161
+ *(.debug_info)
+ .debug_info    0x00000000     0x1280 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_info    0x00001280      0xf3c obj/eecfg.o
+ .debug_info    0x000021bc      0x907 obj/src/code.o
+ .debug_info    0x00002ac3      0x133 libee.a(ee_tc_trapvec.o)
+ .debug_info    0x00002bf6     0x1259 libee.a(ee_tc_intvec.o)
+ .debug_info    0x00003e4f      0xdb1 libee.a(ee_tc_context.o)
+ .debug_info    0x00004c00      0xdfc libee.a(ee_terminat.o)
+ .debug_info    0x000059fc      0xc3a libee.a(ee_thendin.o)
+ .debug_info    0x00006636      0xb93 libee.a(ee_irqendin.o)
+ .debug_info    0x000071c9      0x9be libee.a(ee_tstub.o)
+ .debug_info    0x00007b87      0x829 libee.a(ee_lookup.o)
+ .debug_info    0x000083b0      0x861 libee.a(ee_rq_exchg.o)
+ .debug_info    0x00008c11      0x872 libee.a(ee_rq_inser.o)
+ .debug_info    0x00009483     0x184e libee.a(ee_startos.o)
+ .debug_info    0x0000acd1      0xeca libee.a(ee_lockres.o)
+ .debug_info    0x0000bb9b     0x11b3 libee.a(ee_ulockres.o)
+ .debug_info    0x0000cd4e     0x1561 libee.a(ee_altick.o)
+ .debug_info    0x0000e2af      0xe0b libee.a(ee_evclear.o)
+ .debug_info    0x0000f0ba     0x1112 libee.a(ee_evset.o)
+ .debug_info    0x000101cc     0x11c1 libee.a(ee_evwait.o)
+ .debug_info    0x0001138d     0x201e libee.a(ee_tc2Yx_system.o)
+ .debug_info    0x000133ab      0x82f libee.a(ee_hal_structs.o)
+ .debug_info    0x00013bda     0x11f9 libee.a(ee_tc_oo.o)
+ .debug_info    0x00014dd3      0x8fe libee.a(ee_tnterm.o)
+ .debug_info    0x000156d1      0x903 libee.a(ee_ulockallres.o)
+ .debug_info    0x00015fd4      0x18d c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug_abbrev   memory region -> *default*
+                0x00000000     0x32ff
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x2ad obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_abbrev  0x000002ad      0x142 obj/eecfg.o
+ .debug_abbrev  0x000003ef      0x190 obj/src/code.o
+ .debug_abbrev  0x0000057f       0x1d libee.a(ee_tc_trapvec.o)
+ .debug_abbrev  0x0000059c      0x25c libee.a(ee_tc_intvec.o)
+ .debug_abbrev  0x000007f8      0x276 libee.a(ee_tc_context.o)
+ .debug_abbrev  0x00000a6e      0x271 libee.a(ee_terminat.o)
+ .debug_abbrev  0x00000cdf      0x217 libee.a(ee_thendin.o)
+ .debug_abbrev  0x00000ef6      0x1f2 libee.a(ee_irqendin.o)
+ .debug_abbrev  0x000010e8      0x149 libee.a(ee_tstub.o)
+ .debug_abbrev  0x00001231       0xf6 libee.a(ee_lookup.o)
+ .debug_abbrev  0x00001327      0x10f libee.a(ee_rq_exchg.o)
+ .debug_abbrev  0x00001436      0x129 libee.a(ee_rq_inser.o)
+ .debug_abbrev  0x0000155f      0x2f6 libee.a(ee_startos.o)
+ .debug_abbrev  0x00001855      0x280 libee.a(ee_lockres.o)
+ .debug_abbrev  0x00001ad5      0x2bd libee.a(ee_ulockres.o)
+ .debug_abbrev  0x00001d92      0x336 libee.a(ee_altick.o)
+ .debug_abbrev  0x000020c8      0x2c5 libee.a(ee_evclear.o)
+ .debug_abbrev  0x0000238d      0x290 libee.a(ee_evset.o)
+ .debug_abbrev  0x0000261d      0x2d0 libee.a(ee_evwait.o)
+ .debug_abbrev  0x000028ed      0x394 libee.a(ee_tc2Yx_system.o)
+ .debug_abbrev  0x00002c81       0xf6 libee.a(ee_hal_structs.o)
+ .debug_abbrev  0x00002d77      0x284 libee.a(ee_tc_oo.o)
+ .debug_abbrev  0x00002ffb      0x17a libee.a(ee_tnterm.o)
+ .debug_abbrev  0x00003175      0x12b libee.a(ee_ulockallres.o)
+ .debug_abbrev  0x000032a0       0x5f c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug_line     memory region -> *default*
+                0x00000000     0x3ef8
+ *(.debug_line)
+ .debug_line    0x00000000      0x3ef obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_line    0x000003ef      0x12c obj/eecfg.o
+ .debug_line    0x0000051b      0x2ab obj/src/code.o
+ .debug_line    0x000007c6       0x1d libee.a(ee_tc_trapvec.o)
+ .debug_line    0x000007e3      0x2f2 libee.a(ee_tc_intvec.o)
+ .debug_line    0x00000ad5      0x29d libee.a(ee_tc_context.o)
+ .debug_line    0x00000d72      0x273 libee.a(ee_terminat.o)
+ .debug_line    0x00000fe5      0x259 libee.a(ee_thendin.o)
+ .debug_line    0x0000123e      0x1fe libee.a(ee_irqendin.o)
+ .debug_line    0x0000143c      0x1af libee.a(ee_tstub.o)
+ .debug_line    0x000015eb      0x18c libee.a(ee_lookup.o)
+ .debug_line    0x00001777      0x1a2 libee.a(ee_rq_exchg.o)
+ .debug_line    0x00001919      0x1b0 libee.a(ee_rq_inser.o)
+ .debug_line    0x00001ac9      0x3d3 libee.a(ee_startos.o)
+ .debug_line    0x00001e9c      0x29d libee.a(ee_lockres.o)
+ .debug_line    0x00002139      0x319 libee.a(ee_ulockres.o)
+ .debug_line    0x00002452      0x3a5 libee.a(ee_altick.o)
+ .debug_line    0x000027f7      0x27d libee.a(ee_evclear.o)
+ .debug_line    0x00002a74      0x2c9 libee.a(ee_evset.o)
+ .debug_line    0x00002d3d      0x30b libee.a(ee_evwait.o)
+ .debug_line    0x00003048      0x620 libee.a(ee_tc2Yx_system.o)
+ .debug_line    0x00003668      0x16f libee.a(ee_hal_structs.o)
+ .debug_line    0x000037d7      0x2a2 libee.a(ee_tc_oo.o)
+ .debug_line    0x00003a79      0x23c libee.a(ee_tnterm.o)
+ .debug_line    0x00003cb5      0x1b9 libee.a(ee_ulockallres.o)
+ .debug_line    0x00003e6e       0x8a c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug_frame    memory region -> *default*
+                0x00000000      0x404
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_frame   0x00000030       0x40 obj/src/code.o
+ .debug_frame   0x00000070       0x20 libee.a(ee_tc_intvec.o)
+ .debug_frame   0x00000090       0x20 libee.a(ee_tc_context.o)
+ .debug_frame   0x000000b0       0x20 libee.a(ee_terminat.o)
+ .debug_frame   0x000000d0       0x20 libee.a(ee_thendin.o)
+ .debug_frame   0x000000f0       0x30 libee.a(ee_irqendin.o)
+ .debug_frame   0x00000120       0x20 libee.a(ee_tstub.o)
+ .debug_frame   0x00000140       0x20 libee.a(ee_rq_exchg.o)
+ .debug_frame   0x00000160       0x20 libee.a(ee_rq_inser.o)
+ .debug_frame   0x00000180       0x20 libee.a(ee_startos.o)
+ .debug_frame   0x000001a0       0x20 libee.a(ee_lockres.o)
+ .debug_frame   0x000001c0       0x20 libee.a(ee_ulockres.o)
+ .debug_frame   0x000001e0       0x50 libee.a(ee_altick.o)
+ .debug_frame   0x00000230       0x20 libee.a(ee_evclear.o)
+ .debug_frame   0x00000250       0x24 libee.a(ee_evset.o)
+ .debug_frame   0x00000274       0x20 libee.a(ee_evwait.o)
+ .debug_frame   0x00000294       0xd0 libee.a(ee_tc2Yx_system.o)
+ .debug_frame   0x00000364       0x40 libee.a(ee_tc_oo.o)
+ .debug_frame   0x000003a4       0x20 libee.a(ee_tnterm.o)
+ .debug_frame   0x000003c4       0x20 libee.a(ee_ulockallres.o)
+ .debug_frame   0x000003e4       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug_str      memory region -> *default*
+                0x00000000      0x44d
+ *(.debug_str)
+ .debug_str     0x00000000       0x44 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_str     0x00000044       0x26 obj/eecfg.o
+ .debug_str     0x0000006a        0xa libee.a(ee_tc_intvec.o)
+ .debug_str     0x00000074       0x26 libee.a(ee_tc_context.o)
+ .debug_str     0x0000009a       0x30 libee.a(ee_terminat.o)
+ .debug_str     0x000000ca       0x2d libee.a(ee_thendin.o)
+ .debug_str     0x000000f7       0x26 libee.a(ee_irqendin.o)
+ .debug_str     0x0000011d       0x26 libee.a(ee_tstub.o)
+ .debug_str     0x00000143       0x26 libee.a(ee_lookup.o)
+ .debug_str     0x00000169       0x26 libee.a(ee_rq_exchg.o)
+ .debug_str     0x0000018f       0x26 libee.a(ee_rq_inser.o)
+ .debug_str     0x000001b5       0x30 libee.a(ee_startos.o)
+ .debug_str     0x000001e5       0x30 libee.a(ee_lockres.o)
+ .debug_str     0x00000215       0x30 libee.a(ee_ulockres.o)
+ .debug_str     0x00000245       0x53 libee.a(ee_altick.o)
+ .debug_str     0x00000298       0x30 libee.a(ee_evclear.o)
+ .debug_str     0x000002c8       0x30 libee.a(ee_evset.o)
+ .debug_str     0x000002f8       0x30 libee.a(ee_evwait.o)
+ .debug_str     0x00000328       0x84 libee.a(ee_tc2Yx_system.o)
+ .debug_str     0x000003ac       0x26 libee.a(ee_hal_structs.o)
+ .debug_str     0x000003d2       0x2f libee.a(ee_tc_oo.o)
+ .debug_str     0x00000401       0x26 libee.a(ee_tnterm.o)
+ .debug_str     0x00000427       0x26 libee.a(ee_ulockallres.o)
+
+.debug_loc      memory region -> *default*
+                0x00000000      0xa41
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x83 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_loc     0x00000083       0xd4 libee.a(ee_tc_intvec.o)
+ .debug_loc     0x00000157      0x121 libee.a(ee_tc_context.o)
+ .debug_loc     0x00000278       0x29 libee.a(ee_terminat.o)
+ .debug_loc     0x000002a1       0x99 libee.a(ee_thendin.o)
+ .debug_loc     0x0000033a       0x65 libee.a(ee_irqendin.o)
+ .debug_loc     0x0000039f       0x13 libee.a(ee_rq_exchg.o)
+ .debug_loc     0x000003b2       0x96 libee.a(ee_startos.o)
+ .debug_loc     0x00000448       0x3c libee.a(ee_lockres.o)
+ .debug_loc     0x00000484       0xca libee.a(ee_ulockres.o)
+ .debug_loc     0x0000054e      0x111 libee.a(ee_altick.o)
+ .debug_loc     0x0000065f       0x4f libee.a(ee_evclear.o)
+ .debug_loc     0x000006ae       0xea libee.a(ee_evset.o)
+ .debug_loc     0x00000798       0x8b libee.a(ee_evwait.o)
+ .debug_loc     0x00000823      0x18b libee.a(ee_tc2Yx_system.o)
+ .debug_loc     0x000009ae       0x57 libee.a(ee_tc_oo.o)
+ .debug_loc     0x00000a05       0x3c libee.a(ee_ulockallres.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   memory region -> *default*
+                0x00000000      0xb78
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x48 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_ranges  0x00000048       0x38 obj/src/code.o
+ .debug_ranges  0x00000080       0x40 libee.a(ee_tc_intvec.o)
+ .debug_ranges  0x000000c0       0x70 libee.a(ee_tc_context.o)
+ .debug_ranges  0x00000130       0x10 libee.a(ee_terminat.o)
+ .debug_ranges  0x00000140       0x90 libee.a(ee_thendin.o)
+ .debug_ranges  0x000001d0       0x78 libee.a(ee_irqendin.o)
+ .debug_ranges  0x00000248       0x10 libee.a(ee_tstub.o)
+ .debug_ranges  0x00000258       0x10 libee.a(ee_rq_exchg.o)
+ .debug_ranges  0x00000268       0x10 libee.a(ee_rq_inser.o)
+ .debug_ranges  0x00000278       0xe0 libee.a(ee_startos.o)
+ .debug_ranges  0x00000358       0x10 libee.a(ee_lockres.o)
+ .debug_ranges  0x00000368       0xf8 libee.a(ee_ulockres.o)
+ .debug_ranges  0x00000460      0x210 libee.a(ee_altick.o)
+ .debug_ranges  0x00000670       0xd0 libee.a(ee_evclear.o)
+ .debug_ranges  0x00000740       0x80 libee.a(ee_evset.o)
+ .debug_ranges  0x000007c0       0xf8 libee.a(ee_evwait.o)
+ .debug_ranges  0x000008b8      0x270 libee.a(ee_tc2Yx_system.o)
+ .debug_ranges  0x00000b28       0x20 libee.a(ee_tc_oo.o)
+ .debug_ranges  0x00000b48       0x10 libee.a(ee_tnterm.o)
+ .debug_ranges  0x00000b58       0x10 libee.a(ee_ulockallres.o)
+ .debug_ranges  0x00000b68       0x10 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.version_info   memory region -> *default*
+                0x00000000    0x20435
+ *(.version_info)
+ .version_info  0x00000000     0x147f obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .version_info  0x0000147f     0x12be obj/eecfg.o
+ .version_info  0x0000273d     0x1389 obj/src/code.o
+ .version_info  0x00003ac6     0x13ff libee.a(ee_tc_trapvec.o)
+ .version_info  0x00004ec5     0x13f7 libee.a(ee_tc_intvec.o)
+ .version_info  0x000062bc     0x13ff libee.a(ee_tc_context.o)
+ .version_info  0x000076bb     0x13df libee.a(ee_terminat.o)
+ .version_info  0x00008a9a     0x13d7 libee.a(ee_thendin.o)
+ .version_info  0x00009e71     0x13df libee.a(ee_irqendin.o)
+ .version_info  0x0000b250     0x13c7 libee.a(ee_tstub.o)
+ .version_info  0x0000c617     0x13cf libee.a(ee_lookup.o)
+ .version_info  0x0000d9e6     0x13df libee.a(ee_rq_exchg.o)
+ .version_info  0x0000edc5     0x13df libee.a(ee_rq_inser.o)
+ .version_info  0x000101a4     0x13d7 libee.a(ee_startos.o)
+ .version_info  0x0001157b     0x13d7 libee.a(ee_lockres.o)
+ .version_info  0x00012952     0x13df libee.a(ee_ulockres.o)
+ .version_info  0x00013d31     0x13cf libee.a(ee_altick.o)
+ .version_info  0x00015100     0x13d7 libee.a(ee_evclear.o)
+ .version_info  0x000164d7     0x13c7 libee.a(ee_evset.o)
+ .version_info  0x0001789e     0x13cf libee.a(ee_evwait.o)
+ .version_info  0x00018c6d     0x147f libee.a(ee_tc2Yx_system.o)
+ .version_info  0x0001a0ec     0x13ff libee.a(ee_hal_structs.o)
+ .version_info  0x0001b4eb     0x13d7 libee.a(ee_tc_oo.o)
+ .version_info  0x0001c8c2     0x13cf libee.a(ee_tnterm.o)
+ .version_info  0x0001dc91     0x13f7 libee.a(ee_ulockallres.o)
+ .version_info  0x0001f088     0x13ad c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+
+.boffs
+ *(.boffs)
+OUTPUT(tc29x.elf elf32-tricore)
+
+Cross Reference Table
+
+Symbol                                            File
+BootModeHeader0                                   obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+BootModeHeader1                                   obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+EE_ApplicationMode                                obj/eecfg.o
+                                                  libee.a(ee_startos.o)
+EE_IRQ_end_instance                               libee.a(ee_irqendin.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_IRQ_end_post_stub                              libee.a(ee_irqendin.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_IRQ_nesting_level                              libee.a(ee_hal_structs.o)
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_evclear.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+                                                  libee.a(ee_terminat.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_alarm_ROM                                      obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+EE_counter_RAM                                    obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+EE_counter_ROM                                    obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+EE_counter_hw_ROM                                 obj/eecfg.o
+EE_hal_terminate_savestk                          libee.a(ee_tc_oo.o)
+                                                  libee.a(ee_tstub.o)
+EE_hal_terminate_task                             libee.a(ee_tc_oo.o)
+                                                  libee.a(ee_tnterm.o)
+                                                  libee.a(ee_terminat.o)
+EE_hal_thread_body                                obj/eecfg.o
+EE_oo_ClearEvent                                  libee.a(ee_evclear.o)
+                                                  obj/src/code.o
+EE_oo_GetResource                                 libee.a(ee_lockres.o)
+                                                  obj/src/code.o
+EE_oo_IRQ_disable_count                           libee.a(ee_lookup.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_oo_IRQ_suspend_status                          libee.a(ee_lookup.o)
+EE_oo_IncrementCounter                            libee.a(ee_altick.o)
+EE_oo_IncrementCounterHardware                    libee.a(ee_altick.o)
+                                                  libee.a(ee_tc2Yx_system.o)
+EE_oo_IncrementCounterImplementation              libee.a(ee_altick.o)
+EE_oo_ReleaseResource                             libee.a(ee_ulockres.o)
+                                                  obj/src/code.o
+EE_oo_SetEvent                                    libee.a(ee_evset.o)
+                                                  obj/src/code.o
+EE_oo_StartOS                                     libee.a(ee_startos.o)
+                                                  obj/src/code.o
+EE_oo_TerminateTask                               libee.a(ee_terminat.o)
+                                                  obj/src/code.o
+EE_oo_WaitEvent                                   libee.a(ee_evwait.o)
+                                                  obj/src/code.o
+EE_oo_action_ROM                                  obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+EE_oo_autostart_alarm_cycle                       obj/eecfg.o
+                                                  libee.a(ee_startos.o)
+EE_oo_autostart_alarm_data                        obj/eecfg.o
+                                                  libee.a(ee_startos.o)
+EE_oo_autostart_alarm_increment                   obj/eecfg.o
+                                                  libee.a(ee_startos.o)
+EE_oo_counter_object_RAM                          obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+                                                  libee.a(ee_startos.o)
+EE_oo_counter_object_ROM                          obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+EE_oo_counter_object_insert                       libee.a(ee_altick.o)
+                                                  libee.a(ee_startos.o)
+EE_oo_release_all_resources                       libee.a(ee_ulockallres.o)
+                                                  libee.a(ee_tnterm.o)
+EE_oo_started                                     libee.a(ee_startos.o)
+EE_oo_thread_stub                                 libee.a(ee_tstub.o)
+                                                  libee.a(ee_tc_context.o)
+                                                  obj/eecfg.o
+EE_resource_ceiling                               obj/eecfg.o
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+EE_resource_locked                                obj/eecfg.o
+                                                  libee.a(ee_ulockallres.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+EE_resource_oldceiling                            obj/eecfg.o
+                                                  libee.a(ee_ulockallres.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+EE_resource_stack                                 obj/eecfg.o
+                                                  libee.a(ee_ulockallres.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+EE_rq2stk_exchange                                libee.a(ee_rq_exchg.o)
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_startos.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_rq_first                                       obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_startos.o)
+                                                  libee.a(ee_rq_inser.o)
+                                                  libee.a(ee_rq_exchg.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_rq_insert                                      libee.a(ee_rq_inser.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_altick.o)
+                                                  libee.a(ee_thendin.o)
+EE_std_change_context                             libee.a(ee_tc_context.o)
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_startos.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_std_endcycle_next_tid                          libee.a(ee_hal_structs.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+                                                  libee.a(ee_tc_context.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_std_thread_tos                                 obj/eecfg.o
+                                                  libee.a(ee_tc_context.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_stkfirst                                       obj/eecfg.o
+                                                  libee.a(ee_tnterm.o)
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_evclear.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+                                                  libee.a(ee_rq_exchg.o)
+                                                  libee.a(ee_tstub.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+                                                  libee.a(ee_terminat.o)
+EE_sys_ceiling                                    obj/eecfg.o
+                                                  libee.a(ee_ulockallres.o)
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+                                                  libee.a(ee_startos.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_tc2Yx_configure_clock                          libee.a(ee_tc2Yx_system.o)
+                                                  libee.a(ee_startos.o)
+EE_tc2Yx_delay                                    libee.a(ee_tc2Yx_system.o)
+EE_tc2Yx_get_clock                                libee.a(ee_tc2Yx_system.o)
+EE_tc2Yx_initialize_system_timer                  libee.a(ee_tc2Yx_system.o)
+                                                  libee.a(ee_startos.o)
+EE_tc2Yx_start                                    obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+EE_tc2Yx_stm_set_clockpersec                      libee.a(ee_tc2Yx_system.o)
+                                                  libee.a(ee_startos.o)
+EE_tc2Yx_stm_set_sr1                              libee.a(ee_tc2Yx_system.o)
+EE_tc2Yx_stm_set_sr1_next_match                   libee.a(ee_tc2Yx_system.o)
+EE_tc_IRQ_tos                                     obj/eecfg.o
+                                                  obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+EE_tc_active_tos                                  obj/eecfg.o
+                                                  libee.a(ee_tc_context.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_tc_active_utid                                 libee.a(ee_tc_context.o)
+EE_tc_endint_disable                              libee.a(ee_tc2Yx_system.o)
+EE_tc_endint_enable                               libee.a(ee_tc2Yx_system.o)
+EE_tc_interrupt_table                             libee.a(ee_tc_intvec.o)
+                                                  obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+EE_tc_isr2_entry_1                                libee.a(ee_tc_intvec.o)
+EE_tc_isr2_global_wrapper                         libee.a(ee_tc_intvec.o)
+EE_tc_safety_endinit_disable                      libee.a(ee_tc2Yx_system.o)
+                                                  libee.a(ee_startos.o)
+EE_tc_safety_endinit_enable                       libee.a(ee_tc2Yx_system.o)
+                                                  libee.a(ee_startos.o)
+EE_tc_stack_1                                     obj/eecfg.o
+EE_tc_stack_2                                     obj/eecfg.o
+EE_tc_stack_3                                     obj/eecfg.o
+EE_tc_system_timer_handler                        libee.a(ee_tc2Yx_system.o)
+                                                  libee.a(ee_tc_intvec.o)
+EE_tc_system_tos                                  obj/eecfg.o
+                                                  libee.a(ee_tc_context.o)
+EE_tc_tasks_RA                                    obj/eecfg.o
+                                                  libee.a(ee_tc_context.o)
+EE_tc_trap_assertion                              libee.a(ee_tc_trapvec.o)
+EE_tc_trap_bus                                    libee.a(ee_tc_trapvec.o)
+EE_tc_trap_context                                libee.a(ee_tc_trapvec.o)
+EE_tc_trap_instruction                            libee.a(ee_tc_trapvec.o)
+EE_tc_trap_mmu                                    libee.a(ee_tc_trapvec.o)
+EE_tc_trap_nmi                                    libee.a(ee_tc_trapvec.o)
+EE_tc_trap_protection                             libee.a(ee_tc_trapvec.o)
+EE_tc_trap_system                                 libee.a(ee_tc_trapvec.o)
+EE_tc_trap_table                                  libee.a(ee_tc_trapvec.o)
+                                                  obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+EE_terminate_data                                 obj/eecfg.o
+                                                  libee.a(ee_tc_oo.o)
+EE_terminate_real_th_body                         obj/eecfg.o
+                                                  libee.a(ee_tc_oo.o)
+EE_th_dispatch_prio                               obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_startos.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_th_event_active                                obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_evclear.o)
+                                                  libee.a(ee_altick.o)
+                                                  libee.a(ee_thendin.o)
+EE_th_event_waitmask                              obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_altick.o)
+EE_th_is_extended                                 obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_evclear.o)
+                                                  libee.a(ee_altick.o)
+EE_th_next                                        obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_rq_inser.o)
+                                                  libee.a(ee_rq_exchg.o)
+                                                  libee.a(ee_thendin.o)
+EE_th_ready_prio                                  obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+                                                  libee.a(ee_rq_inser.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_th_resource_last                               obj/eecfg.o
+                                                  libee.a(ee_ulockallres.o)
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_lockres.o)
+                                                  libee.a(ee_terminat.o)
+EE_th_rnact                                       obj/eecfg.o
+                                                  libee.a(ee_altick.o)
+                                                  libee.a(ee_thendin.o)
+EE_th_status                                      obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_altick.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_startos.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_th_terminate_nextask                           obj/eecfg.o
+                                                  libee.a(ee_thendin.o)
+                                                  libee.a(ee_terminat.o)
+EE_th_waswaiting                                  obj/eecfg.o
+                                                  libee.a(ee_evwait.o)
+                                                  libee.a(ee_evset.o)
+                                                  libee.a(ee_ulockres.o)
+                                                  libee.a(ee_irqendin.o)
+                                                  libee.a(ee_thendin.o)
+EE_thread_end_instance                            libee.a(ee_thendin.o)
+                                                  libee.a(ee_tc_context.o)
+EE_thread_not_terminated                          libee.a(ee_tnterm.o)
+                                                  libee.a(ee_tc_oo.o)
+FuncTask_Alarm1                                   obj/src/code.o
+                                                  obj/eecfg.o
+FuncTask_Alarm2                                   obj/src/code.o
+                                                  obj/eecfg.o
+_SMALL_DATA2_                                     obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+_SMALL_DATA_                                      obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+_START                                            obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+__CSA_BEGIN                                       obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+__CSA_END                                         obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+__USTACK                                          obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+__progname                                        c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+_exit                                             c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+                                                  libee.a(ee_tc_trapvec.o)
+                                                  obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+main                                              obj/src/code.o
+                                                  obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o

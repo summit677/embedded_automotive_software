@@ -1,0 +1,285 @@
+;
+; Example script for flash declaration and programming of Infineon
+; TriCore TC26x internal flash.
+;
+; Script arguments:
+;
+;   DO tc26x [PREPAREONLY] [CHECKBMHD] [CPU=<cpu>] [DUALPORT=0|1]
+;
+;     PREPAREONLY only declares flash but does not execute flash programming example
+;
+;     CHECKBMHD checks if at least one valid Boot Mode Header can be found.
+;
+;     CPU=<cpu> selects CPU derivative <cpu>
+;
+;     DUALPORT default value is 0 (disabled). If DualPort mode is enabled
+;             flash algorithm stays running until flash programming is
+;             finished. Data is tranferred via dual port memory access. 
+;
+; Example:
+;
+;   DO ~~/demo/tricore/flash/tc26x CPU=TC264DE DUALPORT=1 PREPAREONLY
+;
+; Supported devices: All TC26xD and TC26xDE devices, e.g. TC264D, TC265D.
+;
+; Flash:
+;
+;   2.5 MByte on-chip program flash    at 0x80000000--0x8027FFFF (cached)
+;                                      or 0xA0000000--0xA027FFFF (non cached)
+;   96 kByte data flash EEPROM         at 0xAF000000--0xAF017FFF
+;   16 kByte data flash UCB sectors    at 0xAF100000--0xAF103FFF
+;
+; RAM:
+;
+;   72 kByte Data Scratch-Pad RAM (DSPR) at        0xD0000000--0xD0011FFF
+;   16 kByte Instruction Scratch-Pad RAM (PSPR) at 0xC0000000--0xC0003FFF
+;
+; HINTS:
+;
+;   Erased flash is showing bus error caused by ECC error. ECC width is one
+;   page. In the PFlash a page is an aligned group of 32 bytes and in DFlash
+;   of 8 bytes.
+;
+;   The flash algorithm is programming PFlash in an aligned group of 32 bytes.
+;   When using FLASH.Program command the download has to care about this
+;   alignment.
+;
+;   To avoid any aligment issues FLASH.ReProgram is recommended. Unused flash
+;   data of affected sectors is programmed to 0x0.
+;
+;   FLASH.AUTO is not working for sectors with enabled ECC and uncorrectable
+;   ECC error (showing bus error).
+;
+; CAUTION:
+;
+;   Do not reboot or unpower your device in case all BMHD (Boot Mode Headers)
+;   do not contain valid information. This is normally the case after having
+;   erased the internal program flash or loading an object or binary file
+;   without a valid BMHD. The BMHD are located at:
+;     BMHD0 0xA0000000--0xA000001F
+;     BMHD1 0xA0020000--0xA002001F
+;     BMHD2 0xA000FFE0--0xA000FFFF
+;     BMHD3 0xA001FFE0--0xA001FFFF
+;   See the Infineon documentation for more information.
+;
+;   Do not enable HSM boot when no valid HSM code is present. This will lock
+;   your device permanently. See the Infineon documentation and contact your
+;   Infineon FAE for more information on HSM.
+;
+;   Pay special attention when modifying the UCB. An invalid or erroneous
+;   content will lock your device permanently. This also happens in case the
+;   confirmation code is neither "unlocked" nor "confirmed". See the Infineon
+;   documentation for more information.
+;
+; $Author: wdoering $
+; $Date: 2013-11-04 15:35:56 +0100 (Mon, 04 Nov 2013) $
+; $Rev: 2458 $
+;
+
+  ;========================================================================
+  ; Initialize
+
+  IF SYStem.MODE()<5.
+  (
+    SYStem.RESet
+
+    SYStem.CPU TC264DE
+
+    CORE.select 0.        ; CPU0 is selected for flash programming.
+
+    IF CPUIS("TC26*A")||CPUIS("TC26*E")
+    (
+    ; Emulation Devices in LQFP packages (except Fusion Quad) do not support
+    ; JTAG (TDI pin is used as VDDPSB)
+      IF (ID.CABLE()==0x0029)||(ID.CABLE()==0x4155)
+      (
+      ; DAP only supported by 
+      ; - Bi-directional OCDS Debug Cable (0x0029)
+      ; - Automotive Debug Cable (0x4155)
+        SYStem.CONFIG.DEBUGPORTTYPE DAP2
+      )
+      ELSE 
+      (
+        DIALOG.OK CPU()+" not supported by debug cable."
+        ENDDO
+      )
+    )
+    SYStem.Up
+  )
+
+  ; Disable Watchdog Timers on TC26xD[E]
+
+  ; Disable the Safety Watchdog Timer (overall system level watchdog):
+  PER.Set D:0xF00360F4 %Long 0x00000008 // SCU_WDTSCON1, Request to disable the WDT
+  ; Disable the CPU Watchdog Timers:
+  PER.Set D:0xF0036104 %Long 0x00000008 // SCU_WDTCPU0CON1, Request to disable the WDT
+  PER.Set D:0xF0036110 %Long 0x00000008 // SCU_WDTCPU1CON1, Request to disable the WDT
+
+  ;========================================================================
+  ; Flash declaration
+
+  FLASH.RESet
+
+  ; Program flash PF0
+  FLASH.Create  1. 0xA0000000--0xA000BFFF  0x4000 TARGET Long /BootModeHeaDer 0xA0000000--0xA000001F  ; PS0, S0..S2
+  FLASH.Create  1. 0xA000C000--0xA0013FFF  0x4000 TARGET Long /BootModeHeaDer 0xA000FFE0--0xA000FFFF  ; PS0, S3..S4
+  FLASH.Create  1. 0xA0014000--0xA0017FFF  0x4000 NOP    Long /INFO "Tuning Protection"               ; PS0, S5
+  FLASH.Create  1. 0xA0018000--0xA001BFFF  0x4000 NOP    Long /INFO "HSM code sector"                 ; PS0, S6
+  FLASH.Create  1. 0xA001C000--0xA001FFFF  0x4000 TARGET Long /BootModeHeaDer 0xA001FFE0--0xA001FFFF  ; PS0, S7
+  FLASH.Create  1. 0xA0020000--0xA005FFFF  0x8000 TARGET Long /BootModeHeaDer 0xA0020000--0xA002001F  ; PS0, S8..S15
+  FLASH.Create  1. 0xA0060000--0xA007FFFF 0x10000 NOP    Long /INFO "HSM code sector"                 ; PS0, S16..S17
+  FLASH.Create  2. 0xA0080000--0xA009FFFF 0x10000 TARGET Long   ; PS1, S18..S19
+  FLASH.Create  2. 0xA00A0000--0xA00FFFFF 0x20000 TARGET Long   ; PS1, S20..S22
+  ; Program flash PF1
+  FLASH.Create  5. 0xA0100000--0xA011FFFF  0x4000 TARGET Long   ; PS0, S0..S7
+  FLASH.Create  5. 0xA0120000--0xA015FFFF  0x8000 TARGET Long   ; PS0, S8..S15
+  FLASH.Create  5. 0xA0160000--0xA017FFFF 0x10000 TARGET Long   ; PS0, S16..S17
+  FLASH.Create  6. 0xA0180000--0xA019FFFF 0x10000 TARGET Long   ; PS1, S18..S19
+  FLASH.Create  6. 0xA01A0000--0xA01FFFFF 0x20000 TARGET Long   ; PS1, S20..S22
+  FLASH.Create  7. 0xA0200000--0xA027FFFF 0x40000 TARGET Long   ; PS2, S23..S24
+  ; Data flash DF0
+  FLASH.Create  9. 0xAF000000--0xAF017FFF  0x2000 TARGET Long /INFO "EEPROM"          ; DF0, EEPROM0..EEPROM11
+  FLASH.Create 10. 0xAF100000--0xAF1003FF   0x400 NOP    Long /INFO "UCB_PFlash"      ; DF0, UCB0
+  FLASH.Create 10. 0xAF100400--0xAF1007FF   0x400 NOP    Long /INFO "UCB_DFlash"      ; DF0, UCB1
+  FLASH.Create 10. 0xAF100800--0xAF100BFF   0x400 NOP    Long /INFO "UCB_HSMCOTP"     ; DF0, UCB2
+  FLASH.Create 10. 0xAF100C00--0xAF100FFF   0x400 NOP    Long /INFO "UCB_OTP"         ; DF0, UCB3
+  FLASH.Create 10. 0xAF101000--0xAF1013FF   0x400 NOP    Long /INFO "UCB_IFX"         ; DF0, UCB4
+  FLASH.Create 10. 0xAF101400--0xAF1017FF   0x400 NOP    Long /INFO "UCB_DBG"         ; DF0, UCB5
+  FLASH.Create 10. 0xAF101800--0xAF101BFF   0x400 NOP    Long /INFO "UCB_HSM"         ; DF0, UCB6
+  FLASH.Create 10. 0xAF101C00--0xAF102FFF   0x400 NOP    Long                         ; DF0, UCB7..UCB11
+  FLASH.Create 10. 0xAF103000--0xAF103FFF   0x400 NOP    Long /INFO "Erase Counter"   ; DF0, UCB12..UCB15
+
+  ; Cached program flash address range
+  FLASH.CreateALIAS 0x80000000--0x80FFFFFF 0xA0000000
+
+  FLASH.TARGET 0xC0000000 0xD0000000 0x2000 ~~/demo/tricore/flash/long/tc2.bin
+  ;FLASH.TARGET 0xC0000000 0xD0000000 0x2000 ~~/demo/tricore/flash/long/tc2.bin /DualPort
+
+  
+  ;========================================================================
+  ; Example for download
+
+  DIALOG.YESNO "Program internal flash memory?"
+  LOCAL &progflash
+  ENTRY &progflash
+  IF &progflash
+  (
+    ; Enable flash programming
+    FLASH.ReProgram.ALL
+
+    Data.LOAD.auto   "#EXE_NAME#"
+
+    ; Use the following commands to manually program a valid default BMHD (see comment above)
+    ; Data.Set 0xA0000000++0x17 %Long 0xA0000020 0xB3590070 0x00000000 0x00000000 0x00000000 0x00000000
+    ; Data.SUM 0xA0000000++0x17 /Long /ByteSWAP /CRC32
+    ; Data.Set 0xA0000018 %Long Data.SUM()
+    ; Data.Set 0xA000001C %Long ~Data.SUM()
+
+    GOSUB CheckAllBootModeHeaders
+    ENTRY &progflash
+    IF !&progflash
+    (
+      DIALOG.YESNO "No valid Boot Mode Header found!" \
+                   "Flashing now can lock your device." \
+                   "Do you really want to program flash?"
+      ENTRY &progflash
+    )
+
+    IF &progflash
+    (
+      ; Finally program flash memory
+      FLASH.ReProgram.off
+    )
+    ELSE
+    (
+      ; Revert loaded data
+      FLASH.ReProgram.ALL
+      FLASH.ReProgram.off
+    )
+  )
+
+  #ORTICMD#
+
+; open some windows
+  WinCLEAR
+  WinPOS 0% 0% 100% 50%
+  Data.List
+  WinPOS 0% 50% 50% 50%
+  Var.Frame /Locals /Caller
+  WinPOS 50% 50% 50% 50%
+
+  ENDDO
+
+;========================================================================
+; Check if at least one valid boot mode header is available
+;
+CheckAllBootModeHeaders:
+(
+  LOCAL &bmhdValid
+  GOSUB CheckBootModeHeader 0xa0000000
+  ENTRY &bmhdValid
+  IF &bmhdValid
+    RETURN &bmhdValid
+  GOSUB CheckBootModeHeader 0xa0020000
+  ENTRY &bmhdValid
+  IF &bmhdValid
+    RETURN &bmhdValid
+  GOSUB CheckBootModeHeader 0xa000ffe0
+  ENTRY &bmhdValid
+  IF &bmhdValid
+    RETURN &bmhdValid
+  GOSUB CheckBootModeHeader 0xa001ffe0
+  ENTRY &bmhdValid
+  RETURN &bmhdValid
+)
+
+;========================================================================
+; Check if Boot Mode Header has valid contents
+;
+CheckBootModeHeader:
+(
+  LOCAL &addr &result &bmhdid
+  ENTRY &addr
+  &result=TRUE()
+
+  ON.ERROR GOSUB
+  (
+    &result=FALSE()
+    RETURN
+  )
+
+  IF !STRing.FIND("&addr",":")
+    &addr="C:&addr"
+
+  ; Check Boot Mode Header ID
+  &bmhdid=Data.Word(&addr+0x6)
+  IF &result
+  (
+    IF &bmhdid!=0xB359
+      &result=FALSE()
+  )
+
+  ; Check Boot Mode Header CRC
+  IF &result
+  (
+    Data.SUM &addr++0x17 /Long /ByteSWAP /CRC32
+    IF &result
+    (
+      Data.Set &addr+0x18 %Long Data.SUM() /DIFF
+      IF &result
+      (
+        &result=!FOUND()
+        IF &result
+        (
+          Data.Set &addr+0x1C %Long ~Data.SUM() /DIFF
+          IF &result
+          (
+            &result=!FOUND()
+          )
+        )
+      )
+    )
+  )
+
+  RETURN &result
+)

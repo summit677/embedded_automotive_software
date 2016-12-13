@@ -1,0 +1,183 @@
+; Script file for TC264DE on TRIBOARD-TC2X4
+;
+; Initializes the TriCore opens AMP environment.
+;
+LOCAL &master_elf &cpu1_elf &cpu2_elf
+&master_elf="#MASTER_ELF#"
+&cpu1_elf="#CPU1_ELF#"
+
+
+; script-local macros:
+LOCAL &portGUI0 &portGUI1
+LOCAL &addressGUI0 &addressGUI1
+
+;========================================================================
+; generic setup
+
+; setup communication between GUIs:
+GOSUB setup_intercom
+
+; set up user-defined helper commands for this script:
+ON CMD CORE0 GOSUB coreTC0
+ON CMD CORE1 GOSUB coreTC1
+ON CMD COREALL GOSUB coreAll
+
+; check connection / launch GUIs:
+GOSUB other_guis
+
+;========================================================================
+; initialize and start the debugger
+COREALL RESet
+COREALL SYStem.CPU TC264DE
+IF ((ID.CABLE()==0x29)||(ID.CABLE()==0x4155))
+(
+  ; Emulation Devices in LQFP packages (except Fusion Quad and TC27x A-Step)
+  ; do not support JTAG (TDI pin is used as VDDPSB)
+  ; DAP only supported by
+  ; - Bi-directional OCDS Debug Cable (0x29)
+  ; - Automotive Debug Cable (0x4155)
+  ; See tricore_app_ocds.pdf for details
+  SYStem.CONFIG.DEBUGPORTTYPE DAP2
+)
+ELSE
+(
+  DIALOG.OK "TC264DE not supported by "+CABLE.NAME() "For details see TriCore FAQ"
+  ENDDO
+)
+
+; mount all cores into the same chip:
+CORE0 SYStem.CONFIG CORE 1. 1.
+CORE1 SYStem.CONFIG CORE 2. 1.
+CORE0 SYStem.Up
+CORE1 SYStem.Mode Attach
+
+; optional settings:
+COREALL SYStem.Option DUALPORT ON
+COREALL SETUP.Var %SpotLight
+COREALL MAP.BOnchip 0x0--0xffffffff // force onchip-breakpoints
+; COREALL DO ~~/demo/practice/intercom/toolbar_quit_all.cmm
+
+;========================================================================
+; load elf file (uses internal RAM only)
+  CORE0 Data.LOAD.Elf "&master_elf" /NOCODE        /NAME master
+  CORE1 Data.LOAD.Elf "&cpu1_elf"   /NOCODE /NOREG /NAME slave1
+
+;========================================================================
+; arrange GUIs and open some windows
+CORE0 FramePOS 0% 0% 50% 75%
+CORE1 FramePOS 50% 0% 50% 75%
+
+COREALL WinCLEAR
+COREALL WinPOS 0% 0% 100% 33%
+COREALL List.auto
+COREALL WinPOS 0% 33% 100% 33%
+COREALL Var.Watch
+COREALL WinPOS 0% 67% 100% 33%
+COREALL SYnch.state
+CORE0 TargetSystem.state DEFault Title SYnch.All InterComPort /Global
+
+; set up synchronization between GUIs:
+COREALL SYnch.Connect &addressGUI0 &addressGUI1
+; required when setting breakpoints on slave GUIs:
+CORE0 SYnch.MasterGo ON
+CORE1 SYnch.SlaveGo ON
+; optional:
+; COREALL SYnch.MasterBreak ON
+; COREALL SYnch.SlaveBreak ON
+
+; Load ORTI Support
+#ORTICDMASTER#
+#ORTICDCPU1#
+#ORTICMDMASTER#
+#ORTICMDCPU1#
+#ORTICDBACKMASTER#
+#ORTICDBACKCPU1#
+
+; script ends here
+ENDDO
+
+;========================================================================
+; helper subroutines:
+
+coreTC0:
+(
+  LOCAL &params
+  ENTRY %LINE &params
+  &params ; execute on this GUI
+  RETURN
+)
+
+coreTC1:
+(
+  LOCAL &params
+  ENTRY %LINE &params
+  INTERCOM.execute &addressGUI1 &params ; execute on remote GUI 1
+  RETURN
+)
+
+coreAll:
+(
+  LOCAL &params
+  ENTRY %LINE &params
+  GOSUB coreTC0 &params
+  GOSUB coreTC1 &params
+  RETURN
+)
+
+setup_intercom:
+(
+  &portGUI0=FORMAT.Decimal(1.,INTERCOM.PORT())
+  &portGUI1=FORMAT.Decimal(1.,INTERCOM.PORT()+1.)
+  &addressGUI0="127.0.0.1:&portGUI0"
+  &addressGUI1="127.0.0.1:&portGUI1"
+  RETURN
+)
+
+other_guis:
+(
+  LOCAL &nodename &config &launchGUI &p3_tmp &p4_sys &p5_help &p6_pbi &p7_opt &p8_opt &p9_bgnd
+  &p3_tmp=OS.PTD()
+  &p4_sys=OS.PSD()
+  &p5_help=OS.PHELPD()
+
+  IF (VERSION.BUILD.BASE()<45240.)
+  (
+    PRINT %ERROR "This script requires TRACE32 Version 2013.06.000045240 or later, contact bdmtc-support@lauterbach.com"
+    ENDDO
+  )
+
+  &config=IFCONFIG.CONFIGURATION()
+  &nodename=IFCONFIG.DEVICENAME()
+  IF (STRing.SCAN("&config","USB",0)!=-1)
+  (
+    &p6_pbi="USB"
+    IF "&nodename"!=""
+    (
+      &p7_opt="NODE=&nodename"
+    )
+  )
+  ELSE
+  (
+    &p6_pbi="NET"
+    &p7_opt="NODE=&nodename"
+    &p8_opt="PACKLEN=1024"
+  )
+
+  ;Check if the machine is a LINUX machine, in this case I have to put new call
+  ;in background 
+  IF (OS.VERSION(0)==0x1X)
+    &p9_bgnd=" &"
+  ELSE
+    &p9_bgnd=""
+
+  WAIT INTERCOM.PING(&addressGUI1) 5.s
+  IF !INTERCOM.PING(&addressGUI1)
+  (
+    PRINT "no debugger / GUI at &addressGUI1 detected, launching second GUI..."
+    &launchGUI=OS.PEF()+" -c "+OS.PPD()+"/config_tc26x_mc.t32 &portGUI1 TriCore-Core1 &p3_tmp &p4_sys &p5_help &p6_pbi &p7_opt &p8_opt CORE=2 &p9_bgnd"
+    OS &launchGUI
+  )
+
+  WAIT INTERCOM.PING(&addressGUI1) 5.s
+  RETURN
+)

@@ -1,0 +1,233 @@
+;
+; Script for flash declaration and programming of Infineon
+; TriCore TC275TE internal flash.
+;
+;
+; Flash:
+;   4 MByte on-chip program flash      at 0x80000000--0x803fffff (cached)
+;                                      or 0xa0000000--0xa03fffff (non cached)
+;   384 kByte data flash EEPROM        at 0xaf000000--0xaf05ffff
+;   16 kByte data flash UCB sectors    at 0xaf100000--0xaf103fff
+;   64 kByte data flash HSM sectors    at 0xaf110000--0xaf11ffff
+;
+; RAM:
+;   112 kByte Data Scratch-Pad RAM (DSPR) at        0xd0000000--0xd001bfff
+;    24 kByte Instruction Scratch-Pad RAM (PSPR) at 0xc0000000--0xc0005fff
+;
+; HINTS:
+;
+;   Erased flash is showing bus error caused by ECC error. ECC width is one
+;   page. In the PFlash a page is an aligned group of 32 bytes and in DFlash
+;   of 8 bytes.
+;
+;   The flash algorithm is programming PFlash in an aligned group of 32 bytes.
+;   When using FLASH.Program command the download has to care about this
+;   alignment.
+;
+;   To avoid any aligment issues FLASH.ReProgram is recommended. Unused flash
+;   data of affected sectors is programmed to 0x0.
+;
+;   FLASH.AUTO is not working for sectors with enabled ECC and uncorrectable
+;   ECC error (showing bus error).
+;
+; CAUTION:
+;
+;   Do not reboot or unpower your device in case all BMHD (Boot Mode Headers)
+;   do not contain valid information. This is normally the case after having
+;   erased the internal program flash or loading an object or binary file
+;   without a valid BMHD. The BMHD are located at:
+;     BMHD0 0xA0000000--0xA000001F
+;     BMHD1 0xA0020000--0xA002001F
+;     BMHD2 0xA000FFE0--0xA000FFFF
+;     BMHD3 0xA001FFE0--0xA001FFFF
+;   See the Infineon documentation for more information.
+;
+
+  ;========================================================================
+  ; Initialize and start debugging
+  LOCAL &master_elf &cpu1_elf
+  &master_elf="#MASTER_ELF#"
+  &cpu1_elf="#CPU1_ELF#"
+
+
+  IF SYStem.MODE()<5
+  (
+    SYStem.RESet
+
+    SYStem.CPU TC264DE
+
+    CORE.select 0.        ; CPU0 is selected for flash programming.
+
+    IF CPUIS("TC26*A")||CPUIS("TC26*E")
+    (
+    ; Emulation Devices in LQFP packages (except Fusion Quad) do not support
+    ; JTAG (TDI pin is used as VDDPSB)
+      IF (ID.CABLE()==0x0029)||(ID.CABLE()==0x4155)
+      (
+      ; DAP only supported by 
+      ; - Bi-directional OCDS Debug Cable (0x0029)
+      ; - Automotive Debug Cable (0x4155)
+        SYStem.CONFIG.DEBUGPORTTYPE DAP2
+      )
+      ELSE 
+      (
+        DIALOG.OK CPU()+" not supported by debug cable."
+        ENDDO
+      )
+    )
+    SYStem.Up
+  )
+
+  ; Disable Watchdog Timers on TC26xD[E]
+
+  ; Disable the Safety Watchdog Timer (overall system level watchdog):
+  PER.Set D:0xF00360F4 %Long 0x00000008 // SCU_WDTSCON1, Request to disable the WDT
+  ; Disable the CPU Watchdog Timers:
+  PER.Set D:0xF0036104 %Long 0x00000008 // SCU_WDTCPU0CON1, Request to disable the WDT
+  PER.Set D:0xF0036110 %Long 0x00000008 // SCU_WDTCPU1CON1, Request to disable the WDT
+
+  ;========================================================================
+  ; Flash Declaration
+
+  IF VERSION.BUILD()<38225.
+  (
+    DIALOG.OK "Please request a Trace32 software update to support Boot Mode Header handling"
+    ENDDO
+  )
+
+  FLASH.RESet
+
+  ; Program flash PF0
+  FLASH.Create  1. 0xA0000000--0xA000BFFF  0x4000 TARGET Long /BootModeHeaDer 0xA0000000--0xA000001F  ; PS0, S0..S2
+  FLASH.Create  1. 0xA000C000--0xA0013FFF  0x4000 TARGET Long /BootModeHeaDer 0xA000FFE0--0xA000FFFF  ; PS0, S3..S4
+  FLASH.Create  1. 0xA0014000--0xA0017FFF  0x4000 NOP    Long /INFO "Tuning Protection"               ; PS0, S5
+  FLASH.Create  1. 0xA0018000--0xA001BFFF  0x4000 NOP    Long /INFO "HSM code sector"                 ; PS0, S6
+  FLASH.Create  1. 0xA001C000--0xA001FFFF  0x4000 TARGET Long /BootModeHeaDer 0xA001FFE0--0xA001FFFF  ; PS0, S7
+  FLASH.Create  1. 0xA0020000--0xA005FFFF  0x8000 TARGET Long /BootModeHeaDer 0xA0020000--0xA002001F  ; PS0, S8..S15
+  FLASH.Create  1. 0xA0060000--0xA007FFFF 0x10000 NOP    Long /INFO "HSM code sector"                 ; PS0, S16..S17
+  FLASH.Create  2. 0xA0080000--0xA009FFFF 0x10000 TARGET Long   ; PS1, S18..S19
+  FLASH.Create  2. 0xA00A0000--0xA00FFFFF 0x20000 TARGET Long   ; PS1, S20..S22
+  ; Program flash PF1
+  FLASH.Create  5. 0xA0100000--0xA011FFFF  0x4000 TARGET Long   ; PS0, S0..S7
+  FLASH.Create  5. 0xA0120000--0xA015FFFF  0x8000 TARGET Long   ; PS0, S8..S15
+  FLASH.Create  5. 0xA0160000--0xA017FFFF 0x10000 TARGET Long   ; PS0, S16..S17
+  FLASH.Create  6. 0xA0180000--0xA019FFFF 0x10000 TARGET Long   ; PS1, S18..S19
+  FLASH.Create  6. 0xA01A0000--0xA01FFFFF 0x20000 TARGET Long   ; PS1, S20..S22
+  FLASH.Create  7. 0xA0200000--0xA027FFFF 0x40000 TARGET Long   ; PS2, S23..S24
+  ; Data flash DF0
+  FLASH.Create  9. 0xAF000000--0xAF017FFF  0x2000 TARGET Long /INFO "EEPROM"          ; DF0, EEPROM0..EEPROM11
+  FLASH.Create 10. 0xAF100000--0xAF1003FF   0x400 NOP    Long /INFO "UCB_PFlash"      ; DF0, UCB0
+  FLASH.Create 10. 0xAF100400--0xAF1007FF   0x400 NOP    Long /INFO "UCB_DFlash"      ; DF0, UCB1
+  FLASH.Create 10. 0xAF100800--0xAF100BFF   0x400 NOP    Long /INFO "UCB_HSMCOTP"     ; DF0, UCB2
+  FLASH.Create 10. 0xAF100C00--0xAF100FFF   0x400 NOP    Long /INFO "UCB_OTP"         ; DF0, UCB3
+  FLASH.Create 10. 0xAF101000--0xAF1013FF   0x400 NOP    Long /INFO "UCB_IFX"         ; DF0, UCB4
+  FLASH.Create 10. 0xAF101400--0xAF1017FF   0x400 NOP    Long /INFO "UCB_DBG"         ; DF0, UCB5
+  FLASH.Create 10. 0xAF101800--0xAF101BFF   0x400 NOP    Long /INFO "UCB_HSM"         ; DF0, UCB6
+  FLASH.Create 10. 0xAF101C00--0xAF102FFF   0x400 NOP    Long                         ; DF0, UCB7..UCB11
+  FLASH.Create 10. 0xAF103000--0xAF103FFF   0x400 NOP    Long /INFO "Erase Counter"   ; DF0, UCB12..UCB15
+
+  ; Cached program flash address range
+  FLASH.CreateALIAS 0x80000000--0x80FFFFFF 0xA0000000
+
+  FLASH.TARGET 0xC0000000 0xD0000000 0x2000 ~~/demo/tricore/flash/long/tc2.bin
+  ;FLASH.TARGET 0xC0000000 0xD0000000 0x2000 ~~/demo/tricore/flash/long/tc2.bin /DualPort
+
+  ;========================================================================
+  ; Example for download (Handle double addressing spaces A and 8)
+
+  FLASH.ReProgram ALL
+
+  Data.LOAD.Elf "&master_elf" 0x80000000--0x80001fff  ; PFLASH0 8k Cached
+  Data.LOAD.Elf "&master_elf" 0x80004000--0x800fffff  ; PFLASH0 1M-16k Cached
+
+  Data.LOAD.Elf "&master_elf" 0xA0000000--0xA0001fff  ; PFLASH0 8k Not Cached
+  Data.LOAD.Elf "&master_elf" 0xA0004000--0xA00fffff  ; PFLASH0 1M-16k Not Cached
+
+  Data.LOAD.Elf "&cpu1_elf" 0x80002000--0x80002fff  ; PFLASH0 4k Cached
+  Data.LOAD.Elf "&cpu1_elf" 0x80100000--0x801fffff  ; PFLASH1 1M Cached
+
+  Data.LOAD.Elf "&cpu1_elf" 0xA0002000--0xA0002fff  ; PFLASH0 4k Not Cached
+  Data.LOAD.Elf "&cpu1_elf" 0xA0100000--0xA01fffff  ; PFLASH1 1M Not Cached
+
+  ; Check if at one valid boot mode header is available
+  LOCAL  &progflash
+  GOSUB CheckBootModeHeader 0xa0000000
+  ENTRY &progflash
+  IF &progflash
+    GOTO ProgramFlash
+  GOSUB CheckBootModeHeader 0xa0020000
+  ENTRY &progflash
+  IF &progflash
+    GOTO ProgramFlash
+  GOSUB CheckBootModeHeader 0xa000ffe0
+  ENTRY &progflash
+  IF &progflash
+    GOTO ProgramFlash
+  GOSUB CheckBootModeHeader 0xa001ffe0
+  ENTRY &progflash
+  IF &progflash
+    GOTO ProgramFlash
+
+  DIALOG.YESNO "No valid Boot Mode Header found!" "Do you really want to program flash?"
+  ENTRY &progflash
+  IF !&progflash
+  (
+    ; Revert loaded data
+    FLASH.ReProgram ALL
+    FLASH.ReProgram off
+  )
+
+ProgramFlash: 
+  FLASH.ReProgram off
+
+  QUIT
+
+;========================================================================
+; Check if Boot Mode Header has valid contents
+
+CheckBootModeHeader:
+  LOCAL &addr
+  ENTRY &addr
+
+  LOCAL &result
+  &result=TRUE()
+
+  ON ERROR GOSUB
+  (
+    &result=FALSE()
+    RETURN
+  )
+
+  Data.SUM &addr++0x17 /Long /ByteSWAP /CRC32
+  IF &result
+  (
+    Data.Set &addr+0x18 %Long DATA.SUM() /DIFF
+    IF &result
+    (
+      &result=!FOUND()
+      IF &result
+      (
+        Data.Set &addr+0x1c %Long ~DATA.SUM() /DIFF
+        IF &result
+        (
+          &result=!FOUND()
+        )
+      )
+    )
+  )
+
+  RETURN &result
+
+;========================================================================
+; Check Flash contents
+CheckFlashRange:
+    LOCAL &elf_path &range
+    ENTRY  &elf_path &range
+    Data.LOAD.Elf "&elf_path" &range /DIFF
+    IF FOUND()
+    (
+      PRINT "Difference found at address " address.offset(Track.address())
+    )
+
+  RETURN
+

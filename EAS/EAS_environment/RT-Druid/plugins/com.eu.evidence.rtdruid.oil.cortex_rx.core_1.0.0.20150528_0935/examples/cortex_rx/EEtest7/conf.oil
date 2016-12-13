@@ -1,0 +1,104 @@
+/* ###*B*###
+ * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+ *
+ * Copyright (C) 2002-2011  Evidence Srl
+ *
+ * This file is part of ERIKA Enterprise.
+ *
+ * ERIKA Enterprise is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation, 
+ * (with a special exception described below).
+ *
+ * Linking this code statically or dynamically with other modules is
+ * making a combined work based on this code.  Thus, the terms and
+ * conditions of the GNU General Public License cover the whole
+ * combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this code with independent modules to produce an
+ * executable, regardless of the license terms of these independent
+ * modules, and to copy and distribute the resulting executable under
+ * terms of your choice, provided that you also meet, for each linked
+ * independent module, the terms and conditions of the license of that
+ * module.  An independent module is a module which is not derived from
+ * or based on this library.  If you modify this code, you may extend
+ * this exception to your version of the code, but you are not
+ * obligated to do so.  If you do not wish to do so, delete this
+ * exception statement from your version.
+ *
+ * ERIKA Enterprise is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License version 2 for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * version 2 along with ERIKA Enterprise; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA.
+ * ###*E*### */
+
+/*
+ * A minimal EE demo for BCC2 mode testing. Task1 is a non-preemptive task
+ * and Task2 can have pending activations.
+ * Author: 2011  Giuseppe Serano
+ *         2014  Christoph Kreuzberger
+ * Based on examples/s12xs/porting_examples/monostack/EEtest7
+ */
+
+CPU mySystem {
+
+	OS myOs {
+
+		EE_OPT = "DEBUG";
+		EE_OPT = "__ASSERT__";
+
+		CPU_DATA = CORTEX_RX {
+			MODEL = R4;
+			APP_SRC = "code.c";
+			COMPILER_TYPE = CCS; 
+			MULTI_STACK = FALSE;
+		};
+
+		MCU_DATA = TI {
+			MODEL = TMS570;
+		};
+
+		EE_OPT = "__USE_USER_LED__";
+		EE_OPT = "__USE_SYSTICK__";
+		EE_OPT = "__TI_DRIVER_LIB__";
+    EE_OPT = "__ALLOW_NESTED_IRQ__";
+
+		KERNEL_TYPE = BCC2;
+    EE_OPT = "__OO_STARTOS_OLD__";
+
+		STATUS = EXTENDED;
+		STARTUPHOOK = FALSE;
+		ERRORHOOK = FALSE;
+		SHUTDOWNHOOK = FALSE;
+		PRETASKHOOK = FALSE;
+		POSTTASKHOOK = FALSE;
+		USEGETSERVICEID = FALSE;
+		USEPARAMETERACCESS = FALSE;
+		USERESSCHEDULER = FALSE;
+
+	};
+
+	TASK Task1 {
+		PRIORITY = 0x01;   /* Low priority */
+		AUTOSTART = FALSE;
+		STACK = SHARED;
+		ACTIVATION = 1;    /* only one pending activation */
+		SCHEDULE = NON;
+	};
+
+	TASK Task2 {
+		PRIORITY = 0x02;   /* High priority */
+		STACK = SHARED;
+		SCHEDULE = FULL;
+		AUTOSTART = FALSE;
+		ACTIVATION = 4;
+	};
+
+
+};

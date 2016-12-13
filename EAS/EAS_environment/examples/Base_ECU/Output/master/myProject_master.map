@@ -1,0 +1,1863 @@
+Archive member included because of file (symbol)
+
+libee.a(display.o)            obj/src/master.o (DISPLAY_BackgroundColor)
+libee.a(graph.o)              obj/src/master.o (graph_drawRectangle)
+libee.a(util.o)               libee.a(display.o) (delay_ms)
+libee.a(ee_tc_trapvec.o)      obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o (EE_tc_trap_table)
+libee.a(ee_tc_intvec.o)       obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o (EE_tc_interrupt_table)
+libee.a(ee_tc_context.o)      libee.a(ee_tc_intvec.o) (EE_std_change_context)
+libee.a(ee_tc_multicore.o)    libee.a(ee_tc_intvec.o) (EE_TC_iirq_handler)
+libee.a(ee_as_multicore.o)    obj/src/master.o (EE_as_StartCore)
+libee.a(ee_as_rpc.o)          libee.a(ee_tc_multicore.o) (EE_as_rpc_handler)
+libee.a(ee_activate.o)        libee.a(ee_as_rpc.o) (EE_oo_ActivateTask)
+libee.a(ee_gettaskstate.o)    libee.a(ee_as_rpc.o) (EE_oo_GetTaskState)
+libee.a(ee_terminat.o)        obj/src/master.o (EE_oo_TerminateTask)
+libee.a(ee_thendin.o)         libee.a(ee_tc_context.o) (EE_thread_end_instance)
+libee.a(ee_irqendin.o)        libee.a(ee_tc_intvec.o) (EE_IRQ_end_instance)
+libee.a(ee_tstub.o)           obj/eecfg.o (EE_oo_thread_stub)
+libee.a(ee_lookup.o)          libee.a(ee_thendin.o) (EE_oo_IRQ_disable_count)
+libee.a(ee_rq_exchg.o)        libee.a(ee_activate.o) (EE_rq2stk_exchange)
+libee.a(ee_rq_inser.o)        libee.a(ee_activate.o) (EE_rq_insert)
+libee.a(ee_shtdown.o)         libee.a(ee_as_rpc.o) (EE_oo_ShutdownOS_internal)
+libee.a(ee_startos.o)         obj/src/master.o (EE_oo_StartOS)
+libee.a(ee_alcancel.o)        libee.a(ee_as_rpc.o) (EE_oo_CancelAlarm)
+libee.a(ee_algetbase.o)       libee.a(ee_as_rpc.o) (EE_oo_GetAlarmBase)
+libee.a(ee_alget.o)           libee.a(ee_as_rpc.o) (EE_oo_GetAlarm)
+libee.a(ee_alsetabs.o)        libee.a(ee_as_rpc.o) (EE_oo_SetAbsAlarm)
+libee.a(ee_alsetrel.o)        obj/src/master.o (EE_oo_SetRelAlarm)
+libee.a(ee_altick.o)          libee.a(ee_startos.o) (EE_oo_counter_object_insert)
+libee.a(ee_getcountervalue.o)
+                              libee.a(ee_as_rpc.o) (EE_oo_GetCounterValue)
+libee.a(ee_getelapsedvalue.o)
+                              libee.a(ee_as_rpc.o) (EE_oo_GetElapsedValue)
+libee.a(ee_evset.o)           libee.a(ee_as_rpc.o) (EE_oo_SetEvent)
+libee.a(ee_tc2Yx_system.o)    libee.a(ee_startos.o) (EE_tc_safety_endinit_disable)
+libee.a(ee_hal_structs.o)     libee.a(ee_tc_intvec.o) (EE_std_endcycle_next_tid)
+libee.a(ee_tc_oo.o)           libee.a(ee_terminat.o) (EE_hal_terminate_task)
+libee.a(ee_as_spinlocks.o)    libee.a(ee_irqendin.o) (EE_as_release_all_spinlocks)
+libee.a(ee_tnterm.o)          libee.a(ee_tc_oo.o) (EE_thread_not_terminated)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+                              obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o (_exit)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+                              libee.a(graph.o) (round)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+                              c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o) (__adddf3)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+                              c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o) (__thenan_df)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+                              c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o) (__ashldi3)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+                              c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o) (__lshrdi3)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+                              c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o) (__pack_d)
+c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+                              c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o) (__unpack_d)
+
+----- BEGIN EXTENDED MAP LISTING -----
+
+>>> Linker and link run information
+
+Linker version: GNU ld version (GNU Binutils) 2.20 (TriCore) using BFD version (GNU Binutils) 2.20 (v2.3), Tool Version v2.7
+Name of linker executable: c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/bin/ld.exe
+Date of link run: Mon Dec 05 15:57:36 2016
+Name of linker map file: myProject_master.map
+
+>>> Symbols (global (S = g) and static (S = l); sorted by address)
+
+=====================================================================================================================================================================================================================
+Start      End         Size S Name                                        Memory    O-Sec                 I-Sec                                               Input object                                           
+=====================================================================================================================================================================================================================
+0x00000000 0x0000001f    32 g BootModeHeader0                             *default* .bmhd0                .bmhd0                                              obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x00000000 0x0000001f    32 g BootModeHeader1                             *default* .bmhd1                .bmhd1                                              obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x00000000 0x00000007     8 g EE_as_core_start_addresses                  *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000000 0x00000013    20 g EE_as_spinlocks_locker_task_or_isr2         *default* .CPU0.data            .data.EE_as_spinlocks_locker_task_or_isr2           obj/eecfg.o
+0x00000000 0x00000003     4 g EE_as_spinlocks_stack                       *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000000 0x00000161   354 g EE_tc2Yx_start                              *default* ee_kernel_start       ee_kernel_start                                     obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x00000000 0x00000000     0 g EE_tc_interrupt_table                       *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000000 0x00000203   516 g EE_tc_stack_1                               *default* .CPU0.ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0x00000000 0x00000000     0 g EE_tc_trap_mmu                              *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000000 0x00000000     0 g EE_tc_trap_table                            *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000000 0x0000010f   272 g FuncTaskUi                                  *default* .CPU0.text            .text.FuncTaskUi                                    obj/src/master.o
+0x00000000 0x00000001     2 g StartupHook                                 *default* ee_mcglobalt          .text.StartupHook                                   obj/src/master.o
+0x00000000 0x00000005     6 g _START                                      *default* .startup              .startup                                            obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x00000000 0x00000003     4 g __progname                                  *default* .CPU0.bss             .bss                                                libos_exit.o
+0x00000002 0x00000003     2 g ShutdownHook                                *default* ee_mcglobalt          .text.ShutdownHook                                  obj/src/master.o
+0x00000004 0x0000000f    12 g EE_as_spinlocks_last                        *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000004 0x00000017    20 g __thenan_df                                 *default* .CPU0.rodata          .rodata                                             _thenan_df.o
+0x00000008 0x0000001b    20 g EE_as_rpc_services_table                    *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000008 0x0000000b     4 l on_off_timer.35640                          *default* .CPU0.bss             .bss.on_off_timer.35640                             obj/src/master.o
+0x0000000c 0x0000000f     4 g EE_ApplicationMode                          *default* .CPU0.bss             .bss.EE_ApplicationMode                             obj/eecfg.o
+0x00000010 0x00000010     1 g EE_as_spinlocks_locker_core                 *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000010 0x0000002f    32 g EE_oo_counter_object_RAM                    *default* .CPU0.bss             .bss.EE_oo_counter_object_RAM                       obj/eecfg.o
+0x00000014 0x0000001b     8 g EE_counter_RAM                              *default* .CPU0.data            .data.EE_counter_RAM                                obj/eecfg.o
+0x00000014 0x00000023    16 g EE_hal_spinlock_status                      *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000018 0x0000001f     8 g EE_oo_autostart_alarm_cycle                 *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_cycle                 obj/eecfg.o
+0x0000001c 0x00000023     8 g EE_as_rpc_counters                          *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x0000001c 0x0000001f     4 g EE_th_terminate_nextask                     *default* .CPU0.data            .data.EE_th_terminate_nextask                       obj/eecfg.o
+0x00000020 0x00000027     8 g EE_oo_autostart_alarm_increment             *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_increment             obj/eecfg.o
+0x00000020 0x00000023     4 g EE_rq_first                                 *default* .CPU0.data            .data.EE_rq_first                                   obj/eecfg.o
+0x00000020 0x00000020     0 g EE_tc_isr2_entry_1                          *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000020 0x00000020     0 g EE_tc_trap_protection                       *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000024 0x0000005f    60 g EE_as_rpc_RAM                               *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000024 0x00000033    16 g EE_as_rpc_alarms                            *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000024 0x00000027     4 g EE_th_rnact                                 *default* .CPU0.data            .data.EE_th_rnact                                   obj/eecfg.o
+0x00000028 0x0000002f     8 g EE_oo_autostart_alarm_data                  *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_data                  obj/eecfg.o
+0x00000028 0x0000002b     4 g EE_stkfirst                                 *default* .CPU0.data            .data.EE_stkfirst                                   obj/eecfg.o
+0x0000002c 0x0000002f     4 g EE_th_next                                  *default* .CPU0.data            .data.EE_th_next                                    obj/eecfg.o
+0x00000030 0x0000003f    16 g EE_isr2_nesting_level                       *default* .CPU0.bss             .bss.EE_isr2_nesting_level                          obj/eecfg.o
+0x00000030 0x00000057    40 g EE_oo_action_ROM                            *default* .CPU0.rodata          .rodata.EE_oo_action_ROM                            obj/eecfg.o
+0x00000030 0x00000033     4 g EE_th_status                                *default* .CPU0.data            .data.EE_th_status                                  obj/eecfg.o
+0x00000034 0x0000005b    40 g EE_as_rpc_tasks                             *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000034 0x00000043    16 g EE_tc_system_tos                            *default* .CPU0.data            .data.EE_tc_system_tos                              obj/eecfg.o
+0x00000040 0x00000040     0 g EE_tc_isr2_entry_2                          *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000040 0x00000040     0 g EE_tc_trap_instruction                      *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000040 0x00000043     4 g EE_th_waswaiting                            *default* .CPU0.bss             .bss.EE_th_waswaiting                               obj/eecfg.o
+0x00000044 0x00000047     4 g EE_isr2_index                               *default* .CPU0.data            .data.EE_isr2_index                                 ee_irqendin.o
+0x00000044 0x00000047     4 g EE_th_event_waitmask                        *default* .CPU0.bss             .bss.EE_th_event_waitmask                           obj/eecfg.o
+0x00000048 0x0000004b     4 g EE_th_event_active                          *default* .CPU0.bss             .bss.EE_th_event_active                             obj/eecfg.o
+0x0000004c 0x0000004f     4 g EE_sys_ceiling                              *default* .CPU0.bss             .bss.EE_sys_ceiling                                 obj/eecfg.o
+0x00000050 0x00000053     4 g EE_terminate_data                           *default* .CPU0.bss             .bss.EE_terminate_data                              obj/eecfg.o
+0x00000054 0x0000005b     8 g EE_tc_tasks_RA                              *default* .CPU0.bss             .bss.EE_tc_tasks_RA                                 obj/eecfg.o
+0x00000058 0x0000006f    24 g EE_oo_counter_object_ROM                    *default* .CPU0.rodata          .rodata.EE_oo_counter_object_ROM                    obj/eecfg.o
+0x0000005c 0x00000067    12 g EE_as_core_spinlocks                        *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x0000005c 0x0000005f     4 g EE_tc_active_tos                            *default* .CPU0.bss             .bss.EE_tc_active_tos                               obj/eecfg.o
+0x00000060 0x000000e7   136 g EE_tc_isr2_global_wrapper                   *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000060 0x00000060     0 g EE_tc_trap_context                          *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000060 0x00000060     1 g on_off                                      *default* ee_mcglobald          ee_mcglobald                                        obj/src/master.o
+0x00000060 0x00000061     2 g touch_y                                     *default* .CPU0.bss             .bss.touch_y                                        display.o
+0x00000061 0x00000061     1 g adc                                         *default* ee_mcglobald          ee_mcglobald                                        obj/src/master.o
+0x00000062 0x00000063     2 g tft_id                                      *default* ee_mcglobald          ee_mcglobald                                        display.o
+0x00000062 0x00000063     2 g touch_x                                     *default* .CPU0.bss             .bss.touch_x                                        display.o
+0x00000064 0x00000067     4 g EE_tc_kernel_barrier                        *default* ee_mcglobald          ee_mcglobald                                        ee_tc_multicore.o
+0x00000064 0x00000067     4 g defaultDispBufReady                         *default* .CPU0.bss             .bss.defaultDispBufReady                            display.o
+0x00000068 0x00000068     1 g BackgroundColor                             *default* .CPU0.bss             .bss.BackgroundColor                                display.o
+0x00000068 0x0000006b     4 g EE_as_not_as_core_mask                      *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x0000006a 0x000000ff   150 g colorTable                                  *default* .CPU0.bss             .bss.colorTable                                     display.o
+0x0000006c 0x0000006f     4 g EE_as_core_started                          *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x00000070 0x00000077     8 g EE_alarm_ROM                                *default* .CPU0.rodata          .rodata.EE_alarm_ROM                                obj/eecfg.o
+0x00000070 0x00000073     4 g EE_as_core_mask                             *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x00000074 0x0000007f    12 g EE_as_os_application_mode                   *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x00000078 0x00000083    12 g EE_counter_ROM                              *default* .CPU0.rodata          .rodata.EE_counter_ROM                              obj/eecfg.o
+0x00000080 0x00000083     4 g EE_as_shutdown_mask                         *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000080 0x00000080     0 g EE_tc_trap_bus                              *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000084 0x00000084     1 g EE_as_shutdown_all_cores_error              *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000084 0x00000087     4 g EE_th_is_extended                           *default* .CPU0.rodata          .rodata.EE_th_is_extended                           obj/eecfg.o
+0x00000085 0x00000085     1 g EE_as_shutdown_all_cores_flag               *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000086 0x00000088     3 g EE_as_rpc_serving                           *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000088 0x0000008b     4 g EE_th_dispatch_prio                         *default* .CPU0.rodata          .rodata.EE_th_dispatch_prio                         obj/eecfg.o
+0x0000008c 0x0000008f     4 g EE_th_ready_prio                            *default* .CPU0.rodata          .rodata.EE_th_ready_prio                            obj/eecfg.o
+0x00000090 0x00000093     4 g EE_terminate_real_th_body                   *default* .CPU0.rodata          .rodata.EE_terminate_real_th_body                   obj/eecfg.o
+0x00000094 0x00000097     4 g EE_hal_thread_body                          *default* .CPU0.rodata          .rodata.EE_hal_thread_body                          obj/eecfg.o
+0x00000098 0x0000009b     4 g EE_counter_hw_ROM                           *default* .CPU0.rodata          .rodata.EE_counter_hw_ROM                           obj/eecfg.o
+0x0000009c 0x000000a3     8 g EE_std_thread_tos                           *default* .CPU0.rodata          .rodata.EE_std_thread_tos                           obj/eecfg.o
+0x000000a0 0x000000a0     0 g EE_tc_trap_assertion                        *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x000000a4 0x000000a7     4 l EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE obj/eecfg.o
+0x000000a8 0x000000f7    80 l CSWTCH.18                                   *default* .CPU0.rodata          .rodata.CSWTCH.18                                   ee_as_rpc.o
+0x000000c0 0x000000c0     0 g EE_tc_trap_system                           *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x000000e0 0x000000e0     0 g EE_tc_trap_nmi                              *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x000000f8 0x00000147    80 l CSWTCH.19                                   *default* .CPU0.rodata          .rodata.CSWTCH.19                                   ee_as_rpc.o
+0x00000100 0x00012cff 76800 g frameBuffer                                 *default* .CPU0.bss             .bss.frameBuffer                                    display.o
+0x00000110 0x00000199   138 g main                                        *default* .CPU0.text            .text.main                                          obj/src/master.o
+0x00000148 0x0000014b     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_activate.o
+0x0000014c 0x0000014f     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_gettaskstate.o
+0x00000150 0x00000153     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_alcancel.o
+0x00000154 0x00000157     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_algetbase.o
+0x00000158 0x0000015b     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_alget.o
+0x0000015c 0x0000015f     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_altick.o
+0x00000160 0x00000163     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_getcountervalue.o
+0x00000164 0x00000167     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_evset.o
+0x0000019a 0x00000433   666 l tft_display_home.constprop.1                *default* .CPU0.text            .text.tft_display_home.constprop.1                  display.o
+0x00000434 0x0000043d    10 g DISPLAY_BackgroundColor                     *default* .CPU0.text            .text.DISPLAY_BackgroundColor                       display.o
+0x0000043e 0x0000045d    32 g DISPLAY_Framebuffer_Init                    *default* .CPU0.text            .text.DISPLAY_Framebuffer_Init                      display.o
+0x0000045e 0x00000573   278 g DISPLAY_colorTable_StdInit                  *default* .CPU0.text            .text.DISPLAY_colorTable_StdInit                    display.o
+0x00000574 0x00000597    36 g DISPLAY_Buffer_Init                         *default* .CPU0.text            .text.DISPLAY_Buffer_Init                           display.o
+0x00000598 0x00000613   124 g writeDisplay                                *default* .CPU0.text            .text.writeDisplay                                  display.o
+0x00000614 0x0000062d    26 g writePixel                                  *default* .CPU0.text            .text.writePixel                                    display.o
+0x0000062e 0x00000695   104 g setPx                                       *default* .CPU0.text            .text.setPx                                         display.o
+0x00000696 0x00000739   164 g printScrn                                   *default* .CPU0.text            .text.printScrn                                     display.o
+0x0000073a 0x000008d9   416 g drawChar                                    *default* .CPU0.text            .text.drawChar                                      display.o
+0x000008da 0x0000091f    70 l drawString.constprop.2                      *default* .CPU0.text            .text.drawString.constprop.2                        display.o
+0x00000920 0x000009cf   176 g drawString                                  *default* .CPU0.text            .text.drawString                                    display.o
+0x000009d0 0x00000a37   104 g drawBinary                                  *default* .CPU0.text            .text.drawBinary                                    display.o
+0x00000a38 0x0000276f  7480 g DISPLAY_Init                                *default* .CPU0.text            .text.DISPLAY_Init                                  display.o
+0x00002770 0x0000282f   192 g DISPLAY_Clear                               *default* .CPU0.text            .text.DISPLAY_Clear                                 display.o
+0x00002830 0x0000296b   316 g TOUCH_read                                  *default* .CPU0.text            .text.TOUCH_read                                    display.o
+0x0000296c 0x00002983    24 g TOUCH_x                                     *default* .CPU0.text            .text.TOUCH_x                                       display.o
+0x00002984 0x0000299b    24 g TOUCH_y                                     *default* .CPU0.text            .text.TOUCH_y                                       display.o
+0x0000299c 0x000029fb    96 g clearDisplayBuffer                          *default* .CPU0.text            .text.clearDisplayBuffer                            display.o
+0x000029fc 0x00002c9b   672 g graph_line                                  *default* .CPU0.text            .text.graph_line                                    graph.o
+0x00002c9c 0x00002cfd    98 g graph_drawZPoint                            *default* .CPU0.text            .text.graph_drawZPoint                              graph.o
+0x00002cfe 0x00002d77   122 g graph_drawXYPoint                           *default* .CPU0.text            .text.graph_drawXYPoint                             graph.o
+0x00002d78 0x00002d91    26 g graph_pointOnAxis                           *default* .CPU0.text            .text.graph_pointOnAxis                             graph.o
+0x00002d92 0x00002deb    90 g graph_hLine                                 *default* .CPU0.text            .text.graph_hLine                                   graph.o
+0x00002dec 0x00002e45    90 g graph_vLine                                 *default* .CPU0.text            .text.graph_vLine                                   graph.o
+0x00002e46 0x00002ea3    94 g graph_squarePoint                           *default* .CPU0.text            .text.graph_squarePoint                             graph.o
+0x00002ea4 0x00002f7b   216 g graph_rasterCircle                          *default* .CPU0.text            .text.graph_rasterCircle                            graph.o
+0x00002f7c 0x00002fc7    76 g graph_fillCircle                            *default* .CPU0.text            .text.graph_fillCircle                              graph.o
+0x00002fc8 0x000031a3   476 g graph_drawRectangle                         *default* .CPU0.text            .text.graph_drawRectangle                           graph.o
+0x000031a4 0x000031d7    52 g graph_fillRectangle                         *default* .CPU0.text            .text.graph_fillRectangle                           graph.o
+0x000031d8 0x00003225    78 g graph_drawColorMap                          *default* .CPU0.text            .text.graph_drawColorMap                            graph.o
+0x00003226 0x00003227     2 g delay_us                                    *default* .CPU0.text            .text.delay_us                                      util.o
+0x00003228 0x00003229     2 g delay_ms                                    *default* .CPU0.text            .text.delay_ms                                      util.o
+0x0000322a 0x0000322f     6 g EE_tc_isr2_call_handler                     *default* .CPU0.text            .text.EE_tc_isr2_call_handler                       ee_tc_intvec.o
+0x00003230 0x000032c7   152 g EE_std_change_context                       *default* .CPU0.text            .text.EE_std_change_context                         ee_tc_context.o
+0x000032c8 0x00003339   114 g EE_hal_sync_barrier                         *default* .CPU0.text            .text.EE_hal_sync_barrier                           ee_tc_multicore.o
+0x0000333a 0x000033a5   108 g EE_tc_sync_barrier                          *default* .CPU0.text            .text.EE_tc_sync_barrier                            ee_tc_multicore.o
+0x000033a6 0x000033a9     4 g EE_TC_iirq_handler                          *default* .CPU0.text            .text.EE_TC_iirq_handler                            ee_tc_multicore.o
+0x000033aa 0x00003493   234 g EE_as_StartCore                             *default* .CPU0.text            .text.EE_as_StartCore                               ee_as_multicore.o
+0x00003494 0x00003563   208 g EE_as_StartNonAutosarCore                   *default* .CPU0.text            .text.EE_as_StartNonAutosarCore                     ee_as_multicore.o
+0x00003564 0x0000363f   220 g EE_as_rpc                                   *default* .CPU0.text            .text.EE_as_rpc                                     ee_as_rpc.o
+0x00003640 0x00003865   550 g EE_as_rpc_handler                           *default* .CPU0.text            .text.EE_as_rpc_handler                             ee_as_rpc.o
+0x00003868 0x00003967   256 g EE_as_ShutdownAllCores                      *default* .CPU0.text            .text.EE_as_ShutdownAllCores                        ee_as_rpc.o
+0x00003968 0x00003a7f   280 g EE_oo_ActivateTask                          *default* .CPU0.text            .text.EE_oo_ActivateTask                            ee_activate.o
+0x00003a80 0x00003af7   120 g EE_oo_GetTaskState                          *default* .CPU0.text            .text.EE_oo_GetTaskState                            ee_gettaskstate.o
+0x00003af8 0x00003b61   106 g EE_oo_TerminateTask                         *default* .CPU0.text            .text.EE_oo_TerminateTask                           ee_terminat.o
+0x00003b62 0x00003c91   304 g EE_thread_end_instance                      *default* .CPU0.text            .text.EE_thread_end_instance                        ee_thendin.o
+0x00003c92 0x00003cdb    74 g EE_oo_assign_TID_to_ISR2                    *default* .CPU0.text            .text.EE_oo_assign_TID_to_ISR2                      ee_irqendin.o
+0x00003cdc 0x00003d71   150 g EE_IRQ_end_instance                         *default* .CPU0.text            .text.EE_IRQ_end_instance                           ee_irqendin.o
+0x00003d72 0x00003dd3    98 g EE_IRQ_end_post_stub                        *default* .CPU0.text            .text.EE_IRQ_end_post_stub                          ee_irqendin.o
+0x00003dd4 0x00003ddf    12 g EE_oo_thread_stub                           *default* .CPU0.text            .text.EE_oo_thread_stub                             ee_tstub.o
+0x00003de0 0x00003e09    42 g EE_rq2stk_exchange                          *default* .CPU0.text            .text.EE_rq2stk_exchange                            ee_rq_exchg.o
+0x00003e0a 0x00003e75   108 g EE_rq_insert                                *default* .CPU0.text            .text.EE_rq_insert                                  ee_rq_inser.o
+0x00003e76 0x00003f3b   198 g EE_oo_ShutdownOS_internal                   *default* .CPU0.text            .text.EE_oo_ShutdownOS_internal                     ee_shtdown.o
+0x00003f3c 0x00003f4d    18 g EE_oo_ShutdownOS                            *default* .CPU0.text            .text.EE_oo_ShutdownOS                              ee_shtdown.o
+0x00003f4e 0x000041bf   626 g EE_oo_StartOS                               *default* .CPU0.text            .text.EE_oo_StartOS                                 ee_startos.o
+0x000041c0 0x000042bb   252 g EE_oo_CancelAlarm                           *default* .CPU0.text            .text.EE_oo_CancelAlarm                             ee_alcancel.o
+0x000042bc 0x00004359   158 g EE_oo_GetAlarmBase                          *default* .CPU0.text            .text.EE_oo_GetAlarmBase                            ee_algetbase.o
+0x0000435a 0x0000442b   210 g EE_oo_GetAlarm                              *default* .CPU0.text            .text.EE_oo_GetAlarm                                ee_alget.o
+0x0000442c 0x0000450f   228 g EE_oo_SetAbsAlarm                           *default* .CPU0.text            .text.EE_oo_SetAbsAlarm                             ee_alsetabs.o
+0x00004510 0x000045df   208 g EE_oo_SetRelAlarm                           *default* .CPU0.text            .text.EE_oo_SetRelAlarm                             ee_alsetrel.o
+0x000045e0 0x0000468f   176 g EE_oo_counter_object_insert                 *default* .CPU0.text            .text.EE_oo_counter_object_insert                   ee_altick.o
+0x00004690 0x000048fb   620 g EE_oo_IncrementCounterImplementation        *default* .CPU0.text            .text.EE_oo_IncrementCounterImplementation          ee_altick.o
+0x000048fc 0x0000492b    48 g EE_oo_IncrementCounterHardware              *default* .CPU0.text            .text.EE_oo_IncrementCounterHardware                ee_altick.o
+0x0000492c 0x00004963    56 g EE_oo_IncrementCounter                      *default* .CPU0.text            .text.EE_oo_IncrementCounter                        ee_altick.o
+0x00004964 0x000049df   124 g EE_oo_GetCounterValue                       *default* .CPU0.text            .text.EE_oo_GetCounterValue                         ee_getcountervalue.o
+0x000049e0 0x00004a75   150 g EE_oo_GetElapsedValue                       *default* .CPU0.text            .text.EE_oo_GetElapsedValue                         ee_getelapsedvalue.o
+0x00004a76 0x00004bb3   318 g EE_oo_SetEvent                              *default* .CPU0.text            .text.EE_oo_SetEvent                                ee_evset.o
+0x00004bb4 0x00004bd3    32 g EE_tc_endint_disable                        *default* .CPU0.text            .text.EE_tc_endint_disable                          ee_tc2Yx_system.o
+0x00004bd4 0x00004bf3    32 g EE_tc_endint_enable                         *default* .CPU0.text            .text.EE_tc_endint_enable                           ee_tc2Yx_system.o
+0x00004bf4 0x00004c13    32 g EE_tc_safety_endinit_disable                *default* .CPU0.text            .text.EE_tc_safety_endinit_disable                  ee_tc2Yx_system.o
+0x00004c14 0x00004c33    32 g EE_tc_safety_endinit_enable                 *default* .CPU0.text            .text.EE_tc_safety_endinit_enable                   ee_tc2Yx_system.o
+0x00004c34 0x00004c8f    92 g EE_tc_system_timer_handler                  *default* .CPU0.text            .text.EE_tc_system_timer_handler                    ee_tc2Yx_system.o
+0x00004c90 0x00004d19   138 g EE_tc2Yx_initialize_system_timer            *default* .CPU0.text            .text.EE_tc2Yx_initialize_system_timer              ee_tc2Yx_system.o
+0x00004d1a 0x00004e25   268 g EE_tc2Yx_configure_clock                    *default* .CPU0.text            .text.EE_tc2Yx_configure_clock                      ee_tc2Yx_system.o
+0x00004e26 0x00004ea5   128 g EE_tc2Yx_get_clock                          *default* .CPU0.text            .text.EE_tc2Yx_get_clock                            ee_tc2Yx_system.o
+0x00004ea6 0x00004f4f   170 g EE_tc2Yx_stm_set_clockpersec                *default* .CPU0.text            .text.EE_tc2Yx_stm_set_clockpersec                  ee_tc2Yx_system.o
+0x00004f50 0x0000501f   208 g EE_tc2Yx_stm_set_sr1                        *default* .CPU0.text            .text.EE_tc2Yx_stm_set_sr1                          ee_tc2Yx_system.o
+0x00005020 0x0000508d   110 g EE_tc2Yx_stm_set_sr1_next_match             *default* .CPU0.text            .text.EE_tc2Yx_stm_set_sr1_next_match               ee_tc2Yx_system.o
+0x0000508e 0x000050ed    96 g EE_tc2Yx_delay                              *default* .CPU0.text            .text.EE_tc2Yx_delay                                ee_tc2Yx_system.o
+0x000050ee 0x0000511f    50 l EE_tc_dummy_context                         *default* .CPU0.text            .text.EE_tc_dummy_context                           ee_tc_oo.o
+0x00005120 0x0000517b    92 g EE_hal_terminate_task                       *default* .CPU0.text            .text.EE_hal_terminate_task                         ee_tc_oo.o
+0x0000517c 0x00005183     8 g EE_hal_terminate_savestk                    *default* .CPU0.text            .text.EE_hal_terminate_savestk                      ee_tc_oo.o
+0x00005184 0x00005231   174 g EE_as_GetSpinlock                           *default* .CPU0.text            .text.EE_as_GetSpinlock                             ee_as_spinlocks.o
+0x00005232 0x000052d3   162 g EE_as_ReleaseSpinlock                       *default* .CPU0.text            .text.EE_as_ReleaseSpinlock                         ee_as_spinlocks.o
+0x000052d4 0x0000538b   184 g EE_as_TryToGetSpinlock                      *default* .CPU0.text            .text.EE_as_TryToGetSpinlock                        ee_as_spinlocks.o
+0x0000538c 0x00005411   134 g EE_as_release_all_spinlocks                 *default* .CPU0.text            .text.EE_as_release_all_spinlocks                   ee_as_spinlocks.o
+0x00005412 0x00005435    36 g EE_thread_not_terminated                    *default* .CPU0.text            .text.EE_thread_not_terminated                      ee_tnterm.o
+0x00005436 0x00005445    16 g _exit                                       *default* .CPU0.text            .text._exit                                         libos_exit.o
+0x00005446 0x000054f5   176 g round                                       *default* .CPU0.text            .text.round                                         lib_a-s_round.o
+0x000054f6 0x0000569f   426 l _fpadd_parts                                *default* .CPU0.text            .text._fpadd_parts                                  _addsub_df.o
+0x000056a0 0x000056d7    56 g __adddf3                                    *default* .CPU0.text            .text.__adddf3                                      _addsub_df.o
+0x000056d8 0x00005717    64 g __subdf3                                    *default* .CPU0.text            .text.__subdf3                                      _addsub_df.o
+0x00005718 0x00005731    26 g __ashldi3                                   *default* .CPU0.text            .text.libgcc                                        _ashldi3.o
+0x00005732 0x00005757    38 g __lshrdi3                                   *default* .CPU0.text            .text.libgcc                                        _lshrdi3.o
+0x00005758 0x00005863   268 g __pack_d                                    *default* .CPU0.text            .text.__pack_d                                      _pack_df.o
+0x00005864 0x000058f5   146 g __unpack_d                                  *default* .CPU0.text            .text.__unpack_d                                    _unpack_df.o
+0x00012d00 0x00012d03     4 g EE_tc_active_utid                           *default* .CPU0.bss             .bss.EE_tc_active_utid                              ee_tc_context.o
+0x00012d04 0x00012d07     4 g EE_oo_IRQ_suspend_status                    *default* .CPU0.bss             .bss.EE_oo_IRQ_suspend_status                       ee_lookup.o
+0x00012d08 0x00012d0b     4 g EE_oo_IRQ_disable_count                     *default* .CPU0.bss             .bss.EE_oo_IRQ_disable_count                        ee_lookup.o
+0x00012d0c 0x00012d0f     4 g EE_oo_started                               *default* .CPU0.bss             .bss.EE_oo_started                                  ee_startos.o
+0x00012d10 0x00012d13     4 g EE_ORTI_runningisr2                         *default* .CPU0.bss             .bss.EE_ORTI_runningisr2                            ee_startos.o
+0x00012d14 0x00012d17     4 g EE_ORTI_th_priority                         *default* .CPU0.bss             .bss.EE_ORTI_th_priority                            ee_startos.o
+0x00012d18 0x00012d18     1 g EE_ORTI_lasterror                           *default* .CPU0.bss             .bss.EE_ORTI_lasterror                              ee_startos.o
+0x00012d19 0x00012d19     1 g EE_ORTI_servicetrace                        *default* .CPU0.bss             .bss.EE_ORTI_servicetrace                           ee_startos.o
+0x00012d1c 0x00012d23     8 l EE_ORTI_alarmtime                           *default* .CPU0.bss             .bss.EE_ORTI_alarmtime                              ee_altick.o
+0x00012d24 0x00012d27     4 l EE_tc2Yx_stm_freq_khz                       *default* .CPU0.bss             .bss.EE_tc2Yx_stm_freq_khz                          ee_tc2Yx_system.o
+0x00012d28 0x00012d2b     4 g EE_std_endcycle_next_tid                    *default* .CPU0.bss             .bss.EE_std_endcycle_next_tid                       ee_hal_structs.o
+0x00012d2c 0x00012d2f     4 g EE_IRQ_nesting_level                        *default* .CPU0.bss             .bss.EE_IRQ_nesting_level                           ee_hal_structs.o
+
+>>> Symbols (global (S = g) and static (S = l); sorted by name)
+
+=====================================================================================================================================================================================================================
+Start      End         Size S Name                                        Memory    O-Sec                 I-Sec                                               Input object                                           
+=====================================================================================================================================================================================================================
+0x00000068 0x00000068     1 g BackgroundColor                             *default* .CPU0.bss             .bss.BackgroundColor                                display.o
+0x00000000 0x0000001f    32 g BootModeHeader0                             *default* .bmhd0                .bmhd0                                              obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x00000000 0x0000001f    32 g BootModeHeader1                             *default* .bmhd1                .bmhd1                                              obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x000000a8 0x000000f7    80 l CSWTCH.18                                   *default* .CPU0.rodata          .rodata.CSWTCH.18                                   ee_as_rpc.o
+0x000000f8 0x00000147    80 l CSWTCH.19                                   *default* .CPU0.rodata          .rodata.CSWTCH.19                                   ee_as_rpc.o
+0x00000434 0x0000043d    10 g DISPLAY_BackgroundColor                     *default* .CPU0.text            .text.DISPLAY_BackgroundColor                       display.o
+0x00000574 0x00000597    36 g DISPLAY_Buffer_Init                         *default* .CPU0.text            .text.DISPLAY_Buffer_Init                           display.o
+0x00002770 0x0000282f   192 g DISPLAY_Clear                               *default* .CPU0.text            .text.DISPLAY_Clear                                 display.o
+0x0000043e 0x0000045d    32 g DISPLAY_Framebuffer_Init                    *default* .CPU0.text            .text.DISPLAY_Framebuffer_Init                      display.o
+0x00000a38 0x0000276f  7480 g DISPLAY_Init                                *default* .CPU0.text            .text.DISPLAY_Init                                  display.o
+0x0000045e 0x00000573   278 g DISPLAY_colorTable_StdInit                  *default* .CPU0.text            .text.DISPLAY_colorTable_StdInit                    display.o
+0x0000000c 0x0000000f     4 g EE_ApplicationMode                          *default* .CPU0.bss             .bss.EE_ApplicationMode                             obj/eecfg.o
+0x00003cdc 0x00003d71   150 g EE_IRQ_end_instance                         *default* .CPU0.text            .text.EE_IRQ_end_instance                           ee_irqendin.o
+0x00003d72 0x00003dd3    98 g EE_IRQ_end_post_stub                        *default* .CPU0.text            .text.EE_IRQ_end_post_stub                          ee_irqendin.o
+0x00012d2c 0x00012d2f     4 g EE_IRQ_nesting_level                        *default* .CPU0.bss             .bss.EE_IRQ_nesting_level                           ee_hal_structs.o
+0x00012d1c 0x00012d23     8 l EE_ORTI_alarmtime                           *default* .CPU0.bss             .bss.EE_ORTI_alarmtime                              ee_altick.o
+0x00012d18 0x00012d18     1 g EE_ORTI_lasterror                           *default* .CPU0.bss             .bss.EE_ORTI_lasterror                              ee_startos.o
+0x00012d10 0x00012d13     4 g EE_ORTI_runningisr2                         *default* .CPU0.bss             .bss.EE_ORTI_runningisr2                            ee_startos.o
+0x00012d19 0x00012d19     1 g EE_ORTI_servicetrace                        *default* .CPU0.bss             .bss.EE_ORTI_servicetrace                           ee_startos.o
+0x00012d14 0x00012d17     4 g EE_ORTI_th_priority                         *default* .CPU0.bss             .bss.EE_ORTI_th_priority                            ee_startos.o
+0x000033a6 0x000033a9     4 g EE_TC_iirq_handler                          *default* .CPU0.text            .text.EE_TC_iirq_handler                            ee_tc_multicore.o
+0x00000070 0x00000077     8 g EE_alarm_ROM                                *default* .CPU0.rodata          .rodata.EE_alarm_ROM                                obj/eecfg.o
+0x00005184 0x00005231   174 g EE_as_GetSpinlock                           *default* .CPU0.text            .text.EE_as_GetSpinlock                             ee_as_spinlocks.o
+0x00005232 0x000052d3   162 g EE_as_ReleaseSpinlock                       *default* .CPU0.text            .text.EE_as_ReleaseSpinlock                         ee_as_spinlocks.o
+0x00003868 0x00003967   256 g EE_as_ShutdownAllCores                      *default* .CPU0.text            .text.EE_as_ShutdownAllCores                        ee_as_rpc.o
+0x000033aa 0x00003493   234 g EE_as_StartCore                             *default* .CPU0.text            .text.EE_as_StartCore                               ee_as_multicore.o
+0x00003494 0x00003563   208 g EE_as_StartNonAutosarCore                   *default* .CPU0.text            .text.EE_as_StartNonAutosarCore                     ee_as_multicore.o
+0x000052d4 0x0000538b   184 g EE_as_TryToGetSpinlock                      *default* .CPU0.text            .text.EE_as_TryToGetSpinlock                        ee_as_spinlocks.o
+0x00000070 0x00000073     4 g EE_as_core_mask                             *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x0000005c 0x00000067    12 g EE_as_core_spinlocks                        *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000000 0x00000007     8 g EE_as_core_start_addresses                  *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x0000006c 0x0000006f     4 g EE_as_core_started                          *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x00000068 0x0000006b     4 g EE_as_not_as_core_mask                      *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x00000074 0x0000007f    12 g EE_as_os_application_mode                   *default* ee_mcglobald          ee_mcglobald                                        ee_as_multicore.o
+0x0000538c 0x00005411   134 g EE_as_release_all_spinlocks                 *default* .CPU0.text            .text.EE_as_release_all_spinlocks                   ee_as_spinlocks.o
+0x00003564 0x0000363f   220 g EE_as_rpc                                   *default* .CPU0.text            .text.EE_as_rpc                                     ee_as_rpc.o
+0x00000024 0x0000005f    60 g EE_as_rpc_RAM                               *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000024 0x00000033    16 g EE_as_rpc_alarms                            *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x0000001c 0x00000023     8 g EE_as_rpc_counters                          *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00003640 0x00003865   550 g EE_as_rpc_handler                           *default* .CPU0.text            .text.EE_as_rpc_handler                             ee_as_rpc.o
+0x00000008 0x0000001b    20 g EE_as_rpc_services_table                    *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000086 0x00000088     3 g EE_as_rpc_serving                           *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000034 0x0000005b    40 g EE_as_rpc_tasks                             *default* ee_mcglobalc          ee_mcglobalc                                        obj/common.o
+0x00000084 0x00000084     1 g EE_as_shutdown_all_cores_error              *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000085 0x00000085     1 g EE_as_shutdown_all_cores_flag               *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000080 0x00000083     4 g EE_as_shutdown_mask                         *default* ee_mcglobald          ee_mcglobald                                        ee_as_rpc.o
+0x00000004 0x0000000f    12 g EE_as_spinlocks_last                        *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000010 0x00000010     1 g EE_as_spinlocks_locker_core                 *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000000 0x00000013    20 g EE_as_spinlocks_locker_task_or_isr2         *default* .CPU0.data            .data.EE_as_spinlocks_locker_task_or_isr2           obj/eecfg.o
+0x00000000 0x00000003     4 g EE_as_spinlocks_stack                       *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x00000014 0x0000001b     8 g EE_counter_RAM                              *default* .CPU0.data            .data.EE_counter_RAM                                obj/eecfg.o
+0x00000078 0x00000083    12 g EE_counter_ROM                              *default* .CPU0.rodata          .rodata.EE_counter_ROM                              obj/eecfg.o
+0x00000098 0x0000009b     4 g EE_counter_hw_ROM                           *default* .CPU0.rodata          .rodata.EE_counter_hw_ROM                           obj/eecfg.o
+0x00000014 0x00000023    16 g EE_hal_spinlock_status                      *default* ee_mcglobald          ee_mcglobald                                        obj/common.o
+0x000032c8 0x00003339   114 g EE_hal_sync_barrier                         *default* .CPU0.text            .text.EE_hal_sync_barrier                           ee_tc_multicore.o
+0x0000517c 0x00005183     8 g EE_hal_terminate_savestk                    *default* .CPU0.text            .text.EE_hal_terminate_savestk                      ee_tc_oo.o
+0x00005120 0x0000517b    92 g EE_hal_terminate_task                       *default* .CPU0.text            .text.EE_hal_terminate_task                         ee_tc_oo.o
+0x00000094 0x00000097     4 g EE_hal_thread_body                          *default* .CPU0.rodata          .rodata.EE_hal_thread_body                          obj/eecfg.o
+0x00000044 0x00000047     4 g EE_isr2_index                               *default* .CPU0.data            .data.EE_isr2_index                                 ee_irqendin.o
+0x00000030 0x0000003f    16 g EE_isr2_nesting_level                       *default* .CPU0.bss             .bss.EE_isr2_nesting_level                          obj/eecfg.o
+0x00003968 0x00003a7f   280 g EE_oo_ActivateTask                          *default* .CPU0.text            .text.EE_oo_ActivateTask                            ee_activate.o
+0x000041c0 0x000042bb   252 g EE_oo_CancelAlarm                           *default* .CPU0.text            .text.EE_oo_CancelAlarm                             ee_alcancel.o
+0x0000435a 0x0000442b   210 g EE_oo_GetAlarm                              *default* .CPU0.text            .text.EE_oo_GetAlarm                                ee_alget.o
+0x000042bc 0x00004359   158 g EE_oo_GetAlarmBase                          *default* .CPU0.text            .text.EE_oo_GetAlarmBase                            ee_algetbase.o
+0x00004964 0x000049df   124 g EE_oo_GetCounterValue                       *default* .CPU0.text            .text.EE_oo_GetCounterValue                         ee_getcountervalue.o
+0x000049e0 0x00004a75   150 g EE_oo_GetElapsedValue                       *default* .CPU0.text            .text.EE_oo_GetElapsedValue                         ee_getelapsedvalue.o
+0x00003a80 0x00003af7   120 g EE_oo_GetTaskState                          *default* .CPU0.text            .text.EE_oo_GetTaskState                            ee_gettaskstate.o
+0x00012d08 0x00012d0b     4 g EE_oo_IRQ_disable_count                     *default* .CPU0.bss             .bss.EE_oo_IRQ_disable_count                        ee_lookup.o
+0x00012d04 0x00012d07     4 g EE_oo_IRQ_suspend_status                    *default* .CPU0.bss             .bss.EE_oo_IRQ_suspend_status                       ee_lookup.o
+0x0000492c 0x00004963    56 g EE_oo_IncrementCounter                      *default* .CPU0.text            .text.EE_oo_IncrementCounter                        ee_altick.o
+0x000048fc 0x0000492b    48 g EE_oo_IncrementCounterHardware              *default* .CPU0.text            .text.EE_oo_IncrementCounterHardware                ee_altick.o
+0x00004690 0x000048fb   620 g EE_oo_IncrementCounterImplementation        *default* .CPU0.text            .text.EE_oo_IncrementCounterImplementation          ee_altick.o
+0x0000442c 0x0000450f   228 g EE_oo_SetAbsAlarm                           *default* .CPU0.text            .text.EE_oo_SetAbsAlarm                             ee_alsetabs.o
+0x00004a76 0x00004bb3   318 g EE_oo_SetEvent                              *default* .CPU0.text            .text.EE_oo_SetEvent                                ee_evset.o
+0x00004510 0x000045df   208 g EE_oo_SetRelAlarm                           *default* .CPU0.text            .text.EE_oo_SetRelAlarm                             ee_alsetrel.o
+0x00003f3c 0x00003f4d    18 g EE_oo_ShutdownOS                            *default* .CPU0.text            .text.EE_oo_ShutdownOS                              ee_shtdown.o
+0x00003e76 0x00003f3b   198 g EE_oo_ShutdownOS_internal                   *default* .CPU0.text            .text.EE_oo_ShutdownOS_internal                     ee_shtdown.o
+0x00003f4e 0x000041bf   626 g EE_oo_StartOS                               *default* .CPU0.text            .text.EE_oo_StartOS                                 ee_startos.o
+0x00003af8 0x00003b61   106 g EE_oo_TerminateTask                         *default* .CPU0.text            .text.EE_oo_TerminateTask                           ee_terminat.o
+0x00000030 0x00000057    40 g EE_oo_action_ROM                            *default* .CPU0.rodata          .rodata.EE_oo_action_ROM                            obj/eecfg.o
+0x00003c92 0x00003cdb    74 g EE_oo_assign_TID_to_ISR2                    *default* .CPU0.text            .text.EE_oo_assign_TID_to_ISR2                      ee_irqendin.o
+0x00000018 0x0000001f     8 g EE_oo_autostart_alarm_cycle                 *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_cycle                 obj/eecfg.o
+0x00000028 0x0000002f     8 g EE_oo_autostart_alarm_data                  *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_data                  obj/eecfg.o
+0x00000020 0x00000027     8 g EE_oo_autostart_alarm_increment             *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_increment             obj/eecfg.o
+0x000000a4 0x000000a7     4 l EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE *default* .CPU0.rodata          .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE obj/eecfg.o
+0x00000010 0x0000002f    32 g EE_oo_counter_object_RAM                    *default* .CPU0.bss             .bss.EE_oo_counter_object_RAM                       obj/eecfg.o
+0x00000058 0x0000006f    24 g EE_oo_counter_object_ROM                    *default* .CPU0.rodata          .rodata.EE_oo_counter_object_ROM                    obj/eecfg.o
+0x000045e0 0x0000468f   176 g EE_oo_counter_object_insert                 *default* .CPU0.text            .text.EE_oo_counter_object_insert                   ee_altick.o
+0x00012d0c 0x00012d0f     4 g EE_oo_started                               *default* .CPU0.bss             .bss.EE_oo_started                                  ee_startos.o
+0x00003dd4 0x00003ddf    12 g EE_oo_thread_stub                           *default* .CPU0.text            .text.EE_oo_thread_stub                             ee_tstub.o
+0x00000148 0x0000014b     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_activate.o
+0x0000014c 0x0000014f     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_gettaskstate.o
+0x00000150 0x00000153     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_alcancel.o
+0x00000154 0x00000157     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_algetbase.o
+0x00000158 0x0000015b     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_alget.o
+0x0000015c 0x0000015f     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_altick.o
+0x00000160 0x00000163     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_getcountervalue.o
+0x00000164 0x00000167     4 l EE_os_invalid_param                         *default* .CPU0.rodata          .rodata.EE_os_invalid_param                         ee_evset.o
+0x00003de0 0x00003e09    42 g EE_rq2stk_exchange                          *default* .CPU0.text            .text.EE_rq2stk_exchange                            ee_rq_exchg.o
+0x00000020 0x00000023     4 g EE_rq_first                                 *default* .CPU0.data            .data.EE_rq_first                                   obj/eecfg.o
+0x00003e0a 0x00003e75   108 g EE_rq_insert                                *default* .CPU0.text            .text.EE_rq_insert                                  ee_rq_inser.o
+0x00003230 0x000032c7   152 g EE_std_change_context                       *default* .CPU0.text            .text.EE_std_change_context                         ee_tc_context.o
+0x00012d28 0x00012d2b     4 g EE_std_endcycle_next_tid                    *default* .CPU0.bss             .bss.EE_std_endcycle_next_tid                       ee_hal_structs.o
+0x0000009c 0x000000a3     8 g EE_std_thread_tos                           *default* .CPU0.rodata          .rodata.EE_std_thread_tos                           obj/eecfg.o
+0x00000028 0x0000002b     4 g EE_stkfirst                                 *default* .CPU0.data            .data.EE_stkfirst                                   obj/eecfg.o
+0x0000004c 0x0000004f     4 g EE_sys_ceiling                              *default* .CPU0.bss             .bss.EE_sys_ceiling                                 obj/eecfg.o
+0x00004d1a 0x00004e25   268 g EE_tc2Yx_configure_clock                    *default* .CPU0.text            .text.EE_tc2Yx_configure_clock                      ee_tc2Yx_system.o
+0x0000508e 0x000050ed    96 g EE_tc2Yx_delay                              *default* .CPU0.text            .text.EE_tc2Yx_delay                                ee_tc2Yx_system.o
+0x00004e26 0x00004ea5   128 g EE_tc2Yx_get_clock                          *default* .CPU0.text            .text.EE_tc2Yx_get_clock                            ee_tc2Yx_system.o
+0x00004c90 0x00004d19   138 g EE_tc2Yx_initialize_system_timer            *default* .CPU0.text            .text.EE_tc2Yx_initialize_system_timer              ee_tc2Yx_system.o
+0x00000000 0x00000161   354 g EE_tc2Yx_start                              *default* ee_kernel_start       ee_kernel_start                                     obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x00012d24 0x00012d27     4 l EE_tc2Yx_stm_freq_khz                       *default* .CPU0.bss             .bss.EE_tc2Yx_stm_freq_khz                          ee_tc2Yx_system.o
+0x00004ea6 0x00004f4f   170 g EE_tc2Yx_stm_set_clockpersec                *default* .CPU0.text            .text.EE_tc2Yx_stm_set_clockpersec                  ee_tc2Yx_system.o
+0x00004f50 0x0000501f   208 g EE_tc2Yx_stm_set_sr1                        *default* .CPU0.text            .text.EE_tc2Yx_stm_set_sr1                          ee_tc2Yx_system.o
+0x00005020 0x0000508d   110 g EE_tc2Yx_stm_set_sr1_next_match             *default* .CPU0.text            .text.EE_tc2Yx_stm_set_sr1_next_match               ee_tc2Yx_system.o
+0x0000005c 0x0000005f     4 g EE_tc_active_tos                            *default* .CPU0.bss             .bss.EE_tc_active_tos                               obj/eecfg.o
+0x00012d00 0x00012d03     4 g EE_tc_active_utid                           *default* .CPU0.bss             .bss.EE_tc_active_utid                              ee_tc_context.o
+0x000050ee 0x0000511f    50 l EE_tc_dummy_context                         *default* .CPU0.text            .text.EE_tc_dummy_context                           ee_tc_oo.o
+0x00004bb4 0x00004bd3    32 g EE_tc_endint_disable                        *default* .CPU0.text            .text.EE_tc_endint_disable                          ee_tc2Yx_system.o
+0x00004bd4 0x00004bf3    32 g EE_tc_endint_enable                         *default* .CPU0.text            .text.EE_tc_endint_enable                           ee_tc2Yx_system.o
+0x00000000 0x00000000     0 g EE_tc_interrupt_table                       *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x0000322a 0x0000322f     6 g EE_tc_isr2_call_handler                     *default* .CPU0.text            .text.EE_tc_isr2_call_handler                       ee_tc_intvec.o
+0x00000020 0x00000020     0 g EE_tc_isr2_entry_1                          *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000040 0x00000040     0 g EE_tc_isr2_entry_2                          *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000060 0x000000e7   136 g EE_tc_isr2_global_wrapper                   *default* .CPU0.inttab          .inttab                                             ee_tc_intvec.o
+0x00000064 0x00000067     4 g EE_tc_kernel_barrier                        *default* ee_mcglobald          ee_mcglobald                                        ee_tc_multicore.o
+0x00004bf4 0x00004c13    32 g EE_tc_safety_endinit_disable                *default* .CPU0.text            .text.EE_tc_safety_endinit_disable                  ee_tc2Yx_system.o
+0x00004c14 0x00004c33    32 g EE_tc_safety_endinit_enable                 *default* .CPU0.text            .text.EE_tc_safety_endinit_enable                   ee_tc2Yx_system.o
+0x00000000 0x00000203   516 g EE_tc_stack_1                               *default* .CPU0.ee_kernel_stack ee_kernel_stack                                     obj/eecfg.o
+0x0000333a 0x000033a5   108 g EE_tc_sync_barrier                          *default* .CPU0.text            .text.EE_tc_sync_barrier                            ee_tc_multicore.o
+0x00004c34 0x00004c8f    92 g EE_tc_system_timer_handler                  *default* .CPU0.text            .text.EE_tc_system_timer_handler                    ee_tc2Yx_system.o
+0x00000034 0x00000043    16 g EE_tc_system_tos                            *default* .CPU0.data            .data.EE_tc_system_tos                              obj/eecfg.o
+0x00000054 0x0000005b     8 g EE_tc_tasks_RA                              *default* .CPU0.bss             .bss.EE_tc_tasks_RA                                 obj/eecfg.o
+0x000000a0 0x000000a0     0 g EE_tc_trap_assertion                        *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000080 0x00000080     0 g EE_tc_trap_bus                              *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000060 0x00000060     0 g EE_tc_trap_context                          *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000040 0x00000040     0 g EE_tc_trap_instruction                      *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000000 0x00000000     0 g EE_tc_trap_mmu                              *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x000000e0 0x000000e0     0 g EE_tc_trap_nmi                              *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000020 0x00000020     0 g EE_tc_trap_protection                       *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x000000c0 0x000000c0     0 g EE_tc_trap_system                           *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000000 0x00000000     0 g EE_tc_trap_table                            *default* .CPU0.traptab         .traptab                                            ee_tc_trapvec.o
+0x00000050 0x00000053     4 g EE_terminate_data                           *default* .CPU0.bss             .bss.EE_terminate_data                              obj/eecfg.o
+0x00000090 0x00000093     4 g EE_terminate_real_th_body                   *default* .CPU0.rodata          .rodata.EE_terminate_real_th_body                   obj/eecfg.o
+0x00000088 0x0000008b     4 g EE_th_dispatch_prio                         *default* .CPU0.rodata          .rodata.EE_th_dispatch_prio                         obj/eecfg.o
+0x00000048 0x0000004b     4 g EE_th_event_active                          *default* .CPU0.bss             .bss.EE_th_event_active                             obj/eecfg.o
+0x00000044 0x00000047     4 g EE_th_event_waitmask                        *default* .CPU0.bss             .bss.EE_th_event_waitmask                           obj/eecfg.o
+0x00000084 0x00000087     4 g EE_th_is_extended                           *default* .CPU0.rodata          .rodata.EE_th_is_extended                           obj/eecfg.o
+0x0000002c 0x0000002f     4 g EE_th_next                                  *default* .CPU0.data            .data.EE_th_next                                    obj/eecfg.o
+0x0000008c 0x0000008f     4 g EE_th_ready_prio                            *default* .CPU0.rodata          .rodata.EE_th_ready_prio                            obj/eecfg.o
+0x00000024 0x00000027     4 g EE_th_rnact                                 *default* .CPU0.data            .data.EE_th_rnact                                   obj/eecfg.o
+0x00000030 0x00000033     4 g EE_th_status                                *default* .CPU0.data            .data.EE_th_status                                  obj/eecfg.o
+0x0000001c 0x0000001f     4 g EE_th_terminate_nextask                     *default* .CPU0.data            .data.EE_th_terminate_nextask                       obj/eecfg.o
+0x00000040 0x00000043     4 g EE_th_waswaiting                            *default* .CPU0.bss             .bss.EE_th_waswaiting                               obj/eecfg.o
+0x00003b62 0x00003c91   304 g EE_thread_end_instance                      *default* .CPU0.text            .text.EE_thread_end_instance                        ee_thendin.o
+0x00005412 0x00005435    36 g EE_thread_not_terminated                    *default* .CPU0.text            .text.EE_thread_not_terminated                      ee_tnterm.o
+0x00000000 0x0000010f   272 g FuncTaskUi                                  *default* .CPU0.text            .text.FuncTaskUi                                    obj/src/master.o
+0x00000002 0x00000003     2 g ShutdownHook                                *default* ee_mcglobalt          .text.ShutdownHook                                  obj/src/master.o
+0x00000000 0x00000001     2 g StartupHook                                 *default* ee_mcglobalt          .text.StartupHook                                   obj/src/master.o
+0x00002830 0x0000296b   316 g TOUCH_read                                  *default* .CPU0.text            .text.TOUCH_read                                    display.o
+0x0000296c 0x00002983    24 g TOUCH_x                                     *default* .CPU0.text            .text.TOUCH_x                                       display.o
+0x00002984 0x0000299b    24 g TOUCH_y                                     *default* .CPU0.text            .text.TOUCH_y                                       display.o
+0x00000000 0x00000005     6 g _START                                      *default* .startup              .startup                                            obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+0x000056a0 0x000056d7    56 g __adddf3                                    *default* .CPU0.text            .text.__adddf3                                      _addsub_df.o
+0x00005718 0x00005731    26 g __ashldi3                                   *default* .CPU0.text            .text.libgcc                                        _ashldi3.o
+0x00005732 0x00005757    38 g __lshrdi3                                   *default* .CPU0.text            .text.libgcc                                        _lshrdi3.o
+0x00005758 0x00005863   268 g __pack_d                                    *default* .CPU0.text            .text.__pack_d                                      _pack_df.o
+0x00000000 0x00000003     4 g __progname                                  *default* .CPU0.bss             .bss                                                libos_exit.o
+0x000056d8 0x00005717    64 g __subdf3                                    *default* .CPU0.text            .text.__subdf3                                      _addsub_df.o
+0x00000004 0x00000017    20 g __thenan_df                                 *default* .CPU0.rodata          .rodata                                             _thenan_df.o
+0x00005864 0x000058f5   146 g __unpack_d                                  *default* .CPU0.text            .text.__unpack_d                                    _unpack_df.o
+0x00005436 0x00005445    16 g _exit                                       *default* .CPU0.text            .text._exit                                         libos_exit.o
+0x000054f6 0x0000569f   426 l _fpadd_parts                                *default* .CPU0.text            .text._fpadd_parts                                  _addsub_df.o
+0x00000061 0x00000061     1 g adc                                         *default* ee_mcglobald          ee_mcglobald                                        obj/src/master.o
+0x0000299c 0x000029fb    96 g clearDisplayBuffer                          *default* .CPU0.text            .text.clearDisplayBuffer                            display.o
+0x0000006a 0x000000ff   150 g colorTable                                  *default* .CPU0.bss             .bss.colorTable                                     display.o
+0x00000064 0x00000067     4 g defaultDispBufReady                         *default* .CPU0.bss             .bss.defaultDispBufReady                            display.o
+0x00003228 0x00003229     2 g delay_ms                                    *default* .CPU0.text            .text.delay_ms                                      util.o
+0x00003226 0x00003227     2 g delay_us                                    *default* .CPU0.text            .text.delay_us                                      util.o
+0x000009d0 0x00000a37   104 g drawBinary                                  *default* .CPU0.text            .text.drawBinary                                    display.o
+0x0000073a 0x000008d9   416 g drawChar                                    *default* .CPU0.text            .text.drawChar                                      display.o
+0x00000920 0x000009cf   176 g drawString                                  *default* .CPU0.text            .text.drawString                                    display.o
+0x000008da 0x0000091f    70 l drawString.constprop.2                      *default* .CPU0.text            .text.drawString.constprop.2                        display.o
+0x00000100 0x00012cff 76800 g frameBuffer                                 *default* .CPU0.bss             .bss.frameBuffer                                    display.o
+0x000031d8 0x00003225    78 g graph_drawColorMap                          *default* .CPU0.text            .text.graph_drawColorMap                            graph.o
+0x00002fc8 0x000031a3   476 g graph_drawRectangle                         *default* .CPU0.text            .text.graph_drawRectangle                           graph.o
+0x00002cfe 0x00002d77   122 g graph_drawXYPoint                           *default* .CPU0.text            .text.graph_drawXYPoint                             graph.o
+0x00002c9c 0x00002cfd    98 g graph_drawZPoint                            *default* .CPU0.text            .text.graph_drawZPoint                              graph.o
+0x00002f7c 0x00002fc7    76 g graph_fillCircle                            *default* .CPU0.text            .text.graph_fillCircle                              graph.o
+0x000031a4 0x000031d7    52 g graph_fillRectangle                         *default* .CPU0.text            .text.graph_fillRectangle                           graph.o
+0x00002d92 0x00002deb    90 g graph_hLine                                 *default* .CPU0.text            .text.graph_hLine                                   graph.o
+0x000029fc 0x00002c9b   672 g graph_line                                  *default* .CPU0.text            .text.graph_line                                    graph.o
+0x00002d78 0x00002d91    26 g graph_pointOnAxis                           *default* .CPU0.text            .text.graph_pointOnAxis                             graph.o
+0x00002ea4 0x00002f7b   216 g graph_rasterCircle                          *default* .CPU0.text            .text.graph_rasterCircle                            graph.o
+0x00002e46 0x00002ea3    94 g graph_squarePoint                           *default* .CPU0.text            .text.graph_squarePoint                             graph.o
+0x00002dec 0x00002e45    90 g graph_vLine                                 *default* .CPU0.text            .text.graph_vLine                                   graph.o
+0x00000110 0x00000199   138 g main                                        *default* .CPU0.text            .text.main                                          obj/src/master.o
+0x00000060 0x00000060     1 g on_off                                      *default* ee_mcglobald          ee_mcglobald                                        obj/src/master.o
+0x00000008 0x0000000b     4 l on_off_timer.35640                          *default* .CPU0.bss             .bss.on_off_timer.35640                             obj/src/master.o
+0x00000696 0x00000739   164 g printScrn                                   *default* .CPU0.text            .text.printScrn                                     display.o
+0x00005446 0x000054f5   176 g round                                       *default* .CPU0.text            .text.round                                         lib_a-s_round.o
+0x0000062e 0x00000695   104 g setPx                                       *default* .CPU0.text            .text.setPx                                         display.o
+0x0000019a 0x00000433   666 l tft_display_home.constprop.1                *default* .CPU0.text            .text.tft_display_home.constprop.1                  display.o
+0x00000062 0x00000063     2 g tft_id                                      *default* ee_mcglobald          ee_mcglobald                                        display.o
+0x00000062 0x00000063     2 g touch_x                                     *default* .CPU0.bss             .bss.touch_x                                        display.o
+0x00000060 0x00000061     2 g touch_y                                     *default* .CPU0.bss             .bss.touch_y                                        display.o
+0x00000598 0x00000613   124 g writeDisplay                                *default* .CPU0.text            .text.writeDisplay                                  display.o
+0x00000614 0x0000062d    26 g writePixel                                  *default* .CPU0.text            .text.writePixel                                    display.o
+
+
+----- END EXTENDED MAP LISTING -----
+
+
+Memory Configuration
+
+Name             Origin             Length             Used               Free               Attributes
+*default*        0x00000000         0xffffffff         0x0003ee89         0xfffc1176
+
+Linker script and memory map
+
+LOAD export_ee_global
+LOAD obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+LOAD obj/common.o
+LOAD obj/src/master.o
+LOAD obj/eecfg.o
+LOAD libee.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a
+
+ee_mcglobalt    memory region -> *default*
+                0x00000000        0x4
+ *(*.StartupHook)
+ .text.StartupHook
+                0x00000000        0x2 obj/src/master.o
+                0x00000000                StartupHook
+ *(*.ErrorHook)
+ *(*.ShutdownHook)
+ .text.ShutdownHook
+                0x00000002        0x2 obj/src/master.o
+                0x00000002                ShutdownHook
+ *(*.ProtectionHook)
+ *(ee_mcglobalt)
+
+ee_mcglobald    memory region -> *default*
+                0x00000000       0x8c
+ *(ee_mcglobald)
+ ee_mcglobald   0x00000000       0x60 obj/common.o
+                0x00000000                EE_as_spinlocks_stack
+                0x00000004                EE_as_spinlocks_last
+                0x00000010                EE_as_spinlocks_locker_core
+                0x00000014                EE_hal_spinlock_status
+                0x00000024                EE_as_rpc_RAM
+ ee_mcglobald   0x00000060        0x2 obj/src/master.o
+                0x00000060                on_off
+                0x00000061                adc
+ ee_mcglobald   0x00000062        0x2 libee.a(display.o)
+                0x00000062                tft_id
+ ee_mcglobald   0x00000064        0x4 libee.a(ee_tc_multicore.o)
+                0x00000064                EE_tc_kernel_barrier
+ ee_mcglobald   0x00000068       0x18 libee.a(ee_as_multicore.o)
+                0x00000068                EE_as_not_as_core_mask
+                0x0000006c                EE_as_core_started
+                0x00000070                EE_as_core_mask
+                0x00000074                EE_as_os_application_mode
+ ee_mcglobald   0x00000080        0xc libee.a(ee_as_rpc.o)
+                0x00000080                EE_as_shutdown_mask
+                0x00000084                EE_as_shutdown_all_cores_error
+                0x00000085                EE_as_shutdown_all_cores_flag
+                0x00000086                EE_as_rpc_serving
+
+ee_mcglobalc    memory region -> *default*
+                0x00000000       0x68
+ *(ee_mcglobalc)
+ ee_mcglobalc   0x00000000       0x68 obj/common.o
+                0x00000000                EE_as_core_start_addresses
+                0x00000008                EE_as_rpc_services_table
+                0x0000001c                EE_as_rpc_counters
+                0x00000024                EE_as_rpc_alarms
+                0x00000034                EE_as_rpc_tasks
+                0x0000005c                EE_as_core_spinlocks
+
+.CPU0.init
+ *(.init)
+
+.CPU0.fini
+ *(.fini)
+
+.CPU0.cramtext
+ *(.cramtext)
+ *(.cramtext.*)
+
+.CPU0.traptab   memory region -> *default*
+                0x00000000      0x100
+ *(.traptab)
+ .traptab       0x00000000      0x100 libee.a(ee_tc_trapvec.o)
+                0x00000000                EE_tc_trap_mmu
+                0x00000000                EE_tc_trap_table
+                0x00000020                EE_tc_trap_protection
+                0x00000040                EE_tc_trap_instruction
+                0x00000060                EE_tc_trap_context
+                0x00000080                EE_tc_trap_bus
+                0x000000a0                EE_tc_trap_assertion
+                0x000000c0                EE_tc_trap_system
+                0x000000e0                EE_tc_trap_nmi
+ *(.traptab*)
+
+.CPU0.inttab    memory region -> *default*
+                0x00000000      0x100
+ *(.inttab)
+ .inttab        0x00000000      0x100 libee.a(ee_tc_intvec.o)
+                0x00000000                EE_tc_interrupt_table
+                0x00000020                EE_tc_isr2_entry_1
+                0x00000040                EE_tc_isr2_entry_2
+                0x00000060                EE_tc_isr2_global_wrapper
+ *(.*.inttab)
+
+.CPU0.text      memory region -> *default*
+                0x00000000     0x58f6
+ *(.text)
+ .text          0x00000000        0x0 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .text          0x00000000        0x0 obj/common.o
+ .text          0x00000000        0x0 obj/src/master.o
+ .text          0x00000000        0x0 obj/eecfg.o
+ .text          0x00000000        0x0 libee.a(display.o)
+ .text          0x00000000        0x0 libee.a(graph.o)
+ .text          0x00000000        0x0 libee.a(util.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_trapvec.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_intvec.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_context.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_multicore.o)
+ .text          0x00000000        0x0 libee.a(ee_as_multicore.o)
+ .text          0x00000000        0x0 libee.a(ee_as_rpc.o)
+ .text          0x00000000        0x0 libee.a(ee_activate.o)
+ .text          0x00000000        0x0 libee.a(ee_gettaskstate.o)
+ .text          0x00000000        0x0 libee.a(ee_terminat.o)
+ .text          0x00000000        0x0 libee.a(ee_thendin.o)
+ .text          0x00000000        0x0 libee.a(ee_irqendin.o)
+ .text          0x00000000        0x0 libee.a(ee_tstub.o)
+ .text          0x00000000        0x0 libee.a(ee_lookup.o)
+ .text          0x00000000        0x0 libee.a(ee_rq_exchg.o)
+ .text          0x00000000        0x0 libee.a(ee_rq_inser.o)
+ .text          0x00000000        0x0 libee.a(ee_shtdown.o)
+ .text          0x00000000        0x0 libee.a(ee_startos.o)
+ .text          0x00000000        0x0 libee.a(ee_alcancel.o)
+ .text          0x00000000        0x0 libee.a(ee_algetbase.o)
+ .text          0x00000000        0x0 libee.a(ee_alget.o)
+ .text          0x00000000        0x0 libee.a(ee_alsetabs.o)
+ .text          0x00000000        0x0 libee.a(ee_alsetrel.o)
+ .text          0x00000000        0x0 libee.a(ee_altick.o)
+ .text          0x00000000        0x0 libee.a(ee_getcountervalue.o)
+ .text          0x00000000        0x0 libee.a(ee_getelapsedvalue.o)
+ .text          0x00000000        0x0 libee.a(ee_evset.o)
+ .text          0x00000000        0x0 libee.a(ee_tc2Yx_system.o)
+ .text          0x00000000        0x0 libee.a(ee_hal_structs.o)
+ .text          0x00000000        0x0 libee.a(ee_tc_oo.o)
+ .text          0x00000000        0x0 libee.a(ee_as_spinlocks.o)
+ .text          0x00000000        0x0 libee.a(ee_tnterm.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .text          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+ *(.text.*)
+ .text.FuncTaskUi
+                0x00000000      0x110 obj/src/master.o
+                0x00000000                FuncTaskUi
+ .text.main     0x00000110       0x8a obj/src/master.o
+                0x00000110                main
+ .text.tft_display_home.constprop.1
+                0x0000019a      0x29a libee.a(display.o)
+ .text.DISPLAY_BackgroundColor
+                0x00000434        0xa libee.a(display.o)
+                0x00000434                DISPLAY_BackgroundColor
+ .text.DISPLAY_Framebuffer_Init
+                0x0000043e       0x20 libee.a(display.o)
+                0x0000043e                DISPLAY_Framebuffer_Init
+ .text.DISPLAY_colorTable_StdInit
+                0x0000045e      0x116 libee.a(display.o)
+                0x0000045e                DISPLAY_colorTable_StdInit
+ .text.DISPLAY_Buffer_Init
+                0x00000574       0x24 libee.a(display.o)
+                0x00000574                DISPLAY_Buffer_Init
+ .text.writeDisplay
+                0x00000598       0x7c libee.a(display.o)
+                0x00000598                writeDisplay
+ .text.writePixel
+                0x00000614       0x1a libee.a(display.o)
+                0x00000614                writePixel
+ .text.setPx    0x0000062e       0x68 libee.a(display.o)
+                0x0000062e                setPx
+ .text.printScrn
+                0x00000696       0xa4 libee.a(display.o)
+                0x00000696                printScrn
+ .text.drawChar
+                0x0000073a      0x1a0 libee.a(display.o)
+                0x0000073a                drawChar
+ .text.drawString.constprop.2
+                0x000008da       0x46 libee.a(display.o)
+ .text.drawString
+                0x00000920       0xb0 libee.a(display.o)
+                0x00000920                drawString
+ .text.drawBinary
+                0x000009d0       0x68 libee.a(display.o)
+                0x000009d0                drawBinary
+ .text.DISPLAY_Init
+                0x00000a38     0x1d38 libee.a(display.o)
+                0x00000a38                DISPLAY_Init
+ .text.DISPLAY_Clear
+                0x00002770       0xc0 libee.a(display.o)
+                0x00002770                DISPLAY_Clear
+ .text.TOUCH_read
+                0x00002830      0x13c libee.a(display.o)
+                0x00002830                TOUCH_read
+ .text.TOUCH_x  0x0000296c       0x18 libee.a(display.o)
+                0x0000296c                TOUCH_x
+ .text.TOUCH_y  0x00002984       0x18 libee.a(display.o)
+                0x00002984                TOUCH_y
+ .text.clearDisplayBuffer
+                0x0000299c       0x60 libee.a(display.o)
+                0x0000299c                clearDisplayBuffer
+ .text.graph_line
+                0x000029fc      0x2a0 libee.a(graph.o)
+                0x000029fc                graph_line
+ .text.graph_drawZPoint
+                0x00002c9c       0x62 libee.a(graph.o)
+                0x00002c9c                graph_drawZPoint
+ .text.graph_drawXYPoint
+                0x00002cfe       0x7a libee.a(graph.o)
+                0x00002cfe                graph_drawXYPoint
+ .text.graph_pointOnAxis
+                0x00002d78       0x1a libee.a(graph.o)
+                0x00002d78                graph_pointOnAxis
+ .text.graph_hLine
+                0x00002d92       0x5a libee.a(graph.o)
+                0x00002d92                graph_hLine
+ .text.graph_vLine
+                0x00002dec       0x5a libee.a(graph.o)
+                0x00002dec                graph_vLine
+ .text.graph_squarePoint
+                0x00002e46       0x5e libee.a(graph.o)
+                0x00002e46                graph_squarePoint
+ .text.graph_rasterCircle
+                0x00002ea4       0xd8 libee.a(graph.o)
+                0x00002ea4                graph_rasterCircle
+ .text.graph_fillCircle
+                0x00002f7c       0x4c libee.a(graph.o)
+                0x00002f7c                graph_fillCircle
+ .text.graph_drawRectangle
+                0x00002fc8      0x1dc libee.a(graph.o)
+                0x00002fc8                graph_drawRectangle
+ .text.graph_fillRectangle
+                0x000031a4       0x34 libee.a(graph.o)
+                0x000031a4                graph_fillRectangle
+ .text.graph_drawColorMap
+                0x000031d8       0x4e libee.a(graph.o)
+                0x000031d8                graph_drawColorMap
+ .text.delay_us
+                0x00003226        0x2 libee.a(util.o)
+                0x00003226                delay_us
+ .text.delay_ms
+                0x00003228        0x2 libee.a(util.o)
+                0x00003228                delay_ms
+ .text.EE_tc_isr2_call_handler
+                0x0000322a        0x6 libee.a(ee_tc_intvec.o)
+                0x0000322a                EE_tc_isr2_call_handler
+ .text.EE_std_change_context
+                0x00003230       0x98 libee.a(ee_tc_context.o)
+                0x00003230                EE_std_change_context
+ .text.EE_hal_sync_barrier
+                0x000032c8       0x72 libee.a(ee_tc_multicore.o)
+                0x000032c8                EE_hal_sync_barrier
+ .text.EE_tc_sync_barrier
+                0x0000333a       0x6c libee.a(ee_tc_multicore.o)
+                0x0000333a                EE_tc_sync_barrier
+ .text.EE_TC_iirq_handler
+                0x000033a6        0x4 libee.a(ee_tc_multicore.o)
+                0x000033a6                EE_TC_iirq_handler
+ .text.EE_as_StartCore
+                0x000033aa       0xea libee.a(ee_as_multicore.o)
+                0x000033aa                EE_as_StartCore
+ .text.EE_as_StartNonAutosarCore
+                0x00003494       0xd0 libee.a(ee_as_multicore.o)
+                0x00003494                EE_as_StartNonAutosarCore
+ .text.EE_as_rpc
+                0x00003564       0xdc libee.a(ee_as_rpc.o)
+                0x00003564                EE_as_rpc
+ .text.EE_as_rpc_handler
+                0x00003640      0x228 libee.a(ee_as_rpc.o)
+                0x00003640                EE_as_rpc_handler
+ .text.EE_as_ShutdownAllCores
+                0x00003868      0x100 libee.a(ee_as_rpc.o)
+                0x00003868                EE_as_ShutdownAllCores
+ .text.EE_oo_ActivateTask
+                0x00003968      0x118 libee.a(ee_activate.o)
+                0x00003968                EE_oo_ActivateTask
+ .text.EE_oo_GetTaskState
+                0x00003a80       0x78 libee.a(ee_gettaskstate.o)
+                0x00003a80                EE_oo_GetTaskState
+ .text.EE_oo_TerminateTask
+                0x00003af8       0x6a libee.a(ee_terminat.o)
+                0x00003af8                EE_oo_TerminateTask
+ .text.EE_thread_end_instance
+                0x00003b62      0x130 libee.a(ee_thendin.o)
+                0x00003b62                EE_thread_end_instance
+ .text.EE_oo_assign_TID_to_ISR2
+                0x00003c92       0x4a libee.a(ee_irqendin.o)
+                0x00003c92                EE_oo_assign_TID_to_ISR2
+ .text.EE_IRQ_end_instance
+                0x00003cdc       0x96 libee.a(ee_irqendin.o)
+                0x00003cdc                EE_IRQ_end_instance
+ .text.EE_IRQ_end_post_stub
+                0x00003d72       0x62 libee.a(ee_irqendin.o)
+                0x00003d72                EE_IRQ_end_post_stub
+ .text.EE_oo_thread_stub
+                0x00003dd4        0xc libee.a(ee_tstub.o)
+                0x00003dd4                EE_oo_thread_stub
+ .text.EE_rq2stk_exchange
+                0x00003de0       0x2a libee.a(ee_rq_exchg.o)
+                0x00003de0                EE_rq2stk_exchange
+ .text.EE_rq_insert
+                0x00003e0a       0x6c libee.a(ee_rq_inser.o)
+                0x00003e0a                EE_rq_insert
+ .text.EE_oo_ShutdownOS_internal
+                0x00003e76       0xc6 libee.a(ee_shtdown.o)
+                0x00003e76                EE_oo_ShutdownOS_internal
+ .text.EE_oo_ShutdownOS
+                0x00003f3c       0x12 libee.a(ee_shtdown.o)
+                0x00003f3c                EE_oo_ShutdownOS
+ .text.EE_oo_StartOS
+                0x00003f4e      0x272 libee.a(ee_startos.o)
+                0x00003f4e                EE_oo_StartOS
+ .text.EE_oo_CancelAlarm
+                0x000041c0       0xfc libee.a(ee_alcancel.o)
+                0x000041c0                EE_oo_CancelAlarm
+ .text.EE_oo_GetAlarmBase
+                0x000042bc       0x9e libee.a(ee_algetbase.o)
+                0x000042bc                EE_oo_GetAlarmBase
+ .text.EE_oo_GetAlarm
+                0x0000435a       0xd2 libee.a(ee_alget.o)
+                0x0000435a                EE_oo_GetAlarm
+ .text.EE_oo_SetAbsAlarm
+                0x0000442c       0xe4 libee.a(ee_alsetabs.o)
+                0x0000442c                EE_oo_SetAbsAlarm
+ .text.EE_oo_SetRelAlarm
+                0x00004510       0xd0 libee.a(ee_alsetrel.o)
+                0x00004510                EE_oo_SetRelAlarm
+ .text.EE_oo_counter_object_insert
+                0x000045e0       0xb0 libee.a(ee_altick.o)
+                0x000045e0                EE_oo_counter_object_insert
+ .text.EE_oo_IncrementCounterImplementation
+                0x00004690      0x26c libee.a(ee_altick.o)
+                0x00004690                EE_oo_IncrementCounterImplementation
+ .text.EE_oo_IncrementCounterHardware
+                0x000048fc       0x30 libee.a(ee_altick.o)
+                0x000048fc                EE_oo_IncrementCounterHardware
+ .text.EE_oo_IncrementCounter
+                0x0000492c       0x38 libee.a(ee_altick.o)
+                0x0000492c                EE_oo_IncrementCounter
+ .text.EE_oo_GetCounterValue
+                0x00004964       0x7c libee.a(ee_getcountervalue.o)
+                0x00004964                EE_oo_GetCounterValue
+ .text.EE_oo_GetElapsedValue
+                0x000049e0       0x96 libee.a(ee_getelapsedvalue.o)
+                0x000049e0                EE_oo_GetElapsedValue
+ .text.EE_oo_SetEvent
+                0x00004a76      0x13e libee.a(ee_evset.o)
+                0x00004a76                EE_oo_SetEvent
+ .text.EE_tc_endint_disable
+                0x00004bb4       0x20 libee.a(ee_tc2Yx_system.o)
+                0x00004bb4                EE_tc_endint_disable
+ .text.EE_tc_endint_enable
+                0x00004bd4       0x20 libee.a(ee_tc2Yx_system.o)
+                0x00004bd4                EE_tc_endint_enable
+ .text.EE_tc_safety_endinit_disable
+                0x00004bf4       0x20 libee.a(ee_tc2Yx_system.o)
+                0x00004bf4                EE_tc_safety_endinit_disable
+ .text.EE_tc_safety_endinit_enable
+                0x00004c14       0x20 libee.a(ee_tc2Yx_system.o)
+                0x00004c14                EE_tc_safety_endinit_enable
+ .text.EE_tc_system_timer_handler
+                0x00004c34       0x5c libee.a(ee_tc2Yx_system.o)
+                0x00004c34                EE_tc_system_timer_handler
+ .text.EE_tc2Yx_initialize_system_timer
+                0x00004c90       0x8a libee.a(ee_tc2Yx_system.o)
+                0x00004c90                EE_tc2Yx_initialize_system_timer
+ .text.EE_tc2Yx_configure_clock
+                0x00004d1a      0x10c libee.a(ee_tc2Yx_system.o)
+                0x00004d1a                EE_tc2Yx_configure_clock
+ .text.EE_tc2Yx_get_clock
+                0x00004e26       0x80 libee.a(ee_tc2Yx_system.o)
+                0x00004e26                EE_tc2Yx_get_clock
+ .text.EE_tc2Yx_stm_set_clockpersec
+                0x00004ea6       0xaa libee.a(ee_tc2Yx_system.o)
+                0x00004ea6                EE_tc2Yx_stm_set_clockpersec
+ .text.EE_tc2Yx_stm_set_sr1
+                0x00004f50       0xd0 libee.a(ee_tc2Yx_system.o)
+                0x00004f50                EE_tc2Yx_stm_set_sr1
+ .text.EE_tc2Yx_stm_set_sr1_next_match
+                0x00005020       0x6e libee.a(ee_tc2Yx_system.o)
+                0x00005020                EE_tc2Yx_stm_set_sr1_next_match
+ .text.EE_tc2Yx_delay
+                0x0000508e       0x60 libee.a(ee_tc2Yx_system.o)
+                0x0000508e                EE_tc2Yx_delay
+ .text.EE_tc_dummy_context
+                0x000050ee       0x32 libee.a(ee_tc_oo.o)
+ .text.EE_hal_terminate_task
+                0x00005120       0x5c libee.a(ee_tc_oo.o)
+                0x00005120                EE_hal_terminate_task
+ .text.EE_hal_terminate_savestk
+                0x0000517c        0x8 libee.a(ee_tc_oo.o)
+                0x0000517c                EE_hal_terminate_savestk
+ .text.EE_as_GetSpinlock
+                0x00005184       0xae libee.a(ee_as_spinlocks.o)
+                0x00005184                EE_as_GetSpinlock
+ .text.EE_as_ReleaseSpinlock
+                0x00005232       0xa2 libee.a(ee_as_spinlocks.o)
+                0x00005232                EE_as_ReleaseSpinlock
+ .text.EE_as_TryToGetSpinlock
+                0x000052d4       0xb8 libee.a(ee_as_spinlocks.o)
+                0x000052d4                EE_as_TryToGetSpinlock
+ .text.EE_as_release_all_spinlocks
+                0x0000538c       0x86 libee.a(ee_as_spinlocks.o)
+                0x0000538c                EE_as_release_all_spinlocks
+ .text.EE_thread_not_terminated
+                0x00005412       0x24 libee.a(ee_tnterm.o)
+                0x00005412                EE_thread_not_terminated
+ .text._exit    0x00005436       0x10 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+                0x00005436                _exit
+ .text.round    0x00005446       0xb0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+                0x00005446                round
+ .text._fpadd_parts
+                0x000054f6      0x1aa c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .text.__adddf3
+                0x000056a0       0x38 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+                0x000056a0                __adddf3
+ .text.__subdf3
+                0x000056d8       0x40 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+                0x000056d8                __subdf3
+ .text.libgcc   0x00005718       0x1a c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+                0x00005718                __ashldi3
+ .text.libgcc   0x00005732       0x26 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+                0x00005732                __lshrdi3
+ .text.__pack_d
+                0x00005758      0x10c c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+                0x00005758                __pack_d
+ .text.__unpack_d
+                0x00005864       0x92 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+                0x00005864                __unpack_d
+ *(.gnu.linkonce.t.*)
+ *(.gnu.warning)
+
+.startup        memory region -> *default*
+                0x00000000        0x6
+ .startup       0x00000000        0x6 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                0x00000000                _START
+
+ee_kernel_start memory region -> *default*
+                0x00000000      0x164
+ ee_kernel_start
+                0x00000000      0x164 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                0x00000000                EE_tc2Yx_start
+
+.CPU0.ee_api_text
+ *(ee_api_text)
+
+.CPU0.ee_kernel_text
+ *(ee_kernel_text)
+
+.CPU0.gcc_except_table
+ *(.gcc_except_table)
+
+.CPU0.eh_frame
+ *(.eh_frame)
+
+.CPU0.jcr
+ *(.jcr)
+
+.CPU0.ctors
+ *(.ctors)
+
+.CPU0.dtors
+ *(.dtors)
+
+.CPU0.rodata    memory region -> *default*
+                0x00000000      0x168
+ *(.rodata)
+ .rodata        0x00000000        0x4 libee.a(display.o)
+ .rodata        0x00000004       0x14 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+                0x00000004                __thenan_df
+ *(.rodata.*)
+ .rodata.EE_oo_autostart_alarm_cycle
+                0x00000018        0x8 obj/eecfg.o
+                0x00000018                EE_oo_autostart_alarm_cycle
+ .rodata.EE_oo_autostart_alarm_increment
+                0x00000020        0x8 obj/eecfg.o
+                0x00000020                EE_oo_autostart_alarm_increment
+ .rodata.EE_oo_autostart_alarm_data
+                0x00000028        0x8 obj/eecfg.o
+                0x00000028                EE_oo_autostart_alarm_data
+ .rodata.EE_oo_action_ROM
+                0x00000030       0x28 obj/eecfg.o
+                0x00000030                EE_oo_action_ROM
+ .rodata.EE_oo_counter_object_ROM
+                0x00000058       0x18 obj/eecfg.o
+                0x00000058                EE_oo_counter_object_ROM
+ .rodata.EE_alarm_ROM
+                0x00000070        0x8 obj/eecfg.o
+                0x00000070                EE_alarm_ROM
+ .rodata.EE_counter_ROM
+                0x00000078        0xc obj/eecfg.o
+                0x00000078                EE_counter_ROM
+ .rodata.EE_th_is_extended
+                0x00000084        0x4 obj/eecfg.o
+                0x00000084                EE_th_is_extended
+ .rodata.EE_th_dispatch_prio
+                0x00000088        0x4 obj/eecfg.o
+                0x00000088                EE_th_dispatch_prio
+ .rodata.EE_th_ready_prio
+                0x0000008c        0x4 obj/eecfg.o
+                0x0000008c                EE_th_ready_prio
+ .rodata.EE_terminate_real_th_body
+                0x00000090        0x4 obj/eecfg.o
+                0x00000090                EE_terminate_real_th_body
+ .rodata.EE_hal_thread_body
+                0x00000094        0x4 obj/eecfg.o
+                0x00000094                EE_hal_thread_body
+ .rodata.EE_counter_hw_ROM
+                0x00000098        0x4 obj/eecfg.o
+                0x00000098                EE_counter_hw_ROM
+ .rodata.EE_std_thread_tos
+                0x0000009c        0x8 obj/eecfg.o
+                0x0000009c                EE_std_thread_tos
+ .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE
+                0x000000a4        0x4 obj/eecfg.o
+ .rodata.CSWTCH.18
+                0x000000a8       0x50 libee.a(ee_as_rpc.o)
+ .rodata.CSWTCH.19
+                0x000000f8       0x50 libee.a(ee_as_rpc.o)
+ .rodata.EE_os_invalid_param
+                0x00000148        0x4 libee.a(ee_activate.o)
+ .rodata.EE_os_invalid_param
+                0x0000014c        0x4 libee.a(ee_gettaskstate.o)
+ .rodata.EE_os_invalid_param
+                0x00000150        0x4 libee.a(ee_alcancel.o)
+ .rodata.EE_os_invalid_param
+                0x00000154        0x4 libee.a(ee_algetbase.o)
+ .rodata.EE_os_invalid_param
+                0x00000158        0x4 libee.a(ee_alget.o)
+ .rodata.EE_os_invalid_param
+                0x0000015c        0x4 libee.a(ee_altick.o)
+ .rodata.EE_os_invalid_param
+                0x00000160        0x4 libee.a(ee_getcountervalue.o)
+ .rodata.EE_os_invalid_param
+                0x00000164        0x4 libee.a(ee_evset.o)
+ *(.gnu.linkonce.r.*)
+ *(.rodata1)
+ *(.toc)
+
+.bmhd1          memory region -> *default*
+                0x00000000       0x20
+ .bmhd1         0x00000000       0x20 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                0x00000000                BootModeHeader1
+
+.bmhd0          memory region -> *default*
+                0x00000000       0x20
+ .bmhd0         0x00000000       0x20 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+                0x00000000                BootModeHeader0
+
+.CPU0.sdata2
+ *(.sdata.rodata)
+ *(.sdata.rodata.*)
+ *(.srodata)
+
+.CPU0.zbss
+ *(.zbss)
+ *(.zbss.*)
+ *(.gnu.linkonce.zb.*)
+ *(.bbss)
+ *(.bbss.*)
+
+.CPU0.zdata
+ *(.zrodata)
+ *(.zrodata.*)
+ *(.zdata)
+ *(.zdata.*)
+ *(.gnu.linkonce.z.*)
+ *(.bdata)
+ *(.bdata.*)
+
+.CPU0.sbss
+ *(.sbss)
+ *(.sbss.CONFIG)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+
+.CPU0.sdata
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+
+.CPU0.bss       memory region -> *default*
+                0x00000000    0x12d30
+ *(.bss)
+ .bss           0x00000000        0x0 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .bss           0x00000000        0x0 obj/common.o
+ .bss           0x00000000        0x0 obj/src/master.o
+ .bss           0x00000000        0x0 obj/eecfg.o
+ .bss           0x00000000        0x0 libee.a(display.o)
+ .bss           0x00000000        0x0 libee.a(graph.o)
+ .bss           0x00000000        0x0 libee.a(util.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_trapvec.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_intvec.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_context.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_multicore.o)
+ .bss           0x00000000        0x0 libee.a(ee_as_multicore.o)
+ .bss           0x00000000        0x0 libee.a(ee_as_rpc.o)
+ .bss           0x00000000        0x0 libee.a(ee_activate.o)
+ .bss           0x00000000        0x0 libee.a(ee_gettaskstate.o)
+ .bss           0x00000000        0x0 libee.a(ee_terminat.o)
+ .bss           0x00000000        0x0 libee.a(ee_thendin.o)
+ .bss           0x00000000        0x0 libee.a(ee_irqendin.o)
+ .bss           0x00000000        0x0 libee.a(ee_tstub.o)
+ .bss           0x00000000        0x0 libee.a(ee_lookup.o)
+ .bss           0x00000000        0x0 libee.a(ee_rq_exchg.o)
+ .bss           0x00000000        0x0 libee.a(ee_rq_inser.o)
+ .bss           0x00000000        0x0 libee.a(ee_shtdown.o)
+ .bss           0x00000000        0x0 libee.a(ee_startos.o)
+ .bss           0x00000000        0x0 libee.a(ee_alcancel.o)
+ .bss           0x00000000        0x0 libee.a(ee_algetbase.o)
+ .bss           0x00000000        0x0 libee.a(ee_alget.o)
+ .bss           0x00000000        0x0 libee.a(ee_alsetabs.o)
+ .bss           0x00000000        0x0 libee.a(ee_alsetrel.o)
+ .bss           0x00000000        0x0 libee.a(ee_altick.o)
+ .bss           0x00000000        0x0 libee.a(ee_getcountervalue.o)
+ .bss           0x00000000        0x0 libee.a(ee_getelapsedvalue.o)
+ .bss           0x00000000        0x0 libee.a(ee_evset.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc2Yx_system.o)
+ .bss           0x00000000        0x0 libee.a(ee_hal_structs.o)
+ .bss           0x00000000        0x0 libee.a(ee_tc_oo.o)
+ .bss           0x00000000        0x0 libee.a(ee_as_spinlocks.o)
+ .bss           0x00000000        0x0 libee.a(ee_tnterm.o)
+ .bss           0x00000000        0x8 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+                0x00000000                __progname
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .bss           0x00000008        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+ *(.bss.*)
+ .bss.on_off_timer.35640
+                0x00000008        0x4 obj/src/master.o
+ .bss.EE_ApplicationMode
+                0x0000000c        0x4 obj/eecfg.o
+                0x0000000c                EE_ApplicationMode
+ .bss.EE_oo_counter_object_RAM
+                0x00000010       0x20 obj/eecfg.o
+                0x00000010                EE_oo_counter_object_RAM
+ .bss.EE_isr2_nesting_level
+                0x00000030       0x10 obj/eecfg.o
+                0x00000030                EE_isr2_nesting_level
+ .bss.EE_th_waswaiting
+                0x00000040        0x4 obj/eecfg.o
+                0x00000040                EE_th_waswaiting
+ .bss.EE_th_event_waitmask
+                0x00000044        0x4 obj/eecfg.o
+                0x00000044                EE_th_event_waitmask
+ .bss.EE_th_event_active
+                0x00000048        0x4 obj/eecfg.o
+                0x00000048                EE_th_event_active
+ .bss.EE_sys_ceiling
+                0x0000004c        0x4 obj/eecfg.o
+                0x0000004c                EE_sys_ceiling
+ .bss.EE_terminate_data
+                0x00000050        0x4 obj/eecfg.o
+                0x00000050                EE_terminate_data
+ .bss.EE_tc_tasks_RA
+                0x00000054        0x8 obj/eecfg.o
+                0x00000054                EE_tc_tasks_RA
+ .bss.EE_tc_active_tos
+                0x0000005c        0x4 obj/eecfg.o
+                0x0000005c                EE_tc_active_tos
+ .bss.touch_y   0x00000060        0x2 libee.a(display.o)
+                0x00000060                touch_y
+ .bss.touch_x   0x00000062        0x2 libee.a(display.o)
+                0x00000062                touch_x
+ .bss.defaultDispBufReady
+                0x00000064        0x4 libee.a(display.o)
+                0x00000064                defaultDispBufReady
+ .bss.BackgroundColor
+                0x00000068        0x1 libee.a(display.o)
+                0x00000068                BackgroundColor
+ *fill*         0x00000069        0x1 00
+ .bss.colorTable
+                0x0000006a       0x96 libee.a(display.o)
+                0x0000006a                colorTable
+ .bss.frameBuffer
+                0x00000100    0x12c00 libee.a(display.o)
+                0x00000100                frameBuffer
+ .bss.EE_tc_active_utid
+                0x00012d00        0x4 libee.a(ee_tc_context.o)
+                0x00012d00                EE_tc_active_utid
+ .bss.EE_oo_IRQ_suspend_status
+                0x00012d04        0x4 libee.a(ee_lookup.o)
+                0x00012d04                EE_oo_IRQ_suspend_status
+ .bss.EE_oo_IRQ_disable_count
+                0x00012d08        0x4 libee.a(ee_lookup.o)
+                0x00012d08                EE_oo_IRQ_disable_count
+ .bss.EE_oo_started
+                0x00012d0c        0x4 libee.a(ee_startos.o)
+                0x00012d0c                EE_oo_started
+ .bss.EE_ORTI_runningisr2
+                0x00012d10        0x4 libee.a(ee_startos.o)
+                0x00012d10                EE_ORTI_runningisr2
+ .bss.EE_ORTI_th_priority
+                0x00012d14        0x4 libee.a(ee_startos.o)
+                0x00012d14                EE_ORTI_th_priority
+ .bss.EE_ORTI_lasterror
+                0x00012d18        0x1 libee.a(ee_startos.o)
+                0x00012d18                EE_ORTI_lasterror
+ .bss.EE_ORTI_servicetrace
+                0x00012d19        0x1 libee.a(ee_startos.o)
+                0x00012d19                EE_ORTI_servicetrace
+ *fill*         0x00012d1a        0x2 00
+ .bss.EE_ORTI_alarmtime
+                0x00012d1c        0x8 libee.a(ee_altick.o)
+ .bss.EE_tc2Yx_stm_freq_khz
+                0x00012d24        0x4 libee.a(ee_tc2Yx_system.o)
+ .bss.EE_std_endcycle_next_tid
+                0x00012d28        0x4 libee.a(ee_hal_structs.o)
+                0x00012d28                EE_std_endcycle_next_tid
+ .bss.EE_IRQ_nesting_level
+                0x00012d2c        0x4 libee.a(ee_hal_structs.o)
+                0x00012d2c                EE_IRQ_nesting_level
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+
+.CPU0.data      memory region -> *default*
+                0x00000000       0x48
+ *(.data)
+ .data          0x00000000        0x0 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .data          0x00000000        0x0 obj/common.o
+ .data          0x00000000        0x0 obj/src/master.o
+ .data          0x00000000        0x0 obj/eecfg.o
+ .data          0x00000000        0x0 libee.a(display.o)
+ .data          0x00000000        0x0 libee.a(graph.o)
+ .data          0x00000000        0x0 libee.a(util.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_trapvec.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_intvec.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_context.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_multicore.o)
+ .data          0x00000000        0x0 libee.a(ee_as_multicore.o)
+ .data          0x00000000        0x0 libee.a(ee_as_rpc.o)
+ .data          0x00000000        0x0 libee.a(ee_activate.o)
+ .data          0x00000000        0x0 libee.a(ee_gettaskstate.o)
+ .data          0x00000000        0x0 libee.a(ee_terminat.o)
+ .data          0x00000000        0x0 libee.a(ee_thendin.o)
+ .data          0x00000000        0x0 libee.a(ee_irqendin.o)
+ .data          0x00000000        0x0 libee.a(ee_tstub.o)
+ .data          0x00000000        0x0 libee.a(ee_lookup.o)
+ .data          0x00000000        0x0 libee.a(ee_rq_exchg.o)
+ .data          0x00000000        0x0 libee.a(ee_rq_inser.o)
+ .data          0x00000000        0x0 libee.a(ee_shtdown.o)
+ .data          0x00000000        0x0 libee.a(ee_startos.o)
+ .data          0x00000000        0x0 libee.a(ee_alcancel.o)
+ .data          0x00000000        0x0 libee.a(ee_algetbase.o)
+ .data          0x00000000        0x0 libee.a(ee_alget.o)
+ .data          0x00000000        0x0 libee.a(ee_alsetabs.o)
+ .data          0x00000000        0x0 libee.a(ee_alsetrel.o)
+ .data          0x00000000        0x0 libee.a(ee_altick.o)
+ .data          0x00000000        0x0 libee.a(ee_getcountervalue.o)
+ .data          0x00000000        0x0 libee.a(ee_getelapsedvalue.o)
+ .data          0x00000000        0x0 libee.a(ee_evset.o)
+ .data          0x00000000        0x0 libee.a(ee_tc2Yx_system.o)
+ .data          0x00000000        0x0 libee.a(ee_hal_structs.o)
+ .data          0x00000000        0x0 libee.a(ee_tc_oo.o)
+ .data          0x00000000        0x0 libee.a(ee_as_spinlocks.o)
+ .data          0x00000000        0x0 libee.a(ee_tnterm.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .data          0x00000000        0x0 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+ *(.data.*)
+ .data.EE_as_spinlocks_locker_task_or_isr2
+                0x00000000       0x14 obj/eecfg.o
+                0x00000000                EE_as_spinlocks_locker_task_or_isr2
+ .data.EE_counter_RAM
+                0x00000014        0x8 obj/eecfg.o
+                0x00000014                EE_counter_RAM
+ .data.EE_th_terminate_nextask
+                0x0000001c        0x4 obj/eecfg.o
+                0x0000001c                EE_th_terminate_nextask
+ .data.EE_rq_first
+                0x00000020        0x4 obj/eecfg.o
+                0x00000020                EE_rq_first
+ .data.EE_th_rnact
+                0x00000024        0x4 obj/eecfg.o
+                0x00000024                EE_th_rnact
+ .data.EE_stkfirst
+                0x00000028        0x4 obj/eecfg.o
+                0x00000028                EE_stkfirst
+ .data.EE_th_next
+                0x0000002c        0x4 obj/eecfg.o
+                0x0000002c                EE_th_next
+ .data.EE_th_status
+                0x00000030        0x4 obj/eecfg.o
+                0x00000030                EE_th_status
+ .data.EE_tc_system_tos
+                0x00000034       0x10 obj/eecfg.o
+                0x00000034                EE_tc_system_tos
+ .data.EE_isr2_index
+                0x00000044        0x4 libee.a(ee_irqendin.o)
+                0x00000044                EE_isr2_index
+ *(.gnu.linkonce.d.*)
+
+.CPU0.ustack
+
+.CPU0.istack
+
+.CPU0.heap
+
+.CPU0.csa
+
+.CPU0.ee_api_bss
+ *(ee_api_bss)
+
+.CPU0.ee_api_data
+ *(ee_api_data)
+
+.CPU0.ee_kernel_bss
+ *(ee_kernel_bss)
+
+.CPU0.ee_kernel_data
+ *(ee_kernel_data)
+
+.CPU0.ee_kernel_stack memory region -> *default*
+                0x00000000      0x208
+ *(ee_kernel_stack)
+ ee_kernel_stack
+                0x00000000      0x208 obj/eecfg.o
+                0x00000000                EE_tc_stack_1
+
+.comment        memory region -> *default*
+                0x00000000      0xc60
+ *(.comment)
+ .comment       0x00000000       0x48 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .comment       0x00000048       0x48 obj/common.o
+ .comment       0x00000090       0x48 obj/src/master.o
+ .comment       0x000000d8       0x48 obj/eecfg.o
+ .comment       0x00000120       0x48 libee.a(display.o)
+ .comment       0x00000168       0x48 libee.a(graph.o)
+ .comment       0x000001b0       0x48 libee.a(util.o)
+ .comment       0x000001f8       0x48 libee.a(ee_tc_trapvec.o)
+ .comment       0x00000240       0x48 libee.a(ee_tc_intvec.o)
+ .comment       0x00000288       0x48 libee.a(ee_tc_context.o)
+ .comment       0x000002d0       0x48 libee.a(ee_tc_multicore.o)
+ .comment       0x00000318       0x48 libee.a(ee_as_multicore.o)
+ .comment       0x00000360       0x48 libee.a(ee_as_rpc.o)
+ .comment       0x000003a8       0x48 libee.a(ee_activate.o)
+ .comment       0x000003f0       0x48 libee.a(ee_gettaskstate.o)
+ .comment       0x00000438       0x48 libee.a(ee_terminat.o)
+ .comment       0x00000480       0x48 libee.a(ee_thendin.o)
+ .comment       0x000004c8       0x48 libee.a(ee_irqendin.o)
+ .comment       0x00000510       0x48 libee.a(ee_tstub.o)
+ .comment       0x00000558       0x48 libee.a(ee_lookup.o)
+ .comment       0x000005a0       0x48 libee.a(ee_rq_exchg.o)
+ .comment       0x000005e8       0x48 libee.a(ee_rq_inser.o)
+ .comment       0x00000630       0x48 libee.a(ee_shtdown.o)
+ .comment       0x00000678       0x48 libee.a(ee_startos.o)
+ .comment       0x000006c0       0x48 libee.a(ee_alcancel.o)
+ .comment       0x00000708       0x48 libee.a(ee_algetbase.o)
+ .comment       0x00000750       0x48 libee.a(ee_alget.o)
+ .comment       0x00000798       0x48 libee.a(ee_alsetabs.o)
+ .comment       0x000007e0       0x48 libee.a(ee_alsetrel.o)
+ .comment       0x00000828       0x48 libee.a(ee_altick.o)
+ .comment       0x00000870       0x48 libee.a(ee_getcountervalue.o)
+ .comment       0x000008b8       0x48 libee.a(ee_getelapsedvalue.o)
+ .comment       0x00000900       0x48 libee.a(ee_evset.o)
+ .comment       0x00000948       0x48 libee.a(ee_tc2Yx_system.o)
+ .comment       0x00000990       0x48 libee.a(ee_hal_structs.o)
+ .comment       0x000009d8       0x48 libee.a(ee_tc_oo.o)
+ .comment       0x00000a20       0x48 libee.a(ee_as_spinlocks.o)
+ .comment       0x00000a68       0x48 libee.a(ee_tnterm.o)
+ .comment       0x00000ab0       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .comment       0x00000af8       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .comment       0x00000b40       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .comment       0x00000b88       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .comment       0x00000bd0       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .comment       0x00000c18       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  memory region -> *default*
+                0x00000000      0x700
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_aranges
+                0x00000028       0x38 obj/src/master.o
+ .debug_aranges
+                0x00000060       0xb0 libee.a(display.o)
+ .debug_aranges
+                0x00000110       0x78 libee.a(graph.o)
+ .debug_aranges
+                0x00000188       0x28 libee.a(util.o)
+ .debug_aranges
+                0x000001b0       0x28 libee.a(ee_tc_intvec.o)
+ .debug_aranges
+                0x000001d8       0x20 libee.a(ee_tc_context.o)
+ .debug_aranges
+                0x000001f8       0x30 libee.a(ee_tc_multicore.o)
+ .debug_aranges
+                0x00000228       0x28 libee.a(ee_as_multicore.o)
+ .debug_aranges
+                0x00000250       0x30 libee.a(ee_as_rpc.o)
+ .debug_aranges
+                0x00000280       0x20 libee.a(ee_activate.o)
+ .debug_aranges
+                0x000002a0       0x20 libee.a(ee_gettaskstate.o)
+ .debug_aranges
+                0x000002c0       0x20 libee.a(ee_terminat.o)
+ .debug_aranges
+                0x000002e0       0x20 libee.a(ee_thendin.o)
+ .debug_aranges
+                0x00000300       0x30 libee.a(ee_irqendin.o)
+ .debug_aranges
+                0x00000330       0x20 libee.a(ee_tstub.o)
+ .debug_aranges
+                0x00000350       0x20 libee.a(ee_rq_exchg.o)
+ .debug_aranges
+                0x00000370       0x20 libee.a(ee_rq_inser.o)
+ .debug_aranges
+                0x00000390       0x28 libee.a(ee_shtdown.o)
+ .debug_aranges
+                0x000003b8       0x20 libee.a(ee_startos.o)
+ .debug_aranges
+                0x000003d8       0x20 libee.a(ee_alcancel.o)
+ .debug_aranges
+                0x000003f8       0x20 libee.a(ee_algetbase.o)
+ .debug_aranges
+                0x00000418       0x20 libee.a(ee_alget.o)
+ .debug_aranges
+                0x00000438       0x20 libee.a(ee_alsetabs.o)
+ .debug_aranges
+                0x00000458       0x20 libee.a(ee_alsetrel.o)
+ .debug_aranges
+                0x00000478       0x38 libee.a(ee_altick.o)
+ .debug_aranges
+                0x000004b0       0x20 libee.a(ee_getcountervalue.o)
+ .debug_aranges
+                0x000004d0       0x20 libee.a(ee_getelapsedvalue.o)
+ .debug_aranges
+                0x000004f0       0x20 libee.a(ee_evset.o)
+ .debug_aranges
+                0x00000510       0x78 libee.a(ee_tc2Yx_system.o)
+ .debug_aranges
+                0x00000588       0x30 libee.a(ee_tc_oo.o)
+ .debug_aranges
+                0x000005b8       0x38 libee.a(ee_as_spinlocks.o)
+ .debug_aranges
+                0x000005f0       0x20 libee.a(ee_tnterm.o)
+ .debug_aranges
+                0x00000610       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .debug_aranges
+                0x00000630       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_aranges
+                0x00000650       0x30 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_aranges
+                0x00000680       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .debug_aranges
+                0x000006a0       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .debug_aranges
+                0x000006c0       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_aranges
+                0x000006e0       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     memory region -> *default*
+                0x00000000    0x2b94c
+ *(.debug_info)
+ .debug_info    0x00000000     0x1429 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_info    0x00001429      0x9db obj/common.o
+ .debug_info    0x00001e04      0xb8b obj/src/master.o
+ .debug_info    0x0000298f     0x1014 obj/eecfg.o
+ .debug_info    0x000039a3     0x40c8 libee.a(display.o)
+ .debug_info    0x00007a6b      0xfbb libee.a(graph.o)
+ .debug_info    0x00008a26      0x114 libee.a(util.o)
+ .debug_info    0x00008b3a      0x18a libee.a(ee_tc_trapvec.o)
+ .debug_info    0x00008cc4      0xdb8 libee.a(ee_tc_intvec.o)
+ .debug_info    0x00009a7c      0xfda libee.a(ee_tc_context.o)
+ .debug_info    0x0000aa56      0xe7d libee.a(ee_tc_multicore.o)
+ .debug_info    0x0000b8d3     0x17cc libee.a(ee_as_multicore.o)
+ .debug_info    0x0000d09f     0x1ca3 libee.a(ee_as_rpc.o)
+ .debug_info    0x0000ed42     0x1417 libee.a(ee_activate.o)
+ .debug_info    0x00010159     0x118a libee.a(ee_gettaskstate.o)
+ .debug_info    0x000112e3     0x10c4 libee.a(ee_terminat.o)
+ .debug_info    0x000123a7      0xebf libee.a(ee_thendin.o)
+ .debug_info    0x00013266      0xf0e libee.a(ee_irqendin.o)
+ .debug_info    0x00014174      0xbe7 libee.a(ee_tstub.o)
+ .debug_info    0x00014d5b      0xa52 libee.a(ee_lookup.o)
+ .debug_info    0x000157ad      0xa8a libee.a(ee_rq_exchg.o)
+ .debug_info    0x00016237      0xa9f libee.a(ee_rq_inser.o)
+ .debug_info    0x00016cd6     0x1152 libee.a(ee_shtdown.o)
+ .debug_info    0x00017e28     0x1e84 libee.a(ee_startos.o)
+ .debug_info    0x00019cac     0x10ca libee.a(ee_alcancel.o)
+ .debug_info    0x0001ad76     0x1077 libee.a(ee_algetbase.o)
+ .debug_info    0x0001bded     0x1066 libee.a(ee_alget.o)
+ .debug_info    0x0001ce53     0x113e libee.a(ee_alsetabs.o)
+ .debug_info    0x0001df91     0x10e9 libee.a(ee_alsetrel.o)
+ .debug_info    0x0001f07a     0x1891 libee.a(ee_altick.o)
+ .debug_info    0x0002090b     0x1044 libee.a(ee_getcountervalue.o)
+ .debug_info    0x0002194f     0x1072 libee.a(ee_getelapsedvalue.o)
+ .debug_info    0x000229c1     0x13ae libee.a(ee_evset.o)
+ .debug_info    0x00023d6f     0x227f libee.a(ee_tc2Yx_system.o)
+ .debug_info    0x00025fee      0xa58 libee.a(ee_hal_structs.o)
+ .debug_info    0x00026a46     0x141a libee.a(ee_tc_oo.o)
+ .debug_info    0x00027e60     0x18e8 libee.a(ee_as_spinlocks.o)
+ .debug_info    0x00029748      0xb27 libee.a(ee_tnterm.o)
+ .debug_info    0x0002a26f      0x18d c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .debug_info    0x0002a3fc      0x2d1 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_info    0x0002a6cd      0x5f3 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_info    0x0002acc0      0x2c4 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .debug_info    0x0002af84      0x100 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .debug_info    0x0002b084      0x100 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .debug_info    0x0002b184      0x427 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_info    0x0002b5ab      0x3a1 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_abbrev   memory region -> *default*
+                0x00000000     0x6019
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x29d obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_abbrev  0x0000029d      0x10d obj/common.o
+ .debug_abbrev  0x000003aa      0x216 obj/src/master.o
+ .debug_abbrev  0x000005c0      0x14e obj/eecfg.o
+ .debug_abbrev  0x0000070e      0x436 libee.a(display.o)
+ .debug_abbrev  0x00000b44      0x2e1 libee.a(graph.o)
+ .debug_abbrev  0x00000e25       0x67 libee.a(util.o)
+ .debug_abbrev  0x00000e8c       0x56 libee.a(ee_tc_trapvec.o)
+ .debug_abbrev  0x00000ee2      0x281 libee.a(ee_tc_intvec.o)
+ .debug_abbrev  0x00001163      0x27d libee.a(ee_tc_context.o)
+ .debug_abbrev  0x000013e0      0x268 libee.a(ee_tc_multicore.o)
+ .debug_abbrev  0x00001648      0x30c libee.a(ee_as_multicore.o)
+ .debug_abbrev  0x00001954      0x38c libee.a(ee_as_rpc.o)
+ .debug_abbrev  0x00001ce0      0x2ff libee.a(ee_activate.o)
+ .debug_abbrev  0x00001fdf      0x29e libee.a(ee_gettaskstate.o)
+ .debug_abbrev  0x0000227d      0x2a4 libee.a(ee_terminat.o)
+ .debug_abbrev  0x00002521      0x23b libee.a(ee_thendin.o)
+ .debug_abbrev  0x0000275c      0x22c libee.a(ee_irqendin.o)
+ .debug_abbrev  0x00002988      0x15c libee.a(ee_tstub.o)
+ .debug_abbrev  0x00002ae4      0x109 libee.a(ee_lookup.o)
+ .debug_abbrev  0x00002bed      0x122 libee.a(ee_rq_exchg.o)
+ .debug_abbrev  0x00002d0f      0x13c libee.a(ee_rq_inser.o)
+ .debug_abbrev  0x00002e4b      0x272 libee.a(ee_shtdown.o)
+ .debug_abbrev  0x000030bd      0x37a libee.a(ee_startos.o)
+ .debug_abbrev  0x00003437      0x2f2 libee.a(ee_alcancel.o)
+ .debug_abbrev  0x00003729      0x29e libee.a(ee_algetbase.o)
+ .debug_abbrev  0x000039c7      0x29e libee.a(ee_alget.o)
+ .debug_abbrev  0x00003c65      0x2e3 libee.a(ee_alsetabs.o)
+ .debug_abbrev  0x00003f48      0x2f6 libee.a(ee_alsetrel.o)
+ .debug_abbrev  0x0000423e      0x372 libee.a(ee_altick.o)
+ .debug_abbrev  0x000045b0      0x2e9 libee.a(ee_getcountervalue.o)
+ .debug_abbrev  0x00004899      0x295 libee.a(ee_getelapsedvalue.o)
+ .debug_abbrev  0x00004b2e      0x2f2 libee.a(ee_evset.o)
+ .debug_abbrev  0x00004e20      0x3a7 libee.a(ee_tc2Yx_system.o)
+ .debug_abbrev  0x000051c7      0x109 libee.a(ee_hal_structs.o)
+ .debug_abbrev  0x000052d0      0x290 libee.a(ee_tc_oo.o)
+ .debug_abbrev  0x00005560      0x35c libee.a(ee_as_spinlocks.o)
+ .debug_abbrev  0x000058bc      0x18d libee.a(ee_tnterm.o)
+ .debug_abbrev  0x00005a49       0x5f c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .debug_abbrev  0x00005aa8       0xdd c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_abbrev  0x00005b85      0x151 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_abbrev  0x00005cd6       0xaf c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .debug_abbrev  0x00005d85       0x14 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .debug_abbrev  0x00005d99       0x14 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .debug_abbrev  0x00005dad      0x152 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_abbrev  0x00005eff      0x11a c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_line     memory region -> *default*
+                0x00000000     0x92c6
+ *(.debug_line)
+ .debug_line    0x00000000      0x470 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_line    0x00000470      0x19a obj/common.o
+ .debug_line    0x0000060a      0x336 obj/src/master.o
+ .debug_line    0x00000940      0x187 obj/eecfg.o
+ .debug_line    0x00000ac7      0xcf7 libee.a(display.o)
+ .debug_line    0x000017be      0x596 libee.a(graph.o)
+ .debug_line    0x00001d54       0x9b libee.a(util.o)
+ .debug_line    0x00001def       0xb5 libee.a(ee_tc_trapvec.o)
+ .debug_line    0x00001ea4      0x33a libee.a(ee_tc_intvec.o)
+ .debug_line    0x000021de      0x380 libee.a(ee_tc_context.o)
+ .debug_line    0x0000255e      0x368 libee.a(ee_tc_multicore.o)
+ .debug_line    0x000028c6      0x40f libee.a(ee_as_multicore.o)
+ .debug_line    0x00002cd5      0x678 libee.a(ee_as_rpc.o)
+ .debug_line    0x0000334d      0x3ab libee.a(ee_activate.o)
+ .debug_line    0x000036f8      0x38f libee.a(ee_gettaskstate.o)
+ .debug_line    0x00003a87      0x390 libee.a(ee_terminat.o)
+ .debug_line    0x00003e17      0x358 libee.a(ee_thendin.o)
+ .debug_line    0x0000416f      0x2fc libee.a(ee_irqendin.o)
+ .debug_line    0x0000446b      0x27e libee.a(ee_tstub.o)
+ .debug_line    0x000046e9      0x26f libee.a(ee_lookup.o)
+ .debug_line    0x00004958      0x285 libee.a(ee_rq_exchg.o)
+ .debug_line    0x00004bdd      0x294 libee.a(ee_rq_inser.o)
+ .debug_line    0x00004e71      0x3a9 libee.a(ee_shtdown.o)
+ .debug_line    0x0000521a      0x4fc libee.a(ee_startos.o)
+ .debug_line    0x00005716      0x377 libee.a(ee_alcancel.o)
+ .debug_line    0x00005a8d      0x352 libee.a(ee_algetbase.o)
+ .debug_line    0x00005ddf      0x354 libee.a(ee_alget.o)
+ .debug_line    0x00006133      0x37e libee.a(ee_alsetabs.o)
+ .debug_line    0x000064b1      0x37e libee.a(ee_alsetrel.o)
+ .debug_line    0x0000682f      0x4d2 libee.a(ee_altick.o)
+ .debug_line    0x00006d01      0x378 libee.a(ee_getcountervalue.o)
+ .debug_line    0x00007079      0x367 libee.a(ee_getelapsedvalue.o)
+ .debug_line    0x000073e0      0x3a8 libee.a(ee_evset.o)
+ .debug_line    0x00007788      0x6a7 libee.a(ee_tc2Yx_system.o)
+ .debug_line    0x00007e2f      0x252 libee.a(ee_hal_structs.o)
+ .debug_line    0x00008081      0x385 libee.a(ee_tc_oo.o)
+ .debug_line    0x00008406      0x4ea libee.a(ee_as_spinlocks.o)
+ .debug_line    0x000088f0      0x312 libee.a(ee_tnterm.o)
+ .debug_line    0x00008c02       0x8a c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .debug_line    0x00008c8c      0x16c c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_line    0x00008df8      0x14c c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_line    0x00008f44       0x92 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .debug_line    0x00008fd6       0x97 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_ashldi3.o)
+ .debug_line    0x0000906d       0x9b c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_lshrdi3.o)
+ .debug_line    0x00009108       0xef c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_line    0x000091f7       0xcf c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_frame    memory region -> *default*
+                0x00000000      0x8f4
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_frame   0x00000030       0x58 obj/src/master.o
+ .debug_frame   0x00000088      0x158 libee.a(display.o)
+ .debug_frame   0x000001e0       0xd4 libee.a(graph.o)
+ .debug_frame   0x000002b4       0x30 libee.a(util.o)
+ .debug_frame   0x000002e4       0x30 libee.a(ee_tc_intvec.o)
+ .debug_frame   0x00000314       0x20 libee.a(ee_tc_context.o)
+ .debug_frame   0x00000334       0x44 libee.a(ee_tc_multicore.o)
+ .debug_frame   0x00000378       0x30 libee.a(ee_as_multicore.o)
+ .debug_frame   0x000003a8       0x44 libee.a(ee_as_rpc.o)
+ .debug_frame   0x000003ec       0x20 libee.a(ee_activate.o)
+ .debug_frame   0x0000040c       0x20 libee.a(ee_gettaskstate.o)
+ .debug_frame   0x0000042c       0x20 libee.a(ee_terminat.o)
+ .debug_frame   0x0000044c       0x20 libee.a(ee_thendin.o)
+ .debug_frame   0x0000046c       0x40 libee.a(ee_irqendin.o)
+ .debug_frame   0x000004ac       0x20 libee.a(ee_tstub.o)
+ .debug_frame   0x000004cc       0x20 libee.a(ee_rq_exchg.o)
+ .debug_frame   0x000004ec       0x20 libee.a(ee_rq_inser.o)
+ .debug_frame   0x0000050c       0x30 libee.a(ee_shtdown.o)
+ .debug_frame   0x0000053c       0x20 libee.a(ee_startos.o)
+ .debug_frame   0x0000055c       0x20 libee.a(ee_alcancel.o)
+ .debug_frame   0x0000057c       0x20 libee.a(ee_algetbase.o)
+ .debug_frame   0x0000059c       0x20 libee.a(ee_alget.o)
+ .debug_frame   0x000005bc       0x20 libee.a(ee_alsetabs.o)
+ .debug_frame   0x000005dc       0x20 libee.a(ee_alsetrel.o)
+ .debug_frame   0x000005fc       0x50 libee.a(ee_altick.o)
+ .debug_frame   0x0000064c       0x20 libee.a(ee_getcountervalue.o)
+ .debug_frame   0x0000066c       0x20 libee.a(ee_getelapsedvalue.o)
+ .debug_frame   0x0000068c       0x20 libee.a(ee_evset.o)
+ .debug_frame   0x000006ac       0xd0 libee.a(ee_tc2Yx_system.o)
+ .debug_frame   0x0000077c       0x40 libee.a(ee_tc_oo.o)
+ .debug_frame   0x000007bc       0x50 libee.a(ee_as_spinlocks.o)
+ .debug_frame   0x0000080c       0x20 libee.a(ee_tnterm.o)
+ .debug_frame   0x0000082c       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .debug_frame   0x0000084c       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_frame   0x0000086c       0x48 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_frame   0x000008b4       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_frame   0x000008d4       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_str      memory region -> *default*
+                0x00000000      0x790
+ *(.debug_str)
+ .debug_str     0x00000000       0x50 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_str     0x00000050       0x26 obj/eecfg.o
+ .debug_str     0x00000076       0x48 libee.a(display.o)
+ .debug_str     0x000000be        0xc libee.a(graph.o)
+ .debug_str     0x000000ca        0xa libee.a(ee_tc_intvec.o)
+ .debug_str     0x000000d4       0x26 libee.a(ee_tc_context.o)
+ .debug_str     0x000000fa       0x26 libee.a(ee_tc_multicore.o)
+ .debug_str     0x00000120       0x54 libee.a(ee_as_multicore.o)
+ .debug_str     0x00000174       0x7b libee.a(ee_as_rpc.o)
+ .debug_str     0x000001ef       0x37 libee.a(ee_activate.o)
+ .debug_str     0x00000226       0x30 libee.a(ee_gettaskstate.o)
+ .debug_str     0x00000256       0x30 libee.a(ee_terminat.o)
+ .debug_str     0x00000286       0x2d libee.a(ee_thendin.o)
+ .debug_str     0x000002b3       0x35 libee.a(ee_irqendin.o)
+ .debug_str     0x000002e8       0x26 libee.a(ee_tstub.o)
+ .debug_str     0x0000030e       0x26 libee.a(ee_lookup.o)
+ .debug_str     0x00000334       0x26 libee.a(ee_rq_exchg.o)
+ .debug_str     0x0000035a       0x26 libee.a(ee_rq_inser.o)
+ .debug_str     0x00000380       0x32 libee.a(ee_shtdown.o)
+ .debug_str     0x000003b2       0x8a libee.a(ee_startos.o)
+ .debug_str     0x0000043c       0x30 libee.a(ee_alcancel.o)
+ .debug_str     0x0000046c       0x30 libee.a(ee_algetbase.o)
+ .debug_str     0x0000049c       0x30 libee.a(ee_alget.o)
+ .debug_str     0x000004cc       0x30 libee.a(ee_alsetabs.o)
+ .debug_str     0x000004fc       0x3a libee.a(ee_alsetrel.o)
+ .debug_str     0x00000536       0x60 libee.a(ee_altick.o)
+ .debug_str     0x00000596       0x30 libee.a(ee_getcountervalue.o)
+ .debug_str     0x000005c6       0x30 libee.a(ee_getelapsedvalue.o)
+ .debug_str     0x000005f6       0x30 libee.a(ee_evset.o)
+ .debug_str     0x00000626       0x84 libee.a(ee_tc2Yx_system.o)
+ .debug_str     0x000006aa       0x26 libee.a(ee_hal_structs.o)
+ .debug_str     0x000006d0       0x2f libee.a(ee_tc_oo.o)
+ .debug_str     0x000006ff       0x4b libee.a(ee_as_spinlocks.o)
+ .debug_str     0x0000074a       0x26 libee.a(ee_tnterm.o)
+ .debug_str     0x00000770        0xe c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_str     0x0000077e        0x9 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_str     0x00000787        0x9 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_loc      memory region -> *default*
+                0x00000000     0x2aa7
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x83 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_loc     0x00000083       0x69 obj/src/master.o
+ .debug_loc     0x000000ec      0x50a libee.a(display.o)
+ .debug_loc     0x000005f6      0x8c1 libee.a(graph.o)
+ .debug_loc     0x00000eb7       0x57 libee.a(ee_tc_intvec.o)
+ .debug_loc     0x00000f0e      0x121 libee.a(ee_tc_context.o)
+ .debug_loc     0x0000102f       0xb2 libee.a(ee_tc_multicore.o)
+ .debug_loc     0x000010e1       0x7c libee.a(ee_as_multicore.o)
+ .debug_loc     0x0000115d      0x436 libee.a(ee_as_rpc.o)
+ .debug_loc     0x00001593       0xa4 libee.a(ee_activate.o)
+ .debug_loc     0x00001637       0x78 libee.a(ee_gettaskstate.o)
+ .debug_loc     0x000016af       0x29 libee.a(ee_terminat.o)
+ .debug_loc     0x000016d8       0x8e libee.a(ee_thendin.o)
+ .debug_loc     0x00001766       0x5a libee.a(ee_irqendin.o)
+ .debug_loc     0x000017c0       0x13 libee.a(ee_rq_exchg.o)
+ .debug_loc     0x000017d3       0x1e libee.a(ee_rq_inser.o)
+ .debug_loc     0x000017f1       0x7f libee.a(ee_shtdown.o)
+ .debug_loc     0x00001870      0x103 libee.a(ee_startos.o)
+ .debug_loc     0x00001973       0x70 libee.a(ee_alcancel.o)
+ .debug_loc     0x000019e3       0x78 libee.a(ee_algetbase.o)
+ .debug_loc     0x00001a5b       0x83 libee.a(ee_alget.o)
+ .debug_loc     0x00001ade       0xf6 libee.a(ee_alsetabs.o)
+ .debug_loc     0x00001bd4       0xaf libee.a(ee_alsetrel.o)
+ .debug_loc     0x00001c83      0x1ad libee.a(ee_altick.o)
+ .debug_loc     0x00001e30       0x65 libee.a(ee_getcountervalue.o)
+ .debug_loc     0x00001e95       0x83 libee.a(ee_getelapsedvalue.o)
+ .debug_loc     0x00001f18       0xee libee.a(ee_evset.o)
+ .debug_loc     0x00002006      0x18b libee.a(ee_tc2Yx_system.o)
+ .debug_loc     0x00002191       0x57 libee.a(ee_tc_oo.o)
+ .debug_loc     0x000021e8      0x216 libee.a(ee_as_spinlocks.o)
+ .debug_loc     0x000023fe      0x1d2 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_loc     0x000025d0      0x297 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_loc     0x00002867      0x1ae c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_loc     0x00002a15       0x92 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   memory region -> *default*
+                0x00000000     0x1f18
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x48 obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .debug_ranges  0x00000048       0x48 obj/src/master.o
+ .debug_ranges  0x00000090      0x548 libee.a(display.o)
+ .debug_ranges  0x000005d8      0x2f8 libee.a(graph.o)
+ .debug_ranges  0x000008d0       0x18 libee.a(util.o)
+ .debug_ranges  0x000008e8       0x60 libee.a(ee_tc_intvec.o)
+ .debug_ranges  0x00000948       0x70 libee.a(ee_tc_context.o)
+ .debug_ranges  0x000009b8      0x140 libee.a(ee_tc_multicore.o)
+ .debug_ranges  0x00000af8       0x18 libee.a(ee_as_multicore.o)
+ .debug_ranges  0x00000b10      0x2d0 libee.a(ee_as_rpc.o)
+ .debug_ranges  0x00000de0      0x178 libee.a(ee_activate.o)
+ .debug_ranges  0x00000f58       0x50 libee.a(ee_gettaskstate.o)
+ .debug_ranges  0x00000fa8       0x48 libee.a(ee_terminat.o)
+ .debug_ranges  0x00000ff0       0xc0 libee.a(ee_thendin.o)
+ .debug_ranges  0x000010b0       0x80 libee.a(ee_irqendin.o)
+ .debug_ranges  0x00001130       0x10 libee.a(ee_tstub.o)
+ .debug_ranges  0x00001140       0x10 libee.a(ee_rq_exchg.o)
+ .debug_ranges  0x00001150       0x10 libee.a(ee_rq_inser.o)
+ .debug_ranges  0x00001160       0xa8 libee.a(ee_shtdown.o)
+ .debug_ranges  0x00001208      0x148 libee.a(ee_startos.o)
+ .debug_ranges  0x00001350      0x118 libee.a(ee_alcancel.o)
+ .debug_ranges  0x00001468       0x10 libee.a(ee_algetbase.o)
+ .debug_ranges  0x00001478       0x10 libee.a(ee_alget.o)
+ .debug_ranges  0x00001488       0xe8 libee.a(ee_alsetabs.o)
+ .debug_ranges  0x00001570       0xe8 libee.a(ee_alsetrel.o)
+ .debug_ranges  0x00001658      0x260 libee.a(ee_altick.o)
+ .debug_ranges  0x000018b8       0xf0 libee.a(ee_getcountervalue.o)
+ .debug_ranges  0x000019a8       0x28 libee.a(ee_getelapsedvalue.o)
+ .debug_ranges  0x000019d0      0x178 libee.a(ee_evset.o)
+ .debug_ranges  0x00001b48      0x270 libee.a(ee_tc2Yx_system.o)
+ .debug_ranges  0x00001db8       0x20 libee.a(ee_tc_oo.o)
+ .debug_ranges  0x00001dd8       0xb0 libee.a(ee_as_spinlocks.o)
+ .debug_ranges  0x00001e88       0x10 libee.a(ee_tnterm.o)
+ .debug_ranges  0x00001e98       0x10 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .debug_ranges  0x00001ea8       0x30 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .debug_ranges  0x00001ed8       0x20 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .debug_ranges  0x00001ef8       0x10 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .debug_ranges  0x00001f08       0x10 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.version_info   memory region -> *default*
+                0x00000000    0x3ee89
+ *(.version_info)
+ .version_info  0x00000000     0x174c obj/pkg/mcu/infineon_common_tc2Yx/src/ee_tc2Yx_cstart.o
+ .version_info  0x0000174c     0x1593 obj/common.o
+ .version_info  0x00002cdf     0x1638 obj/src/master.o
+ .version_info  0x00004317     0x158b obj/eecfg.o
+ .version_info  0x000058a2     0x1764 libee.a(display.o)
+ .version_info  0x00007006     0x1754 libee.a(graph.o)
+ .version_info  0x0000875a     0x1740 libee.a(util.o)
+ .version_info  0x00009e9a     0x16cc libee.a(ee_tc_trapvec.o)
+ .version_info  0x0000b566     0x16c4 libee.a(ee_tc_intvec.o)
+ .version_info  0x0000cc2a     0x16cc libee.a(ee_tc_context.o)
+ .version_info  0x0000e2f6     0x16dc libee.a(ee_tc_multicore.o)
+ .version_info  0x0000f9d2     0x16cc libee.a(ee_as_multicore.o)
+ .version_info  0x0001109e     0x169c libee.a(ee_as_rpc.o)
+ .version_info  0x0001273a     0x16ac libee.a(ee_activate.o)
+ .version_info  0x00013de6     0x16cc libee.a(ee_gettaskstate.o)
+ .version_info  0x000154b2     0x16ac libee.a(ee_terminat.o)
+ .version_info  0x00016b5e     0x16a4 libee.a(ee_thendin.o)
+ .version_info  0x00018202     0x16ac libee.a(ee_irqendin.o)
+ .version_info  0x000198ae     0x1694 libee.a(ee_tstub.o)
+ .version_info  0x0001af42     0x169c libee.a(ee_lookup.o)
+ .version_info  0x0001c5de     0x16ac libee.a(ee_rq_exchg.o)
+ .version_info  0x0001dc8a     0x16ac libee.a(ee_rq_inser.o)
+ .version_info  0x0001f336     0x16a4 libee.a(ee_shtdown.o)
+ .version_info  0x000209da     0x16a4 libee.a(ee_startos.o)
+ .version_info  0x0002207e     0x16ac libee.a(ee_alcancel.o)
+ .version_info  0x0002372a     0x16b4 libee.a(ee_algetbase.o)
+ .version_info  0x00024dde     0x1694 libee.a(ee_alget.o)
+ .version_info  0x00026472     0x16ac libee.a(ee_alsetabs.o)
+ .version_info  0x00027b1e     0x16ac libee.a(ee_alsetrel.o)
+ .version_info  0x000291ca     0x169c libee.a(ee_altick.o)
+ .version_info  0x0002a866     0x16e4 libee.a(ee_getcountervalue.o)
+ .version_info  0x0002bf4a     0x16e4 libee.a(ee_getelapsedvalue.o)
+ .version_info  0x0002d62e     0x1694 libee.a(ee_evset.o)
+ .version_info  0x0002ecc2     0x174c libee.a(ee_tc2Yx_system.o)
+ .version_info  0x0003040e     0x16cc libee.a(ee_hal_structs.o)
+ .version_info  0x00031ada     0x16a4 libee.a(ee_tc_oo.o)
+ .version_info  0x0003317e     0x16cc libee.a(ee_as_spinlocks.o)
+ .version_info  0x0003484a     0x169c libee.a(ee_tnterm.o)
+ .version_info  0x00035ee6     0x136a c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libos.a(libos_exit.o)
+ .version_info  0x00037250     0x16ef c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161\libm.a(lib_a-s_round.o)
+ .version_info  0x0003893f     0x1957 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_addsub_df.o)
+ .version_info  0x0003a296     0x1957 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_thenan_df.o)
+ .version_info  0x0003bbed     0x1945 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_pack_df.o)
+ .version_info  0x0003d532     0x1957 c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161\libgcc.a(_unpack_df.o)
+
+.boffs
+ *(.boffs)
+OUTPUT(myProject_master.elf elf32-tricore)

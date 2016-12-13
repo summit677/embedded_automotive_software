@@ -1,0 +1,5 @@
+EXPORT FUNCTION test_assert ;
+
+EXPORT OBJECT tft_id ;
+EXPORT OBJECT adc ;
+EXPORT OBJECT on_off ;

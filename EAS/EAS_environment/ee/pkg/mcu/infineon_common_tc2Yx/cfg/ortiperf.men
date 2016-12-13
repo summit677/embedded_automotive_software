@@ -1,0 +1,203 @@
+; osCAN specific menu
+; Derived from the example one distributed in demo/kernel/orti/ortiperf.men
+;
+
+add
+menu
+(
+  popup "Trace"
+  (
+    popup "List"
+    (
+      separator
+      menuitem "&Task Switches and Services"  "Trace.List List.TASK"
+      menuitem "&Default and Tasks"           "Trace.List List.TASK DEFault"
+    )
+  )
+  popup "Perf"
+  (
+    separator
+    popup "&Task Runtime"
+    (
+      menuitem "&Prepare"
+      (
+        if t.method.analyzer()
+        (
+          Analyzer.AutoInit on
+        )
+        if ice()&&!a.mode.flow()
+        (
+          Analyzer.ReProgram
+          (
+            Sample.Enable if AlphaBreak&&Write
+          )
+          Break.Delete /Alpha
+          Break.Set task.config(magic)++(task.config(magicsize)-1) /Alpha
+        )
+        if fire()&&!a.mode.flow()
+        (
+          Analyzer.ReProgram
+          (
+            Sample.Enable if AlphaBreak
+          )
+          Break.Delete /Alpha
+          Break.Set task.config(magic)++(task.config(magicsize)-1) /Alpha /Write
+        )
+        if a.mode.flow()
+        (
+          Break.Delete /TraceEnable
+          Break.Set task.config(magic) /TraceEnable
+        )
+        Trace.Init
+      )
+      menuitem "[:perf]Show &Numerical"   "Trace.STATistic.TASK"
+      menuitem "[:achart]Show as &Timing" "Trace.CHART.TASK"
+      menuitem "[:achart]Tracking with Trace &List"
+      (
+        Trace.List List.TASK DEFault /Track
+        Trace.CHART.TASK /Track
+      )
+    )
+    popup "Task &Services"
+    (
+      menuitem "&Prepare"
+      (
+        if ice()&&!a.mode.flow()
+        (
+          Analyzer.ReProgram
+          (
+            Sample.Enable if AlphaBreak&&Write
+          )
+          Break.Delete /Alpha
+          Break.Set task.config(magic_service) /Alpha
+        )
+       if fire()&&!a.mode.flow()
+        (
+          Analyzer.ReProgram
+          (
+            Sample.Enable if AlphaBreak
+          )
+          Break.Delete /Alpha
+          Break.Set task.config(magic_service) /Alpha /Write
+        )
+        if a.mode.flow()
+        (
+          Break.Delete /TraceEnable
+          Break.Set task.config(magic_service) /TraceEnable
+        )
+        Trace.Init
+      )
+      menuitem "[:perf]Show &Numerical"   "Trace.STATistic.TASKSRV"
+      menuitem "[:achart]Show as &Timing" "Trace.CHART.TASKSRV"
+      menuitem "[:achart]Tracking with Trace &List"
+      (
+        Trace.List List.TASK DEFault /Track
+        Trace.CHART.TASKSRV /Track
+      )
+    )
+    popup "Task &Function Runtime"
+    (
+      menuitem "&Prepare"
+      (
+        if t.method.analyzer()
+        (
+          Analyzer.AutoInit on
+          Analyzer.STATistic.PreFetch on
+        )
+
+        if ice()&&!a.mode.flow()
+        (
+          if a.config.hac()
+          (
+             Analyzer.ReProgram
+             (
+               Sample.Enable if AlphaBreak
+               Sample.Enable if BetaBreak
+               Mark.A        if AlphaBreak
+               Mark.B        if BetaBreak
+             )
+          )
+          else
+          (
+             Analyzer.ReProgram
+             (
+               Sample.Enable if AlphaBreak||BetaBreak||CharlyBreak
+               Mark.A if AlphaBreak
+               Mark.B if BetaBreak
+               Mark.C if CharlyBreak
+             )
+          )
+          Break.Delete /Alpha /Beta /Charly
+          Break.SetFunc
+          Break.Set task.config(magic)++(task.config(magicsize)-1) /Alpha
+        )
+       if fire()&&!a.mode.flow()
+        (
+              Analyzer.ReProgram
+             (
+               Sample.Enable if AlphaBreak||BetaBreak||CharlyBreak
+               Mark.A if AlphaBreak
+               Mark.B if BetaBreak
+               Mark.C if CharlyBreak
+             )
+          Break.Delete /Alpha /Beta /Charly
+          Break.SetFunc
+          Break.Set task.config(magic)++(task.config(magicsize)-1) /Alpha /Write
+        )
+        if a.mode.flow()
+        (
+          Break.Delete /TraceData
+          Break.Set task.config(magic) /TraceData
+        )
+        Trace.Init
+      )
+      menuitem "[:perf]Show &Numerical"     "Trace.STATistic.TASKFUNC"
+      menuitem "[:perf]Show as &Tree"       "Trace.STATistic.TASKTREE"
+      menuitem "[:perf]Show &Detailed Tree" "Trace.STATistic.TASKTREE ALL"
+      menuitem "[:achart]Show as &Timing"   "Trace.CHART.TASKFUNC"
+      menuitem "[:alist]Show N&esting"      "Trace.List List.TASK FUNC TI.FUNC"
+    )
+    popup "Task &Status"
+    (
+      menuitem "&Prepare"
+      (
+        if t.method.analyzer()
+        (
+          Analyzer.AutoInit on
+        )
+        if ice()&&!a.mode.flow()
+        (
+          Analyzer.ReProgram
+          (
+            Sample.Enable if AlphaBreak&&Write
+          )
+          Break.Delete /Alpha
+          Break.Set task.config(magic)++(task.config(magicsize)-1) /Alpha
+          TASK.TASKState
+        )
+       if fire()&&!a.mode.flow()
+        (
+          Analyzer.ReProgram
+          (
+            Sample.Enable if AlphaBreak
+          )
+          Break.Delete /Alpha
+          Break.Set task.config(magic)++(task.config(magicsize)-1) /Alpha /Write
+          TASK.TASKState
+        )
+      )
+      menuitem "[:perf]Show &Numerical"   "Trace.STATistic.TASKSTATE"
+      menuitem "[:achart]Show as &Timing" "Trace.CHART.TASKSTATE"
+      menuitem "[:achart]Tracking with Trace &List"
+      (
+        Trace.List List.TASK DEFault /Track
+        Trace.CHART.TASKSTATE /Track
+      )
+    )
+  )
+  popup "&Help"
+  (
+    menuitem "ORTI RTOS Debugger Manual" "HELP __RTOS_ORTI_"
+  )
+)
+

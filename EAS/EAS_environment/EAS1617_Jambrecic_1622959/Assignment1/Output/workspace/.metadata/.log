@@ -1,0 +1,13 @@
+!SESSION 2016-10-18 11:06:34.442 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Framework arguments:  -application com.eu.evidence.rtdruid.oil.standalone.writer --inputFile conf.oil --outputDir Output
+Command-line arguments:  -data Output/workspace -application com.eu.evidence.rtdruid.oil.standalone.writer --inputFile conf.oil --outputDir Output
+
+!ENTRY org.eclipse.osgi 4 0 2016-10-18 11:06:36.145
+!MESSAGE Bundle reference:file:org.eclipse.equinox.launcher.win32.win32.x86_1.1.200.v20120522-1813/@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2016-10-18 11:06:39.598
+!MESSAGE Bundle reference:file:com.eu.evidence.rtdruid.oil.tricore_appkit_tc2x7.core_2.5.0.20150528_0935/@4 not found.

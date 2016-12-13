@@ -1,0 +1,218 @@
+/* ###*B*###
+ * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+ *
+ * Copyright (C) 2002-2012  Evidence Srl
+ *
+ * This file is part of ERIKA Enterprise.
+ *
+ * ERIKA Enterprise is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation, 
+ * (with a special exception described below).
+ *
+ * Linking this code statically or dynamically with other modules is
+ * making a combined work based on this code.  Thus, the terms and
+ * conditions of the GNU General Public License cover the whole
+ * combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this code with independent modules to produce an
+ * executable, regardless of the license terms of these independent
+ * modules, and to copy and distribute the resulting executable under
+ * terms of your choice, provided that you also meet, for each linked
+ * independent module, the terms and conditions of the license of that
+ * module.  An independent module is a module which is not derived from
+ * or based on this library.  If you modify this code, you may extend
+ * this exception to your version of the code, but you are not
+ * obligated to do so.  If you do not wish to do so, delete this
+ * exception statement from your version.
+ *
+ * ERIKA Enterprise is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License version 2 for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * version 2 along with ERIKA Enterprise; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA.
+ * ###*E*### */
+
+CPU test_application {
+
+  OS EE {    
+    EE_OPT = "__ASSERT__";
+    EE_OPT = "EE_EXECUTE_FROM_RAM";    
+    EE_OPT = "EE_ICACHE_ENABLED";
+    EE_OPT = "EE_DCACHE_ENABLED";
+    EE_OPT = "EE_BUILD_SINGLE_ELF";
+	    
+		
+	BOARD_DATA = APPKIT_TC2X7;	
+	EE_OPT = "EE_USE_DISPLAY";
+	EE_OPT = "EE_USE_LEDS";
+	EE_OPT = "EE_USE_BUTTONS";
+	
+	
+	MCU_DATA = TRICORE { MODEL = TC29x;  };
+	
+	MASTER_CPU = "master";
+	
+    CPU_DATA = TRICORE {
+      ID = "master";
+      APP_SRC = "src/master.c";
+      MULTI_STACK = TRUE;
+      SYS_STACK_SIZE = 4096;
+	  CPU_CLOCK = 200.0;
+      COMPILER_TYPE = GNU {
+        EXPORT_FILE = "export_master.exp";
+      };      
+    };
+
+    CPU_DATA = TRICORE {
+      ID = "slave1";
+      APP_SRC = "src/slave1.c";
+      MULTI_STACK = TRUE;
+      SYS_STACK_SIZE = 4096;
+      COMPILER_TYPE = GNU;      
+    };
+
+    CPU_DATA = TRICORE {
+      ID = "slave2";
+      APP_SRC = "src/slave2.c";
+      MULTI_STACK = TRUE;
+      SYS_STACK_SIZE = 4096;
+      COMPILER_TYPE = GNU;      
+    };
+	
+	USERESSCHEDULER = FALSE;	
+    STATUS = EXTENDED;
+    STARTUPHOOK   = TRUE;
+    SHUTDOWNHOOK = TRUE;
+
+	REMOTENOTIFICATION = USE_RPC;
+    ORTI_SECTIONS = ALL;
+
+    KERNEL_TYPE = ECC1;
+  };
+
+  
+  /* ------------------------------------------------- */
+  /* USER INTERFACE CORE */
+  /* ------------------------------------------------- */  
+  TASK TaskUi {
+    CPU_ID = "master";
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    STACK = PRIVATE {  SYS_SIZE = 512;  };
+    EVENT=event;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;    
+  };  
+  
+  /* ------------------------------------------------- */
+  /* FUNCTION CORE */
+  /* ------------------------------------------------- */
+  TASK TaskPwm  {
+    CPU_ID = "slave1";
+    PRIORITY = 2;
+    AUTOSTART = FALSE;
+    STACK = PRIVATE {  SYS_SIZE = 512;  };
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  TASK TaskPin  {
+    CPU_ID = "slave1";
+    PRIORITY = 1;
+    AUTOSTART = TRUE;
+    STACK = PRIVATE {  SYS_SIZE = 512;  };
+    EVENT = event;	
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  
+  /* ------------------------------------------------- */
+  /* MONITOR CORE */
+  /* ------------------------------------------------- */
+  TASK TaskPwmM  {
+    CPU_ID = "slave2";
+    PRIORITY = 2;
+    AUTOSTART = FALSE;
+    STACK = PRIVATE {  SYS_SIZE = 512;  };
+    RESOURCE = r; 
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  TASK TaskPinM  {
+    CPU_ID = "slave2";
+    PRIORITY = 1;
+    AUTOSTART = TRUE;	
+    STACK = PRIVATE {  SYS_SIZE = 512;  };
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  
+
+
+ 
+  /* ------------------------------------------------- */
+  /* EVENTS */
+  /* ------------------------------------------------- */  
+ 	EVENT event {
+ 		MASK=AUTO;
+ 		};
+ 
+  /* ------------------------------------------------- */
+  /* SPINLOCK */
+  /* ------------------------------------------------- */  
+
+  SPINLOCK s{};
+  /* ------------------------------------------------- */
+  /* RESOURCES */
+  /* ------------------------------------------------- */  
+   RESOURCE r
+  {
+    RESOURCEPROPERTY = STANDARD;
+  };
+ 
+  /* ------------------------------------------------- */
+  /* COUNTERS */
+  /* ------------------------------------------------- */
+  COUNTER system_timer {
+	CPU_ID = "master";
+    MINCYCLE = 1;
+    MAXALLOWEDVALUE = 2147483647;
+    TICKSPERBASE = 1;
+    TYPE = HARDWARE {
+      DEVICE = "STM_SR0";
+      SYSTEM_TIMER = TRUE;
+      PRIORITY = 2;
+    };
+    SECONDSPERTICK = 0.0001; //100us resolution
+  };
+
+  
+  
+  /* ------------------------------------------------- */
+  /* ALARMS */
+  /* ------------------------------------------------- */  
+  ALARM LCDUpdated {
+    COUNTER = system_timer;
+	ACTION = ACTIVATETASK { TASK = TaskUi;};
+	AUTOSTART = TRUE { ALARMTIME = 5000; CYCLETIME = 400; };
+  };
+    
+  ALARM AlarmPinMonitor{
+	COUNTER = system_timer;
+	ACTION = ACTIVATETASK { TASK = TaskPinM;};
+	AUTOSTART = FALSE;
+  };
+  
+  
+
+
+};

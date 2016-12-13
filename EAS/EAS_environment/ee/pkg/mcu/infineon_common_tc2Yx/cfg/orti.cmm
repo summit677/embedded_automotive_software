@@ -1,0 +1,37 @@
+;
+; OSEK/ORTI Example for TRACE32 multitask debugger, derived from the
+; example in demo/kernel/orti/orti.cmm
+;
+
+; initialize ORTI support
+print "initializing ORTI support..."
+
+TASK.ORTI system.orti       ; ORTI awareness
+;MENU.ReProgram orti        ; OSEK objects menu
+;MENU.ReProgram ortiperf    ; trace and performance menu
+
+print "load complete."
+
+; initialize TASK Tracing
+Break.Set TASK.CONFIG(magic) /Write /TraceData
+
+if Symbol.exist(EE_ORTI_servicetrace)
+(
+  ; initialize Service Tracing
+  Break.Set TASK.CONFIG(magic_service) /Write /TraceData
+)
+
+if Symbol.exist(EE_ORTI_runningisr2)
+(
+  ; initialize ISR2 Tracing
+  Break.Set TASK.CONFIG(magic_isr2) /Write /TraceData
+)
+
+
+; Enable Tracing info needed
+MCDS.SOURCE CPUMUX0 WriteAddr ON
+MCDS.SOURCE CPUMUX0 WriteData ON 
+
+; Read Kernel Markers
+do markers.cmm
+enddo

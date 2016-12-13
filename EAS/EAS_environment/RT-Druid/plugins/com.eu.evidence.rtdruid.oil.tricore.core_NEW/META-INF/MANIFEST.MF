@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RT-Druid TriCore plugin (Core)
+Bundle-SymbolicName: com.eu.evidence.rtdruid.oil.tricore.core_NEW;singleton:=true
+Bundle-Version: 1.2.0.Nqualifier
+Bundle-Activator: com.eu.evidence.modules.oil.tricore.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ com.eu.evidence.rtdruid.core,
+ com.eu.evidence.rtdruid.oil.core,
+ com.eu.evidence.rtdruid.oil.ee.core
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: Evidence S.r.l.
+Export-Package: com.eu.evidence.modules.oil.tricore.constants

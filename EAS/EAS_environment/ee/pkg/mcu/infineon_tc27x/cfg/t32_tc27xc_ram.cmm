@@ -1,0 +1,46 @@
+; Script file for TC275TE on TRIBOARD-TC2X5
+;
+; Initializes the TriCore and loads ELF into memory.
+;
+;
+; Edited by Christoph Kreuzberger, 15:33 16.10.2014
+
+;========================================================================
+; initialize and start the debugger
+
+  RESet
+  ;SYStem.CPU TC275TE-ASTEP
+  ; CK
+  SYStem.CPU TC275T
+
+  SYStem.Up
+
+;========================================================================
+; load demo program
+  Data.LOAD.auto   "#EXE_NAME#"
+  IF Analyzer()
+  (
+    ; Workaround for AGBT "RLINE repetition" issue:
+    ; - AURIX A-STEP devices only (will be fixed with B-Step)
+    ; - only required when PLL is not configured
+    ; - when configuring PLL make sure that this workaround is included
+    ; Desription: issue will cause corrupted trace data
+    ; Workaround: f(MAX) = f(MCDS) = f(BBB)
+    ; For 100MHz: MAXDIV = 0x2, BBBDIV = 0x1, MCDSDIV = 0x1
+    ; For 50MHz:  MAXDIV = 0x4, BBBDIV = 0x1, MCDSDIV = 0x1
+    ;PER.Set D:0xF0036034 %Long (Data.Long(D:0xF0036034)&~0x00F)|0x002   ; MAXDIV = 0x2, for 100 MHz
+    ;PER.Set D:0xF0036034 %Long (Data.Long(D:0xF0036034)&~0x00F)|0x004  ; MAXDIV = 0x4, for 50 MHz
+    ;PER.Set D:0xF0036040 %Long (Data.Long(D:0xF0036040)&~0xF0F)|0x101   ; BBBDIV = 0x1, MCDSDIV = 0x1
+  )
+
+  #ORTICMD#
+
+; open some windows
+  WinCLEAR
+  WinPOS 0% 0% 100% 50%
+  Data.List
+  WinPOS 0% 50% 50% 50%
+  Var.Frame /Locals /Caller
+  WinPOS 50% 50% 50% 50%
+
+ENDDO

@@ -1,0 +1,185 @@
+; initialize Kernel Tracing creating markers
+symbol.marker.create KEXIT   EE_hal_terminate_savestk
+symbol.marker.create KENTRY  EE_thread_not_terminated
+symbol.marker.create KBACKDOOR  EE_hal_terminate_task
+
+if Symbol.exist(EE_tc_isr2_global_wrapper)
+(
+  symbol.marker.create KENTRY  EE_tc_isr2_global_wrapper
+  symbol.marker.create KEXIT EE_tc_isr2_global_wrapper
+)
+
+if Symbol.exist(EE_tc_isr2_call_handler)
+(
+  symbol.marker.create KEXIT  EE_tc_isr2_call_handler
+  symbol.marker.create KENTRY symbol.exit(EE_tc_isr2_call_handler)
+)
+
+if Symbol.exist(EE_tc_syscall_handler)
+(
+  symbol.marker.create KEXIT  EE_tc_syscall_handler
+  symbol.marker.create KENTRY symbol.exit(EE_tc_syscall_handler)
+)
+
+if Symbol.exist(EE_as_TerminateISR2)
+(
+  symbol.marker.create KEXIT  symbol.exit(EE_as_TerminateISR2)
+)
+
+symbol.marker.create KBACKDOOR  EE_oo_StartOS
+;symbol.marker.create KEXIT symbol.exit(EE_oo_StartOS)
+
+if Symbol.exist(EE_oo_ActivateTask)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_ActivateTask
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_ActivateTask)
+)
+
+if Symbol.exist(EE_oo_TerminateTask)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_TerminateTask
+)
+
+if Symbol.exist(EE_oo_ChainTask)
+(
+  symbol.marker.create KENTRY  EE_oo_ChainTask
+)
+
+if Symbol.exist(EE_oo_Schedule)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_Schedule
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_Schedule)
+)
+
+if Symbol.exist(EE_oo_GetTaskID)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetTaskID
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetTaskID)
+)
+
+if Symbol.exist(EE_oo_GetTaskState)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetTaskState
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetTaskState)
+)
+
+if Symbol.exist(EE_oo_GetResource)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetResource
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetResource)
+)
+
+if Symbol.exist(EE_oo_ReleaseResource)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_ReleaseResource
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_ReleaseResource)
+)
+
+if Symbol.exist(EE_oo_SetEvent)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_SetEvent
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_SetEvent)
+)
+
+if Symbol.exist(EE_oo_ClearEvent)
+(
+  symbol.marker.create KENTRY  EE_oo_ClearEvent
+  symbol.marker.create KEXIT   symbol.exit(EE_oo_ClearEvent)
+)
+
+if Symbol.exist(EE_oo_GetEvent)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetEvent
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetEvent)
+)
+
+if Symbol.exist(EE_oo_WaitEvent)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_WaitEvent
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_WaitEvent)
+)
+
+if Symbol.exist(EE_oo_GetAlarmBase)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetAlarmBase
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetAlarmBase)
+)
+
+if Symbol.exist(EE_oo_GetAlarm)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetAlarm
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetAlarm)
+)
+
+if Symbol.exist(EE_oo_SetRelAlarm)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_SetRelAlarm
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_SetRelAlarm)
+)
+
+if Symbol.exist(EE_oo_SetAbsAlarm)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_SetAbsAlarm
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_SetAbsAlarm)
+)
+
+if Symbol.exist(EE_oo_CancelAlarm)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_CancelAlarm
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_CancelAlarm)
+)
+
+if Symbol.exist(EE_oo_ShutdownOS)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_ShutdownOS
+  ;symbol.marker.create KEXIT      symbol.exit(EE_oo_ShutdownOS)
+)
+
+if Symbol.exist(EE_oo_IncrementCounter)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_IncrementCounter
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_IncrementCounter)
+)
+
+if Symbol.exist(EE_oo_GetCounterValue)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetCounterValue
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetCounterValue)
+)
+
+if Symbol.exist(EE_oo_GetElapsedValue)
+(
+  symbol.marker.create KBACKDOOR  EE_oo_GetElapsedValue
+  symbol.marker.create KEXIT      symbol.exit(EE_oo_GetElapsedValue)
+)
+
+if Symbol.exist(EE_as_TerminateApplication)
+(
+  symbol.marker.create KBACKDOOR  EE_as_TerminateApplication
+  symbol.marker.create KEXIT      symbol.exit(EE_as_TerminateApplication)
+)
+
+if Symbol.exist(EE_as_AllowAccess)
+(
+  symbol.marker.create KBACKDOOR  EE_as_AllowAccess
+  symbol.marker.create KEXIT      symbol.exit(EE_as_AllowAccess)
+)
+
+if Symbol.exist(EE_as_GetApplicationState)
+(
+  symbol.marker.create KBACKDOOR  EE_as_GetApplicationState
+  symbol.marker.create KEXIT      symbol.exit(EE_as_GetApplicationState)
+)
+
+if Symbol.exist(CheckTaskMemoryAccess)
+(
+  symbol.marker.create KBACKDOOR  CheckTaskMemoryAccess
+  symbol.marker.create KEXIT      symbol.exit(CheckTaskMemoryAccess)
+)
+
+if Symbol.exist(CheckISRMemoryAccess)
+(
+  symbol.marker.create KBACKDOOR  CheckISRMemoryAccess
+  symbol.marker.create KEXIT      symbol.exit(CheckISRMemoryAccess)
+)
+enddo

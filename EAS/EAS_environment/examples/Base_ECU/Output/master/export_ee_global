@@ -1,0 +1,59 @@
+EXPORT FUNCTION _START ;
+EXPORT FUNCTION ErrorHook ;
+EXPORT FUNCTION StartupHook ;
+EXPORT FUNCTION ShutdownHook ;
+
+EXPORT OBJECT EE_oo_ErrorHook_ServiceID ;
+EXPORT OBJECT EE_oo_ErrorHook_data ;
+EXPORT OBJECT EE_tc_kernel_barrier ;
+EXPORT OBJECT EE_as_rpc_alarms ;
+EXPORT OBJECT EE_as_core_start_addresses ;
+EXPORT OBJECT EE_as_rpc_tasks ;
+EXPORT OBJECT EE_oo_ErrorHook_data ;
+EXPORT OBJECT EE_as_shutdown_all_cores_error ;
+EXPORT OBJECT EE_as_core_spinlocks ;
+EXPORT OBJECT EE_as_os_application_mode ;
+EXPORT OBJECT EE_hal_spinlock_status ;
+EXPORT OBJECT EE_as_rpc_serving ;
+EXPORT OBJECT EE_as_rpc_counters ;
+EXPORT OBJECT EE_as_shutdown_all_cores_flag ;
+EXPORT OBJECT EE_as_rpc_RAM ;
+EXPORT OBJECT EE_as_rpc_services_table ;
+EXPORT OBJECT EE_as_core_mask ;
+EXPORT OBJECT EE_as_core_started ;
+EXPORT OBJECT EE_as_shutdown_mask ;
+EXPORT OBJECT EE_as_not_as_core_mask ;
+EXPORT OBJECT EE_as_rpc_out_param2 ;
+EXPORT OBJECT EE_as_rpc_out_param3 ;
+EXPORT OBJECT EE_as_rpc_osAppls;
+EXPORT OBJECT EE_as_rpc_remote_access_rules ;
+EXPORT OBJECT EE_as_rpc_counters ;
+EXPORT OBJECT EE_as_rpc_schedTabs ;
+
+EXPORT OBJECT EE_rn_cpu ;
+EXPORT OBJECT EE_rn_spin ;
+EXPORT OBJECT EE_rn_switch ;
+EXPORT OBJECT EE_rn_pending ;
+EXPORT OBJECT EE_rn_task ;
+EXPORT OBJECT EE_rn_event
+EXPORT OBJECT EE_rn_next ;
+EXPORT OBJECT EE_rn_type ;
+EXPORT OBJECT EE_rn_counter ;
+EXPORT OBJECT EE_rn_first ;
+
+EXPORT OBJECT EE_as_spinlocks_locker_core ;
+EXPORT OBJECT EE_as_spinlocks_last ;
+EXPORT OBJECT EE_as_spinlocks_stack ;
+EXPORT OBJECT EE_hal_spinlock_value ;
+EXPORT OBJECT EE_hal_spinlock_status ;
+
+EXPORT OBJECT EE_as_rpc_IOC ;
+EXPORT OBJECT EE_as_rpc_IOC_channels ;
+EXPORT OBJECT EE_ioc_enqueued_buffer ;
+
+EXPORT OBJECT EE_assertions ;
+EXPORT FUNCTION test_assert ;
+
+EXPORT OBJECT tft_id ;
+EXPORT OBJECT adc ;
+EXPORT OBJECT on_off ;

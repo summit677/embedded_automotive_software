@@ -1,0 +1,198 @@
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.12.10
+  created: 10/14/16, 20:10:37
+
+----------------------------------------------------------
+
+Windows version:
+  Win8 ()
+  Admin: yes
+
+UDE version:
+  Release:  4.04.07
+  Build:    11594
+  Path:     C:\Program Files (x86)\pls\UDE 4.4
+
+Target configuration file:
+  C:\Users\ivona\Desktop\EAS\EAS_environment\examples\Base_1\.ude\.target\AppKit_TC29xB_debug.cfg
+
+Error messages:
+  McdTargIntf: Can't connect target !
+
+Setup:
+  McdDllPath:  mcdxdas.dll
+  ReqDllVers:  1.4
+  HostName:  localhost
+  ServerName:  UDAS
+  SystemKey:  
+  RunningOnly:  n
+  McdExitIfLastClient:  y
+  PrjPath:  
+  GetPrjPathFromFile:  
+  McdDevice:  
+  McdDeviceType:  0xFFFFFFFF
+  McdDeviceId:  4294967295
+  McdCore:  
+  McdCoreType:  0xFFFFFFFF
+  McdCoreId:  4294967295
+  MemSpaceName:  
+  MemSpaceId:  -1
+  RegSpaceName:  
+  RegSpaceId:  0
+  RstVector:  0x00000001
+  ConnOption:  Default
+  LoadElfFromSim:  n
+  HandleInactiveAfterReset:  n
+  ForceInactiveAfterReset:  n
+  BlockResetBeforeGo:  n
+  BlockReset:  n
+  BlockFlashAccess:  n
+  ResetWaitTime:  0
+  BrpAddrRangeBugfix:  n
+  StepAfterConnect:  n
+  DontTouchLcxReg:  n
+  FakePcValue:  0xFFFFFFFF
+  StepAfterReset:  n
+  CoreIsSlave:  n
+  Endianness:  0
+  ExecInitCmds:  y
+  InitScript Script:
+    Script is empty
+  EnableTrace:  n
+  TraceToFile:  
+  StartServer:  n
+  StartServerWaitTime:  1000
+  ServerAppPath:  
+  ServerCmdLine:  
+  ServerWorkDir:  
+
+Info:
+  PublicName:  Controller0.Core0
+  ArchType:  3
+  Architecture:  TriCore
+  IsMaster:  y
+  RegsBaseAddr:  0xF8810000
+  CoreIndex:  0
+  McdDllPath:  C:\Windows\SYSTEM32\mcdxdas.dll
+  McdDllVersion:  1.8.0.0 (SVN 28)
+  McdServer:  UDAS
+  McdAccHw:  
+  McdSystem:  
+  McdSystemInstance:  
+  PrjPath:  
+  McdDevice:  
+  McdDeviceType:  0xFFFFFFFF
+  McdDeviceId:  4294967295
+  McdCore:  
+  McdCoreType:  0xFFFFFFFF
+  McdCoreId:  4294967295
+  InactiveAfterReset:  n
+  StartInactiveCoreDone:  n
+  AbmModeDetected:  y
+  TraceBufferUsage:  0
+  TraceBufferOverflow:  n
+  TraceId:  4294967295
+  TraceName:  
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.12.10
+  created: 10/14/16, 20:28:11
+
+----------------------------------------------------------
+
+Windows version:
+  Win8 ()
+  Admin: yes
+
+UDE version:
+  Release:  4.04.07
+  Build:    11594
+  Path:     C:\Program Files (x86)\pls\UDE 4.4
+
+Target configuration file:
+  C:\Users\ivona\Desktop\EAS\EAS_environment\EAS1617_Jambrecic_1622959\Assignment1\.ude\.target\AppKit_TC29xB_debug.cfg
+
+Error messages:
+  McdTargIntf: Can't connect target !
+
+Setup:
+  McdDllPath:  mcdxdas.dll
+  ReqDllVers:  1.4
+  HostName:  localhost
+  ServerName:  UDAS
+  SystemKey:  
+  RunningOnly:  n
+  McdExitIfLastClient:  y
+  PrjPath:  
+  GetPrjPathFromFile:  
+  McdDevice:  
+  McdDeviceType:  0xFFFFFFFF
+  McdDeviceId:  4294967295
+  McdCore:  
+  McdCoreType:  0xFFFFFFFF
+  McdCoreId:  4294967295
+  MemSpaceName:  
+  MemSpaceId:  -1
+  RegSpaceName:  
+  RegSpaceId:  0
+  RstVector:  0x00000001
+  ConnOption:  Default
+  LoadElfFromSim:  n
+  HandleInactiveAfterReset:  n
+  ForceInactiveAfterReset:  n
+  BlockResetBeforeGo:  n
+  BlockReset:  n
+  BlockFlashAccess:  n
+  ResetWaitTime:  0
+  BrpAddrRangeBugfix:  n
+  StepAfterConnect:  n
+  DontTouchLcxReg:  n
+  FakePcValue:  0xFFFFFFFF
+  StepAfterReset:  n
+  CoreIsSlave:  n
+  Endianness:  0
+  ExecInitCmds:  y
+  InitScript Script:
+    Script is empty
+  EnableTrace:  n
+  TraceToFile:  
+  StartServer:  n
+  StartServerWaitTime:  1000
+  ServerAppPath:  
+  ServerCmdLine:  
+  ServerWorkDir:  
+
+Info:
+  PublicName:  Controller0.Core0
+  ArchType:  3
+  Architecture:  TriCore
+  IsMaster:  y
+  RegsBaseAddr:  0xF8810000
+  CoreIndex:  0
+  McdDllPath:  C:\Windows\SYSTEM32\mcdxdas.dll
+  McdDllVersion:  1.8.0.0 (SVN 28)
+  McdServer:  UDAS
+  McdAccHw:  
+  McdSystem:  
+  McdSystemInstance:  
+  PrjPath:  
+  McdDevice:  
+  McdDeviceType:  0xFFFFFFFF
+  McdDeviceId:  4294967295
+  McdCore:  
+  McdCoreType:  0xFFFFFFFF
+  McdCoreId:  4294967295
+  InactiveAfterReset:  n
+  StartInactiveCoreDone:  n
+  AbmModeDetected:  y
+  TraceBufferUsage:  0
+  TraceBufferOverflow:  n
+  TraceId:  4294967295
+  TraceName:  
+
+

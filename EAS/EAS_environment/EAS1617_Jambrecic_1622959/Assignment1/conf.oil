@@ -1,0 +1,169 @@
+/* ###*B*###
+ * ERIKA Enterprise - a tiny RTOS for small microcontrollers
+ *
+ * Copyright (C) 2002-2012  Evidence Srl
+ *
+ * This file is part of ERIKA Enterprise.
+ *
+ * ERIKA Enterprise is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation, 
+ * (with a special exception described below).
+ *
+ * Linking this code statically or dynamically with other modules is
+ * making a combined work based on this code.  Thus, the terms and
+ * conditions of the GNU General Public License cover the whole
+ * combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this code with independent modules to produce an
+ * executable, regardless of the license terms of these independent
+ * modules, and to copy and distribute the resulting executable under
+ * terms of your choice, provided that you also meet, for each linked
+ * independent module, the terms and conditions of the license of that
+ * module.  An independent module is a module which is not derived from
+ * or based on this library.  If you modify this code, you may extend
+ * this exception to your version of the code, but you are not
+ * obligated to do so.  If you do not wish to do so, delete this
+ * exception statement from your version.
+ *
+ * ERIKA Enterprise is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License version 2 for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * version 2 along with ERIKA Enterprise; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA.
+ * ###*E*### */
+CPU test_application {
+
+    OS EE {        
+        EE_OPT = "__ASSERT__";		
+
+        EE_OPT = "EE_EXECUTE_FROM_RAM";	
+		EE_OPT = "EE_BUILD_SINGLE_ELF";
+
+        STATUS = EXTENDED;
+        USERESSCHEDULER = FALSE;
+
+        MCU_DATA = TRICORE {
+			MODEL = TC29x;
+        };
+
+
+        CPU_DATA = TRICORE {
+            CPU_CLOCK = 300.0;
+            APP_SRC = "src/code.c";
+            COMPILER_TYPE = GNU;
+			MULTI_STACK = TRUE {
+                IRQ_STACK = TRUE {
+                    SYS_SIZE = 256;
+                };
+            };
+        };
+
+		
+        BOARD_DATA = APPKIT_TC2X7;	    		
+		EE_OPT = "EE_USE_DISPLAY";
+		EE_OPT = "EE_USE_LEDS";
+		EE_OPT = "EE_USE_BUTTONS";
+		KERNEL_TYPE = ECC1;
+    };
+    
+     /*added event*/   
+     
+  	EVENT Event1 {
+ 		MASK=AUTO;
+ 		};    
+  	EVENT Event_Mix {
+ 		MASK=AUTO;
+ 		};  
+	 	
+
+    TASK Task_Event {
+      PRIORITY = 0x01; 
+      AUTOSTART = TRUE;
+      STACK = PRIVATE {
+            SYS_SIZE = 256;
+        };
+	  SCHEDULE = FULL;
+	  EVENT = Event1; 
+      ACTIVATION = 1;    /* only one pending activation */
+      
+
+    };
+    
+
+	
+	TASK Task_Alarm {
+      PRIORITY = 0x02; 
+      AUTOSTART = FALSE;
+      STACK = PRIVATE {
+            SYS_SIZE = 256;
+        };
+	  SCHEDULE = FULL;
+      ACTIVATION = 1;    /* only one pending activation */
+    };
+	
+	TASK Task_Mix {
+      PRIORITY = 0x04; 
+      AUTOSTART = TRUE;
+      STACK = PRIVATE {
+            SYS_SIZE = 256;
+        };
+	  SCHEDULE = FULL;
+  	  EVENT = Event_Mix;
+      ACTIVATION = 1;    /* only one pending activation */
+    };
+
+    
+	COUNTER system_counter {
+        MINCYCLE = 1;
+        MAXALLOWEDVALUE = 2147483647;
+        TICKSPERBASE = 1;
+        TYPE = HARDWARE {
+            DEVICE = "STM_SR0";
+            SYSTEM_TIMER = TRUE;
+            PRIORITY = 1;
+        };
+        SECONDSPERTICK = 0.001; // 1ms resolution 
+    };
+	
+	ALARM Alarm {
+		 COUNTER = system_counter;
+		 ACTION = ACTIVATETASK {
+		 TASK = Task_Alarm;
+		 };
+		 AUTOSTART = TRUE {
+		 ALARMTIME = 500;
+		 CYCLETIME = 500;
+		 
+		 };
+		};
+	ALARM Alarm_Mix {
+			 COUNTER = system_counter;
+			 ACTION = SETEVENT {
+ 		 	 TASK = Task_Mix;
+			 EVENT = Event_Mix;
+			 };
+			 AUTOSTART = TRUE {
+			 ALARMTIME = 1;
+			 CYCLETIME = 500;
+			 
+			 };
+			};
+
+	
+	ISR button_isr {
+        CATEGORY = 2;			// OSEK ISR type
+        PRIORITY = 2;			// position inside Interrupt Vector
+        
+    };	
+	
+	
+	
+
+		
+};

@@ -1,0 +1,362 @@
+/*
+ * Name: ee_tc2Yx_gnu_relocable.ld.tmpl
+ * 
+ * Description: 
+ * Linker rules template for relocable object
+ * (used in multicore build with single ELF)
+ */
+
+SECTIONS
+{
+  /* Relocate global sections */
+  ee_mcglobalt 0 :
+  {
+    *(*.StartupHook)
+    *(*.ErrorHook)
+    *(*.ShutdownHook)
+    /* KEEP(*(*.PreTaskHook)) */
+    /* KEEP(*(*.PostTaskHook)) */
+    *(*.ProtectionHook)
+    *(ee_mcglobalt)
+  }
+
+  /* Erika RTOS Multicore global data */
+  ee_mcglobald 0 :
+  {
+    *(ee_mcglobald)
+  }
+
+  /* Erika Constant Shared Data */
+  ee_mcglobalc 0 :
+  {
+    *(ee_mcglobalc)
+  }
+
+  /*
+   * Allocate .text and other read-only sections.
+   */
+  /*
+   * Code executed before calling main
+   */
+  CORE_SEC(.init) 0 :
+  {
+    *(.init)
+  }
+
+  CORE_SEC(.fini) 0 :
+  {
+    *(.fini)
+  }
+
+  CORE_SEC(.cramtext) 0 :
+  {
+    *(.cramtext)
+    *(.cramtext.*)
+  }
+
+  /*
+   * Section for trap table
+   */
+  CORE_SEC(.traptab) 0 :
+  {
+    *(.traptab)   /* Section for trap table */
+    *(.traptab*)
+  }
+
+  /*
+   * Section for interrupt table
+   */
+  CORE_SEC(.inttab) 0 :
+  {
+    *(.inttab)
+    *(.*.inttab)
+  }
+
+  CORE_SEC(.text) 0 :
+  {
+    *(.text)
+    *(.text.*)
+    *(.gnu.linkonce.t.*)
+    /*
+     * .gnu.warning sections are handled specially by elf32.em.
+     */
+    *(.gnu.warning)
+  }
+
+  /* OS Public Code */
+  CORE_SEC(.ee_api_text) 0 :
+  {
+    *(ee_api_text)
+  }
+
+  /* OS Private Code */
+  CORE_SEC(.ee_kernel_text) 0 :
+  {
+    *(ee_kernel_text)
+  }
+
+  /* GENERATED APPLICATION CODE SECTIONS - BEGIN */
+FOR_EACH_APP
+  /* OS-Application Private Code */
+  CORE_SEC(.ee_${APP_NAME}_text) 0 :
+  {
+    *(ee_${APP_NAME}_text)
+  }
+END_EACH_APP
+  /* GENERATED APPLICATION CODE SECTIONS - END */
+
+  CORE_SEC(.gcc_except_table) 0 :
+  {
+    *(.gcc_except_table)
+  }
+
+  CORE_SEC(.eh_frame) 0 :
+  {
+    KEEP (*(.eh_frame))
+  }
+
+  CORE_SEC(.jcr) 0 :
+  {
+    *(.jcr)
+  }
+
+  /*
+   * Constructors and destructors.
+   */
+  CORE_SEC(.ctors) 0 :
+  {
+    *(.ctors)
+  }
+
+  CORE_SEC(.dtors) 0 :
+  {
+    *(.dtors)
+  }
+
+  /*
+   * Storage of write-protected data
+   */
+  CORE_SEC(.rodata) 0 :
+  {
+    *(.rodata)
+    *(.rodata.*)
+    *(.gnu.linkonce.r.*)
+    *(.rodata1)
+    *(.toc)
+  }
+
+  CORE_SEC(.sdata2) 0 :
+  {
+    *(.sdata.rodata)
+    *(.sdata.rodata.*)
+    *(.srodata)
+  }
+
+  /*
+   * Allocate space for absolute addressable sections; this requires that
+   * "int_dspr" starts at a TriCore segment (256M) and points to
+   * some RAM area!  If these conditions are not met by your particular
+   * hardware setup, you should either not use absolute data, or you
+   * must move .zdata*,.zbss*,.bdata*,.bbss* input sections to some appropriate
+   * memory area.
+   */
+  CORE_SEC(.zbss) 0 :
+  {
+    *(.zbss)
+    *(.zbss.*)
+    *(.gnu.linkonce.zb.*)
+    *(.bbss)
+    *(.bbss.*)
+  }
+
+  CORE_SEC(.zdata) 0 :
+  {
+    *(.zrodata)
+    *(.zrodata.*)
+    *(.zdata)
+    *(.zdata.*)
+    *(.gnu.linkonce.z.*)
+    *(.bdata)
+    *(.bdata.*)
+  }
+
+  /*
+   * Not initialised data in section ’.sbss’, addressable by small data area pointer (%a0)
+   */
+  CORE_SEC(.sbss) 0 :
+  {
+    *(.sbss)
+    *(.sbss.CONFIG)
+    *(.sbss.*)
+    *(.gnu.linkonce.sb.*)
+  }
+
+  /*
+   * Initialised data in section ’.sdata’, addressable by small data area pointer (%a0)
+   */
+   
+  CORE_SEC(.sdata) 0 :
+  {
+    *(.sdata)
+    *(.sdata.*)
+    *(.gnu.linkonce.s.*)
+  }
+
+  /*
+   * Not Initialised data.
+   * Allocate space for BSS sections.
+   */
+  CORE_SEC(.bss) 0 :
+  {
+    *(.bss)
+    *(.bss.*)
+    *(.gnu.linkonce.b.*)
+    *(COMMON)
+  }
+
+  /*
+   * Initialised data
+   */
+  CORE_SEC(.data) 0 : FLAGS(awl)
+  {
+    *(.data)
+    *(.data.*)
+    *(.gnu.linkonce.d.*)
+    SORT(CONSTRUCTORS)
+  }
+
+  /*
+   * Section for ustack
+   */  
+  CORE_SEC(.ustack) 0 :
+  {
+  }
+
+  /*
+   * Section for istack
+   */  
+  CORE_SEC(.istack) :
+  {
+  }
+
+  /*
+   * Section for heap
+   */  
+  CORE_SEC(.heap) :
+  {
+  }
+
+  /*
+   * Section for CSA
+   */  
+  CORE_SEC(.csa) :
+  {
+  }
+
+  /* ERIKA API Sections */
+
+  /* ERIKA API public unitializated data section */
+  CORE_SEC(.ee_api_bss) 0 :
+  {
+    *(ee_api_bss)
+  }
+
+  /* ERIKA API public initializated data DATA */
+  CORE_SEC(.ee_api_data) 0 :
+  {
+    *(ee_api_data)
+  }
+
+  /* ERIKA Kernel Sections */
+
+  /* ERIKA Kernel private unitializated data section */
+  CORE_SEC(.ee_kernel_bss) 0 :
+  {
+    *(ee_kernel_bss)
+  }
+
+  /* ERIKA Kernel private initializated data DATA */
+  CORE_SEC(.ee_kernel_data) 0 :
+  {
+    *(ee_kernel_data)
+  }
+
+  /* ERIKA Kenel Stacks (Don't belong to any OS-Applications, special section
+     is needed to handle memory protection and stack monitoring) */
+  CORE_SEC(.ee_kernel_stack) 0 :
+  {
+    *(ee_kernel_stack)
+  }
+
+  /* GENERATED APPLICATION DATA SECTIONS - BEGIN */
+FOR_EACH_APP
+  /* Start OS-Application Data Section Symbol. */
+
+  /* OS-Application Section Private Stack */
+  CORE_SEC(.ee_${APP_NAME}_stack) 0 :
+  {
+    *(ee_${APP_NAME}_stack)
+  }
+
+  /* OS-Application Section Private Unitializated DATA */
+  CORE_SEC(.ee_${APP_NAME}_bss) 0 :
+  {
+    *(ee_${APP_NAME}_bss)
+  }
+
+  /* OS-Application Section Private Initializated DATA */
+  CORE_SEC(.ee_${APP_NAME}_data) 0 :
+  {
+    *(ee_${APP_NAME}_data)
+  }
+END_EACH_APP
+  /* GENERATED APPLICATION DATA SECTIONS - END */
+
+  /*
+   * DWARF debug sections.
+   * Symbols in the DWARF debugging sections are relative to the
+   * beginning of the section, so we begin them at 0.
+   */
+  /*
+   * DWARF 1
+   */
+  .comment         0 : { *(.comment) }
+  .debug           0 : { *(.debug) }
+  .line            0 : { *(.line) }
+  /*
+   * GNU DWARF 1 extensions
+   */
+  .debug_srcinfo   0 : { *(.debug_srcinfo) }
+  .debug_sfnames   0 : { *(.debug_sfnames) }
+  /*
+   * DWARF 1.1 and DWARF 2
+   */
+  .debug_aranges   0 : { *(.debug_aranges) }
+  .debug_pubnames  0 : { *(.debug_pubnames) }
+  /*
+   * DWARF 2
+   */
+  .debug_info      0 : { *(.debug_info) }
+  .debug_abbrev    0 : { *(.debug_abbrev) }
+  .debug_line      0 : { *(.debug_line) }
+  .debug_frame     0 : { *(.debug_frame) }
+  .debug_str       0 : { *(.debug_str) }
+  .debug_loc       0 : { *(.debug_loc) }
+  .debug_macinfo   0 : { *(.debug_macinfo) }
+  .debug_ranges    0 : { *(.debug_ranges) }
+  /*
+   * SGI/MIPS DWARF 2 extensions
+   */
+  .debug_weaknames 0 : { *(.debug_weaknames) }
+  .debug_funcnames 0 : { *(.debug_funcnames) }
+  .debug_typenames 0 : { *(.debug_typenames) }
+  .debug_varnames  0 : { *(.debug_varnames) }
+  /*
+   * Optional sections that may only appear when relocating.
+   */
+  /*
+   * Optional sections that may appear regardless of relocating.
+   */
+  .version_info    0 : { *(.version_info) }
+  .boffs           0 : { KEEP (*(.boffs)) }
+}

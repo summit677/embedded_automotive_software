@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<evidence_example version="1" ID="cortex_rx_monostack_eetest2">
+
+ <category>cortex_rx/monostack</category>
+ <title>Monostack EEtest2</title>
+   
+ <small_descr>
+ EETest2
+ </small_descr>
+
+ <long_descr>
+ EETest2
+ </long_descr>
+
+ <file_section>
+  <file     name="code.c"/> 
+  <file     name="conf.oil"/>
+ </file_section>
+
+</evidence_example>

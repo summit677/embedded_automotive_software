@@ -1,0 +1,2038 @@
+
+Discarded input sections
+
+ .bmhd1         0x00000000       0x20 master/myProject_master.elf
+ .bmhd0         0x00000000       0x20 master/myProject_master.elf
+
+----- BEGIN EXTENDED MAP LISTING -----
+
+>>> Linker and link run information
+
+Linker version: GNU ld version (GNU Binutils) 2.20 (TriCore) using BFD version (GNU Binutils) 2.20 (v2.3), Tool Version v2.7
+Name of linker executable: c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/bin/ld.exe
+Date of link run: Tue Oct 11 01:02:07 2016
+Name of linker map file: tc29x_multicore.map
+
+>>> Symbols (global (S = g) and static (S = l); sorted by address)
+
+============================================================================================================================================================
+Start      End         Size S Name                                       Memory      O-Sec                 I-Sec                 Input object               
+============================================================================================================================================================
+0x00000000 0x00000000     0 g NULL                                       *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00000000 0x00000000     0 g __HEAP_SIZE                                *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00000000 0x00000000     0 g __ISTACK_SIZE                              *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00000001 0x00000001     0 g _.                                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00000290 0x00000290     0 g __TRICORE_DERIVATE_MEMORY_MAP__            *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00000800 0x00000800     0 g __USTACK_SIZE                              *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00002000 0x00002000     0 g __CSA_SIZE                                 *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000000 0x50000007     8 l EE_oo_autostart_task_data                  DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x50000000 0x50000000     0 g _SMALL_DATA__CPU2_                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000000 0x50000000     0 g __A0_MEM_CPU2_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000000 0x50000000     0 g __DMI_DSPR_BEGIN_CPU2_                     *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000008 0x5000000b     4 l EE_th_is_extended                          DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x5000000c 0x5000000f     4 l EE_th_dispatch_prio                        DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x50000010 0x50000013     4 l EE_th_ready_prio                           DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x50000014 0x50000017     4 l EE_terminate_real_th_body                  DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x50000018 0x5000001b     4 l EE_hal_thread_body                         DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x5000001c 0x50000023     8 l EE_std_thread_tos                          DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x50000024 0x50000027     4 l EE_oo_autostart_task_mode_OSDEFAULTAPPMODE DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x50000038 0x5000003b     4 l __progname                                 DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000040 0x50000043     4 l EE_ApplicationMode                         DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000044 0x50000047     4 l EE_th_waswaiting                           DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000048 0x5000004b     4 l EE_th_event_waitmask                       DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x5000004c 0x5000004f     4 l EE_th_event_active                         DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000050 0x50000053     4 l EE_sys_ceiling                             DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000054 0x50000057     4 l EE_terminate_data                          DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000058 0x5000005f     8 l EE_tc_tasks_RA                             DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000060 0x50000063     4 l EE_tc_active_tos                           DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000064 0x50000067     4 l EE_tc_active_utid                          DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000068 0x5000006b     4 l EE_oo_IRQ_suspend_status                   DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x5000006c 0x5000006f     4 l EE_oo_IRQ_disable_count                    DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000070 0x50000073     4 l EE_oo_started                              DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000074 0x50000077     4 l EE_ORTI_runningisr2                        DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000078 0x5000007b     4 l EE_ORTI_th_priority                        DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x5000007c 0x5000007c     1 l EE_ORTI_lasterror                          DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x5000007d 0x5000007d     1 l EE_ORTI_servicetrace                       DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000080 0x50000083     4 l EE_tc2Yx_stm_freq_khz                      DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000084 0x50000087     4 l EE_std_endcycle_next_tid                   DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000088 0x5000008b     4 l EE_IRQ_nesting_level                       DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x50000090 0x50000093     4 l EE_th_terminate_nextask                    DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x50000094 0x50000097     4 l EE_rq_first                                DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x50000098 0x5000009b     4 l EE_th_rnact                                DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x5000009c 0x5000009f     4 l EE_stkfirst                                DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x500000a0 0x500000a3     4 l EE_th_next                                 DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x500000a4 0x500000a7     4 l EE_th_status                               DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x500000a8 0x500000b7    16 l EE_tc_system_tos                           DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x500000b8 0x500000b8     0 g __USTACK_BEGIN_CPU2_                       DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x500008b8 0x500008b8     0 g __HEAP_END_CPU2_                           DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x500008b8 0x500008b8     0 g __ISTACK_CPU2_                             DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x500008b8 0x500008b8     0 g __USTACK_CPU2_                             DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x500008c0 0x500008c0     0 g __CSA_BEGIN_CPU2_                          DMI_DSPR2   .CPU2.csa             .CPU2.csa             tc29x_multicore.elf
+0x500028c0 0x500028c0     0 g __CSA_END_CPU2_                            DMI_DSPR2   .CPU2.csa             .CPU2.csa             tc29x_multicore.elf
+0x500028f0 0x50002af3   516 l EE_tc_stack_1                              DMI_DSPR2   .CPU2.ee_kernel_stack .CPU2.ee_kernel_stack slave2/myProject_slave2.elf
+0x50008000 0x50008000     0 g _SMALL_DATA2__CPU2_                        *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50008000 0x50008000     0 g __A1_MEM_CPU2_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50100000 0x50100000     0 l EE_tc_trap_mmu                             PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x50100000 0x50100000     0 l EE_tc_trap_table                           PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x50100020 0x50100020     0 l EE_tc_trap_protection                      PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x50100040 0x50100040     0 l EE_tc_trap_instruction                     PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x50100060 0x50100060     0 l EE_tc_trap_context                         PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x50100080 0x50100080     0 l EE_tc_trap_bus                             PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x501000a0 0x501000a0     0 l EE_tc_trap_assertion                       PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x501000c0 0x501000c0     0 l EE_tc_trap_system                          PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x501000e0 0x501000e0     0 l EE_tc_trap_nmi                             PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x50100100 0x50100100     0 l EE_tc_interrupt_table                      PMI_PSPR2   .CPU2.inttab          .CPU2.inttab          slave2/myProject_slave2.elf
+0x50100120 0x50100120     0 l EE_tc_isr2_entry_1                         PMI_PSPR2   .CPU2.inttab          .CPU2.inttab          slave2/myProject_slave2.elf
+0x50100140 0x501001c7   136 l EE_tc_isr2_global_wrapper                  PMI_PSPR2   .CPU2.inttab          .CPU2.inttab          slave2/myProject_slave2.elf
+0x50100200 0x50100317   280 g EE_tc2Yx_cpu2_start                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100318 0x50100333    28 l FuncTaskSlave2                             PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100334 0x5010033d    10 l main                                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x5010033e 0x5010033f     2 l delay_us                                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100340 0x50100341     2 l delay_ms                                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100342 0x50100347     6 l EE_tc_isr2_call_handler                    PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100348 0x501003df   152 l EE_std_change_context                      PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501003e0 0x50100451   114 l EE_hal_sync_barrier                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100452 0x501004bd   108 l EE_tc_sync_barrier                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501004be 0x501004c1     4 l EE_TC_iirq_handler                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501004c2 0x501005f1   304 l EE_thread_end_instance                     PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501005f2 0x50100687   150 l EE_IRQ_end_instance                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100688 0x501006a3    28 l EE_IRQ_end_post_stub                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501006a4 0x501006af    12 l EE_oo_thread_stub                          PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501006b0 0x501006d9    42 l EE_rq2stk_exchange                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501006da 0x50100745   108 l EE_rq_insert                               PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100746 0x5010092d   488 l EE_oo_StartOS                              PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x5010092e 0x50100a9d   368 l EE_rn_handler                              PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100a9e 0x50100abd    32 l EE_tc_cpu2_endint_disable                  PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100abe 0x50100add    32 l EE_tc_cpu2_endint_enable                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100ade 0x50100afd    32 l EE_tc_safety_endinit_disable               PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100afe 0x50100b1d    32 l EE_tc_safety_endinit_enable                PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100b1e 0x50100b9d   128 l EE_tc2Yx_get_clock                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100b9e 0x50100c47   170 l EE_tc2Yx_stm_set_clockpersec               PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100c48 0x50100d1d   214 l EE_tc2Yx_stm_set_sr0                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100d1e 0x50100d8b   110 l EE_tc2Yx_stm_set_sr0_next_match            PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100d8c 0x50100e61   214 l EE_tc2Yx_stm_set_sr1                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100e62 0x50100ecf   110 l EE_tc2Yx_stm_set_sr1_next_match            PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100ed0 0x50100f2f    96 l EE_tc2Yx_delay                             PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100f30 0x50100f61    50 l EE_tc_dummy_context                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100f62 0x50100fbd    92 l EE_hal_terminate_task                      PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100fbe 0x50100fc5     8 l EE_hal_terminate_savestk                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100fc6 0x501010cd   264 l EE_oo_ActivateTask                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501010ce 0x501010e7    26 l EE_thread_not_terminated                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501010e8 0x501011f7   272 l EE_rn_send                                 PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x501011f8 0x50101207    16 l _exit                                      PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50101238 0x50101238     0 g __CTOR_LIST___CPU2_                        PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x50101238 0x50101238     0 g __EH_FRAME_BEGIN___CPU2_                   PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x50101238 0x50101238     0 g __EH_FRAME_END___CPU2_                     PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x50101244 0x50101244     0 g __CTOR_END___CPU2_                         PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x50101248 0x50101248     0 g __DTOR_LIST___CPU2_                        PMI_PSPR2   .CPU2.dtors           .CPU2.dtors           tc29x_multicore.elf
+0x50101250 0x50101250     0 g __DTOR_END___CPU2_                         PMI_PSPR2   .CPU2.dtors           .CPU2.dtors           tc29x_multicore.elf
+0x60000000 0x60000000     0 g BootModeIndex                              DMI_DSPR1   .startup              .startup              tc29x_multicore.elf
+0x60000000 0x60000000     0 g _SMALL_DATA__CPU1_                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000000 0x60000005     6 g _START                                     DMI_DSPR1   .startup              .startup              master/myProject_master.elf
+0x60000000 0x60000000     0 g __A0_MEM_CPU1_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000000 0x60000000     0 g __DMI_DSPR_BEGIN_CPU1_                     *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000008 0x60000169   354 l EE_tc2Yx_start                             DMI_DSPR1   .startup              ee_kernel_start       master/myProject_master.elf
+0x60000170 0x60000177     8 g EE_as_core_start_addresses                 DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0x60000178 0x60000183    12 g EE_rn_spin                                 DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0x60000184 0x6000018f    12 g EE_rn_task                                 DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0x60000190 0x60000192     3 g EE_rn_cpu                                  DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0x600001bc 0x600001cf    20 l __thenan_df                                DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001d0 0x600001d7     8 l EE_oo_autostart_task_data                  DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001d8 0x600001db     4 l EE_th_is_extended                          DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001dc 0x600001df     4 l EE_th_dispatch_prio                        DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001e0 0x600001e3     4 l EE_th_ready_prio                           DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001e4 0x600001e7     4 l EE_terminate_real_th_body                  DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001e8 0x600001eb     4 l EE_hal_thread_body                         DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001ec 0x600001f3     8 l EE_std_thread_tos                          DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x600001f4 0x600001f7     4 l EE_oo_autostart_task_mode_OSDEFAULTAPPMODE DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x60000208 0x6000020b     4 l __progname                                 DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000210 0x60000213     4 l EE_ApplicationMode                         DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000214 0x60000217     4 l EE_th_waswaiting                           DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000218 0x6000021b     4 l EE_th_event_waitmask                       DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x6000021c 0x6000021f     4 l EE_th_event_active                         DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000220 0x60000223     4 l EE_sys_ceiling                             DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000224 0x60000227     4 l EE_terminate_data                          DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000228 0x6000022f     8 l EE_tc_tasks_RA                             DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000230 0x60000233     4 l EE_tc_active_tos                           DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000234 0x60000235     2 l touch_y                                    DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000236 0x60000237     2 l touch_x                                    DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60000238 0x6000023b     4 l defaultDispBufReady                        DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x6000023c 0x6000023c     1 l BackgroundColor                            DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x6000023e 0x600002d3   150 l colorTable                                 DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x600002d4 0x60012ed3 76800 l frameBuffer                                DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60008000 0x60008000     0 g _SMALL_DATA2__CPU1_                        *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60008000 0x60008000     0 g __A1_MEM_CPU1_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60012ed4 0x60012ed7     4 l EE_tc_active_utid                          DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ed8 0x60012edb     4 l EE_oo_IRQ_suspend_status                   DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012edc 0x60012edf     4 l EE_oo_IRQ_disable_count                    DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ee0 0x60012ee3     4 l EE_oo_started                              DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ee4 0x60012ee7     4 l EE_ORTI_runningisr2                        DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ee8 0x60012eeb     4 l EE_ORTI_th_priority                        DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012eec 0x60012eec     1 l EE_ORTI_lasterror                          DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012eed 0x60012eed     1 l EE_ORTI_servicetrace                       DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ef0 0x60012ef3     4 l EE_tc2Yx_stm_freq_khz                      DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ef4 0x60012ef7     4 l EE_std_endcycle_next_tid                   DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012ef8 0x60012efb     4 l EE_IRQ_nesting_level                       DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x60012f00 0x60012f03     4 l EE_th_terminate_nextask                    DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f04 0x60012f07     4 l EE_rq_first                                DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f08 0x60012f0b     4 l EE_th_rnact                                DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f0c 0x60012f0f     4 l EE_stkfirst                                DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f10 0x60012f13     4 l EE_th_next                                 DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f14 0x60012f17     4 l EE_th_status                               DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f18 0x60012f27    16 l EE_tc_system_tos                           DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x60012f28 0x60012f28     0 g __USTACK_BEGIN_CPU1_                       DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x60013728 0x60013728     0 g __HEAP_END_CPU1_                           DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x60013728 0x60013728     0 g __ISTACK_CPU1_                             DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x60013728 0x60013728     0 g __USTACK_CPU1_                             DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x60013740 0x60013740     0 g __CSA_BEGIN_CPU1_                          DMI_DSPR1   .CPU1.csa             .CPU1.csa             tc29x_multicore.elf
+0x60015740 0x60015740     0 g __CSA_END_CPU1_                            DMI_DSPR1   .CPU1.csa             .CPU1.csa             tc29x_multicore.elf
+0x60015770 0x60015973   516 l EE_tc_stack_1                              DMI_DSPR1   .CPU1.ee_kernel_stack .CPU1.ee_kernel_stack slave1/myProject_slave1.elf
+0x60100000 0x60100000     0 l EE_tc_trap_mmu                             PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x60100000 0x60100000     0 l EE_tc_trap_table                           PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x60100020 0x60100020     0 l EE_tc_trap_protection                      PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x60100040 0x60100040     0 l EE_tc_trap_instruction                     PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x60100060 0x60100060     0 l EE_tc_trap_context                         PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x60100080 0x60100080     0 l EE_tc_trap_bus                             PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x601000a0 0x601000a0     0 l EE_tc_trap_assertion                       PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x601000c0 0x601000c0     0 l EE_tc_trap_system                          PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x601000e0 0x601000e0     0 l EE_tc_trap_nmi                             PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x60100100 0x60100100     0 l EE_tc_interrupt_table                      PMI_PSPR1   .CPU1.inttab          .CPU1.inttab          slave1/myProject_slave1.elf
+0x60100120 0x60100120     0 l EE_tc_isr2_entry_1                         PMI_PSPR1   .CPU1.inttab          .CPU1.inttab          slave1/myProject_slave1.elf
+0x60100140 0x601001c7   136 l EE_tc_isr2_global_wrapper                  PMI_PSPR1   .CPU1.inttab          .CPU1.inttab          slave1/myProject_slave1.elf
+0x60100200 0x60100317   280 g EE_tc2Yx_cpu1_start                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100318 0x6010034b    52 l FuncTaskSlave1                             PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010034c 0x60100361    22 l main                                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100362 0x601005fb   666 l tft_display_home.constprop.1               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601005fc 0x60100605    10 l DISPLAY_BackgroundColor                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100606 0x60100625    32 l DISPLAY_Framebuffer_Init                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100626 0x6010073b   278 l DISPLAY_colorTable_StdInit                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010073c 0x6010075f    36 l DISPLAY_Buffer_Init                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100760 0x601007db   124 l writeDisplay                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601007dc 0x601007f5    26 l writePixel                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601007f6 0x6010085d   104 l setPx                                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010085e 0x60100901   164 l printScrn                                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100902 0x60100aa1   416 l drawChar                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100aa2 0x60100ae7    70 l drawString.constprop.2                     PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100ae8 0x60100b97   176 l drawString                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100b98 0x60100bff   104 l drawBinary                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60100c00 0x60102937  7480 l DISPLAY_Init                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102938 0x601029f7   192 l DISPLAY_Clear                              PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601029f8 0x60102b33   316 l TOUCH_read                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102b34 0x60102b4b    24 l TOUCH_x                                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102b4c 0x60102b63    24 l TOUCH_y                                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102b64 0x60102bc3    96 l clearDisplayBuffer                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102bc4 0x60102e63   672 l graph_line                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102e64 0x60102ec5    98 l graph_drawZPoint                           PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102ec6 0x60102f3f   122 l graph_drawXYPoint                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102f40 0x60102f59    26 l graph_pointOnAxis                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102f5a 0x60102fb3    90 l graph_hLine                                PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60102fb4 0x6010300d    90 l graph_vLine                                PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010300e 0x6010306b    94 l graph_squarePoint                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010306c 0x60103143   216 l graph_rasterCircle                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103144 0x6010318f    76 l graph_fillCircle                           PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103190 0x6010336b   476 l graph_drawRectangle                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010336c 0x6010339f    52 l graph_fillRectangle                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601033a0 0x601033ed    78 l graph_drawColorMap                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601033ee 0x601033ef     2 l delay_us                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601033f0 0x601033f1     2 l delay_ms                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601033f2 0x601033f7     6 l EE_tc_isr2_call_handler                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601033f8 0x6010348f   152 l EE_std_change_context                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103490 0x60103501   114 l EE_hal_sync_barrier                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103502 0x6010356d   108 l EE_tc_sync_barrier                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010356e 0x60103571     4 l EE_TC_iirq_handler                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103572 0x601036a1   304 l EE_thread_end_instance                     PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601036a2 0x60103737   150 l EE_IRQ_end_instance                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103738 0x60103753    28 l EE_IRQ_end_post_stub                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103754 0x6010375f    12 l EE_oo_thread_stub                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103760 0x60103789    42 l EE_rq2stk_exchange                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010378a 0x601037f5   108 l EE_rq_insert                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601037f6 0x601039dd   488 l EE_oo_StartOS                              PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601039de 0x60103b4d   368 l EE_rn_handler                              PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103b4e 0x60103b6d    32 l EE_tc_cpu1_endint_disable                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103b6e 0x60103b8d    32 l EE_tc_cpu1_endint_enable                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103b8e 0x60103bad    32 l EE_tc_safety_endinit_disable               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103bae 0x60103bcd    32 l EE_tc_safety_endinit_enable                PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103bce 0x60103c4d   128 l EE_tc2Yx_get_clock                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103c4e 0x60103cf7   170 l EE_tc2Yx_stm_set_clockpersec               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103cf8 0x60103dcb   212 l EE_tc2Yx_stm_set_sr0                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103dcc 0x60103e39   110 l EE_tc2Yx_stm_set_sr0_next_match            PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103e3a 0x60103f0d   212 l EE_tc2Yx_stm_set_sr1                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103f0e 0x60103f7b   110 l EE_tc2Yx_stm_set_sr1_next_match            PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103f7c 0x60103fdb    96 l EE_tc2Yx_delay                             PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103fdc 0x6010400d    50 l EE_tc_dummy_context                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010400e 0x60104069    92 l EE_hal_terminate_task                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010406a 0x60104071     8 l EE_hal_terminate_savestk                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60104072 0x60104179   264 l EE_oo_ActivateTask                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010417a 0x60104193    26 l EE_thread_not_terminated                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60104194 0x601042a3   272 l EE_rn_send                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601042a4 0x601042b3    16 l _exit                                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601042b4 0x60104363   176 l round                                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60104364 0x6010450d   426 l _fpadd_parts                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x6010450e 0x60104545    56 l __adddf3                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60104546 0x60104585    64 l __subdf3                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60104586 0x6010459f    26 l __ashldi3                                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601045a0 0x601045c5    38 l __lshrdi3                                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601045c6 0x601046d1   268 l __pack_d                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x601046d2 0x60104763   146 l __unpack_d                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60104798 0x60104798     0 g __CTOR_LIST___CPU1_                        PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x60104798 0x60104798     0 g __EH_FRAME_BEGIN___CPU1_                   PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x60104798 0x60104798     0 g __EH_FRAME_END___CPU1_                     PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x601047a4 0x601047a4     0 g __CTOR_END___CPU1_                         PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x601047a8 0x601047a8     0 g __DTOR_LIST___CPU1_                        PMI_PSPR1   .CPU1.dtors           .CPU1.dtors           tc29x_multicore.elf
+0x601047b0 0x601047b0     0 g __DTOR_END___CPU1_                         PMI_PSPR1   .CPU1.dtors           .CPU1.dtors           tc29x_multicore.elf
+0x70000000 0x70000000     0 g _SMALL_DATA__CPU0_                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70000000 0x70000000     0 g __A0_MEM_CPU0_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70000000 0x70000000     0 g __DMI_DSPR_BEGIN_CPU0_                     *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70000004 0x70000017    20 l __thenan_df                                DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000018 0x7000001f     8 l EE_oo_autostart_task_data                  DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000020 0x70000023     4 l EE_th_is_extended                          DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000024 0x70000027     4 l EE_th_dispatch_prio                        DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000028 0x7000002b     4 l EE_th_ready_prio                           DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x7000002c 0x7000002f     4 l EE_terminate_real_th_body                  DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000030 0x70000033     4 l EE_hal_thread_body                         DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000034 0x7000003b     8 l EE_std_thread_tos                          DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x7000003c 0x7000003f     4 l EE_oo_autostart_task_mode_OSDEFAULTAPPMODE DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x70000050 0x70000053     4 l __progname                                 DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000058 0x7000005b     4 l EE_ApplicationMode                         DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x7000005c 0x7000005f     4 l EE_th_waswaiting                           DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000060 0x70000063     4 l EE_th_event_waitmask                       DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000064 0x70000067     4 l EE_th_event_active                         DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000068 0x7000006b     4 l EE_sys_ceiling                             DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x7000006c 0x7000006f     4 l EE_terminate_data                          DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000070 0x70000077     8 l EE_tc_tasks_RA                             DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000078 0x7000007b     4 l EE_tc_active_tos                           DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x7000007c 0x7000007d     2 l touch_y                                    DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x7000007e 0x7000007f     2 l touch_x                                    DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000080 0x70000083     4 l defaultDispBufReady                        DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000084 0x70000084     1 l BackgroundColor                            DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70000086 0x7000011b   150 l colorTable                                 DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x7000011c 0x70012d1b 76800 l frameBuffer                                DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70008000 0x70008000     0 g _SMALL_DATA2__CPU0_                        *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70008000 0x70008000     0 g __A1_MEM_CPU0_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70012d1c 0x70012d1f     4 l EE_tc_active_utid                          DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d20 0x70012d23     4 l EE_oo_IRQ_suspend_status                   DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d24 0x70012d27     4 l EE_oo_IRQ_disable_count                    DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d28 0x70012d2b     4 l EE_oo_started                              DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d2c 0x70012d2f     4 l EE_ORTI_runningisr2                        DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d30 0x70012d33     4 l EE_ORTI_th_priority                        DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d34 0x70012d34     1 l EE_ORTI_lasterror                          DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d35 0x70012d35     1 l EE_ORTI_servicetrace                       DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d38 0x70012d3b     4 l EE_tc2Yx_stm_freq_khz                      DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d3c 0x70012d3f     4 l EE_std_endcycle_next_tid                   DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d40 0x70012d43     4 l EE_IRQ_nesting_level                       DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70012d48 0x70012d4b     4 l EE_th_terminate_nextask                    DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d4c 0x70012d4f     4 l EE_rq_first                                DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d50 0x70012d53     4 l EE_th_rnact                                DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d54 0x70012d57     4 l EE_stkfirst                                DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d58 0x70012d5b     4 l EE_th_next                                 DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d5c 0x70012d5f     4 l EE_th_status                               DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d60 0x70012d6f    16 l EE_tc_system_tos                           DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x70012d70 0x70012d70     0 g __USTACK_BEGIN_CPU0_                       DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x70013570 0x70013570     0 g __HEAP_END_CPU0_                           DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x70013570 0x70013570     0 g __ISTACK_CPU0_                             DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x70013570 0x70013570     0 g __USTACK_CPU0_                             DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x70013580 0x70013580     0 g __CSA_BEGIN_CPU0_                          DMI_DSPR0   .CPU0.csa             .CPU0.csa             tc29x_multicore.elf
+0x70015580 0x70015580     0 g __CSA_END_CPU0_                            DMI_DSPR0   .CPU0.csa             .CPU0.csa             tc29x_multicore.elf
+0x700155b0 0x700157b3   516 l EE_tc_stack_1                              DMI_DSPR0   .CPU0.ee_kernel_stack .CPU0.ee_kernel_stack master/myProject_master.elf
+0x70100000 0x70100000     0 l EE_tc_trap_mmu                             PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x70100000 0x70100000     0 l EE_tc_trap_table                           PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x70100020 0x70100020     0 l EE_tc_trap_protection                      PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x70100040 0x70100040     0 l EE_tc_trap_instruction                     PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x70100060 0x70100060     0 l EE_tc_trap_context                         PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x70100080 0x70100080     0 l EE_tc_trap_bus                             PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x701000a0 0x701000a0     0 l EE_tc_trap_assertion                       PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x701000c0 0x701000c0     0 l EE_tc_trap_system                          PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x701000e0 0x701000e0     0 l EE_tc_trap_nmi                             PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x70100100 0x70100100     0 l EE_tc_interrupt_table                      PMI_PSPR0   .CPU0.inttab          .CPU0.inttab          master/myProject_master.elf
+0x70100120 0x70100120     0 l EE_tc_isr2_entry_1                         PMI_PSPR0   .CPU0.inttab          .CPU0.inttab          master/myProject_master.elf
+0x70100140 0x701001c7   136 l EE_tc_isr2_global_wrapper                  PMI_PSPR0   .CPU0.inttab          .CPU0.inttab          master/myProject_master.elf
+0x70100200 0x70100231    50 l FuncTaskMaster                             PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100232 0x70100285    84 l main                                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100286 0x7010051f   666 l tft_display_home.constprop.1               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100520 0x70100529    10 l DISPLAY_BackgroundColor                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010052a 0x70100549    32 l DISPLAY_Framebuffer_Init                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010054a 0x7010065f   278 l DISPLAY_colorTable_StdInit                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100660 0x70100683    36 l DISPLAY_Buffer_Init                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100684 0x701006ff   124 l writeDisplay                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100700 0x70100719    26 l writePixel                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010071a 0x70100781   104 l setPx                                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100782 0x70100825   164 l printScrn                                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100826 0x701009c5   416 l drawChar                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701009c6 0x70100a0b    70 l drawString.constprop.2                     PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100a0c 0x70100abb   176 l drawString                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100abc 0x70100b23   104 l drawBinary                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100b24 0x7010285b  7480 l DISPLAY_Init                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010285c 0x7010291b   192 l DISPLAY_Clear                              PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010291c 0x70102a57   316 l TOUCH_read                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102a58 0x70102a6f    24 l TOUCH_x                                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102a70 0x70102a87    24 l TOUCH_y                                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102a88 0x70102ae7    96 l clearDisplayBuffer                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102ae8 0x70102d87   672 l graph_line                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102d88 0x70102de9    98 l graph_drawZPoint                           PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102dea 0x70102e63   122 l graph_drawXYPoint                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102e64 0x70102e7d    26 l graph_pointOnAxis                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102e7e 0x70102ed7    90 l graph_hLine                                PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102ed8 0x70102f31    90 l graph_vLine                                PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102f32 0x70102f8f    94 l graph_squarePoint                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70102f90 0x70103067   216 l graph_rasterCircle                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103068 0x701030b3    76 l graph_fillCircle                           PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701030b4 0x7010328f   476 l graph_drawRectangle                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103290 0x701032c3    52 l graph_fillRectangle                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701032c4 0x70103311    78 l graph_drawColorMap                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103312 0x70103313     2 l delay_us                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103314 0x70103315     2 l delay_ms                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103316 0x7010331b     6 l EE_tc_isr2_call_handler                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010331c 0x701033b3   152 l EE_std_change_context                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701033b4 0x70103425   114 l EE_hal_sync_barrier                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103426 0x70103491   108 l EE_tc_sync_barrier                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103492 0x70103495     4 l EE_TC_iirq_handler                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103496 0x7010357f   234 l EE_as_StartCore                            PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103580 0x7010364f   208 l EE_as_StartNonAutosarCore                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103650 0x7010377f   304 l EE_thread_end_instance                     PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103780 0x70103815   150 l EE_IRQ_end_instance                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103816 0x70103831    28 l EE_IRQ_end_post_stub                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103832 0x7010383d    12 l EE_oo_thread_stub                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010383e 0x70103867    42 l EE_rq2stk_exchange                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103868 0x701038d3   108 l EE_rq_insert                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701038d4 0x70103ad3   512 l EE_oo_StartOS                              PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103ad4 0x70103c47   372 l EE_rn_handler                              PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103c48 0x70103c67    32 l EE_tc_endint_disable                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103c68 0x70103c87    32 l EE_tc_endint_enable                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103c88 0x70103ca7    32 l EE_tc_safety_endinit_disable               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103ca8 0x70103cc7    32 l EE_tc_safety_endinit_enable                PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103cc8 0x70103dd3   268 l EE_tc2Yx_configure_clock                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103dd4 0x70103e53   128 l EE_tc2Yx_get_clock                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103e54 0x70103efd   170 l EE_tc2Yx_stm_set_clockpersec               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103efe 0x70103fcd   208 l EE_tc2Yx_stm_set_sr0                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103fce 0x7010403b   110 l EE_tc2Yx_stm_set_sr0_next_match            PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010403c 0x7010410b   208 l EE_tc2Yx_stm_set_sr1                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010410c 0x70104179   110 l EE_tc2Yx_stm_set_sr1_next_match            PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010417a 0x701041d9    96 l EE_tc2Yx_delay                             PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701041da 0x7010420b    50 l EE_tc_dummy_context                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010420c 0x70104267    92 l EE_hal_terminate_task                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104268 0x7010426f     8 l EE_hal_terminate_savestk                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104270 0x70104377   264 l EE_oo_ActivateTask                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104378 0x70104391    26 l EE_thread_not_terminated                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104392 0x7010449d   268 l EE_rn_send                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010449e 0x701044ad    16 l _exit                                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701044ae 0x7010455d   176 l round                                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010455e 0x70104707   426 l _fpadd_parts                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104708 0x7010473f    56 l __adddf3                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104740 0x7010477f    64 l __subdf3                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104780 0x70104799    26 l __ashldi3                                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x7010479a 0x701047bf    38 l __lshrdi3                                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701047c0 0x701048cb   268 l __pack_d                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x701048cc 0x7010495d   146 l __unpack_d                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70104998 0x70104998     0 g __CTOR_LIST___CPU0_                        PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x70104998 0x70104998     0 g __EH_FRAME_BEGIN___CPU0_                   PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x70104998 0x70104998     0 g __EH_FRAME_END___CPU0_                     PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x701049a4 0x701049a4     0 g __CTOR_END___CPU0_                         PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x701049a8 0x701049a8     0 g __DTOR_LIST___CPU0_                        PMI_PSPR0   .CPU0.dtors           .CPU0.dtors           tc29x_multicore.elf
+0x701049b0 0x701049b0     0 g __DTOR_END___CPU0_                         PMI_PSPR0   .CPU0.dtors           .CPU0.dtors           tc29x_multicore.elf
+0xb0000000 0xb000000b    12 g EE_hal_spinlock_status                     LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb000000c 0xb0000017    12 g EE_rn_switch                               LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000018 0xb000002f    24 g EE_rn_first                                LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000030 0xb0000047    24 g EE_rn_pending                              LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000048 0xb000005f    24 g EE_rn_next                                 LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000060 0xb0000077    24 g EE_rn_type                                 LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000078 0xb0000079     2 g tft_id                                     LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb000007c 0xb000007f     4 g EE_tc_kernel_barrier                       LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000080 0xb0000083     4 g EE_as_not_as_core_mask                     LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000084 0xb0000087     4 g EE_as_core_started                         LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000088 0xb000008b     4 g EE_as_core_mask                            LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb000008c 0xb0000097    12 g EE_as_os_application_mode                  LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+
+>>> Symbols (global (S = g) and static (S = l); sorted by name)
+
+============================================================================================================================================================
+Start      End         Size S Name                                       Memory      O-Sec                 I-Sec                 Input object               
+============================================================================================================================================================
+0x6000023c 0x6000023c     1 l BackgroundColor                            DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000084 0x70000084     1 l BackgroundColor                            DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x60000000 0x60000000     0 g BootModeIndex                              DMI_DSPR1   .startup              .startup              tc29x_multicore.elf
+0x601005fc 0x60100605    10 l DISPLAY_BackgroundColor                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100520 0x70100529    10 l DISPLAY_BackgroundColor                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x6010073c 0x6010075f    36 l DISPLAY_Buffer_Init                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100660 0x70100683    36 l DISPLAY_Buffer_Init                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102938 0x601029f7   192 l DISPLAY_Clear                              PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010285c 0x7010291b   192 l DISPLAY_Clear                              PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100606 0x60100625    32 l DISPLAY_Framebuffer_Init                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010052a 0x70100549    32 l DISPLAY_Framebuffer_Init                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100c00 0x60102937  7480 l DISPLAY_Init                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100b24 0x7010285b  7480 l DISPLAY_Init                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100626 0x6010073b   278 l DISPLAY_colorTable_StdInit                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010054a 0x7010065f   278 l DISPLAY_colorTable_StdInit                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000040 0x50000043     4 l EE_ApplicationMode                         DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000210 0x60000213     4 l EE_ApplicationMode                         DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000058 0x7000005b     4 l EE_ApplicationMode                         DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x501005f2 0x50100687   150 l EE_IRQ_end_instance                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601036a2 0x60103737   150 l EE_IRQ_end_instance                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103780 0x70103815   150 l EE_IRQ_end_instance                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100688 0x501006a3    28 l EE_IRQ_end_post_stub                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103738 0x60103753    28 l EE_IRQ_end_post_stub                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103816 0x70103831    28 l EE_IRQ_end_post_stub                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000088 0x5000008b     4 l EE_IRQ_nesting_level                       DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ef8 0x60012efb     4 l EE_IRQ_nesting_level                       DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d40 0x70012d43     4 l EE_IRQ_nesting_level                       DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x5000007c 0x5000007c     1 l EE_ORTI_lasterror                          DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012eec 0x60012eec     1 l EE_ORTI_lasterror                          DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d34 0x70012d34     1 l EE_ORTI_lasterror                          DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000074 0x50000077     4 l EE_ORTI_runningisr2                        DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ee4 0x60012ee7     4 l EE_ORTI_runningisr2                        DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d2c 0x70012d2f     4 l EE_ORTI_runningisr2                        DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x5000007d 0x5000007d     1 l EE_ORTI_servicetrace                       DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012eed 0x60012eed     1 l EE_ORTI_servicetrace                       DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d35 0x70012d35     1 l EE_ORTI_servicetrace                       DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000078 0x5000007b     4 l EE_ORTI_th_priority                        DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ee8 0x60012eeb     4 l EE_ORTI_th_priority                        DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d30 0x70012d33     4 l EE_ORTI_th_priority                        DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x501004be 0x501004c1     4 l EE_TC_iirq_handler                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x6010356e 0x60103571     4 l EE_TC_iirq_handler                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103492 0x70103495     4 l EE_TC_iirq_handler                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103496 0x7010357f   234 l EE_as_StartCore                            PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103580 0x7010364f   208 l EE_as_StartNonAutosarCore                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0xb0000088 0xb000008b     4 g EE_as_core_mask                            LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x60000170 0x60000177     8 g EE_as_core_start_addresses                 DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0xb0000084 0xb0000087     4 g EE_as_core_started                         LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000080 0xb0000083     4 g EE_as_not_as_core_mask                     LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb000008c 0xb0000097    12 g EE_as_os_application_mode                  LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000000 0xb000000b    12 g EE_hal_spinlock_status                     LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x501003e0 0x50100451   114 l EE_hal_sync_barrier                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103490 0x60103501   114 l EE_hal_sync_barrier                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701033b4 0x70103425   114 l EE_hal_sync_barrier                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100fbe 0x50100fc5     8 l EE_hal_terminate_savestk                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x6010406a 0x60104071     8 l EE_hal_terminate_savestk                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104268 0x7010426f     8 l EE_hal_terminate_savestk                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100f62 0x50100fbd    92 l EE_hal_terminate_task                      PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x6010400e 0x60104069    92 l EE_hal_terminate_task                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010420c 0x70104267    92 l EE_hal_terminate_task                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000018 0x5000001b     4 l EE_hal_thread_body                         DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001e8 0x600001eb     4 l EE_hal_thread_body                         DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000030 0x70000033     4 l EE_hal_thread_body                         DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x50100fc6 0x501010cd   264 l EE_oo_ActivateTask                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60104072 0x60104179   264 l EE_oo_ActivateTask                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104270 0x70104377   264 l EE_oo_ActivateTask                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x5000006c 0x5000006f     4 l EE_oo_IRQ_disable_count                    DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012edc 0x60012edf     4 l EE_oo_IRQ_disable_count                    DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d24 0x70012d27     4 l EE_oo_IRQ_disable_count                    DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000068 0x5000006b     4 l EE_oo_IRQ_suspend_status                   DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ed8 0x60012edb     4 l EE_oo_IRQ_suspend_status                   DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d20 0x70012d23     4 l EE_oo_IRQ_suspend_status                   DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50100746 0x5010092d   488 l EE_oo_StartOS                              PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601037f6 0x601039dd   488 l EE_oo_StartOS                              PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701038d4 0x70103ad3   512 l EE_oo_StartOS                              PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000000 0x50000007     8 l EE_oo_autostart_task_data                  DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001d0 0x600001d7     8 l EE_oo_autostart_task_data                  DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000018 0x7000001f     8 l EE_oo_autostart_task_data                  DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x50000024 0x50000027     4 l EE_oo_autostart_task_mode_OSDEFAULTAPPMODE DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001f4 0x600001f7     4 l EE_oo_autostart_task_mode_OSDEFAULTAPPMODE DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x7000003c 0x7000003f     4 l EE_oo_autostart_task_mode_OSDEFAULTAPPMODE DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x50000070 0x50000073     4 l EE_oo_started                              DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ee0 0x60012ee3     4 l EE_oo_started                              DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d28 0x70012d2b     4 l EE_oo_started                              DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x501006a4 0x501006af    12 l EE_oo_thread_stub                          PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103754 0x6010375f    12 l EE_oo_thread_stub                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103832 0x7010383d    12 l EE_oo_thread_stub                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60000190 0x60000192     3 g EE_rn_cpu                                  DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0xb0000018 0xb000002f    24 g EE_rn_first                                LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x5010092e 0x50100a9d   368 l EE_rn_handler                              PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601039de 0x60103b4d   368 l EE_rn_handler                              PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103ad4 0x70103c47   372 l EE_rn_handler                              PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0xb0000048 0xb000005f    24 g EE_rn_next                                 LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0xb0000030 0xb0000047    24 g EE_rn_pending                              LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x501010e8 0x501011f7   272 l EE_rn_send                                 PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60104194 0x601042a3   272 l EE_rn_send                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104392 0x7010449d   268 l EE_rn_send                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60000178 0x60000183    12 g EE_rn_spin                                 DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0xb000000c 0xb0000017    12 g EE_rn_switch                               LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x60000184 0x6000018f    12 g EE_rn_task                                 DMI_DSPR1   ee_mcglobalc          ee_mcglobalc          master/myProject_master.elf
+0xb0000060 0xb0000077    24 g EE_rn_type                                 LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x501006b0 0x501006d9    42 l EE_rq2stk_exchange                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103760 0x60103789    42 l EE_rq2stk_exchange                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010383e 0x70103867    42 l EE_rq2stk_exchange                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000094 0x50000097     4 l EE_rq_first                                DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f04 0x60012f07     4 l EE_rq_first                                DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d4c 0x70012d4f     4 l EE_rq_first                                DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x501006da 0x50100745   108 l EE_rq_insert                               PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x6010378a 0x601037f5   108 l EE_rq_insert                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103868 0x701038d3   108 l EE_rq_insert                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100348 0x501003df   152 l EE_std_change_context                      PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601033f8 0x6010348f   152 l EE_std_change_context                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010331c 0x701033b3   152 l EE_std_change_context                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000084 0x50000087     4 l EE_std_endcycle_next_tid                   DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ef4 0x60012ef7     4 l EE_std_endcycle_next_tid                   DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d3c 0x70012d3f     4 l EE_std_endcycle_next_tid                   DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x5000001c 0x50000023     8 l EE_std_thread_tos                          DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001ec 0x600001f3     8 l EE_std_thread_tos                          DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000034 0x7000003b     8 l EE_std_thread_tos                          DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x5000009c 0x5000009f     4 l EE_stkfirst                                DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f0c 0x60012f0f     4 l EE_stkfirst                                DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d54 0x70012d57     4 l EE_stkfirst                                DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x50000050 0x50000053     4 l EE_sys_ceiling                             DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000220 0x60000223     4 l EE_sys_ceiling                             DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000068 0x7000006b     4 l EE_sys_ceiling                             DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x70103cc8 0x70103dd3   268 l EE_tc2Yx_configure_clock                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100200 0x60100317   280 g EE_tc2Yx_cpu1_start                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x50100200 0x50100317   280 g EE_tc2Yx_cpu2_start                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100ed0 0x50100f2f    96 l EE_tc2Yx_delay                             PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103f7c 0x60103fdb    96 l EE_tc2Yx_delay                             PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010417a 0x701041d9    96 l EE_tc2Yx_delay                             PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100b1e 0x50100b9d   128 l EE_tc2Yx_get_clock                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103bce 0x60103c4d   128 l EE_tc2Yx_get_clock                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103dd4 0x70103e53   128 l EE_tc2Yx_get_clock                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60000008 0x60000169   354 l EE_tc2Yx_start                             DMI_DSPR1   .startup              ee_kernel_start       master/myProject_master.elf
+0x50000080 0x50000083     4 l EE_tc2Yx_stm_freq_khz                      DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ef0 0x60012ef3     4 l EE_tc2Yx_stm_freq_khz                      DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d38 0x70012d3b     4 l EE_tc2Yx_stm_freq_khz                      DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50100b9e 0x50100c47   170 l EE_tc2Yx_stm_set_clockpersec               PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103c4e 0x60103cf7   170 l EE_tc2Yx_stm_set_clockpersec               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103e54 0x70103efd   170 l EE_tc2Yx_stm_set_clockpersec               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100c48 0x50100d1d   214 l EE_tc2Yx_stm_set_sr0                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103cf8 0x60103dcb   212 l EE_tc2Yx_stm_set_sr0                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103efe 0x70103fcd   208 l EE_tc2Yx_stm_set_sr0                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100d1e 0x50100d8b   110 l EE_tc2Yx_stm_set_sr0_next_match            PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103dcc 0x60103e39   110 l EE_tc2Yx_stm_set_sr0_next_match            PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103fce 0x7010403b   110 l EE_tc2Yx_stm_set_sr0_next_match            PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100d8c 0x50100e61   214 l EE_tc2Yx_stm_set_sr1                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103e3a 0x60103f0d   212 l EE_tc2Yx_stm_set_sr1                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010403c 0x7010410b   208 l EE_tc2Yx_stm_set_sr1                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100e62 0x50100ecf   110 l EE_tc2Yx_stm_set_sr1_next_match            PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103f0e 0x60103f7b   110 l EE_tc2Yx_stm_set_sr1_next_match            PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010410c 0x70104179   110 l EE_tc2Yx_stm_set_sr1_next_match            PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000060 0x50000063     4 l EE_tc_active_tos                           DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000230 0x60000233     4 l EE_tc_active_tos                           DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000078 0x7000007b     4 l EE_tc_active_tos                           DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000064 0x50000067     4 l EE_tc_active_utid                          DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60012ed4 0x60012ed7     4 l EE_tc_active_utid                          DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70012d1c 0x70012d1f     4 l EE_tc_active_utid                          DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x60103b4e 0x60103b6d    32 l EE_tc_cpu1_endint_disable                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x60103b6e 0x60103b8d    32 l EE_tc_cpu1_endint_enable                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x50100a9e 0x50100abd    32 l EE_tc_cpu2_endint_disable                  PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100abe 0x50100add    32 l EE_tc_cpu2_endint_enable                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x50100f30 0x50100f61    50 l EE_tc_dummy_context                        PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103fdc 0x6010400d    50 l EE_tc_dummy_context                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701041da 0x7010420b    50 l EE_tc_dummy_context                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103c48 0x70103c67    32 l EE_tc_endint_disable                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70103c68 0x70103c87    32 l EE_tc_endint_enable                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100100 0x50100100     0 l EE_tc_interrupt_table                      PMI_PSPR2   .CPU2.inttab          .CPU2.inttab          slave2/myProject_slave2.elf
+0x60100100 0x60100100     0 l EE_tc_interrupt_table                      PMI_PSPR1   .CPU1.inttab          .CPU1.inttab          slave1/myProject_slave1.elf
+0x70100100 0x70100100     0 l EE_tc_interrupt_table                      PMI_PSPR0   .CPU0.inttab          .CPU0.inttab          master/myProject_master.elf
+0x50100342 0x50100347     6 l EE_tc_isr2_call_handler                    PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601033f2 0x601033f7     6 l EE_tc_isr2_call_handler                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103316 0x7010331b     6 l EE_tc_isr2_call_handler                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100120 0x50100120     0 l EE_tc_isr2_entry_1                         PMI_PSPR2   .CPU2.inttab          .CPU2.inttab          slave2/myProject_slave2.elf
+0x60100120 0x60100120     0 l EE_tc_isr2_entry_1                         PMI_PSPR1   .CPU1.inttab          .CPU1.inttab          slave1/myProject_slave1.elf
+0x70100120 0x70100120     0 l EE_tc_isr2_entry_1                         PMI_PSPR0   .CPU0.inttab          .CPU0.inttab          master/myProject_master.elf
+0x50100140 0x501001c7   136 l EE_tc_isr2_global_wrapper                  PMI_PSPR2   .CPU2.inttab          .CPU2.inttab          slave2/myProject_slave2.elf
+0x60100140 0x601001c7   136 l EE_tc_isr2_global_wrapper                  PMI_PSPR1   .CPU1.inttab          .CPU1.inttab          slave1/myProject_slave1.elf
+0x70100140 0x701001c7   136 l EE_tc_isr2_global_wrapper                  PMI_PSPR0   .CPU0.inttab          .CPU0.inttab          master/myProject_master.elf
+0xb000007c 0xb000007f     4 g EE_tc_kernel_barrier                       LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x50100ade 0x50100afd    32 l EE_tc_safety_endinit_disable               PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103b8e 0x60103bad    32 l EE_tc_safety_endinit_disable               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103c88 0x70103ca7    32 l EE_tc_safety_endinit_disable               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100afe 0x50100b1d    32 l EE_tc_safety_endinit_enable                PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103bae 0x60103bcd    32 l EE_tc_safety_endinit_enable                PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103ca8 0x70103cc7    32 l EE_tc_safety_endinit_enable                PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x500028f0 0x50002af3   516 l EE_tc_stack_1                              DMI_DSPR2   .CPU2.ee_kernel_stack .CPU2.ee_kernel_stack slave2/myProject_slave2.elf
+0x60015770 0x60015973   516 l EE_tc_stack_1                              DMI_DSPR1   .CPU1.ee_kernel_stack .CPU1.ee_kernel_stack slave1/myProject_slave1.elf
+0x700155b0 0x700157b3   516 l EE_tc_stack_1                              DMI_DSPR0   .CPU0.ee_kernel_stack .CPU0.ee_kernel_stack master/myProject_master.elf
+0x50100452 0x501004bd   108 l EE_tc_sync_barrier                         PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103502 0x6010356d   108 l EE_tc_sync_barrier                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103426 0x70103491   108 l EE_tc_sync_barrier                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x500000a8 0x500000b7    16 l EE_tc_system_tos                           DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f18 0x60012f27    16 l EE_tc_system_tos                           DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d60 0x70012d6f    16 l EE_tc_system_tos                           DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x50000058 0x5000005f     8 l EE_tc_tasks_RA                             DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000228 0x6000022f     8 l EE_tc_tasks_RA                             DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000070 0x70000077     8 l EE_tc_tasks_RA                             DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x501000a0 0x501000a0     0 l EE_tc_trap_assertion                       PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x601000a0 0x601000a0     0 l EE_tc_trap_assertion                       PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x701000a0 0x701000a0     0 l EE_tc_trap_assertion                       PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50100080 0x50100080     0 l EE_tc_trap_bus                             PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x60100080 0x60100080     0 l EE_tc_trap_bus                             PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x70100080 0x70100080     0 l EE_tc_trap_bus                             PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50100060 0x50100060     0 l EE_tc_trap_context                         PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x60100060 0x60100060     0 l EE_tc_trap_context                         PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x70100060 0x70100060     0 l EE_tc_trap_context                         PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50100040 0x50100040     0 l EE_tc_trap_instruction                     PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x60100040 0x60100040     0 l EE_tc_trap_instruction                     PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x70100040 0x70100040     0 l EE_tc_trap_instruction                     PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50100000 0x50100000     0 l EE_tc_trap_mmu                             PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x60100000 0x60100000     0 l EE_tc_trap_mmu                             PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x70100000 0x70100000     0 l EE_tc_trap_mmu                             PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x501000e0 0x501000e0     0 l EE_tc_trap_nmi                             PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x601000e0 0x601000e0     0 l EE_tc_trap_nmi                             PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x701000e0 0x701000e0     0 l EE_tc_trap_nmi                             PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50100020 0x50100020     0 l EE_tc_trap_protection                      PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x60100020 0x60100020     0 l EE_tc_trap_protection                      PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x70100020 0x70100020     0 l EE_tc_trap_protection                      PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x501000c0 0x501000c0     0 l EE_tc_trap_system                          PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x601000c0 0x601000c0     0 l EE_tc_trap_system                          PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x701000c0 0x701000c0     0 l EE_tc_trap_system                          PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50100000 0x50100000     0 l EE_tc_trap_table                           PMI_PSPR2   .CPU2.traptab         .CPU2.traptab         slave2/myProject_slave2.elf
+0x60100000 0x60100000     0 l EE_tc_trap_table                           PMI_PSPR1   .CPU1.traptab         .CPU1.traptab         slave1/myProject_slave1.elf
+0x70100000 0x70100000     0 l EE_tc_trap_table                           PMI_PSPR0   .CPU0.traptab         .CPU0.traptab         master/myProject_master.elf
+0x50000054 0x50000057     4 l EE_terminate_data                          DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000224 0x60000227     4 l EE_terminate_data                          DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x7000006c 0x7000006f     4 l EE_terminate_data                          DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000014 0x50000017     4 l EE_terminate_real_th_body                  DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001e4 0x600001e7     4 l EE_terminate_real_th_body                  DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x7000002c 0x7000002f     4 l EE_terminate_real_th_body                  DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x5000000c 0x5000000f     4 l EE_th_dispatch_prio                        DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001dc 0x600001df     4 l EE_th_dispatch_prio                        DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000024 0x70000027     4 l EE_th_dispatch_prio                        DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x5000004c 0x5000004f     4 l EE_th_event_active                         DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x6000021c 0x6000021f     4 l EE_th_event_active                         DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000064 0x70000067     4 l EE_th_event_active                         DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000048 0x5000004b     4 l EE_th_event_waitmask                       DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000218 0x6000021b     4 l EE_th_event_waitmask                       DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000060 0x70000063     4 l EE_th_event_waitmask                       DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50000008 0x5000000b     4 l EE_th_is_extended                          DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001d8 0x600001db     4 l EE_th_is_extended                          DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000020 0x70000023     4 l EE_th_is_extended                          DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x500000a0 0x500000a3     4 l EE_th_next                                 DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f10 0x60012f13     4 l EE_th_next                                 DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d58 0x70012d5b     4 l EE_th_next                                 DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x50000010 0x50000013     4 l EE_th_ready_prio                           DMI_DSPR2   .CPU2.rodata          .CPU2.rodata          slave2/myProject_slave2.elf
+0x600001e0 0x600001e3     4 l EE_th_ready_prio                           DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000028 0x7000002b     4 l EE_th_ready_prio                           DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x50000098 0x5000009b     4 l EE_th_rnact                                DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f08 0x60012f0b     4 l EE_th_rnact                                DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d50 0x70012d53     4 l EE_th_rnact                                DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x500000a4 0x500000a7     4 l EE_th_status                               DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f14 0x60012f17     4 l EE_th_status                               DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d5c 0x70012d5f     4 l EE_th_status                               DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x50000090 0x50000093     4 l EE_th_terminate_nextask                    DMI_DSPR2   .CPU2.data            .CPU2.data            slave2/myProject_slave2.elf
+0x60012f00 0x60012f03     4 l EE_th_terminate_nextask                    DMI_DSPR1   .CPU1.data            .CPU1.data            slave1/myProject_slave1.elf
+0x70012d48 0x70012d4b     4 l EE_th_terminate_nextask                    DMI_DSPR0   .CPU0.data            .CPU0.data            master/myProject_master.elf
+0x50000044 0x50000047     4 l EE_th_waswaiting                           DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000214 0x60000217     4 l EE_th_waswaiting                           DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x7000005c 0x7000005f     4 l EE_th_waswaiting                           DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x501004c2 0x501005f1   304 l EE_thread_end_instance                     PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x60103572 0x601036a1   304 l EE_thread_end_instance                     PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103650 0x7010377f   304 l EE_thread_end_instance                     PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x501010ce 0x501010e7    26 l EE_thread_not_terminated                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x6010417a 0x60104193    26 l EE_thread_not_terminated                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104378 0x70104391    26 l EE_thread_not_terminated                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x70100200 0x70100231    50 l FuncTaskMaster                             PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100318 0x6010034b    52 l FuncTaskSlave1                             PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x50100318 0x50100333    28 l FuncTaskSlave2                             PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x00000000 0x00000000     0 g NULL                                       *ABS*       *ABS*                 *ABS*                 *ABS*
+0x601029f8 0x60102b33   316 l TOUCH_read                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010291c 0x70102a57   316 l TOUCH_read                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102b34 0x60102b4b    24 l TOUCH_x                                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102a58 0x70102a6f    24 l TOUCH_x                                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102b4c 0x60102b63    24 l TOUCH_y                                    PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102a70 0x70102a87    24 l TOUCH_y                                    PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x00000001 0x00000001     0 g _.                                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70008000 0x70008000     0 g _SMALL_DATA2__CPU0_                        *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60008000 0x60008000     0 g _SMALL_DATA2__CPU1_                        *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50008000 0x50008000     0 g _SMALL_DATA2__CPU2_                        *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70000000 0x70000000     0 g _SMALL_DATA__CPU0_                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000000 0x60000000     0 g _SMALL_DATA__CPU1_                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000000 0x50000000     0 g _SMALL_DATA__CPU2_                         *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000000 0x60000005     6 g _START                                     DMI_DSPR1   .startup              .startup              master/myProject_master.elf
+0x70000000 0x70000000     0 g __A0_MEM_CPU0_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000000 0x60000000     0 g __A0_MEM_CPU1_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000000 0x50000000     0 g __A0_MEM_CPU2_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70008000 0x70008000     0 g __A1_MEM_CPU0_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60008000 0x60008000     0 g __A1_MEM_CPU1_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50008000 0x50008000     0 g __A1_MEM_CPU2_                             *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70013580 0x70013580     0 g __CSA_BEGIN_CPU0_                          DMI_DSPR0   .CPU0.csa             .CPU0.csa             tc29x_multicore.elf
+0x60013740 0x60013740     0 g __CSA_BEGIN_CPU1_                          DMI_DSPR1   .CPU1.csa             .CPU1.csa             tc29x_multicore.elf
+0x500008c0 0x500008c0     0 g __CSA_BEGIN_CPU2_                          DMI_DSPR2   .CPU2.csa             .CPU2.csa             tc29x_multicore.elf
+0x70015580 0x70015580     0 g __CSA_END_CPU0_                            DMI_DSPR0   .CPU0.csa             .CPU0.csa             tc29x_multicore.elf
+0x60015740 0x60015740     0 g __CSA_END_CPU1_                            DMI_DSPR1   .CPU1.csa             .CPU1.csa             tc29x_multicore.elf
+0x500028c0 0x500028c0     0 g __CSA_END_CPU2_                            DMI_DSPR2   .CPU2.csa             .CPU2.csa             tc29x_multicore.elf
+0x00002000 0x00002000     0 g __CSA_SIZE                                 *ABS*       *ABS*                 *ABS*                 *ABS*
+0x701049a4 0x701049a4     0 g __CTOR_END___CPU0_                         PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x601047a4 0x601047a4     0 g __CTOR_END___CPU1_                         PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x50101244 0x50101244     0 g __CTOR_END___CPU2_                         PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x70104998 0x70104998     0 g __CTOR_LIST___CPU0_                        PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x60104798 0x60104798     0 g __CTOR_LIST___CPU1_                        PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x50101238 0x50101238     0 g __CTOR_LIST___CPU2_                        PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x70000000 0x70000000     0 g __DMI_DSPR_BEGIN_CPU0_                     *ABS*       *ABS*                 *ABS*                 *ABS*
+0x60000000 0x60000000     0 g __DMI_DSPR_BEGIN_CPU1_                     *ABS*       *ABS*                 *ABS*                 *ABS*
+0x50000000 0x50000000     0 g __DMI_DSPR_BEGIN_CPU2_                     *ABS*       *ABS*                 *ABS*                 *ABS*
+0x701049b0 0x701049b0     0 g __DTOR_END___CPU0_                         PMI_PSPR0   .CPU0.dtors           .CPU0.dtors           tc29x_multicore.elf
+0x601047b0 0x601047b0     0 g __DTOR_END___CPU1_                         PMI_PSPR1   .CPU1.dtors           .CPU1.dtors           tc29x_multicore.elf
+0x50101250 0x50101250     0 g __DTOR_END___CPU2_                         PMI_PSPR2   .CPU2.dtors           .CPU2.dtors           tc29x_multicore.elf
+0x701049a8 0x701049a8     0 g __DTOR_LIST___CPU0_                        PMI_PSPR0   .CPU0.dtors           .CPU0.dtors           tc29x_multicore.elf
+0x601047a8 0x601047a8     0 g __DTOR_LIST___CPU1_                        PMI_PSPR1   .CPU1.dtors           .CPU1.dtors           tc29x_multicore.elf
+0x50101248 0x50101248     0 g __DTOR_LIST___CPU2_                        PMI_PSPR2   .CPU2.dtors           .CPU2.dtors           tc29x_multicore.elf
+0x70104998 0x70104998     0 g __EH_FRAME_BEGIN___CPU0_                   PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x60104798 0x60104798     0 g __EH_FRAME_BEGIN___CPU1_                   PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x50101238 0x50101238     0 g __EH_FRAME_BEGIN___CPU2_                   PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x70104998 0x70104998     0 g __EH_FRAME_END___CPU0_                     PMI_PSPR0   .CPU0.ctors           .CPU0.ctors           tc29x_multicore.elf
+0x60104798 0x60104798     0 g __EH_FRAME_END___CPU1_                     PMI_PSPR1   .CPU1.ctors           .CPU1.ctors           tc29x_multicore.elf
+0x50101238 0x50101238     0 g __EH_FRAME_END___CPU2_                     PMI_PSPR2   .CPU2.ctors           .CPU2.ctors           tc29x_multicore.elf
+0x70013570 0x70013570     0 g __HEAP_END_CPU0_                           DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x60013728 0x60013728     0 g __HEAP_END_CPU1_                           DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x500008b8 0x500008b8     0 g __HEAP_END_CPU2_                           DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x00000000 0x00000000     0 g __HEAP_SIZE                                *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70013570 0x70013570     0 g __ISTACK_CPU0_                             DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x60013728 0x60013728     0 g __ISTACK_CPU1_                             DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x500008b8 0x500008b8     0 g __ISTACK_CPU2_                             DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x00000000 0x00000000     0 g __ISTACK_SIZE                              *ABS*       *ABS*                 *ABS*                 *ABS*
+0x00000290 0x00000290     0 g __TRICORE_DERIVATE_MEMORY_MAP__            *ABS*       *ABS*                 *ABS*                 *ABS*
+0x70012d70 0x70012d70     0 g __USTACK_BEGIN_CPU0_                       DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x60012f28 0x60012f28     0 g __USTACK_BEGIN_CPU1_                       DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x500000b8 0x500000b8     0 g __USTACK_BEGIN_CPU2_                       DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x70013570 0x70013570     0 g __USTACK_CPU0_                             DMI_DSPR0   .CPU0.ustack          .CPU0.ustack          tc29x_multicore.elf
+0x60013728 0x60013728     0 g __USTACK_CPU1_                             DMI_DSPR1   .CPU1.ustack          .CPU1.ustack          tc29x_multicore.elf
+0x500008b8 0x500008b8     0 g __USTACK_CPU2_                             DMI_DSPR2   .CPU2.ustack          .CPU2.ustack          tc29x_multicore.elf
+0x00000800 0x00000800     0 g __USTACK_SIZE                              *ABS*       *ABS*                 *ABS*                 *ABS*
+0x6010450e 0x60104545    56 l __adddf3                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104708 0x7010473f    56 l __adddf3                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60104586 0x6010459f    26 l __ashldi3                                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104780 0x70104799    26 l __ashldi3                                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x601045a0 0x601045c5    38 l __lshrdi3                                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010479a 0x701047bf    38 l __lshrdi3                                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x601045c6 0x601046d1   268 l __pack_d                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701047c0 0x701048cb   268 l __pack_d                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50000038 0x5000003b     4 l __progname                                 DMI_DSPR2   .CPU2.bss             .CPU2.bss             slave2/myProject_slave2.elf
+0x60000208 0x6000020b     4 l __progname                                 DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000050 0x70000053     4 l __progname                                 DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x60104546 0x60104585    64 l __subdf3                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70104740 0x7010477f    64 l __subdf3                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x600001bc 0x600001cf    20 l __thenan_df                                DMI_DSPR1   .CPU1.rodata          .CPU1.rodata          slave1/myProject_slave1.elf
+0x70000004 0x70000017    20 l __thenan_df                                DMI_DSPR0   .CPU0.rodata          .CPU0.rodata          master/myProject_master.elf
+0x601046d2 0x60104763   146 l __unpack_d                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701048cc 0x7010495d   146 l __unpack_d                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x501011f8 0x50101207    16 l _exit                                      PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601042a4 0x601042b3    16 l _exit                                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010449e 0x701044ad    16 l _exit                                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60104364 0x6010450d   426 l _fpadd_parts                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010455e 0x70104707   426 l _fpadd_parts                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102b64 0x60102bc3    96 l clearDisplayBuffer                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102a88 0x70102ae7    96 l clearDisplayBuffer                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x6000023e 0x600002d3   150 l colorTable                                 DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000086 0x7000011b   150 l colorTable                                 DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x60000238 0x6000023b     4 l defaultDispBufReady                        DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x70000080 0x70000083     4 l defaultDispBufReady                        DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x50100340 0x50100341     2 l delay_ms                                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601033f0 0x601033f1     2 l delay_ms                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103314 0x70103315     2 l delay_ms                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x5010033e 0x5010033f     2 l delay_us                                   PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x601033ee 0x601033ef     2 l delay_us                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103312 0x70103313     2 l delay_us                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100b98 0x60100bff   104 l drawBinary                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100abc 0x70100b23   104 l drawBinary                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100902 0x60100aa1   416 l drawChar                                   PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100826 0x701009c5   416 l drawChar                                   PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100ae8 0x60100b97   176 l drawString                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100a0c 0x70100abb   176 l drawString                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100aa2 0x60100ae7    70 l drawString.constprop.2                     PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701009c6 0x70100a0b    70 l drawString.constprop.2                     PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x600002d4 0x60012ed3 76800 l frameBuffer                                DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x7000011c 0x70012d1b 76800 l frameBuffer                                DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x601033a0 0x601033ed    78 l graph_drawColorMap                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701032c4 0x70103311    78 l graph_drawColorMap                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60103190 0x6010336b   476 l graph_drawRectangle                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701030b4 0x7010328f   476 l graph_drawRectangle                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102ec6 0x60102f3f   122 l graph_drawXYPoint                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102dea 0x70102e63   122 l graph_drawXYPoint                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102e64 0x60102ec5    98 l graph_drawZPoint                           PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102d88 0x70102de9    98 l graph_drawZPoint                           PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60103144 0x6010318f    76 l graph_fillCircle                           PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103068 0x701030b3    76 l graph_fillCircle                           PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x6010336c 0x6010339f    52 l graph_fillRectangle                        PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70103290 0x701032c3    52 l graph_fillRectangle                        PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102f5a 0x60102fb3    90 l graph_hLine                                PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102e7e 0x70102ed7    90 l graph_hLine                                PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102bc4 0x60102e63   672 l graph_line                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102ae8 0x70102d87   672 l graph_line                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102f40 0x60102f59    26 l graph_pointOnAxis                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102e64 0x70102e7d    26 l graph_pointOnAxis                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x6010306c 0x60103143   216 l graph_rasterCircle                         PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102f90 0x70103067   216 l graph_rasterCircle                         PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x6010300e 0x6010306b    94 l graph_squarePoint                          PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102f32 0x70102f8f    94 l graph_squarePoint                          PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60102fb4 0x6010300d    90 l graph_vLine                                PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70102ed8 0x70102f31    90 l graph_vLine                                PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x50100334 0x5010033d    10 l main                                       PMI_PSPR2   .CPU2.text            .CPU2.text            slave2/myProject_slave2.elf
+0x6010034c 0x60100361    22 l main                                       PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100232 0x70100285    84 l main                                       PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x6010085e 0x60100901   164 l printScrn                                  PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100782 0x70100825   164 l printScrn                                  PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x601042b4 0x60104363   176 l round                                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x701044ae 0x7010455d   176 l round                                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x601007f6 0x6010085d   104 l setPx                                      PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x7010071a 0x70100781   104 l setPx                                      PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x60100362 0x601005fb   666 l tft_display_home.constprop.1               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100286 0x7010051f   666 l tft_display_home.constprop.1               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0xb0000078 0xb0000079     2 g tft_id                                     LMU_SRAM_NC ee_mcglobald          ee_mcglobald          master/myProject_master.elf
+0x60000236 0x60000237     2 l touch_x                                    DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x7000007e 0x7000007f     2 l touch_x                                    DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x60000234 0x60000235     2 l touch_y                                    DMI_DSPR1   .CPU1.bss             .CPU1.bss             slave1/myProject_slave1.elf
+0x7000007c 0x7000007d     2 l touch_y                                    DMI_DSPR0   .CPU0.bss             .CPU0.bss             master/myProject_master.elf
+0x60100760 0x601007db   124 l writeDisplay                               PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100684 0x701006ff   124 l writeDisplay                               PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+0x601007dc 0x601007f5    26 l writePixel                                 PMI_PSPR1   .CPU1.text            .CPU1.text            slave1/myProject_slave1.elf
+0x70100700 0x70100719    26 l writePixel                                 PMI_PSPR0   .CPU0.text            .CPU0.text            master/myProject_master.elf
+
+
+----- END EXTENDED MAP LISTING -----
+
+
+Memory Configuration
+
+Name             Origin             Length             Used               Free               Attributes
+DMI_DSPR0_LOCAL  0xd0000000         0x0001e000         0x00000000         0x0001e000         w !xp
+DMI_DSPR0        0x70000000         0x0001e000         0x000157c8         0x00008838         w !xp
+PMI_PSPR0_LOCAL  0xc0000000         0x00008000         0x00000000         0x00008000         w !xp
+PMI_PSPR0        0x70100000         0x00008000         0x000049b0         0x00003650         w !xp
+DMI_DSPR1_LOCAL  0xd0000000         0x0003c000         0x00000000         0x0003c000         w !xp
+DMI_DSPR1        0x60000000         0x0003c000         0x00015988         0x00026678         w !xp
+PMI_PSPR1_LOCAL  0xc0000000         0x00008000         0x00000000         0x00008000         w !xp
+PMI_PSPR1        0x60100000         0x00008000         0x000047b0         0x00003850         w !xp
+DMI_DSPR2_LOCAL  0xd0000000         0x0003c000         0x00000000         0x0003c000         w !xp
+DMI_DSPR2        0x50000000         0x0003c000         0x00002b08         0x000394f8         w !xp
+PMI_PSPR2_LOCAL  0xc0000000         0x00008000         0x00000000         0x00008000         w !xp
+PMI_PSPR2        0x50100000         0x00008000         0x00001250         0x00006db0         w !xp
+PMU_PFLASH0      0x80000000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFALSH0_NC   0xa0000000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFLASH1      0x80200000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFALSH1_NC   0xa0200000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFLASH2      0x80400000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFALSH2_NC   0xa0400000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFLASH3      0x80600000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFALSH3_NC   0xa0600000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_DFLASH0      0xaf000000         0x00100000         0x00000000         0x00100000         w !xp
+BROM             0x8fff8000         0x00008000         0x00000000         0x00008000         xr !p
+BROM_NC          0xafff8000         0x00008000         0x00000000         0x00008000         xr !p
+LMU_SRAM_NC      0xb0000000         0x00008000         0x00000098         0x00007f68         w !xp
+PMU_EDMEM        0x9f000000         0x00200000         0x00000000         0x00200000         w !xp
+PMU_EDMEM_NC     0xbf000000         0x00200000         0x00000000         0x00200000         w !xp
+*default*        0x00000000         0xffffffff         0x00076b70         0xfff8948f
+
+List of aliases
+
+DMI_DSPR0       : DMI_DSPR_CPU0_
+PMI_PSPR0       : PMI_PSPR_CPU0_
+DMI_DSPR1       : DMI_DSPR_CPU1_
+PMI_PSPR1       : PMI_PSPR_CPU1_
+DMI_DSPR2       : DMI_DSPR_CPU2_
+PMI_PSPR2       : PMI_PSPR_CPU2_
+PMU_PFLASH0     : PMU_PFLASH
+
+Memory region maps:
+
+CORE     Local Region   Global Region
+CPU2     0xd0000000     0x50000000
+CPU1     0xd0000000     0x60000000
+CPU0     0xd0000000     0x70000000
+GLOBAL   0xbf000000     0x9f000000
+GLOBAL   0xafff8000     0x8fff8000
+GLOBAL   0xa0600000     0x80600000
+GLOBAL   0xa0400000     0x80400000
+GLOBAL   0xa0200000     0x80200000
+GLOBAL   0xa0000000     0x80000000
+
+
+Linker script and memory map
+
+LOAD master/myProject_master.elf
+LOAD slave1/myProject_slave1.elf
+LOAD slave2/myProject_slave2.elf
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double\libgcc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libm.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libc.a
+LOAD c:/hightec/toolch~1/tricore/v4660-~1.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double\libgcc.a
+                0x00000290                __TRICORE_DERIVATE_MEMORY_MAP__ = 0x290
+                0x70000000                __DMI_DSPR_BEGIN_CPU0_ = 0x70000000
+                0x60000000                __DMI_DSPR_BEGIN_CPU1_ = 0x60000000
+                0x50000000                __DMI_DSPR_BEGIN_CPU2_ = 0x50000000
+                [0x00002000]                __CSA_SIZE = DEFINED (__CSA_SIZE)?__CSA_SIZE:0x2000
+                [0x00000800]                __USTACK_SIZE = DEFINED (__USTACK_SIZE)?__USTACK_SIZE:0x800
+                [0x00000000]                __ISTACK_SIZE = DEFINED (__ISTACK_SIZE)?__ISTACK_SIZE:0x0
+                [0x00000000]                __HEAP_SIZE = DEFINED (__HEAP_SIZE)?__HEAP_SIZE:0x0
+
+.startup        memory region -> DMI_DSPR1
+                0x60000000      0x170
+                0x60000000                BootModeIndex = .
+                0x60000000                PROVIDE (__startup_code_start, .)
+ *(*.startup)
+ .startup       0x60000000        0x6 master/myProject_master.elf
+                0x60000000                _START
+ *(ee_kernel_start)
+ *fill*         0x60000006        0x2 00
+ ee_kernel_start
+                0x60000008      0x164 master/myProject_master.elf
+                0x60000170                . = ALIGN (0x8)
+ *fill*         0x6000016c        0x4 00
+                0x60000170                PROVIDE (__startup_code_end, .)
+
+ee_mcglobalt    memory region -> PMI_PSPR1
+                0x60100000        0x0
+                0x60100000                PROVIDE (ee_mcglobalt_begin, .)
+ *(ee_mcglobalt)
+                0x60100000                . = ALIGN (0x8)
+                0x60100000                PROVIDE (ee_mcglobalt_end, .)
+
+ee_mcglobald    memory region -> LMU_SRAM_NC
+                0xb0000000       0x98
+                0xb0000000                PROVIDE (ee_mcglobald_begin, .)
+ *(SORT(ee_mcglobald*))
+ ee_mcglobald   0xb0000000       0x98 master/myProject_master.elf
+                0xb0000000                EE_hal_spinlock_status
+                0xb000000c                EE_rn_switch
+                0xb0000018                EE_rn_first
+                0xb0000030                EE_rn_pending
+                0xb0000048                EE_rn_next
+                0xb0000060                EE_rn_type
+                0xb0000078                tft_id
+                0xb000007c                EE_tc_kernel_barrier
+                0xb0000080                EE_as_not_as_core_mask
+                0xb0000084                EE_as_core_started
+                0xb0000088                EE_as_core_mask
+                0xb000008c                EE_as_os_application_mode
+                0xb0000098                . = ALIGN (0x8)
+                0xb0000098                PROVIDE (ee_mcglobald_end, .)
+
+ee_mcglobalc    memory region -> DMI_DSPR1
+                0x60000170       0x48
+                0x60000170                PROVIDE (ee_mcglobalc_begin, .)
+ *(SORT(ee_mcglobalc*))
+ ee_mcglobalc   0x60000170       0x24 master/myProject_master.elf
+                0x60000170                EE_as_core_start_addresses
+                0x60000178                EE_rn_spin
+                0x60000184                EE_rn_task
+                0x60000190                EE_rn_cpu
+                0x60000198                . = ALIGN (0x8)
+ *fill*         0x60000194        0x4 00
+                0x60000198                PROVIDE (ee_mcglobalc_end, .)
+                0x60000199                . = (. + 0x1)
+ *fill*         0x60000198        0x1 00
+                0x600001a0                . = ALIGN (0x8)
+ *fill*         0x60000199        0x7 00
+                0x600001a0                PROVIDE (ee_mcglobald_copy_table, .)
+                0x600001a0        0x4 LONG 0xb0000000 LOADADDR (ee_mcglobald)
+                0x600001a4        0x4 LONG 0xb0000000 (0x0 + ADDR (ee_mcglobald))
+                0x600001a8        0x4 LONG 0x98 SIZEOF (ee_mcglobald)
+                0x600001ac        0x4 LONG 0xffffffff
+                0x600001b0        0x4 LONG 0xffffffff
+                0x600001b4        0x4 LONG 0xffffffff
+
+.CPU0.init      memory region -> PMI_PSPR0
+                0x70100000        0x0
+ *(SORT(.CPU0.init*))
+                0x70100000                . = ALIGN (0x8)
+
+.CPU0.fini
+ *(SORT(.CPU0.fini*))
+
+.CPU0.cramtext  memory region -> PMI_PSPR0
+                0x70100000        0x0
+ *(SORT(.CPU0.cramtext*))
+                0x70100000                . = ALIGN (0x8)
+
+.CPU0.traptab   memory region -> PMI_PSPR0
+                0x70100000      0x100
+ *(.CPU0.traptab*)
+ .CPU0.traptab  0x70100000      0x100 master/myProject_master.elf
+                0x70100100                . = ALIGN (0x8)
+
+.CPU0.inttab    memory region -> PMI_PSPR0
+                0x70100100      0x100
+ *(.CPU0.inttab*)
+ .CPU0.inttab   0x70100100      0x100 master/myProject_master.elf
+                0x70100200                . = ALIGN (0x8)
+
+.CPU0.text      memory region -> PMI_PSPR0
+                0x70100200     0x4760
+ *(.CPU0.text*)
+ .CPU0.text     0x70100200     0x475e master/myProject_master.elf
+                0x70104960                . = ALIGN (0x8)
+ *fill*         0x7010495e        0x2 00
+
+.CPU0.ee_api_text memory region -> PMI_PSPR0
+                0x70104960       0x18
+                0x70104960                PROVIDE (ee_stext_api_CPU0_, .)
+ *(.CPU0.ee_api_text*)
+                0x70104961                . = (. + 0x1)
+ *fill*         0x70104960        0x1 00
+                0x70104968                . = ALIGN (0x8)
+ *fill*         0x70104961        0x7 00
+                0x70104968                PROVIDE (ee_etext_api_CPU0_, .)
+                0x70104977                . = (. + 0xf)
+ *fill*         0x70104968        0xf 00
+                0x70104978                . = ALIGN (0x8)
+ *fill*         0x70104977        0x1 00
+
+.CPU0.ee_kernel_text memory region -> PMI_PSPR0
+                0x70104980       0x18
+                0x70104980                PROVIDE (ee_stext_kernel_CPU0_, .)
+ *(.CPU0.ee_kernel_text*)
+                0x70104981                . = (. + 0x1)
+ *fill*         0x70104980        0x1 00
+                0x70104988                . = ALIGN (0x8)
+ *fill*         0x70104981        0x7 00
+                0x70104988                PROVIDE (ee_etext_kernel_CPU0_, .)
+                0x70104997                . = (. + 0xf)
+ *fill*         0x70104988        0xf 00
+                0x70104998                . = ALIGN (0x8)
+ *fill*         0x70104997        0x1 00
+
+.CPU0.gcc_except_table
+ *(.CPU0.gcc_except_table*)
+
+.CPU0.eh_frame  memory region -> PMI_PSPR0
+                0x70104998        0x0
+                0x70104998                __EH_FRAME_BEGIN___CPU0_ = .
+ *(.CPU0.eh_frame*)
+                0x70104998                __EH_FRAME_END___CPU0_ = .
+
+.CPU0.jcr       memory region -> PMI_PSPR0
+                0x70104998        0x0
+ *(.CPU0.jcr*)
+                0x70104998                . = ALIGN (0x8)
+
+.CPU0.ctors     memory region -> PMI_PSPR0
+                0x70104998       0x10
+                0x70104998                __CTOR_LIST___CPU0_ = .
+                0x70104998        0x4 LONG 0x1 (((__CTOR_END___CPU0_ - __CTOR_LIST___CPU0_) / 0x4) - 0x2)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x7010499c        0x4 LONG 0x0
+                0x701049a0                __CTOR_END___CPU0_ = .
+                0x701049a0        0x4 LONG 0x0
+                0x701049a4                __CTOR_END___CPU0_ = .
+                0x701049a8                . = ALIGN (0x8)
+ *fill*         0x701049a4        0x4 00
+
+.CPU0.dtors     memory region -> PMI_PSPR0
+                0x701049a8        0x8
+                0x701049a8                __DTOR_LIST___CPU0_ = .
+                0x701049a8        0x4 LONG 0x0 (((__DTOR_END___CPU0_ - __DTOR_LIST___CPU0_) / 0x4) - 0x2)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x701049ac        0x4 LONG 0x0
+                0x701049b0                __DTOR_END___CPU0_ = .
+                0x701049b0                . = ALIGN (0x8)
+
+.CPU0.sdata2    memory region -> DMI_DSPR0
+                0x70000000        0x0
+ *(.CPU0.sdata2*)
+                0x70000000                . = ALIGN (0x8)
+                0x70008000                _SMALL_DATA2__CPU0_ = SIZEOF (.CPU0.sdata2)?(ADDR (.CPU0.sdata2) + 0x8000):((ADDR (.CPU0.sdata2) & 0xf0000000) + 0x8000)
+                0x70008000                __A1_MEM_CPU0_ = _SMALL_DATA2__CPU0_
+
+.CPU0.rodata    memory region -> DMI_DSPR0
+                0x70000000       0x50
+                0x70000000                PROVIDE (__rodata_start_CPU0_, .)
+ *(SORT(.CPU0.rodata*))
+ .CPU0.rodata   0x70000000       0x40 master/myProject_master.elf
+                0x70000040                . = ALIGN (0x4)
+                0x70000040                PROVIDE (ee_stacks_table_CPU0_, .)
+                0x70000040        0x4 LONG 0x700155b0 (0x0 + ADDR (.CPU0.ee_kernel_stack))
+                0x70000044        0x4 LONG 0x218 SIZEOF (.CPU0.ee_kernel_stack)
+                0x70000048        0x4 LONG 0xffffffff
+                0x7000004c        0x4 LONG 0xffffffff
+                0x70000050                . = ALIGN (0x8)
+
+.CPU0.zbss      memory region -> DMI_DSPR0
+                0x70000050        0x0
+                0x70000050                PROVIDE (ZBSS_BASE_CPU0_, .)
+ *(.CPU0.zbss*)
+                0x70000050                . = ALIGN (0x8)
+                0x70000050                PROVIDE (ZBSS_END_CPU0_, .)
+
+.CPU0.zdata     memory region -> DMI_DSPR0
+                0x70000050        0x0
+                0x70000050                PROVIDE (ZDATA_BASE_CPU0_, .)
+ *(.CPU0.zdata*)
+                0x70000050                . = ALIGN (0x8)
+                0x70000050                PROVIDE (ZDATA_END_CPU0_, .)
+
+.CPU0.sbss      memory region -> DMI_DSPR0
+                0x70000050        0x0
+                0x70000050                PROVIDE (__sbss_start_CPU0_, .)
+ *(.CPU0.sbss*)
+                0x70000050                PROVIDE (__sbss_end_CPU0_, .)
+                0x70000050                . = ALIGN (0x8)
+
+.CPU0.sdata     memory region -> DMI_DSPR0
+                0x70000050        0x0
+                0x70000050                PROVIDE (SDATA_BASE_CPU0_, .)
+                0x70000050                PROVIDE (__sdata_start_CPU0_, .)
+ *(.CPU0.sdata*)
+                0x70000050                . = ALIGN (0x8)
+                0x70000050                PROVIDE (SDATA_END_CPU0_, .)
+                0x70000050                PROVIDE (__sdata_end_CPU0_, .)
+                0x70000000                _SMALL_DATA__CPU0_ = (SIZEOF (.CPU0.sbss) + SIZEOF (.CPU0.sdata))?(ADDR (.CPU0.sbss) + 0x8000):(ADDR (.CPU0.sbss) & 0xf0000000)
+                0x70000000                __A0_MEM_CPU0_ = _SMALL_DATA__CPU0_
+
+.CPU0.bss       memory region -> DMI_DSPR0
+                0x70000050    0x12cf8
+                0x70000050                PROVIDE (BSS_BASE_CPU0_, .)
+                0x70000050                PROVIDE (__bss_start_CPU0_, .)
+ *(.CPU0.bss*)
+ .CPU0.bss      0x70000050    0x12cf4 master/myProject_master.elf
+                0x70012d44                PROVIDE (__bss_end_CPU0_, .)
+                0x70012d48                . = ALIGN (0x8)
+ *fill*         0x70012d44        0x4 00
+
+.CPU0.data      memory region -> DMI_DSPR0
+                0x70012d48       0x28
+                0x70012d48                PROVIDE (DATA_BASE_CPU0_, .)
+                0x70012d48                PROVIDE (__data_start_CPU0_, .)
+ *(.CPU0.data*)
+ .CPU0.data     0x70012d48       0x28 master/myProject_master.elf
+                0x70012d70                . = ALIGN (0x8)
+                0x70012d70                PROVIDE (DATA_END_CPU0_, .)
+                0x70012d70                PROVIDE (__data_end_CPU0_, .)
+
+.CPU0.ustack    memory region -> DMI_DSPR0
+                0x70012d70      0x800
+                0x70012d70                PROVIDE (__USTACK_BEGIN_CPU0_, .)
+                0x70013570                . = (. + __USTACK_SIZE)
+ *fill*         0x70012d70      0x800 00
+                0x70013570                . = ALIGN (0x8)
+                0x70013570                __USTACK_CPU0_ = .
+                0x70013570                PROVIDE (__USTACK_END_CPU0_, .)
+
+.CPU0.istack    memory region -> DMI_DSPR0
+                0x70013570        0x0
+                0x70013570                PROVIDE (__ISTACK_BEGIN_CPU0_, .)
+                0x70013570                . = (. + __ISTACK_SIZE)
+                0x70013570                . = ALIGN (0x8)
+                0x70013570                __ISTACK_CPU0_ = .
+                0x70013570                PROVIDE (__ISTACK_END_CPU0_, .)
+
+.CPU0.heap      memory region -> DMI_DSPR0
+                0x70013570        0x0
+                0x70013570                PROVIDE (__HEAP_BEGIN_CPU0_, .)
+                0x70013570                PROVIDE (__HEAP_CPU0_, .)
+                0x70013570                . = (. + __HEAP_SIZE)
+                0x70013570                . = ALIGN (0x8)
+                0x70013570                __HEAP_END_CPU0_ = .
+
+.CPU0.csa       memory region -> DMI_DSPR0
+                0x70013580     0x2000
+                0x70013580                __CSA_BEGIN_CPU0_ = .
+                0x70013580                PROVIDE (__CSA_CPU0_, .)
+                0x70015580                . = (. + __CSA_SIZE)
+ *fill*         0x70013580     0x2000 00
+                0x70015580                . = ALIGN (0x40)
+                0x70015580                PROVIDE (__CSA_END_CPU0_, .)
+
+.CPU0.ee_api_bss memory region -> DMI_DSPR0
+                0x70015580        0x0
+                0x70015580                PROVIDE (ee_sbss_api_CPU0_, .)
+ *(.CPU0*.ee_api_bss*)
+                0x70015580                PROVIDE (ee_ebss_api_CPU0_, .)
+                0x70015580                . = ALIGN (0x8)
+
+.CPU0.ee_api_data memory region -> DMI_DSPR0
+                0x70015580       0x18
+                0x70015580                PROVIDE (ee_sdata_api_CPU0_, .)
+ *(.CPU0.ee_api_data*)
+                0x70015581                . = (. + 0x1)
+ *fill*         0x70015580        0x1 00
+                0x70015588                . = ALIGN (0x8)
+ *fill*         0x70015581        0x7 00
+                0x70015588                PROVIDE (ee_edata_api_CPU0_, .)
+                0x70015597                . = (. + 0xf)
+ *fill*         0x70015588        0xf 00
+                0x70015598                . = ALIGN (0x8)
+ *fill*         0x70015597        0x1 00
+
+.CPU0.ee_kernel_bss memory region -> DMI_DSPR0
+                0x70015598        0x0
+                0x70015598                PROVIDE (ee_sbss_kernel_CPU0_, .)
+ *(.CPU0.ee_kernel_bss*)
+                0x70015598                PROVIDE (ee_ebss_kernel_CPU0_, .)
+
+.CPU0.ee_kernel_data memory region -> DMI_DSPR0
+                0x70015598       0x18
+                0x70015598                PROVIDE (ee_sdata_kernel_CPU0_, .)
+ *(.CPU0.ee_kernel_data*)
+                0x70015599                . = (. + 0x1)
+ *fill*         0x70015598        0x1 00
+                0x700155a0                . = ALIGN (0x8)
+ *fill*         0x70015599        0x7 00
+                0x700155a0                PROVIDE (ee_edata_kernel_CPU0_, .)
+                0x700155af                . = (. + 0xf)
+ *fill*         0x700155a0        0xf 00
+                0x700155b0                . = ALIGN (0x8)
+ *fill*         0x700155af        0x1 00
+
+.CPU0.ee_kernel_stack memory region -> DMI_DSPR0
+                0x700155b0      0x218
+                0x700155b0                PROVIDE (ee_sstack_kernel_CPU0_, .)
+ *(.CPU0.ee_kernel_stack*)
+ .CPU0.ee_kernel_stack
+                0x700155b0      0x208 master/myProject_master.elf
+                0x700157c7                . = (. + 0xf)
+ *fill*         0x700157b8        0xf 00
+                0x700157c8                . = ALIGN (0x8)
+ *fill*         0x700157c7        0x1 00
+                0x700157c8                PROVIDE (ee_estack_kernel_CPU0_, .)
+
+.CPU0ee_end     memory region -> DMI_DSPR0
+                0x700157c8        0x0 load address 0x80000000
+                0x70100000                PROVIDE (ee_sall_code_CPU0_, ADDR (.CPU0.init))
+                0x701049b0                PROVIDE (ee_eall_code_CPU0_, (ADDR (.CPU0.dtors) + SIZEOF (.CPU0.dtors)))
+                0x70000000                PROVIDE (ee_skernel_ram_CPU0_, __DMI_DSPR_BEGIN_CPU0_)
+                0x700157c8                PROVIDE (ee_ekernel_ram_CPU0_, .)
+                0x70104980                PROVIDE (ee_skernel_code_CPU0_, ADDR (.CPU0.ee_kernel_text))
+                0x70104998                PROVIDE (ee_ekernel_code_CPU0_, (ADDR (.CPU0.ee_kernel_text) + SIZEOF (.CPU0.ee_kernel_text)))
+                0x70000000                PROVIDE (ee_sapi_const_CPU0_, ADDR (.CPU0.sdata2))
+                0x70000050                PROVIDE (ee_eapi_const_CPU0_, (ADDR (.CPU0.rodata) + SIZEOF (.CPU0.rodata)))
+                0x70015580                PROVIDE (ee_sapi_ram_CPU0_, ADDR (.CPU0.ee_api_bss))
+                0x70015598                PROVIDE (ee_eapi_ram_CPU0_, (ADDR (.CPU0.ee_api_data) + SIZEOF (.CPU0.ee_api_data)))
+                0x70104960                PROVIDE (ee_sapi_code_CPU0_, ADDR (.CPU0.ee_api_text))
+                0x70104978                PROVIDE (ee_eapi_code_CPU0_, (ADDR (.CPU0.ee_api_text) + SIZEOF (.CPU0.ee_api_text)))
+                0x700157c8                . = ALIGN (0x4)
+                0x00000001                _. = ASSERT (((__CSA_BEGIN_CPU0_ & 0x3f) == 0x0), illegal CSA start address)
+                0x00000001                _. = ASSERT (((__CSA_SIZE & 0x3f) == 0x0), illegal CSA size)
+                0x00000001                _. = ASSERT (((__ISTACK_CPU0_ & 0x7) == 0x0), ISTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__USTACK_CPU0_ & 0x7) == 0x0), USTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__HEAP_END_CPU0_ & 0x7) == 0x0), HEAP not doubleword aligned)
+
+.CPU1.init      memory region -> PMI_PSPR1
+                0x60100000        0x0
+ *(SORT(.CPU1.init*))
+                0x60100000                . = ALIGN (0x8)
+
+.CPU1.fini
+ *(SORT(.CPU1.fini*))
+
+.CPU1.cramtext  memory region -> PMI_PSPR1
+                0x60100000        0x0
+ *(SORT(.CPU1.cramtext*))
+                0x60100000                . = ALIGN (0x8)
+
+.CPU1.traptab   memory region -> PMI_PSPR1
+                0x60100000      0x100
+ *(.CPU1.traptab*)
+ .CPU1.traptab  0x60100000      0x100 slave1/myProject_slave1.elf
+                0x60100100                . = ALIGN (0x8)
+
+.CPU1.inttab    memory region -> PMI_PSPR1
+                0x60100100      0x100
+ *(.CPU1.inttab*)
+ .CPU1.inttab   0x60100100      0x100 slave1/myProject_slave1.elf
+                0x60100200                . = ALIGN (0x8)
+
+.CPU1.text      memory region -> PMI_PSPR1
+                0x60100200     0x4568
+ *(.CPU1.text*)
+ .CPU1.text     0x60100200     0x4564 slave1/myProject_slave1.elf
+                0x60100200                EE_tc2Yx_cpu1_start
+                0x60104768                . = ALIGN (0x8)
+ *fill*         0x60104764        0x4 00
+
+.CPU1.ee_api_text memory region -> PMI_PSPR1
+                0x60104768       0x18
+                0x60104768                PROVIDE (ee_stext_api_CPU1_, .)
+ *(.CPU1.ee_api_text*)
+                0x60104769                . = (. + 0x1)
+ *fill*         0x60104768        0x1 00
+                0x60104770                . = ALIGN (0x8)
+ *fill*         0x60104769        0x7 00
+                0x60104770                PROVIDE (ee_etext_api_CPU1_, .)
+                0x6010477f                . = (. + 0xf)
+ *fill*         0x60104770        0xf 00
+                0x60104780                . = ALIGN (0x8)
+ *fill*         0x6010477f        0x1 00
+
+.CPU1.ee_kernel_text memory region -> PMI_PSPR1
+                0x60104780       0x18
+                0x60104780                PROVIDE (ee_stext_kernel_CPU1_, .)
+ *(.CPU1.ee_kernel_text*)
+                0x60104781                . = (. + 0x1)
+ *fill*         0x60104780        0x1 00
+                0x60104788                . = ALIGN (0x8)
+ *fill*         0x60104781        0x7 00
+                0x60104788                PROVIDE (ee_etext_kernel_CPU1_, .)
+                0x60104797                . = (. + 0xf)
+ *fill*         0x60104788        0xf 00
+                0x60104798                . = ALIGN (0x8)
+ *fill*         0x60104797        0x1 00
+
+.CPU1.gcc_except_table
+ *(.CPU1.gcc_except_table*)
+
+.CPU1.eh_frame  memory region -> PMI_PSPR1
+                0x60104798        0x0
+                0x60104798                __EH_FRAME_BEGIN___CPU1_ = .
+ *(.CPU1.eh_frame*)
+                0x60104798                __EH_FRAME_END___CPU1_ = .
+
+.CPU1.jcr       memory region -> PMI_PSPR1
+                0x60104798        0x0
+ *(.CPU1.jcr*)
+                0x60104798                . = ALIGN (0x8)
+
+.CPU1.ctors     memory region -> PMI_PSPR1
+                0x60104798       0x10
+                0x60104798                __CTOR_LIST___CPU1_ = .
+                0x60104798        0x4 LONG 0x1 (((__CTOR_END___CPU1_ - __CTOR_LIST___CPU1_) / 0x4) - 0x2)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x6010479c        0x4 LONG 0x0
+                0x601047a0                __CTOR_END___CPU1_ = .
+                0x601047a0        0x4 LONG 0x0
+                0x601047a4                __CTOR_END___CPU1_ = .
+                0x601047a8                . = ALIGN (0x8)
+ *fill*         0x601047a4        0x4 00
+
+.CPU1.dtors     memory region -> PMI_PSPR1
+                0x601047a8        0x8
+                0x601047a8                __DTOR_LIST___CPU1_ = .
+                0x601047a8        0x4 LONG 0x0 (((__DTOR_END___CPU1_ - __DTOR_LIST___CPU1_) / 0x4) - 0x2)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x601047ac        0x4 LONG 0x0
+                0x601047b0                __DTOR_END___CPU1_ = .
+                0x601047b0                . = ALIGN (0x8)
+
+.CPU1.sdata2    memory region -> DMI_DSPR1
+                0x600001b8        0x0
+ *(.CPU1.sdata2*)
+                0x600001b8                . = ALIGN (0x8)
+                0x60008000                _SMALL_DATA2__CPU1_ = SIZEOF (.CPU1.sdata2)?(ADDR (.CPU1.sdata2) + 0x8000):((ADDR (.CPU1.sdata2) & 0xf0000000) + 0x8000)
+                0x60008000                __A1_MEM_CPU1_ = _SMALL_DATA2__CPU1_
+
+.CPU1.rodata    memory region -> DMI_DSPR1
+                0x600001b8       0x50
+                0x600001b8                PROVIDE (__rodata_start_CPU1_, .)
+ *(SORT(.CPU1.rodata*))
+ .CPU1.rodata   0x600001b8       0x40 slave1/myProject_slave1.elf
+                0x600001f8                . = ALIGN (0x4)
+                0x600001f8                PROVIDE (ee_stacks_table_CPU1_, .)
+                0x600001f8        0x4 LONG 0x60015770 (0x0 + ADDR (.CPU1.ee_kernel_stack))
+                0x600001fc        0x4 LONG 0x218 SIZEOF (.CPU1.ee_kernel_stack)
+                0x60000200        0x4 LONG 0xffffffff
+                0x60000204        0x4 LONG 0xffffffff
+                0x60000208                . = ALIGN (0x8)
+
+.CPU1.zbss      memory region -> DMI_DSPR1
+                0x60000208        0x0
+                0x60000208                PROVIDE (ZBSS_BASE_CPU1_, .)
+ *(.CPU1.zbss*)
+                0x60000208                . = ALIGN (0x8)
+                0x60000208                PROVIDE (ZBSS_END_CPU1_, .)
+
+.CPU1.zdata     memory region -> DMI_DSPR1
+                0x60000208        0x0
+                0x60000208                PROVIDE (ZDATA_BASE_CPU1_, .)
+ *(.CPU1.zdata*)
+                0x60000208                . = ALIGN (0x8)
+                0x60000208                PROVIDE (ZDATA_END_CPU1_, .)
+
+.CPU1.sbss      memory region -> DMI_DSPR1
+                0x60000208        0x0
+                0x60000208                PROVIDE (__sbss_start_CPU1_, .)
+ *(.CPU1.sbss*)
+                0x60000208                PROVIDE (__sbss_end_CPU1_, .)
+                0x60000208                . = ALIGN (0x8)
+
+.CPU1.sdata     memory region -> DMI_DSPR1
+                0x60000208        0x0
+                0x60000208                PROVIDE (SDATA_BASE_CPU1_, .)
+                0x60000208                PROVIDE (__sdata_start_CPU1_, .)
+ *(.CPU1.sdata*)
+                0x60000208                . = ALIGN (0x8)
+                0x60000208                PROVIDE (SDATA_END_CPU1_, .)
+                0x60000208                PROVIDE (__sdata_end_CPU1_, .)
+                0x60000000                _SMALL_DATA__CPU1_ = (SIZEOF (.CPU1.sbss) + SIZEOF (.CPU1.sdata))?(ADDR (.CPU1.sbss) + 0x8000):(ADDR (.CPU1.sbss) & 0xf0000000)
+                0x60000000                __A0_MEM_CPU1_ = _SMALL_DATA__CPU1_
+
+.CPU1.bss       memory region -> DMI_DSPR1
+                0x60000208    0x12cf8
+                0x60000208                PROVIDE (BSS_BASE_CPU1_, .)
+                0x60000208                PROVIDE (__bss_start_CPU1_, .)
+ *(.CPU1.bss*)
+ .CPU1.bss      0x60000208    0x12cf4 slave1/myProject_slave1.elf
+                0x60012efc                PROVIDE (__bss_end_CPU1_, .)
+                0x60012f00                . = ALIGN (0x8)
+ *fill*         0x60012efc        0x4 00
+
+.CPU1.data      memory region -> DMI_DSPR1
+                0x60012f00       0x28
+                0x60012f00                PROVIDE (DATA_BASE_CPU1_, .)
+                0x60012f00                PROVIDE (__data_start_CPU1_, .)
+ *(.CPU1.data*)
+ .CPU1.data     0x60012f00       0x28 slave1/myProject_slave1.elf
+                0x60012f28                . = ALIGN (0x8)
+                0x60012f28                PROVIDE (DATA_END_CPU1_, .)
+                0x60012f28                PROVIDE (__data_end_CPU1_, .)
+
+.CPU1.ustack    memory region -> DMI_DSPR1
+                0x60012f28      0x800
+                0x60012f28                PROVIDE (__USTACK_BEGIN_CPU1_, .)
+                0x60013728                . = (. + __USTACK_SIZE)
+ *fill*         0x60012f28      0x800 00
+                0x60013728                . = ALIGN (0x8)
+                0x60013728                __USTACK_CPU1_ = .
+                0x60013728                PROVIDE (__USTACK_END_CPU1_, .)
+
+.CPU1.istack    memory region -> DMI_DSPR1
+                0x60013728        0x0
+                0x60013728                PROVIDE (__ISTACK_BEGIN_CPU1_, .)
+                0x60013728                . = (. + __ISTACK_SIZE)
+                0x60013728                . = ALIGN (0x8)
+                0x60013728                __ISTACK_CPU1_ = .
+                0x60013728                PROVIDE (__ISTACK_END_CPU1_, .)
+
+.CPU1.heap      memory region -> DMI_DSPR1
+                0x60013728        0x0
+                0x60013728                PROVIDE (__HEAP_BEGIN_CPU1_, .)
+                0x60013728                PROVIDE (__HEAP_CPU1_, .)
+                0x60013728                . = (. + __HEAP_SIZE)
+                0x60013728                . = ALIGN (0x8)
+                0x60013728                __HEAP_END_CPU1_ = .
+
+.CPU1.csa       memory region -> DMI_DSPR1
+                0x60013740     0x2000
+                0x60013740                __CSA_BEGIN_CPU1_ = .
+                0x60013740                PROVIDE (__CSA_CPU1_, .)
+                0x60015740                . = (. + __CSA_SIZE)
+ *fill*         0x60013740     0x2000 00
+                0x60015740                . = ALIGN (0x40)
+                0x60015740                PROVIDE (__CSA_END_CPU1_, .)
+
+.CPU1.ee_api_bss memory region -> DMI_DSPR1
+                0x60015740        0x0
+                0x60015740                PROVIDE (ee_sbss_api_CPU1_, .)
+ *(.CPU1*.ee_api_bss*)
+                0x60015740                PROVIDE (ee_ebss_api_CPU1_, .)
+                0x60015740                . = ALIGN (0x8)
+
+.CPU1.ee_api_data memory region -> DMI_DSPR1
+                0x60015740       0x18
+                0x60015740                PROVIDE (ee_sdata_api_CPU1_, .)
+ *(.CPU1.ee_api_data*)
+                0x60015741                . = (. + 0x1)
+ *fill*         0x60015740        0x1 00
+                0x60015748                . = ALIGN (0x8)
+ *fill*         0x60015741        0x7 00
+                0x60015748                PROVIDE (ee_edata_api_CPU1_, .)
+                0x60015757                . = (. + 0xf)
+ *fill*         0x60015748        0xf 00
+                0x60015758                . = ALIGN (0x8)
+ *fill*         0x60015757        0x1 00
+
+.CPU1.ee_kernel_bss memory region -> DMI_DSPR1
+                0x60015758        0x0
+                0x60015758                PROVIDE (ee_sbss_kernel_CPU1_, .)
+ *(.CPU1.ee_kernel_bss*)
+                0x60015758                PROVIDE (ee_ebss_kernel_CPU1_, .)
+
+.CPU1.ee_kernel_data memory region -> DMI_DSPR1
+                0x60015758       0x18
+                0x60015758                PROVIDE (ee_sdata_kernel_CPU1_, .)
+ *(.CPU1.ee_kernel_data*)
+                0x60015759                . = (. + 0x1)
+ *fill*         0x60015758        0x1 00
+                0x60015760                . = ALIGN (0x8)
+ *fill*         0x60015759        0x7 00
+                0x60015760                PROVIDE (ee_edata_kernel_CPU1_, .)
+                0x6001576f                . = (. + 0xf)
+ *fill*         0x60015760        0xf 00
+                0x60015770                . = ALIGN (0x8)
+ *fill*         0x6001576f        0x1 00
+
+.CPU1.ee_kernel_stack memory region -> DMI_DSPR1
+                0x60015770      0x218
+                0x60015770                PROVIDE (ee_sstack_kernel_CPU1_, .)
+ *(.CPU1.ee_kernel_stack*)
+ .CPU1.ee_kernel_stack
+                0x60015770      0x208 slave1/myProject_slave1.elf
+                0x60015987                . = (. + 0xf)
+ *fill*         0x60015978        0xf 00
+                0x60015988                . = ALIGN (0x8)
+ *fill*         0x60015987        0x1 00
+                0x60015988                PROVIDE (ee_estack_kernel_CPU1_, .)
+
+.CPU1ee_end     memory region -> DMI_DSPR1
+                0x60015988        0x0 load address 0x80000000
+                0x60100000                PROVIDE (ee_sall_code_CPU1_, ADDR (.CPU1.init))
+                0x601047b0                PROVIDE (ee_eall_code_CPU1_, (ADDR (.CPU1.dtors) + SIZEOF (.CPU1.dtors)))
+                0x60000000                PROVIDE (ee_skernel_ram_CPU1_, __DMI_DSPR_BEGIN_CPU1_)
+                0x60015988                PROVIDE (ee_ekernel_ram_CPU1_, .)
+                0x60104780                PROVIDE (ee_skernel_code_CPU1_, ADDR (.CPU1.ee_kernel_text))
+                0x60104798                PROVIDE (ee_ekernel_code_CPU1_, (ADDR (.CPU1.ee_kernel_text) + SIZEOF (.CPU1.ee_kernel_text)))
+                0x600001b8                PROVIDE (ee_sapi_const_CPU1_, ADDR (.CPU1.sdata2))
+                0x60000208                PROVIDE (ee_eapi_const_CPU1_, (ADDR (.CPU1.rodata) + SIZEOF (.CPU1.rodata)))
+                0x60015740                PROVIDE (ee_sapi_ram_CPU1_, ADDR (.CPU1.ee_api_bss))
+                0x60015758                PROVIDE (ee_eapi_ram_CPU1_, (ADDR (.CPU1.ee_api_data) + SIZEOF (.CPU1.ee_api_data)))
+                0x60104768                PROVIDE (ee_sapi_code_CPU1_, ADDR (.CPU1.ee_api_text))
+                0x60104780                PROVIDE (ee_eapi_code_CPU1_, (ADDR (.CPU1.ee_api_text) + SIZEOF (.CPU1.ee_api_text)))
+                0x60015988                . = ALIGN (0x4)
+                0x00000001                _. = ASSERT (((__CSA_BEGIN_CPU1_ & 0x3f) == 0x0), illegal CSA start address)
+                0x00000001                _. = ASSERT (((__CSA_SIZE & 0x3f) == 0x0), illegal CSA size)
+                0x00000001                _. = ASSERT (((__ISTACK_CPU1_ & 0x7) == 0x0), ISTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__USTACK_CPU1_ & 0x7) == 0x0), USTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__HEAP_END_CPU1_ & 0x7) == 0x0), HEAP not doubleword aligned)
+
+.CPU2.init      memory region -> PMI_PSPR2
+                0x50100000        0x0
+ *(SORT(.CPU2.init*))
+                0x50100000                . = ALIGN (0x8)
+
+.CPU2.fini
+ *(SORT(.CPU2.fini*))
+
+.CPU2.cramtext  memory region -> PMI_PSPR2
+                0x50100000        0x0
+ *(SORT(.CPU2.cramtext*))
+                0x50100000                . = ALIGN (0x8)
+
+.CPU2.traptab   memory region -> PMI_PSPR2
+                0x50100000      0x100
+ *(.CPU2.traptab*)
+ .CPU2.traptab  0x50100000      0x100 slave2/myProject_slave2.elf
+                0x50100100                . = ALIGN (0x8)
+
+.CPU2.inttab    memory region -> PMI_PSPR2
+                0x50100100      0x100
+ *(.CPU2.inttab*)
+ .CPU2.inttab   0x50100100      0x100 slave2/myProject_slave2.elf
+                0x50100200                . = ALIGN (0x8)
+
+.CPU2.text      memory region -> PMI_PSPR2
+                0x50100200     0x1008
+ *(.CPU2.text*)
+ .CPU2.text     0x50100200     0x1008 slave2/myProject_slave2.elf
+                0x50100200                EE_tc2Yx_cpu2_start
+                0x50101208                . = ALIGN (0x8)
+
+.CPU2.ee_api_text memory region -> PMI_PSPR2
+                0x50101208       0x18
+                0x50101208                PROVIDE (ee_stext_api_CPU2_, .)
+ *(.CPU2.ee_api_text*)
+                0x50101209                . = (. + 0x1)
+ *fill*         0x50101208        0x1 00
+                0x50101210                . = ALIGN (0x8)
+ *fill*         0x50101209        0x7 00
+                0x50101210                PROVIDE (ee_etext_api_CPU2_, .)
+                0x5010121f                . = (. + 0xf)
+ *fill*         0x50101210        0xf 00
+                0x50101220                . = ALIGN (0x8)
+ *fill*         0x5010121f        0x1 00
+
+.CPU2.ee_kernel_text memory region -> PMI_PSPR2
+                0x50101220       0x18
+                0x50101220                PROVIDE (ee_stext_kernel_CPU2_, .)
+ *(.CPU2.ee_kernel_text*)
+                0x50101221                . = (. + 0x1)
+ *fill*         0x50101220        0x1 00
+                0x50101228                . = ALIGN (0x8)
+ *fill*         0x50101221        0x7 00
+                0x50101228                PROVIDE (ee_etext_kernel_CPU2_, .)
+                0x50101237                . = (. + 0xf)
+ *fill*         0x50101228        0xf 00
+                0x50101238                . = ALIGN (0x8)
+ *fill*         0x50101237        0x1 00
+
+.CPU2.gcc_except_table
+ *(.CPU2.gcc_except_table*)
+
+.CPU2.eh_frame  memory region -> PMI_PSPR2
+                0x50101238        0x0
+                0x50101238                __EH_FRAME_BEGIN___CPU2_ = .
+ *(.CPU2.eh_frame*)
+                0x50101238                __EH_FRAME_END___CPU2_ = .
+
+.CPU2.jcr       memory region -> PMI_PSPR2
+                0x50101238        0x0
+ *(.CPU2.jcr*)
+                0x50101238                . = ALIGN (0x8)
+
+.CPU2.ctors     memory region -> PMI_PSPR2
+                0x50101238       0x10
+                0x50101238                __CTOR_LIST___CPU2_ = .
+                0x50101238        0x4 LONG 0x1 (((__CTOR_END___CPU2_ - __CTOR_LIST___CPU2_) / 0x4) - 0x2)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x5010123c        0x4 LONG 0x0
+                0x50101240                __CTOR_END___CPU2_ = .
+                0x50101240        0x4 LONG 0x0
+                0x50101244                __CTOR_END___CPU2_ = .
+                0x50101248                . = ALIGN (0x8)
+ *fill*         0x50101244        0x4 00
+
+.CPU2.dtors     memory region -> PMI_PSPR2
+                0x50101248        0x8
+                0x50101248                __DTOR_LIST___CPU2_ = .
+                0x50101248        0x4 LONG 0x0 (((__DTOR_END___CPU2_ - __DTOR_LIST___CPU2_) / 0x4) - 0x2)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x5010124c        0x4 LONG 0x0
+                0x50101250                __DTOR_END___CPU2_ = .
+                0x50101250                . = ALIGN (0x8)
+
+.CPU2.sdata2    memory region -> DMI_DSPR2
+                0x50000000        0x0
+ *(.CPU2.sdata2*)
+                0x50000000                . = ALIGN (0x8)
+                0x50008000                _SMALL_DATA2__CPU2_ = SIZEOF (.CPU2.sdata2)?(ADDR (.CPU2.sdata2) + 0x8000):((ADDR (.CPU2.sdata2) & 0xf0000000) + 0x8000)
+                0x50008000                __A1_MEM_CPU2_ = _SMALL_DATA2__CPU2_
+
+.CPU2.rodata    memory region -> DMI_DSPR2
+                0x50000000       0x38
+                0x50000000                PROVIDE (__rodata_start_CPU2_, .)
+ *(SORT(.CPU2.rodata*))
+ .CPU2.rodata   0x50000000       0x28 slave2/myProject_slave2.elf
+                0x50000028                . = ALIGN (0x4)
+                0x50000028                PROVIDE (ee_stacks_table_CPU2_, .)
+                0x50000028        0x4 LONG 0x500028f0 (0x0 + ADDR (.CPU2.ee_kernel_stack))
+                0x5000002c        0x4 LONG 0x218 SIZEOF (.CPU2.ee_kernel_stack)
+                0x50000030        0x4 LONG 0xffffffff
+                0x50000034        0x4 LONG 0xffffffff
+                0x50000038                . = ALIGN (0x8)
+
+.CPU2.zbss      memory region -> DMI_DSPR2
+                0x50000038        0x0
+                0x50000038                PROVIDE (ZBSS_BASE_CPU2_, .)
+ *(.CPU2.zbss*)
+                0x50000038                . = ALIGN (0x8)
+                0x50000038                PROVIDE (ZBSS_END_CPU2_, .)
+
+.CPU2.zdata     memory region -> DMI_DSPR2
+                0x50000038        0x0
+                0x50000038                PROVIDE (ZDATA_BASE_CPU2_, .)
+ *(.CPU2.zdata*)
+                0x50000038                . = ALIGN (0x8)
+                0x50000038                PROVIDE (ZDATA_END_CPU2_, .)
+
+.CPU2.sbss      memory region -> DMI_DSPR2
+                0x50000038        0x0
+                0x50000038                PROVIDE (__sbss_start_CPU2_, .)
+ *(.CPU2.sbss*)
+                0x50000038                PROVIDE (__sbss_end_CPU2_, .)
+                0x50000038                . = ALIGN (0x8)
+
+.CPU2.sdata     memory region -> DMI_DSPR2
+                0x50000038        0x0
+                0x50000038                PROVIDE (SDATA_BASE_CPU2_, .)
+                0x50000038                PROVIDE (__sdata_start_CPU2_, .)
+ *(.CPU2.sdata*)
+                0x50000038                . = ALIGN (0x8)
+                0x50000038                PROVIDE (SDATA_END_CPU2_, .)
+                0x50000038                PROVIDE (__sdata_end_CPU2_, .)
+                0x50000000                _SMALL_DATA__CPU2_ = (SIZEOF (.CPU2.sbss) + SIZEOF (.CPU2.sdata))?(ADDR (.CPU2.sbss) + 0x8000):(ADDR (.CPU2.sbss) & 0xf0000000)
+                0x50000000                __A0_MEM_CPU2_ = _SMALL_DATA__CPU2_
+
+.CPU2.bss       memory region -> DMI_DSPR2
+                0x50000038       0x58
+                0x50000038                PROVIDE (BSS_BASE_CPU2_, .)
+                0x50000038                PROVIDE (__bss_start_CPU2_, .)
+ *(.CPU2.bss*)
+ .CPU2.bss      0x50000038       0x54 slave2/myProject_slave2.elf
+                0x5000008c                PROVIDE (__bss_end_CPU2_, .)
+                0x50000090                . = ALIGN (0x8)
+ *fill*         0x5000008c        0x4 00
+
+.CPU2.data      memory region -> DMI_DSPR2
+                0x50000090       0x28
+                0x50000090                PROVIDE (DATA_BASE_CPU2_, .)
+                0x50000090                PROVIDE (__data_start_CPU2_, .)
+ *(.CPU2.data*)
+ .CPU2.data     0x50000090       0x28 slave2/myProject_slave2.elf
+                0x500000b8                . = ALIGN (0x8)
+                0x500000b8                PROVIDE (DATA_END_CPU2_, .)
+                0x500000b8                PROVIDE (__data_end_CPU2_, .)
+
+.CPU2.ustack    memory region -> DMI_DSPR2
+                0x500000b8      0x800
+                0x500000b8                PROVIDE (__USTACK_BEGIN_CPU2_, .)
+                0x500008b8                . = (. + __USTACK_SIZE)
+ *fill*         0x500000b8      0x800 00
+                0x500008b8                . = ALIGN (0x8)
+                0x500008b8                __USTACK_CPU2_ = .
+                0x500008b8                PROVIDE (__USTACK_END_CPU2_, .)
+
+.CPU2.istack    memory region -> DMI_DSPR2
+                0x500008b8        0x0
+                0x500008b8                PROVIDE (__ISTACK_BEGIN_CPU2_, .)
+                0x500008b8                . = (. + __ISTACK_SIZE)
+                0x500008b8                . = ALIGN (0x8)
+                0x500008b8                __ISTACK_CPU2_ = .
+                0x500008b8                PROVIDE (__ISTACK_END_CPU2_, .)
+
+.CPU2.heap      memory region -> DMI_DSPR2
+                0x500008b8        0x0
+                0x500008b8                PROVIDE (__HEAP_BEGIN_CPU2_, .)
+                0x500008b8                PROVIDE (__HEAP_CPU2_, .)
+                0x500008b8                . = (. + __HEAP_SIZE)
+                0x500008b8                . = ALIGN (0x8)
+                0x500008b8                __HEAP_END_CPU2_ = .
+
+.CPU2.csa       memory region -> DMI_DSPR2
+                0x500008c0     0x2000
+                0x500008c0                __CSA_BEGIN_CPU2_ = .
+                0x500008c0                PROVIDE (__CSA_CPU2_, .)
+                0x500028c0                . = (. + __CSA_SIZE)
+ *fill*         0x500008c0     0x2000 00
+                0x500028c0                . = ALIGN (0x40)
+                0x500028c0                PROVIDE (__CSA_END_CPU2_, .)
+
+.CPU2.ee_api_bss memory region -> DMI_DSPR2
+                0x500028c0        0x0
+                0x500028c0                PROVIDE (ee_sbss_api_CPU2_, .)
+ *(.CPU2*.ee_api_bss*)
+                0x500028c0                PROVIDE (ee_ebss_api_CPU2_, .)
+                0x500028c0                . = ALIGN (0x8)
+
+.CPU2.ee_api_data memory region -> DMI_DSPR2
+                0x500028c0       0x18
+                0x500028c0                PROVIDE (ee_sdata_api_CPU2_, .)
+ *(.CPU2.ee_api_data*)
+                0x500028c1                . = (. + 0x1)
+ *fill*         0x500028c0        0x1 00
+                0x500028c8                . = ALIGN (0x8)
+ *fill*         0x500028c1        0x7 00
+                0x500028c8                PROVIDE (ee_edata_api_CPU2_, .)
+                0x500028d7                . = (. + 0xf)
+ *fill*         0x500028c8        0xf 00
+                0x500028d8                . = ALIGN (0x8)
+ *fill*         0x500028d7        0x1 00
+
+.CPU2.ee_kernel_bss memory region -> DMI_DSPR2
+                0x500028d8        0x0
+                0x500028d8                PROVIDE (ee_sbss_kernel_CPU2_, .)
+ *(.CPU2.ee_kernel_bss*)
+                0x500028d8                PROVIDE (ee_ebss_kernel_CPU2_, .)
+
+.CPU2.ee_kernel_data memory region -> DMI_DSPR2
+                0x500028d8       0x18
+                0x500028d8                PROVIDE (ee_sdata_kernel_CPU2_, .)
+ *(.CPU2.ee_kernel_data*)
+                0x500028d9                . = (. + 0x1)
+ *fill*         0x500028d8        0x1 00
+                0x500028e0                . = ALIGN (0x8)
+ *fill*         0x500028d9        0x7 00
+                0x500028e0                PROVIDE (ee_edata_kernel_CPU2_, .)
+                0x500028ef                . = (. + 0xf)
+ *fill*         0x500028e0        0xf 00
+                0x500028f0                . = ALIGN (0x8)
+ *fill*         0x500028ef        0x1 00
+
+.CPU2.ee_kernel_stack memory region -> DMI_DSPR2
+                0x500028f0      0x218
+                0x500028f0                PROVIDE (ee_sstack_kernel_CPU2_, .)
+ *(.CPU2.ee_kernel_stack*)
+ .CPU2.ee_kernel_stack
+                0x500028f0      0x208 slave2/myProject_slave2.elf
+                0x50002b07                . = (. + 0xf)
+ *fill*         0x50002af8        0xf 00
+                0x50002b08                . = ALIGN (0x8)
+ *fill*         0x50002b07        0x1 00
+                0x50002b08                PROVIDE (ee_estack_kernel_CPU2_, .)
+
+.CPU2ee_end     memory region -> DMI_DSPR2
+                0x50002b08        0x0 load address 0x80000000
+                0x50100000                PROVIDE (ee_sall_code_CPU2_, ADDR (.CPU2.init))
+                0x50101250                PROVIDE (ee_eall_code_CPU2_, (ADDR (.CPU2.dtors) + SIZEOF (.CPU2.dtors)))
+                0x50000000                PROVIDE (ee_skernel_ram_CPU2_, __DMI_DSPR_BEGIN_CPU2_)
+                0x50002b08                PROVIDE (ee_ekernel_ram_CPU2_, .)
+                0x50101220                PROVIDE (ee_skernel_code_CPU2_, ADDR (.CPU2.ee_kernel_text))
+                0x50101238                PROVIDE (ee_ekernel_code_CPU2_, (ADDR (.CPU2.ee_kernel_text) + SIZEOF (.CPU2.ee_kernel_text)))
+                0x50000000                PROVIDE (ee_sapi_const_CPU2_, ADDR (.CPU2.sdata2))
+                0x50000038                PROVIDE (ee_eapi_const_CPU2_, (ADDR (.CPU2.rodata) + SIZEOF (.CPU2.rodata)))
+                0x500028c0                PROVIDE (ee_sapi_ram_CPU2_, ADDR (.CPU2.ee_api_bss))
+                0x500028d8                PROVIDE (ee_eapi_ram_CPU2_, (ADDR (.CPU2.ee_api_data) + SIZEOF (.CPU2.ee_api_data)))
+                0x50101208                PROVIDE (ee_sapi_code_CPU2_, ADDR (.CPU2.ee_api_text))
+                0x50101220                PROVIDE (ee_eapi_code_CPU2_, (ADDR (.CPU2.ee_api_text) + SIZEOF (.CPU2.ee_api_text)))
+                0x50002b08                . = ALIGN (0x4)
+                0x00000001                _. = ASSERT (((__CSA_BEGIN_CPU2_ & 0x3f) == 0x0), illegal CSA start address)
+                0x00000001                _. = ASSERT (((__CSA_SIZE & 0x3f) == 0x0), illegal CSA size)
+                0x00000001                _. = ASSERT (((__ISTACK_CPU2_ & 0x7) == 0x0), ISTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__USTACK_CPU2_ & 0x7) == 0x0), USTACK not doubleword aligned)
+                0x00000001                _. = ASSERT (((__HEAP_END_CPU2_ & 0x7) == 0x0), HEAP not doubleword aligned)
+                [0x00000000]                NULL = DEFINED (NULL)?NULL:0x0
+
+.comment        memory region -> *default*
+                0x00000000       0x47
+ *(.comment)
+ .comment       0x00000000       0x47 master/myProject_master.elf
+                                0x900 (size before relaxing)
+ .comment       0x00000000      0x870 slave1/myProject_slave1.elf
+ .comment       0x00000000      0x678 slave2/myProject_slave2.elf
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  memory region -> *default*
+                0x00000000      0xcf8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x520 master/myProject_master.elf
+ .debug_aranges
+                0x00000520      0x4e8 slave1/myProject_slave1.elf
+ .debug_aranges
+                0x00000a08      0x2f0 slave2/myProject_slave2.elf
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     memory region -> *default*
+                0x00000000    0x3b3bc
+ *(.debug_info)
+ .debug_info    0x00000000    0x172cb master/myProject_master.elf
+ .debug_info    0x000172cb    0x15202 slave1/myProject_slave1.elf
+ .debug_info    0x0002c4cd     0xeeef slave2/myProject_slave2.elf
+
+.debug_abbrev   memory region -> *default*
+                0x00000000     0x925d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000     0x37db master/myProject_master.elf
+ .debug_abbrev  0x000037db     0x335e slave1/myProject_slave1.elf
+ .debug_abbrev  0x00006b39     0x2724 slave2/myProject_slave2.elf
+
+.debug_line     memory region -> *default*
+                0x00000000    0x10612
+ *(.debug_line)
+ .debug_line    0x00000000     0x6401 master/myProject_master.elf
+ .debug_line    0x00006401     0x5d7d slave1/myProject_slave1.elf
+ .debug_line    0x0000c17e     0x4494 slave2/myProject_slave2.elf
+
+.debug_frame    memory region -> *default*
+                0x00000000     0x109c
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x6b4 master/myProject_master.elf
+ .debug_frame   0x000006b4      0x660 slave1/myProject_slave1.elf
+ .debug_frame   0x00000d14      0x388 slave2/myProject_slave2.elf
+
+.debug_str      memory region -> *default*
+                0x00000000      0x47d
+ *(.debug_str)
+ .debug_str     0x00000000      0x1dd master/myProject_master.elf
+ .debug_str     0x000001dd      0x18a slave1/myProject_slave1.elf
+ .debug_str     0x00000367      0x116 slave2/myProject_slave2.elf
+
+.debug_loc      memory region -> *default*
+                0x00000000     0x45f3
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1ea9 master/myProject_master.elf
+ .debug_loc     0x00001ea9     0x1def slave1/myProject_slave1.elf
+ .debug_loc     0x00003c98      0x95b slave2/myProject_slave2.elf
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   memory region -> *default*
+                0x00000000     0x3678
+ *(.debug_ranges)
+ .debug_ranges  0x00000000     0x1550 master/myProject_master.elf
+ .debug_ranges  0x00001550     0x14f0 slave1/myProject_slave1.elf
+ .debug_ranges  0x00002a40      0xc38 slave2/myProject_slave2.elf
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.version_info   memory region -> *default*
+                0x00000000    0x76b70
+ *(.version_info)
+ .version_info  0x00000000    0x2d2cf master/myProject_master.elf
+ .version_info  0x0002d2cf    0x2a11a slave1/myProject_slave1.elf
+ .version_info  0x000573e9    0x1f787 slave2/myProject_slave2.elf
+
+.boffs
+ *(.boffs)
+OUTPUT(tc29x_multicore.elf elf32-tricore)
+
+Cross Reference Table
+
+Symbol                                            File
+EE_as_core_mask                                   master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_as_core_start_addresses                        master/myProject_master.elf
+EE_as_core_started                                master/myProject_master.elf
+EE_as_not_as_core_mask                            master/myProject_master.elf
+EE_as_os_application_mode                         master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_hal_spinlock_status                            master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_cpu                                         master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_first                                       master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_next                                        master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_pending                                     master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_spin                                        master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_switch                                      master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_task                                        master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_rn_type                                        master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+EE_tc2Yx_cpu1_start                               slave1/myProject_slave1.elf
+                                                  master/myProject_master.elf
+EE_tc2Yx_cpu2_start                               slave2/myProject_slave2.elf
+                                                  master/myProject_master.elf
+EE_tc_kernel_barrier                              master/myProject_master.elf
+                                                  slave2/myProject_slave2.elf
+                                                  slave1/myProject_slave1.elf
+_SMALL_DATA(unsigned _ *) const                   slave1/myProject_slave1.elf
+_SMALL_DATA2(unsigned _ *) const                  slave1/myProject_slave1.elf
+_SMALL_DATA2__CPU0_                               master/myProject_master.elf
+_SMALL_DATA2__CPU2_                               slave2/myProject_slave2.elf
+_SMALL_DATA__CPU0_                                master/myProject_master.elf
+_SMALL_DATA__CPU2_                                slave2/myProject_slave2.elf
+_START                                            master/myProject_master.elf
+__CSA_BEGIN_CPU0_                                 master/myProject_master.elf
+__CSA_BEGIN_CPU1_                                 slave1/myProject_slave1.elf
+__CSA_BEGIN_CPU2_                                 slave2/myProject_slave2.elf
+__CSA_END_CPU0_                                   master/myProject_master.elf
+__CSA_END_CPU1_                                   slave1/myProject_slave1.elf
+__CSA_END_CPU2_                                   slave2/myProject_slave2.elf
+__USTACK_BEGIN_CPU0_                              master/myProject_master.elf
+__USTACK_BEGIN_CPU1_                              slave1/myProject_slave1.elf
+__USTACK_BEGIN_CPU2_                              slave2/myProject_slave2.elf
+__USTACK_CPU0_                                    master/myProject_master.elf
+__USTACK_CPU1_                                    slave1/myProject_slave1.elf
+__USTACK_CPU2_                                    slave2/myProject_slave2.elf
+tft_id                                            master/myProject_master.elf
+                                                  slave1/myProject_slave1.elf

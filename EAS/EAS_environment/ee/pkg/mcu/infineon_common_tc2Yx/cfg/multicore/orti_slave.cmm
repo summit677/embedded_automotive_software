@@ -1,0 +1,16 @@
+;
+; OSEK/ORTI Example for TRACE32 multitask debugger, derived from the
+; example in demo/kernel/orti/orti.cmm
+;
+
+; initialize ORTI support
+print "initializing ORTI support..."
+
+TASK.ORTI system.orti      ; ORTI awareness
+;MENU.ReProgram orti        ; OSEK objects menu
+;MENU.ReProgram ortiperf    ; trace and performance menu
+
+print "load complete."
+
+;do markers.cmm ;EG: It doesn't work in the expected way in multicore environment
+enddo

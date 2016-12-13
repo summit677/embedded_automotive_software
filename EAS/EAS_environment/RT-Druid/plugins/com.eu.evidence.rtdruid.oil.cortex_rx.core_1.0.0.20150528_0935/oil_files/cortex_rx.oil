@@ -1,0 +1,61 @@
+OIL_VERSION = "2.4";
+
+IMPLEMENTATION ee {
+    OS {
+        ENUM [
+            CORTEX_RX {
+                STRING ID = "default_cpu";
+                STRING APP_SRC[];
+                BOOLEAN [
+                    TRUE {
+                        BOOLEAN [
+                            TRUE {
+                                UINT32 SYS_SIZE;
+                            },
+                            FALSE
+                        ] IRQ_STACK;
+                    },
+                    FALSE
+                ] MULTI_STACK = FALSE;
+                BOOLEAN [
+                    TRUE,
+                    FALSE
+                ] JLINK = FALSE;
+                ENUM [
+                    IAR,
+                    CCS,
+                    GNU,
+                    KEIL
+                ] COMPILER_TYPE;
+                ENUM [
+                    R4
+                ] MODEL;
+                FLOAT CPU_CLOCK;
+                UINT32 SYS_STACK_SIZE;
+            }
+        ] CPU_DATA[];
+
+        ENUM [
+            TI {
+                ENUM [
+                    CUSTOM {
+                        STRING MODEL;
+                        STRING LINKERSCRIPT;
+                        STRING INCLUDE_C;
+                        STRING INCLUDE_S;
+                        STRING STARTUP;
+                    },
+                    TMS570
+                ] MODEL;
+            }
+        ] MCU_DATA[];
+        
+        STRING EE_OPT[];
+        STRING CFLAGS[];
+        STRING ASFLAGS[];
+        STRING LDFLAGS[];
+        STRING LDDEPS[];
+        STRING LIBS[];
+        
+   };
+};
